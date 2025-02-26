@@ -237,7 +237,7 @@ generate mailto links. -->
 		<tomcat.servlet-api.version>10.1.36</tomcat.servlet-api.version>
 		<jsp-api.version>3.1.1</jsp-api.version>
 		<jstl.version>9.0.83</jstl.version>
-		<el-api.version>9.0.83</el-api.version>
+		<el-api.version>10.1.36</el-api.version>
 		<taglibs.standard.version>1.2.3</taglibs.standard.version>
 		<jaxb.version>2.1</jaxb.version>
 		<jaxb-impl.version>2.1.9</jaxb-impl.version>
