@@ -239,8 +239,8 @@ generate mailto links. -->
 		<jstl.version>9.0.83</jstl.version>
 		<el-api.version>10.1.36</el-api.version>
 		<taglibs.standard.version>1.2.3</taglibs.standard.version>
-		<jaxb.version>2.1</jaxb.version>
-		<jaxb-impl.version>2.1.9</jaxb-impl.version>
+		<jaxb.version>3.0.1</jaxb.version>
+		<jaxb-impl.version>4.0.5</jaxb-impl.version>
 		<stax.impl.version>1.2.0</stax.impl.version>
 		<commons-digester.version>1.8</commons-digester.version>
 		<commons-cli.version>1.0</commons-cli.version>
@@ -333,8 +333,8 @@ generate mailto links. -->
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>javax.xml.bind</groupId>
-				<artifactId>jaxb-api</artifactId>
+				<groupId>jakarta.xml.bind</groupId>
+				<artifactId>jakarta.xml.bind-api</artifactId>
 				<version>${jaxb.version}</version>
 			</dependency>
 			<dependency>
