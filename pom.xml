@@ -233,8 +233,8 @@ generate mailto links. -->
 		<javax.portlet.version.major>3</javax.portlet.version.major>
 		<javax.portlet.version.minor>0</javax.portlet.version.minor>
 		<portals.portlet-api.version>4.0.0-SNAPSHOT</portals.portlet-api.version>
-		<servlet-api.version>3.1.0</servlet-api.version>
-		<tomcat.servlet-api.version>9.0.83</tomcat.servlet-api.version>
+		<servlet-api.version>6.0.0</servlet-api.version>
+		<tomcat.servlet-api.version>10.1.36</tomcat.servlet-api.version>
 		<jsp-api.version>9.0.83</jsp-api.version>
 		<jstl.version>9.0.83</jstl.version>
 		<el-api.version>9.0.83</el-api.version>
@@ -321,8 +321,8 @@ generate mailto links. -->
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
+				<groupId>jakarta.servlet</groupId>
+				<artifactId>jakarta.servlet-api</artifactId>
 				<version>${servlet-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
