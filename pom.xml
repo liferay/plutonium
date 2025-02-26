@@ -256,7 +256,7 @@ generate mailto links. -->
 		<junit.version>4.13.1</junit.version>
 		<jmock.version>1.2.0</jmock.version>
 		<xmlunit.version>1.1</xmlunit.version>
-		<cdi.version>2.3.1.Final</cdi.version>
+		<cdi.version>5.1.5.Final</cdi.version>
 		<annotation-detector.version>3.0.5</annotation-detector.version>
 		<!-- MVC ================================================== -->
 		<classmate.version>1.3.4</classmate.version>
@@ -361,7 +361,7 @@ generate mailto links. -->
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.weld.servlet</groupId>
-				<artifactId>weld-servlet</artifactId>
+				<artifactId>weld-servlet-core</artifactId>
 				<version>${cdi.version}</version>
 			</dependency>
 			<!-- For method annotation scanning ==================================== -->
