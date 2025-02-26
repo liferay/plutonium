@@ -309,9 +309,9 @@ generate mailto links. -->
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>javax.inject</groupId>
-				<artifactId>javax.inject</artifactId>
-				<version>1</version>
+				<groupId>jakarta.inject</groupId>
+				<artifactId>jakarta.inject-api</artifactId>
+				<version>2.0.1</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
