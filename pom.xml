@@ -355,9 +355,9 @@ generate mailto links. -->
 			</dependency>
 			<!-- CDI Library -->
 			<dependency>
-				<groupId>javax.enterprise</groupId>
-				<artifactId>cdi-api</artifactId>
-				<version>1.2</version>
+				<groupId>jakarta.enterprise</groupId>
+				<artifactId>jakarta.enterprise.cdi-api</artifactId>
+				<version>4.0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.weld.servlet</groupId>
