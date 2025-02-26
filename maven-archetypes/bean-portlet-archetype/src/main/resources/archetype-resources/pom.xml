@@ -29,9 +29,9 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>javax.portlet</groupId>
-			<artifactId>portlet-api</artifactId>
-			<version>3.0.0</version>
+			<groupId>jakarta.portlet</groupId>
+			<artifactId>jakarta.portlet-api</artifactId>
+			<version>4.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Note: Eclipse projects require servlet-api -->

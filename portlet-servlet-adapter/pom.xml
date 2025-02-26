@@ -21,8 +21,8 @@
 	<name>Portlet Servlet Adapter</name>
 	<dependencies>
 		<dependency>
-			<groupId>javax.portlet</groupId>
-			<artifactId>portlet-api</artifactId>
+			<groupId>jakarta.portlet</groupId>
+			<artifactId>jakarta.portlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
