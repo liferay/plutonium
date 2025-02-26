@@ -55,8 +55,8 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.mvc</groupId>
-			<artifactId>javax.mvc-api</artifactId>
+			<groupId>jakarta.mvc</groupId>
+			<artifactId>jakarta.mvc-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
