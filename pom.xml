@@ -264,7 +264,7 @@ generate mailto links. -->
 		<jaxrs-api.version>2.1.1</jaxrs-api.version>
 		<mvc-api.version>1.0-pfd</mvc-api.version>
 		<jboss-logging.version>3.3.2.Final</jboss-logging.version>
-		<validation-api.version>1.1.0.Final</validation-api.version>
+		<validation-api.version>3.0.2</validation-api.version>
 		<!-- scope of certain dependencies is "compile" for deployment on tomcat,
          but "provided" for deployment on tomee. See tomee profile. -->
 		<dependency.scope>compile</dependency.scope>
@@ -413,8 +413,8 @@ generate mailto links. -->
 				<version>${hibernate-validator.version}</version>
 				<exclusions>
 					<exclusion>
-						<groupId>javax.validation</groupId>
-						<artifactId>validation-api</artifactId>
+						<groupId>jakarta.validation</groupId>
+						<artifactId>jakarta.validation-api</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
@@ -435,8 +435,8 @@ generate mailto links. -->
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>javax.validation</groupId>
-				<artifactId>validation-api</artifactId>
+				<groupId>jakarta.validation</groupId>
+				<artifactId>jakarta.validation-api</artifactId>
 				<version>${validation-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
