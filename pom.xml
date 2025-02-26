@@ -768,7 +768,6 @@ generate mailto links. -->
 				<module>maven-archetypes/generic-portlet-archetype</module>
 				<module>maven-archetypes/mvcbean-jsp-portlet-archetype</module>
 				<module>maven-archetypes/mvcbean-thymeleaf-portlet-archetype</module>
-				<module>portlet-tck_3.0</module>
 			</modules>
 		</profile>
 		<profile>
