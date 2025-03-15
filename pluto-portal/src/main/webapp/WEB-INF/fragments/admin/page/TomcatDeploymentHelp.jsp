@@ -17,8 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ page isELIgnored="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/portlet" prefix="portlet" %>
 
 <div class="portlet-section-header">Deploying Portlet Applications in Tomcat</div>
@@ -34,7 +34,7 @@ Clicking on that link opens up a new browser window, so you should disable any p
 
 <div class="portlet-section-subheader">Uploading and deploying using Tomcat's Manager Application</div>
 <p class="portlet-font">
-The binary distribution of Pluto is built on Tomcat. Tomcat'’s deployer application is the manager application. 
+The binary distribution of Pluto is built on Tomcat. Tomcat'ï¿½s deployer application is the manager application. 
 Use that application to upload and deploy the war. A properly deployed portlet on Tomcat requires that the war 
 have a context.xml file in META-INF containing a Context element and the crossContext attribute set to true 
 like this:<br/>

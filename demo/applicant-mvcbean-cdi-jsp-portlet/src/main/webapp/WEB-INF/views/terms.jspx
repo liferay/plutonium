@@ -17,9 +17,9 @@ implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<jsp:root xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
-		  xmlns:jsp="http://java.sun.com/JSP/Page"
-		  xmlns:portlet="http://xmlns.jcp.org/portlet_3_0" version="2.1">
+<jsp:root xmlns:fmt="jakarta.tags.fmt"
+		  xmlns:jsp="https://jakarta.ee/xml/ns/jsp"
+		  xmlns:portlet="jakarta.tags.portlet" version="3.1">
 	<jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
 	<fmt:setBundle basename="content.portlet1" var="i18n" />
 	<html>

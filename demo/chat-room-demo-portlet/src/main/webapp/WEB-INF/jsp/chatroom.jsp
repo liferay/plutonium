@@ -17,8 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ page session="false" %>
-<%@ taglib uri="http://xmlns.jcp.org/portlet_3_0"  prefix="portlet" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <portlet:defineObjects />
 
@@ -42,7 +42,7 @@ limitations under the License.
    </td><td align='right'>
    <INPUT id='<portlet:namespace/>-clear' type='button' name='action' value='clear history' />
    </td></tr></table>
-   <INPUT type='hidden' name='javax.portlet.action' value='addMessage'>
+   <INPUT type='hidden' name='jakarta.portlet.action' value='addMessage'>
 </FORM>
 </div>
 </div>
@@ -121,13 +121,13 @@ limitations under the License.
    
    // Handler for "clear" button. This form of the portlet hub action method 
    // doesn't submit a form, but rather just some action parameters. In this case,
-   // the reserved parameter with name 'javax.portlet.action' is set to the 
+   // the reserved parameter with name 'jakarta.portlet.action' is set to the
    // value 'clearHistory', causing the portlet container to execute the 
    // action method carrying this action name.
    
    document.getElementById(clrButton).onclick = function () {
       actionParams = {};
-      actionParams['javax.portlet.action'] = ['clearHistory'];
+      actionParams['jakarta.portlet.action'] = ['clearHistory'];
       hub.action(actionParams);
       return false;
    };

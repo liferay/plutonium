@@ -17,8 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ page isELIgnored="false" %>
-<%@ page import="javax.portlet.WindowState"%>
-<%@ taglib uri='http://java.sun.com/portlet_2_0' prefix='portlet'%>
+<%@ page import="jakarta.portlet.WindowState"%>
+<%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
 
 <portlet:defineObjects/>
 

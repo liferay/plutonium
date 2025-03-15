@@ -17,8 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ page session="false" %>
-<%@ taglib uri="http://xmlns.jcp.org/portlet_3_0"  prefix="portlet" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <div class='orangebox'>
 
@@ -215,7 +215,7 @@ limitations under the License.
       <li>Attaches onclick handler to the clear button</li>
       <ul>
          <li>Instead of submitting the form, specific action parameters are submitted</li>
-         <li>The action parameter 'javax.portlet.action' specifies the action name</li>
+         <li>The action parameter 'jakarta.portlet.action' specifies the action name</li>
          <li>In this case, the action name 'clearHistory' causes the server-side clearHistory action method to be called</li>
       </ul>
    </ul>

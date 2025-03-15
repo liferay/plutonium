@@ -1,4 +1,4 @@
-<%@ page import="javax.portlet.WindowState" %>
+<%@ page import="jakarta.portlet.WindowState" %>
 <%--
 Licensed to the Apache Software Foundation (ASF) under one or more
 contributor license agreements.  See the NOTICE file distributed with
@@ -19,8 +19,8 @@ limitations under the License.
 --%>
 
 <%@ page isELIgnored="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
 
 <portlet:defineObjects/>
 

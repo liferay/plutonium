@@ -1,5 +1,5 @@
 <%@ page isELIgnored="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <%--
 Licensed to the Apache Software Foundation (ASF) under one or more
@@ -21,6 +21,19 @@ limitations under the License.
 --%>
 
 <!-- Pluto about portlet fragment (displayed in VIEW mode). -->
+
+<%@ page import="java.util.Map" %>
+<%
+  java.util.Map<String, Object> uriMap = (Map<String,Object>)application.getAttribute("org.apache.jasper.compiler.TldLocationsCache");
+  out.println("<h3>Registered TLDs:</h3>");
+  if (uriMap != null) {
+    for (Map.Entry<String, Object> entry : uriMap.entrySet()) {
+      out.println("<p>URI: " + entry.getKey() + "</p>");
+    }
+  } else {
+    out.println("<p>No registered TLDs found.</p>");
+  }
+%>
 
 <table>
   

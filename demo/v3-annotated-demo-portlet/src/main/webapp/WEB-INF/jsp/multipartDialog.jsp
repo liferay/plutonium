@@ -18,9 +18,9 @@ limitations under the License.
 --%>
 <%@ page session="false" %>
 <%@ page isELIgnored ="false" %> 
-<%@ taglib uri="http://xmlns.jcp.org/portlet_3_0"  prefix="portlet" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.functions" prefix="fn" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html><head>

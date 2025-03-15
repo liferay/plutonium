@@ -17,8 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ page isELIgnored="false" %>
-<%@taglib prefix="portlet" uri="http://java.sun.com/portlet_2_0" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="jakarta.tags.portlet" prefix="portlet"  %>
+<%@taglib uri="jakarta.tags.core" prefix="c" %>
 <portlet:defineObjects />
 <TABLE style="font-size: -1">
 <TR><TH colspan="2" style="background-color:blue;color:white;">MANUAL TEST</TH></TR>
