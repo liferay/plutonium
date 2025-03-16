@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.container.driver;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletResponse;
 
 
 public interface AdministrativeRequestListener {

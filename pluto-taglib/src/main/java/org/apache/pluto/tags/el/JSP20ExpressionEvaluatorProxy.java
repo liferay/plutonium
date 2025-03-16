@@ -19,8 +19,8 @@ package org.apache.pluto.tags.el;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
 
 class JSP20ExpressionEvaluatorProxy extends ExpressionEvaluatorProxy {
 
@@ -37,7 +37,7 @@ class JSP20ExpressionEvaluatorProxy extends ExpressionEvaluatorProxy {
             variableResolverGetter = PageContext.class.getMethod("getVariableResolver", new Class[0]);
 
             evalMethod = expressionEvaluatorGetter.getReturnType().getMethod("evaluate",
-                new Class[]{String.class, Class.class, variableResolverGetter.getReturnType(), Class.forName("javax.servlet.jsp.el.FunctionMapper")});
+                new Class[]{String.class, Class.class, variableResolverGetter.getReturnType(), Class.forName("jakarta.servlet.jsp.el.FunctionMapper")});
 
         } catch (Exception e) {
             throw new RuntimeException("Unable to located JSP20 Methods.", e);

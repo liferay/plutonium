@@ -48,9 +48,9 @@ public interface PropertyConfigService {
     /**
      * Set of unique Portlet Modes.
      * The set must include
-     * {@link javax.portlet.PortletMode#VIEW},
-     * {@link javax.portlet.PortletMode#EDIT}, and
-     * {@link javax.portlet.PortletMode#HELP}
+     * {@link jakarta.portlet.PortletMode#VIEW},
+     * {@link jakarta.portlet.PortletMode#EDIT}, and
+     * {@link jakarta.portlet.PortletMode#HELP}
      * @return set of unique portlet modes.
      */
     Set<String> getSupportedPortletModes();
@@ -58,9 +58,9 @@ public interface PropertyConfigService {
     /**
      * Set of unique Window States.
      * The set must include:
-     * {@link javax.portlet.WindowState#NORMAL},
-     * {@link javax.portlet.WindowState#MAXIMIZED}, and
-     * {@link javax.portlet.WindowState#MINIMIZED}
+     * {@link jakarta.portlet.WindowState#NORMAL},
+     * {@link jakarta.portlet.WindowState#MAXIMIZED}, and
+     * {@link jakarta.portlet.WindowState#MINIMIZED}
      * @return set of unique window states.
      */
     Set<String> getSupportedWindowStates();

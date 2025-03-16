@@ -19,14 +19,14 @@ package org.apache.pluto.tags;
 import java.lang.reflect.Field;
 import java.util.Hashtable;
 
-import javax.portlet.BaseURL;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletModeException;
-import javax.portlet.PortletResponse;
-import javax.portlet.PortletURL;
-import javax.portlet.WindowState;
-import javax.portlet.WindowStateException;
-import javax.servlet.jsp.JspException;
+import jakarta.portlet.BaseURL;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletModeException;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.PortletURL;
+import jakarta.portlet.WindowState;
+import jakarta.portlet.WindowStateException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Abstract supporting class for the JSR168 actionURL and renderURL tag handlers.
@@ -156,7 +156,7 @@ public abstract class PortletURLTag168 extends BaseURLTag {
    /*
     * (non-Javadoc)
     * 
-    * @see org.apache.pluto.tags.BaseURLTag#setUrl(javax.portlet.BaseURL)
+    * @see org.apache.pluto.tags.BaseURLTag#setUrl(jakarta.portlet.BaseURL)
     */
    @Override
    protected void setUrl(BaseURL url) {
@@ -190,7 +190,7 @@ public abstract class PortletURLTag168 extends BaseURLTag {
          Field[] f = PortletMode.class.getDeclaredFields();
 
          for (int i = 0; i < f.length; i++) {
-            if (f[i].getType().isAssignableFrom(javax.portlet.PortletMode.class)) {
+            if (f[i].getType().isAssignableFrom(jakarta.portlet.PortletMode.class)) {
                try {
                   portletModes.put(f[i].get(f[i]).toString().toUpperCase(), f[i].get(f[i]));
                } catch (IllegalAccessException e) {
@@ -211,7 +211,7 @@ public abstract class PortletURLTag168 extends BaseURLTag {
          Field[] f = WindowState.class.getDeclaredFields();
 
          for (int i = 0; i < f.length; i++) {
-            if (f[i].getType().isAssignableFrom(javax.portlet.WindowState.class)) {
+            if (f[i].getType().isAssignableFrom(jakarta.portlet.WindowState.class)) {
                try {
                   definedWindowStates.put(f[i].get(f[i]).toString().toUpperCase(), f[i].get(f[i]));
                } catch (IllegalAccessException e) {

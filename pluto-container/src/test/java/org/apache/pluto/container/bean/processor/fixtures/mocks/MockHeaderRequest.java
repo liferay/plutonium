@@ -19,7 +19,7 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
-import javax.portlet.HeaderRequest;
+import jakarta.portlet.HeaderRequest;
 
 /**
  * @author Scott Nicklous

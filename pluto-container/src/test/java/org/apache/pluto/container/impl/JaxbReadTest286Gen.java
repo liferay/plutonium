@@ -23,9 +23,9 @@ import static org.junit.Assert.*;
 import java.io.InputStream;
 import java.util.List;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.Unmarshaller;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.Unmarshaller;
 
 import org.apache.pluto.container.om.portlet.impl.fixtures.TestPortlet;
 import org.apache.pluto.container.om.portlet20.impl.ContainerRuntimeOptionType;

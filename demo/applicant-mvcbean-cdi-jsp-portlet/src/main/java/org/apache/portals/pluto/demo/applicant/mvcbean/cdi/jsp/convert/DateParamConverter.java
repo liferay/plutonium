@@ -21,8 +21,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.portlet.PortletPreferences;
-import javax.ws.rs.ext.ParamConverter;
+import jakarta.portlet.PortletPreferences;
+import jakarta.ws.rs.ext.ParamConverter;
 
 
 /**

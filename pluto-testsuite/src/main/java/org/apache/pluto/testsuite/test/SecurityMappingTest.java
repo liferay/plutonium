@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.testsuite.test;
 
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.testsuite.TestResult;
 

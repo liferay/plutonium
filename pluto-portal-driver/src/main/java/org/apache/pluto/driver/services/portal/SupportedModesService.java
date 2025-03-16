@@ -18,8 +18,8 @@ package org.apache.pluto.driver.services.portal;
 
 import java.util.Set;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletMode;
 
 import org.apache.pluto.container.PortletContainerException;
 

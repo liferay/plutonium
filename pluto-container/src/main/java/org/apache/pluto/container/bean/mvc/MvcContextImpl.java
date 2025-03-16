@@ -24,19 +24,19 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.mvc.MvcContext;
-import javax.mvc.locale.LocaleResolver;
-import javax.mvc.security.Csrf;
-import javax.mvc.security.Encoders;
-import javax.portlet.PortletContext;
-import javax.portlet.PortletRequest;
-import javax.portlet.annotations.PortletRequestScoped;
-import javax.servlet.http.Cookie;
-import javax.ws.rs.core.Configuration;
-import javax.ws.rs.core.UriBuilder;
+import jakarta.annotation.PostConstruct;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.mvc.MvcContext;
+import jakarta.mvc.locale.LocaleResolver;
+import jakarta.mvc.security.Csrf;
+import jakarta.mvc.security.Encoders;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.annotations.PortletRequestScoped;
+import jakarta.servlet.http.Cookie;
+import jakarta.ws.rs.core.Configuration;
+import jakarta.ws.rs.core.UriBuilder;
 
 
 /**
@@ -100,12 +100,12 @@ public class MvcContextImpl implements MvcContext {
 
 		List<LocaleResolver> localeResolvers = localeResolverChain.getLocaleResolvers();
 
-		Map<String, javax.ws.rs.core.Cookie> cookieMap = new HashMap<>();
+		Map<String, jakarta.ws.rs.core.Cookie> cookieMap = new HashMap<>();
 
 		Cookie[] cookies = portletRequest.getCookies();
 
 		for (Cookie cookie : cookies) {
-			cookieMap.put(cookie.getName(), new javax.ws.rs.core.Cookie(cookie.getName(), cookie.getValue()));
+			cookieMap.put(cookie.getName(), new jakarta.ws.rs.core.Cookie(cookie.getName(), cookie.getValue()));
 		}
 
 		Map<String, String> headerMap = new HashMap<>();

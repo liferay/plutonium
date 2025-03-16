@@ -621,7 +621,7 @@ public class MergePortletAppTest {
     */
    @Test
    public void testGetContainerRuntimeOption() {
-      assertNotNull(cut.getContainerRuntimeOption("javax.portlet.renderHeaders"));
+      assertNotNull(cut.getContainerRuntimeOption("jakarta.portlet.renderHeaders"));
       assertNotNull(cut.getContainerRuntimeOption("Runtime-Option-Portlet-App"));
       assertNotNull(cut.getContainerRuntimeOption("runtime.option"));
    }

@@ -37,7 +37,7 @@ package org.apache.portals.pluto.demo.v3annotated;
 import java.io.IOException;
 import java.io.Writer;
 
-import javax.portlet.PortletURL;
+import jakarta.portlet.PortletURL;
 
 /**
  * Formats a link for a test case.

@@ -28,10 +28,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.pluto.container.PortletRequestContext;
 import org.apache.pluto.driver.AttributeKeys;

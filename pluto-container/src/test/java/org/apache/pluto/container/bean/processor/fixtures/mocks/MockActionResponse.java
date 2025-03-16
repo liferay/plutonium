@@ -21,9 +21,9 @@ package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
 import java.io.IOException;
 
-import javax.portlet.ActionResponse;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.RenderURL;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.RenderURL;
 
 /**
  * @author Scott
@@ -32,7 +32,7 @@ import javax.portlet.RenderURL;
 public class MockActionResponse extends MockStateAwareResponse implements ActionResponse {
 
    /* (non-Javadoc)
-    * @see javax.portlet.ActionResponse#getRedirectURL(javax.portlet.MimeResponse.Copy)
+    * @see jakarta.portlet.ActionResponse#getRedirectURL(jakarta.portlet.MimeResponse.Copy)
     */
    @Override
    public RenderURL createRedirectURL(Copy arg0) throws IllegalStateException {
@@ -40,14 +40,14 @@ public class MockActionResponse extends MockStateAwareResponse implements Action
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ActionResponse#sendRedirect(java.lang.String)
+    * @see jakarta.portlet.ActionResponse#sendRedirect(java.lang.String)
     */
    @Override
    public void sendRedirect(String arg0) throws IOException {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ActionResponse#sendRedirect(java.lang.String, java.lang.String)
+    * @see jakarta.portlet.ActionResponse#sendRedirect(java.lang.String, java.lang.String)
     */
    @Override
    public void sendRedirect(String arg0, String arg1) throws IOException {

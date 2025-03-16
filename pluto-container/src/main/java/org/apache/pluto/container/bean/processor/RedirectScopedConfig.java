@@ -22,10 +22,10 @@ package org.apache.pluto.container.bean.processor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.mvc.RedirectScoped;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.mvc.RedirectScoped;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;

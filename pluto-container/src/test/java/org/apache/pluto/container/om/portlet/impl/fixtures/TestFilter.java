@@ -19,9 +19,9 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.PortletException;
-import javax.portlet.filter.FilterConfig;
-import javax.portlet.filter.PortletFilter;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.filter.FilterConfig;
+import jakarta.portlet.filter.PortletFilter;
 
 /**
  * @author Scott Nicklous
@@ -30,7 +30,7 @@ import javax.portlet.filter.PortletFilter;
 public class TestFilter implements PortletFilter {
 
    /* (non-Javadoc)
-    * @see javax.portlet.filter.PortletFilter#destroy()
+    * @see jakarta.portlet.filter.PortletFilter#destroy()
     */
    @Override
    public void destroy() {
@@ -39,7 +39,7 @@ public class TestFilter implements PortletFilter {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.filter.PortletFilter#init(javax.portlet.filter.FilterConfig)
+    * @see jakarta.portlet.filter.PortletFilter#init(jakarta.portlet.filter.FilterConfig)
     */
    @Override
    public void init(FilterConfig arg0) throws PortletException {

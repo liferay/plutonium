@@ -24,13 +24,13 @@ import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.enterprise.context.SessionScoped;
-import javax.enterprise.inject.spi.AnnotatedConstructor;
-import javax.enterprise.inject.spi.AnnotatedField;
-import javax.enterprise.inject.spi.AnnotatedMethod;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.portlet.PortletSession;
-import javax.portlet.annotations.PortletSessionScoped;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.enterprise.inject.spi.AnnotatedConstructor;
+import jakarta.enterprise.inject.spi.AnnotatedField;
+import jakarta.enterprise.inject.spi.AnnotatedMethod;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.annotations.PortletSessionScoped;
 
 /**
  * A wrapper for a PortletSessionScoped annotated type with APPLICATION_SCOPE
@@ -66,7 +66,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getAnnotation(java.lang.Class)
+    * @see jakarta.enterprise.inject.spi.Annotated#getAnnotation(java.lang.Class)
     */
    @SuppressWarnings({"unchecked"})
    @Override
@@ -80,7 +80,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getAnnotations()
+    * @see jakarta.enterprise.inject.spi.Annotated#getAnnotations()
     */
    @Override
    public Set<Annotation> getAnnotations() {
@@ -88,7 +88,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getBaseType()
+    * @see jakarta.enterprise.inject.spi.Annotated#getBaseType()
     */
    @Override
    public Type getBaseType() {
@@ -96,7 +96,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getTypeClosure()
+    * @see jakarta.enterprise.inject.spi.Annotated#getTypeClosure()
     */
    @Override
    public Set<Type> getTypeClosure() {
@@ -104,7 +104,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#isAnnotationPresent(java.lang.Class)
+    * @see jakarta.enterprise.inject.spi.Annotated#isAnnotationPresent(java.lang.Class)
     */
    @Override
    public boolean isAnnotationPresent(Class<? extends Annotation> type) {
@@ -117,7 +117,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getConstructors()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getConstructors()
     */
    @Override
    public Set<AnnotatedConstructor<SessionScoped>> getConstructors() {
@@ -125,7 +125,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getFields()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getFields()
     */
    @Override
    public Set<AnnotatedField<? super SessionScoped>> getFields() {
@@ -133,7 +133,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getJavaClass()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getJavaClass()
     */
    @Override
    public Class<SessionScoped> getJavaClass() {
@@ -141,7 +141,7 @@ public class PortletSessionScopedAnnotatedType implements AnnotatedType<SessionS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getMethods()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getMethods()
     */
    @Override
    public Set<AnnotatedMethod<? super SessionScoped>> getMethods() {

@@ -19,10 +19,10 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.action;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.PortletQName;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.PortletQName;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

@@ -21,7 +21,7 @@ package org.apache.portals.pluto.demo.v3annotated;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
+import jakarta.enterprise.context.SessionScoped;
 
 /**
  * Provides a random number generated once per request.

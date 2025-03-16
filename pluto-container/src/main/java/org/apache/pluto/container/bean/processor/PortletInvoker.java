@@ -18,7 +18,7 @@
 
 package org.apache.pluto.container.bean.processor;
 
-import static javax.portlet.ActionRequest.ACTION_NAME;
+import static jakarta.portlet.ActionRequest.ACTION_NAME;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -26,28 +26,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.EventPortlet;
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.HeaderPortlet;
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.Portlet;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.ResourceServingPortlet;
-import javax.portlet.annotations.HeaderMethod;
-import javax.portlet.annotations.RenderMethod;
-import javax.portlet.annotations.ServeResourceMethod;
-import javax.servlet.DispatcherType;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.EventPortlet;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.HeaderPortlet;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.Portlet;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.ResourceServingPortlet;
+import jakarta.portlet.annotations.HeaderMethod;
+import jakarta.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.ServeResourceMethod;
+import jakarta.servlet.DispatcherType;
 import javax.xml.namespace.QName;
 
 import org.apache.pluto.container.PortletInvokerService;

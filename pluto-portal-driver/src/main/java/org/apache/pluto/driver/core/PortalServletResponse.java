@@ -20,10 +20,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class PortalServletResponse
-    extends javax.servlet.http.HttpServletResponseWrapper {
+    extends jakarta.servlet.http.HttpServletResponseWrapper {
 
     private StringWriter buffer = null;
     private PrintWriter writer = null;

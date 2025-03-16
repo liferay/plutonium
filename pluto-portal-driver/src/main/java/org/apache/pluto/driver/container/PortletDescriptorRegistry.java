@@ -19,7 +19,7 @@ package org.apache.pluto.driver.container;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.pluto.container.PortletAppDescriptorService;
 import org.apache.pluto.container.PortletContainerException;

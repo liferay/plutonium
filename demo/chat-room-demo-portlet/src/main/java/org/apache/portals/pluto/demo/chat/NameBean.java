@@ -19,18 +19,18 @@
 
 package org.apache.portals.pluto.demo.chat;
 
-import javax.inject.Inject;
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.ActionURL;
-import javax.portlet.MimeResponse;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.Namespace;
-import javax.portlet.annotations.PortletSerializable;
-import javax.portlet.annotations.RenderMethod;
-import javax.portlet.annotations.RenderStateScoped;
+import jakarta.inject.Inject;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.Namespace;
+import jakarta.portlet.annotations.PortletSerializable;
+import jakarta.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.RenderStateScoped;
 
 /**
  * Render state scoped bean. The bean is stored as a render parameter,
@@ -118,7 +118,7 @@ public class NameBean implements PortletSerializable {
    /**
     * Bean portlet action method for processing the name entry form.
     * If the action request contains an action parameter with the reserved
-    * name 'javax.portlet.action' and value matching the actionName attribute,
+    * name 'jakarta.portlet.action' and value matching the actionName attribute,
     * the portlet the portlet container routes the request to this method.
     */
    @ActionMethod(portletName = "BeanPortletDemo", actionName="setName")

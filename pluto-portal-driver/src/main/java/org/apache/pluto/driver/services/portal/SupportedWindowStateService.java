@@ -18,7 +18,7 @@ package org.apache.pluto.driver.services.portal;
 
 import java.util.Set;
 
-import javax.portlet.WindowState;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.PortletContainerException;
 
@@ -28,7 +28,7 @@ import org.apache.pluto.container.PortletContainerException;
  *
  * @since Feb 27, 2007
  * @version $Id$
- * @see javax.portlet.WindowState
+ * @see jakarta.portlet.WindowState
  */
 public interface SupportedWindowStateService {
 

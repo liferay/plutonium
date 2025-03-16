@@ -23,9 +23,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-import javax.inject.Named;
-import javax.mvc.Models;
-import javax.mvc.RedirectScoped;
+import jakarta.inject.Named;
+import jakarta.mvc.Models;
+import jakarta.mvc.RedirectScoped;
 
 
 /**

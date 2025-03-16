@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.tags.el;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 
 public class PropertyTag extends org.apache.pluto.tags.PropertyTag {

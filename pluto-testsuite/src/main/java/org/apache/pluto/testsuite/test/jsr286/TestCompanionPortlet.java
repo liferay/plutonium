@@ -18,13 +18,13 @@ package org.apache.pluto.testsuite.test.jsr286;
 
 import java.io.IOException;
 
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.ProcessEvent;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.ProcessEvent;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
 
 import org.apache.pluto.testsuite.test.jsr286.event.ComplexPayloadEventTest;
 import org.apache.pluto.testsuite.test.jsr286.event.ComposedObject;

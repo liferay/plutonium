@@ -22,14 +22,14 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.portlet.Event;
-import javax.portlet.PortletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import jakarta.portlet.Event;
+import jakarta.portlet.PortletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 import javax.xml.namespace.QName;
 import javax.xml.parsers.FactoryConfigurationError;
 import javax.xml.stream.XMLInputFactory;
@@ -114,7 +114,7 @@ public class PortletWindowThread extends Thread {
 			        		JAXBContext jc = JAXBContext.newInstance(clazz);
 			        		Unmarshaller unmarshaller  = jc.createUnmarshaller();
 
-//			        		unmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
+//			        		unmarshaller.setEventHandler(new jakarta.xml.bind.helpers.DefaultValidationEventHandler());
 
 			        		JAXBElement<?> result = unmarshaller.unmarshal(xml,clazz);
 

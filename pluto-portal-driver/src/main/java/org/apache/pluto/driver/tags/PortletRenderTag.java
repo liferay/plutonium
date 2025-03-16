@@ -19,8 +19,8 @@ package org.apache.pluto.driver.tags;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 /**
  * The portlet render tag is used to print portlet rendering result (or error details) to the page.

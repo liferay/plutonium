@@ -20,8 +20,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletMode;
 
 import org.apache.pluto.container.PortletContainerException;
 import org.apache.pluto.container.driver.PortletContextService;

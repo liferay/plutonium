@@ -18,7 +18,7 @@ package org.apache.pluto.container;
 
 import java.util.Collection;
 
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletMode;
 
 /**
  * @author <a href="mailto:ate@douma.nu">Ate Douma</a>

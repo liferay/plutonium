@@ -18,7 +18,7 @@ package org.apache.pluto.container.driver;
 
 import java.util.Iterator;
 
-import javax.servlet.ServletConfig;
+import jakarta.servlet.ServletConfig;
 
 import org.apache.pluto.container.PortletContainerException;
 import org.apache.pluto.container.PortletWindow;

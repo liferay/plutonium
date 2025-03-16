@@ -20,11 +20,11 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.mvc.binding.BindingResult;
-import javax.mvc.binding.ParamError;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.mvc.binding.BindingResult;
+import jakarta.mvc.binding.ParamError;
 
 
 /**

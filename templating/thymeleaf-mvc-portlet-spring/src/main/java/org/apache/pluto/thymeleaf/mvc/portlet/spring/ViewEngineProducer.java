@@ -18,9 +18,9 @@ package org.apache.pluto.thymeleaf.mvc.portlet.spring;
 
 import java.io.IOException;
 
-import javax.mvc.engine.ViewEngine;
-import javax.mvc.engine.ViewEngineException;
-import javax.portlet.MimeResponse;
+import jakarta.mvc.engine.ViewEngine;
+import jakarta.mvc.engine.ViewEngineException;
+import jakarta.portlet.MimeResponse;
 
 import org.apache.pluto.thymeleaf.mvc.portlet.ThymeleafViewEngine;
 import org.apache.pluto.thymeleaf.portlet.TemplateEngineSupplier;

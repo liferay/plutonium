@@ -19,9 +19,9 @@ package org.apache.pluto.driver.url;
 import java.util.Collection;
 import java.util.Map;
 
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
-import javax.servlet.ServletContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.ServletContext;
 
 import org.apache.pluto.container.PortletRequestContext;
 import org.apache.pluto.driver.services.portal.PageConfig;

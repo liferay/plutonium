@@ -18,9 +18,9 @@ package org.apache.pluto.container.bean.mvc;
 
 import java.net.URI;
 
-import javax.mvc.event.ControllerRedirectEvent;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.UriInfo;
+import jakarta.mvc.event.ControllerRedirectEvent;
+import jakarta.ws.rs.container.ResourceInfo;
+import jakarta.ws.rs.core.UriInfo;
 
 
 /**

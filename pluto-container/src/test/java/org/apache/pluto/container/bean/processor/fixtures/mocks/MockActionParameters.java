@@ -22,9 +22,9 @@ package org.apache.pluto.container.bean.processor.fixtures.mocks;
 import java.util.Collections;
 import java.util.Set;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
-import javax.portlet.MutableActionParameters;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.MutableActionParameters;
 
 /**
  * @author Scott
@@ -46,7 +46,7 @@ public class MockActionParameters implements ActionParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#getNames()
+    * @see jakarta.portlet.PortletParameters#getNames()
     */
    @Override
    public Set<String> getNames() {
@@ -54,7 +54,7 @@ public class MockActionParameters implements ActionParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#getValue(java.lang.String)
+    * @see jakarta.portlet.PortletParameters#getValue(java.lang.String)
     */
    @Override
    public String getValue(String arg0) {
@@ -65,7 +65,7 @@ public class MockActionParameters implements ActionParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#getValues(java.lang.String)
+    * @see jakarta.portlet.PortletParameters#getValues(java.lang.String)
     */
    @Override
    public String[] getValues(String arg0) {
@@ -76,7 +76,7 @@ public class MockActionParameters implements ActionParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#isEmpty()
+    * @see jakarta.portlet.PortletParameters#isEmpty()
     */
    @Override
    public boolean isEmpty() {
@@ -84,7 +84,7 @@ public class MockActionParameters implements ActionParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#size()
+    * @see jakarta.portlet.PortletParameters#size()
     */
    @Override
    public int size() {
@@ -92,7 +92,7 @@ public class MockActionParameters implements ActionParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ActionParameters#clone()
+    * @see jakarta.portlet.ActionParameters#clone()
     */
    @Override
    public MutableActionParameters clone() {

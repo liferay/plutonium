@@ -21,13 +21,13 @@ package org.apache.portals.pluto.demo.v3annotated;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
-import javax.portlet.PortletAsyncContext;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.portlet.PortletAsyncContext;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
@@ -80,7 +80,7 @@ public class AsyncRunnable implements Runnable {
 
 			AsyncPortlet.trace(resourceRequest, "Runnable: ");
 
-			PortletConfig portletConfig = (PortletConfig) resourceRequest.getAttribute("javax.portlet.config");
+			PortletConfig portletConfig = (PortletConfig) resourceRequest.getAttribute("jakarta.portlet.config");
 			String portletName = "Could not get PortletConfig";
 			if (portletConfig != null) {
 				portletName = portletConfig.getPortletName();

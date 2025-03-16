@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.driver.services.portal.admin;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 /**
  *

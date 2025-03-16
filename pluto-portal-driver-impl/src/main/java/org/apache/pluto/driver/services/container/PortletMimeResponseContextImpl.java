@@ -21,10 +21,10 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Locale;
 
-import javax.portlet.CacheControl;
-import javax.portlet.PortletRequest;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.CacheControl;
+import jakarta.portlet.PortletRequest;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.PortletContainer;
 import org.apache.pluto.container.PortletMimeResponseContext;

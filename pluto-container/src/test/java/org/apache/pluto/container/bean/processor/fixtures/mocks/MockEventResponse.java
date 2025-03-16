@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
 
 /**
  * @author Scott Nicklous
@@ -29,7 +29,7 @@ import javax.portlet.EventResponse;
 public class MockEventResponse extends MockStateAwareResponse implements EventResponse {
 
    /* (non-Javadoc)
-    * @see javax.portlet.EventResponse#setRenderParameters(javax.portlet.EventRequest)
+    * @see jakarta.portlet.EventResponse#setRenderParameters(jakarta.portlet.EventRequest)
     */
    @Override
    public void setRenderParameters(EventRequest arg0) {

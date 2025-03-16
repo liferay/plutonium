@@ -18,11 +18,11 @@
 
 package org.apache.pluto.driver.services.container;
 
-import static javax.portlet.PortletRequest.ACTION_PHASE;
-import static javax.portlet.PortletRequest.ACTION_SCOPE_ID;
-import static javax.portlet.PortletRequest.EVENT_PHASE;
-import static javax.portlet.PortletRequest.RENDER_PHASE;
-import static javax.portlet.PortletRequest.RESOURCE_PHASE;
+import static jakarta.portlet.PortletRequest.ACTION_PHASE;
+import static jakarta.portlet.PortletRequest.ACTION_SCOPE_ID;
+import static jakarta.portlet.PortletRequest.EVENT_PHASE;
+import static jakarta.portlet.PortletRequest.RENDER_PHASE;
+import static jakarta.portlet.PortletRequest.RESOURCE_PHASE;
 import static org.apache.pluto.driver.url.PortalURLParameter.PARAM_TYPE_RENDER;
 import static org.apache.pluto.driver.url.PortalURLParameter.PARAM_TYPE_RESOURCE;
 
@@ -39,7 +39,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.portlet.PortletSession;
+import jakarta.portlet.PortletSession;
 
 import org.apache.pluto.container.PortletRequestContext;
 import org.apache.pluto.container.PortletResponseContext;
@@ -97,7 +97,7 @@ public class ActionScopedRequestAttributeHandler {
       }
    }
 
-   private static final String       ATTRIB_NAME        = "javax.portlet.asraSessionData";
+   private static final String       ATTRIB_NAME        = "jakarta.portlet.asraSessionData";
 
    // for synchronization
    private static final Object       LOCK               = new Object();
@@ -160,7 +160,7 @@ public class ActionScopedRequestAttributeHandler {
       Map<String, String[]> options = requestContext.getPortletConfig().getContainerRuntimeOptions();
       String[] vals = null;
       if (options != null) {
-         vals = options.get("javax.portlet.actionScopedRequestAttributes");
+         vals = options.get("jakarta.portlet.actionScopedRequestAttributes");
          if (vals != null && vals.length > 0 && Boolean.parseBoolean(vals[0]) == true) {
 
             if (vals.length == 1) {

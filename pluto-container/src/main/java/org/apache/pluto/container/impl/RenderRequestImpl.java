@@ -16,16 +16,16 @@
  */
 package org.apache.pluto.container.impl;
 
-import javax.portlet.CacheControl;
-import javax.portlet.PortletRequest;
-import javax.portlet.RenderRequest;
+import jakarta.portlet.CacheControl;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.RenderRequest;
 
 import org.apache.pluto.container.PortletMimeResponseContext;
 import org.apache.pluto.container.PortletRenderResponseContext;
 import org.apache.pluto.container.PortletRequestContext;
 
 /**
- * Implementation of the <code>javax.portlet.RenderRequest</code> interface.
+ * Implementation of the <code>jakarta.portlet.RenderRequest</code> interface.
  * 
  */
 public class RenderRequestImpl extends PortletRequestImpl implements RenderRequest 

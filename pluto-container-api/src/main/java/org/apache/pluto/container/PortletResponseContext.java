@@ -18,10 +18,10 @@ package org.apache.pluto.container;
 
 import java.util.Collection;
 
-import javax.portlet.PortletConfig;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.PortletConfig;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.PortletURLProvider.TYPE;
 import org.w3c.dom.DOMException;

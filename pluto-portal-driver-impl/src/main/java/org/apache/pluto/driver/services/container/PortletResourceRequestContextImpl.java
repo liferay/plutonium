@@ -20,18 +20,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import javax.enterprise.inject.spi.BeanManager;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletRequest;
-import javax.portlet.ResourceParameters;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.servlet.AsyncContext;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.ResourceParameters;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import org.apache.pluto.container.PortletAsyncManager;
 import org.apache.pluto.container.PortletContainer;
@@ -153,32 +153,32 @@ public class PortletResourceRequestContextImpl extends PortletRequestContextImpl
          StringBuilder txt = new StringBuilder(128);
          txt.append("Start async before:");
          txt.append("\nAttribute names: ").append(attrNames);
-         txt.append("\nasync_request_uri:      ").append((String) hreq.getAttribute("javax.servlet.async.request_uri"));
+         txt.append("\nasync_request_uri:      ").append((String) hreq.getAttribute("jakarta.servlet.async.request_uri"));
          txt.append("\nasync_context_path:      ").append(
-               (String) hreq.getAttribute("javax.servlet.async.context_path"));
+               (String) hreq.getAttribute("jakarta.servlet.async.context_path"));
          txt.append("\nasync_servlet_path:      ").append(
-               (String) hreq.getAttribute("javax.servlet.async.servlet_path"));
-         txt.append("\nasync_path_info:      ").append((String) hreq.getAttribute("javax.servlet.async.path_info"));
+               (String) hreq.getAttribute("jakarta.servlet.async.servlet_path"));
+         txt.append("\nasync_path_info:      ").append((String) hreq.getAttribute("jakarta.servlet.async.path_info"));
          txt.append("\nasync_query_string:      ").append(
-               (String) hreq.getAttribute("javax.servlet.async.query_string"));
+               (String) hreq.getAttribute("jakarta.servlet.async.query_string"));
          txt.append("\nforward_request_uri:      ").append(
-               (String) hreq.getAttribute("javax.servlet.forward.request_uri"));
+               (String) hreq.getAttribute("jakarta.servlet.forward.request_uri"));
          txt.append("\nforward_context_path:      ").append(
-               (String) hreq.getAttribute("javax.servlet.forward.context_path"));
+               (String) hreq.getAttribute("jakarta.servlet.forward.context_path"));
          txt.append("\nforward_servlet_path:      ").append(
-               (String) hreq.getAttribute("javax.servlet.forward.servlet_path"));
-         txt.append("\nforward_path_info:      ").append((String) hreq.getAttribute("javax.servlet.forward.path_info"));
+               (String) hreq.getAttribute("jakarta.servlet.forward.servlet_path"));
+         txt.append("\nforward_path_info:      ").append((String) hreq.getAttribute("jakarta.servlet.forward.path_info"));
          txt.append("\nforward_query_string:      ").append(
-               (String) hreq.getAttribute("javax.servlet.forward.query_string"));
+               (String) hreq.getAttribute("jakarta.servlet.forward.query_string"));
          txt.append("\ninclude_request_uri:      ").append(
-               (String) hreq.getAttribute("javax.servlet.include.request_uri"));
+               (String) hreq.getAttribute("jakarta.servlet.include.request_uri"));
          txt.append("\ninclude_context_path:      ").append(
-               (String) hreq.getAttribute("javax.servlet.include.context_path"));
+               (String) hreq.getAttribute("jakarta.servlet.include.context_path"));
          txt.append("\ninclude_servlet_path:      ").append(
-               (String) hreq.getAttribute("javax.servlet.include.servlet_path"));
-         txt.append("\ninclude_path_info:      ").append((String) hreq.getAttribute("javax.servlet.include.path_info"));
+               (String) hreq.getAttribute("jakarta.servlet.include.servlet_path"));
+         txt.append("\ninclude_path_info:      ").append((String) hreq.getAttribute("jakarta.servlet.include.path_info"));
          txt.append("\ninclude_query_string:      ").append(
-               (String) hreq.getAttribute("javax.servlet.include.query_string"));
+               (String) hreq.getAttribute("jakarta.servlet.include.query_string"));
          txt.append("\nmethod_request_uri:      ").append(hreq.getRequestURI());
          txt.append("\nmethod_context_path:      ").append(hreq.getContextPath());
          txt.append("\nmethod_servlet_path:      ").append(hreq.getServletPath());
@@ -217,32 +217,32 @@ public class PortletResourceRequestContextImpl extends PortletRequestContextImpl
          StringBuilder txt = new StringBuilder(128);
          txt.append("Start async after (wreq):");
          txt.append("\nAttribute names: ").append(attrNames);
-         txt.append("\nasync_request_uri:      ").append((String) wreq.getAttribute("javax.servlet.async.request_uri"));
+         txt.append("\nasync_request_uri:      ").append((String) wreq.getAttribute("jakarta.servlet.async.request_uri"));
          txt.append("\nasync_context_path:      ").append(
-               (String) wreq.getAttribute("javax.servlet.async.context_path"));
+               (String) wreq.getAttribute("jakarta.servlet.async.context_path"));
          txt.append("\nasync_servlet_path:      ").append(
-               (String) wreq.getAttribute("javax.servlet.async.servlet_path"));
-         txt.append("\nasync_path_info:      ").append((String) wreq.getAttribute("javax.servlet.async.path_info"));
+               (String) wreq.getAttribute("jakarta.servlet.async.servlet_path"));
+         txt.append("\nasync_path_info:      ").append((String) wreq.getAttribute("jakarta.servlet.async.path_info"));
          txt.append("\nasync_query_string:      ").append(
-               (String) wreq.getAttribute("javax.servlet.async.query_string"));
+               (String) wreq.getAttribute("jakarta.servlet.async.query_string"));
          txt.append("\nforward_request_uri:      ").append(
-               (String) wreq.getAttribute("javax.servlet.forward.request_uri"));
+               (String) wreq.getAttribute("jakarta.servlet.forward.request_uri"));
          txt.append("\nforward_context_path:      ").append(
-               (String) wreq.getAttribute("javax.servlet.forward.context_path"));
+               (String) wreq.getAttribute("jakarta.servlet.forward.context_path"));
          txt.append("\nforward_servlet_path:      ").append(
-               (String) wreq.getAttribute("javax.servlet.forward.servlet_path"));
-         txt.append("\nforward_path_info:      ").append((String) wreq.getAttribute("javax.servlet.forward.path_info"));
+               (String) wreq.getAttribute("jakarta.servlet.forward.servlet_path"));
+         txt.append("\nforward_path_info:      ").append((String) wreq.getAttribute("jakarta.servlet.forward.path_info"));
          txt.append("\nforward_query_string:      ").append(
-               (String) wreq.getAttribute("javax.servlet.forward.query_string"));
+               (String) wreq.getAttribute("jakarta.servlet.forward.query_string"));
          txt.append("\ninclude_request_uri:      ").append(
-               (String) wreq.getAttribute("javax.servlet.include.request_uri"));
+               (String) wreq.getAttribute("jakarta.servlet.include.request_uri"));
          txt.append("\ninclude_context_path:      ").append(
-               (String) wreq.getAttribute("javax.servlet.include.context_path"));
+               (String) wreq.getAttribute("jakarta.servlet.include.context_path"));
          txt.append("\ninclude_servlet_path:      ").append(
-               (String) wreq.getAttribute("javax.servlet.include.servlet_path"));
-         txt.append("\ninclude_path_info:      ").append((String) wreq.getAttribute("javax.servlet.include.path_info"));
+               (String) wreq.getAttribute("jakarta.servlet.include.servlet_path"));
+         txt.append("\ninclude_path_info:      ").append((String) wreq.getAttribute("jakarta.servlet.include.path_info"));
          txt.append("\ninclude_query_string:      ").append(
-               (String) wreq.getAttribute("javax.servlet.include.query_string"));
+               (String) wreq.getAttribute("jakarta.servlet.include.query_string"));
          txt.append("\nmethod_request_uri:      ").append(wreq.getRequestURI());
          txt.append("\nmethod_context_path:      ").append(wreq.getContextPath());
          txt.append("\nmethod_servlet_path:      ").append(wreq.getServletPath());
@@ -318,14 +318,14 @@ public class PortletResourceRequestContextImpl extends PortletRequestContextImpl
 
    // For use within the wrapper.
    // PLT.10.4.3. Proxied session is created and passed if
-   // javax.portlet.servletDefaultSessionScope == PORTLET_SCOPE
+   // jakarta.portlet.servletDefaultSessionScope == PORTLET_SCOPE
    @Override
    public HttpSession getSession() {
       HttpSession sess = null;
 
       PortletConfig portletConfig = getPortletConfig();
       Map<String, String[]> containerRuntimeOptions = portletConfig.getContainerRuntimeOptions();
-      String[] values = containerRuntimeOptions.get("javax.portlet.servletDefaultSessionScope");
+      String[] values = containerRuntimeOptions.get("jakarta.portlet.servletDefaultSessionScope");
 
       if ((values != null) && (values.length > 0) && "PORTLET_SCOPE".equals(values[0])) {
          String portletWindowId = getPortletWindow().getId().getStringId();

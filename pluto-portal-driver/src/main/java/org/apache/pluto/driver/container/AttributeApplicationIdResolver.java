@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.driver.container;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 public class AttributeApplicationIdResolver implements ApplicationIdResolver {
 

@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.container;
 
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.om.portlet.PortletDefinition;
 

@@ -16,8 +16,8 @@
  */
 package org.apache.portals.pluto.demo.applicant.mvcbean.cdi.thymeleaf.controller;
 
-import javax.portlet.MimeResponse;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.ResourceURL;
 
 
 /**

@@ -23,9 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.ResourceRequest;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.ResourceRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @author Scott Nicklous
@@ -70,23 +70,23 @@ public class PathDisplay {
    public PathDisplay(HttpServletRequest req, String caller) {
       this.caller = caller;
       title = (String) req.getAttribute("title");
-      async_request_uri = (String) req.getAttribute("javax.servlet.async.request_uri");
-      async_context_path = (String) req.getAttribute("javax.servlet.async.context_path");
-      async_servlet_path = (String) req.getAttribute("javax.servlet.async.servlet_path");
-      async_path_info = (String) req.getAttribute("javax.servlet.async.path_info");
-      async_query_string = (String) req.getAttribute("javax.servlet.async.query_string");
+      async_request_uri = (String) req.getAttribute("jakarta.servlet.async.request_uri");
+      async_context_path = (String) req.getAttribute("jakarta.servlet.async.context_path");
+      async_servlet_path = (String) req.getAttribute("jakarta.servlet.async.servlet_path");
+      async_path_info = (String) req.getAttribute("jakarta.servlet.async.path_info");
+      async_query_string = (String) req.getAttribute("jakarta.servlet.async.query_string");
 
-      forward_request_uri = (String) req.getAttribute("javax.servlet.forward.request_uri");
-      forward_context_path = (String) req.getAttribute("javax.servlet.forward.context_path");
-      forward_servlet_path = (String) req.getAttribute("javax.servlet.forward.servlet_path");
-      forward_path_info = (String) req.getAttribute("javax.servlet.forward.path_info");
-      forward_query_string = (String) req.getAttribute("javax.servlet.forward.query_string");
+      forward_request_uri = (String) req.getAttribute("jakarta.servlet.forward.request_uri");
+      forward_context_path = (String) req.getAttribute("jakarta.servlet.forward.context_path");
+      forward_servlet_path = (String) req.getAttribute("jakarta.servlet.forward.servlet_path");
+      forward_path_info = (String) req.getAttribute("jakarta.servlet.forward.path_info");
+      forward_query_string = (String) req.getAttribute("jakarta.servlet.forward.query_string");
 
-      include_request_uri = (String) req.getAttribute("javax.servlet.include.request_uri");
-      include_context_path = (String) req.getAttribute("javax.servlet.include.context_path");
-      include_servlet_path = (String) req.getAttribute("javax.servlet.include.servlet_path");
-      include_path_info = (String) req.getAttribute("javax.servlet.include.path_info");
-      include_query_string = (String) req.getAttribute("javax.servlet.include.query_string");
+      include_request_uri = (String) req.getAttribute("jakarta.servlet.include.request_uri");
+      include_context_path = (String) req.getAttribute("jakarta.servlet.include.context_path");
+      include_servlet_path = (String) req.getAttribute("jakarta.servlet.include.servlet_path");
+      include_path_info = (String) req.getAttribute("jakarta.servlet.include.path_info");
+      include_query_string = (String) req.getAttribute("jakarta.servlet.include.query_string");
 
       method_request_uri = req.getRequestURI();
       method_context_path = req.getContextPath();
@@ -107,23 +107,23 @@ public class PathDisplay {
    public PathDisplay(PortletRequest req, String caller) {
       this.caller = caller;
       title = (String) req.getAttribute("title");
-      async_request_uri = (String) req.getAttribute("javax.servlet.async.request_uri");
-      async_context_path = (String) req.getAttribute("javax.servlet.async.context_path");
-      async_servlet_path = (String) req.getAttribute("javax.servlet.async.servlet_path");
-      async_path_info = (String) req.getAttribute("javax.servlet.async.path_info");
-      async_query_string = (String) req.getAttribute("javax.servlet.async.query_string");
+      async_request_uri = (String) req.getAttribute("jakarta.servlet.async.request_uri");
+      async_context_path = (String) req.getAttribute("jakarta.servlet.async.context_path");
+      async_servlet_path = (String) req.getAttribute("jakarta.servlet.async.servlet_path");
+      async_path_info = (String) req.getAttribute("jakarta.servlet.async.path_info");
+      async_query_string = (String) req.getAttribute("jakarta.servlet.async.query_string");
 
-      forward_request_uri = (String) req.getAttribute("javax.servlet.forward.request_uri");
-      forward_context_path = (String) req.getAttribute("javax.servlet.forward.context_path");
-      forward_servlet_path = (String) req.getAttribute("javax.servlet.forward.servlet_path");
-      forward_path_info = (String) req.getAttribute("javax.servlet.forward.path_info");
-      forward_query_string = (String) req.getAttribute("javax.servlet.forward.query_string");
+      forward_request_uri = (String) req.getAttribute("jakarta.servlet.forward.request_uri");
+      forward_context_path = (String) req.getAttribute("jakarta.servlet.forward.context_path");
+      forward_servlet_path = (String) req.getAttribute("jakarta.servlet.forward.servlet_path");
+      forward_path_info = (String) req.getAttribute("jakarta.servlet.forward.path_info");
+      forward_query_string = (String) req.getAttribute("jakarta.servlet.forward.query_string");
 
-      include_request_uri = (String) req.getAttribute("javax.servlet.include.request_uri");
-      include_context_path = (String) req.getAttribute("javax.servlet.include.context_path");
-      include_servlet_path = (String) req.getAttribute("javax.servlet.include.servlet_path");
-      include_path_info = (String) req.getAttribute("javax.servlet.include.path_info");
-      include_query_string = (String) req.getAttribute("javax.servlet.include.query_string");
+      include_request_uri = (String) req.getAttribute("jakarta.servlet.include.request_uri");
+      include_context_path = (String) req.getAttribute("jakarta.servlet.include.context_path");
+      include_servlet_path = (String) req.getAttribute("jakarta.servlet.include.servlet_path");
+      include_path_info = (String) req.getAttribute("jakarta.servlet.include.path_info");
+      include_query_string = (String) req.getAttribute("jakarta.servlet.include.query_string");
 
       method_request_uri = "undefined";
       method_context_path = req.getContextPath();

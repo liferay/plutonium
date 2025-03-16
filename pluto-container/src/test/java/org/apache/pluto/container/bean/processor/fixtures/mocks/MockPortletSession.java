@@ -23,8 +23,8 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.portlet.PortletContext;
-import javax.portlet.PortletSession;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletSession;
 
 /**
  * @author Scott Nicklous
@@ -35,7 +35,7 @@ public class MockPortletSession implements PortletSession {
    private Map<String, Object> attrs = new HashMap<String, Object>();
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getAttribute(java.lang.String)
+    * @see jakarta.portlet.PortletSession#getAttribute(java.lang.String)
     */
    @Override
    public Object getAttribute(String arg0) {
@@ -43,7 +43,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getAttribute(java.lang.String, int)
+    * @see jakarta.portlet.PortletSession#getAttribute(java.lang.String, int)
     */
    @Override
    public Object getAttribute(String arg0, int arg1) {
@@ -51,7 +51,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getAttributeMap()
+    * @see jakarta.portlet.PortletSession#getAttributeMap()
     */
    @Override
    public Map<String, Object> getAttributeMap() {
@@ -59,7 +59,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getAttributeMap(int)
+    * @see jakarta.portlet.PortletSession#getAttributeMap(int)
     */
    @Override
    public Map<String, Object> getAttributeMap(int arg0) {
@@ -67,7 +67,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getAttributeNames()
+    * @see jakarta.portlet.PortletSession#getAttributeNames()
     */
    @Override
    public Enumeration<String> getAttributeNames() {
@@ -75,7 +75,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getAttributeNames(int)
+    * @see jakarta.portlet.PortletSession#getAttributeNames(int)
     */
    @Override
    public Enumeration<String> getAttributeNames(int arg0) {
@@ -83,7 +83,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getCreationTime()
+    * @see jakarta.portlet.PortletSession#getCreationTime()
     */
    @Override
    public long getCreationTime() {
@@ -91,7 +91,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getId()
+    * @see jakarta.portlet.PortletSession#getId()
     */
    @Override
    public String getId() {
@@ -99,7 +99,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getLastAccessedTime()
+    * @see jakarta.portlet.PortletSession#getLastAccessedTime()
     */
    @Override
    public long getLastAccessedTime() {
@@ -107,7 +107,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getMaxInactiveInterval()
+    * @see jakarta.portlet.PortletSession#getMaxInactiveInterval()
     */
    @Override
    public int getMaxInactiveInterval() {
@@ -115,7 +115,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#getPortletContext()
+    * @see jakarta.portlet.PortletSession#getPortletContext()
     */
    @Override
    public PortletContext getPortletContext() {
@@ -123,14 +123,14 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#invalidate()
+    * @see jakarta.portlet.PortletSession#invalidate()
     */
    @Override
    public void invalidate() {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#isNew()
+    * @see jakarta.portlet.PortletSession#isNew()
     */
    @Override
    public boolean isNew() {
@@ -138,21 +138,21 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#removeAttribute(java.lang.String)
+    * @see jakarta.portlet.PortletSession#removeAttribute(java.lang.String)
     */
    @Override
    public void removeAttribute(String arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#removeAttribute(java.lang.String, int)
+    * @see jakarta.portlet.PortletSession#removeAttribute(java.lang.String, int)
     */
    @Override
    public void removeAttribute(String arg0, int arg1) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#setAttribute(java.lang.String, java.lang.Object)
+    * @see jakarta.portlet.PortletSession#setAttribute(java.lang.String, java.lang.Object)
     */
    @Override
    public void setAttribute(String arg0, Object arg1) {
@@ -160,7 +160,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#setAttribute(java.lang.String, java.lang.Object, int)
+    * @see jakarta.portlet.PortletSession#setAttribute(java.lang.String, java.lang.Object, int)
     */
    @Override
    public void setAttribute(String arg0, Object arg1, int arg2) {
@@ -168,7 +168,7 @@ public class MockPortletSession implements PortletSession {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletSession#setMaxInactiveInterval(int)
+    * @see jakarta.portlet.PortletSession#setMaxInactiveInterval(int)
     */
    @Override
    public void setMaxInactiveInterval(int arg0) {

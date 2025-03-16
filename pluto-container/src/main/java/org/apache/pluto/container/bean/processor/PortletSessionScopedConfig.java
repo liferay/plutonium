@@ -24,11 +24,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.portlet.PortletSession;
-import javax.portlet.annotations.PortletSessionScoped;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.annotations.PortletSessionScoped;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

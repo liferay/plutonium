@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * This class contains a ClassLoader singleton {@link Map} named {@link #INVALIDATED_SESSIONS} that is used to work-
- * around a Tomcat issue such that invalidated {@link javax.servlet.http.HttpSession} objects are recycled in a cross-
+ * around a Tomcat issue such that invalidated {@link jakarta.servlet.http.HttpSession} objects are recycled in a cross-
  * context environment.
  */
 public class CachedPortletSessionUtil {

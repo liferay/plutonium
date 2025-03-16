@@ -21,22 +21,22 @@ package org.apache.pluto.container.om.portlet.impl.fixtures;
 
 import java.io.IOException;
 
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletConfigurations;
-import javax.portlet.annotations.PortletLifecycleFilter;
-import javax.portlet.filter.FilterChain;
-import javax.portlet.filter.FilterConfig;
-import javax.portlet.filter.HeaderFilter;
-import javax.portlet.filter.HeaderFilterChain;
-import javax.portlet.filter.RenderFilter;
-import javax.portlet.filter.ResourceFilter;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletConfigurations;
+import jakarta.portlet.annotations.PortletLifecycleFilter;
+import jakarta.portlet.filter.FilterChain;
+import jakarta.portlet.filter.FilterConfig;
+import jakarta.portlet.filter.HeaderFilter;
+import jakarta.portlet.filter.HeaderFilterChain;
+import jakarta.portlet.filter.RenderFilter;
+import jakarta.portlet.filter.ResourceFilter;
 
 /**
  * Test filter annotation with portletNames = '*', meaning that it applies

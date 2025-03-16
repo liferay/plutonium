@@ -19,8 +19,8 @@ package org.apache.pluto.tags.el;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
 
 
 class ApacheTaglibStandardExpressionEvaluatorProxy extends ExpressionEvaluatorProxy {

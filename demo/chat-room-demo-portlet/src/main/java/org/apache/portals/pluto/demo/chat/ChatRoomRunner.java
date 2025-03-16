@@ -21,10 +21,10 @@ package org.apache.portals.pluto.demo.chat;
 
 import java.io.PrintWriter;
 
-import javax.inject.Inject;
-import javax.portlet.PortletAsyncContext;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.inject.Inject;
+import jakarta.portlet.PortletAsyncContext;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 /**
  * The asynchronous thread for the chat room application. The run() method is executed

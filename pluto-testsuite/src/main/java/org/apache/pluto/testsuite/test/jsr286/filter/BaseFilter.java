@@ -17,9 +17,9 @@
  */
 package org.apache.pluto.testsuite.test.jsr286.filter;
 
-import javax.portlet.PortletException;
-import javax.portlet.filter.FilterConfig;
-import javax.portlet.filter.PortletFilter;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.filter.FilterConfig;
+import jakarta.portlet.filter.PortletFilter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

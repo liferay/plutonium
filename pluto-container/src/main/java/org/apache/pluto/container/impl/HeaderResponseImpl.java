@@ -19,14 +19,14 @@ package org.apache.pluto.container.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javax.portlet.HeaderResponse;
-import javax.portlet.PortletMode;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.PortletMode;
 
 import org.apache.pluto.container.PortletHeaderResponseContext;
 import org.apache.pluto.container.util.ArgumentUtility;
 
 /**
- * Implementation of the <code>javax.portlet.RenderResponse</code> interface.
+ * Implementation of the <code>jakarta.portlet.RenderResponse</code> interface.
  * 
  */
 @SuppressWarnings("unchecked")

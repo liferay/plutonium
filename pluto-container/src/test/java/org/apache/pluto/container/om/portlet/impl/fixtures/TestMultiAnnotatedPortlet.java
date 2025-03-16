@@ -19,13 +19,13 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.GenericPortlet;
-import javax.portlet.annotations.InitParameter;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.Multipart;
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletConfigurations;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.annotations.InitParameter;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.Multipart;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletConfigurations;
 
 /**
  * @author nick

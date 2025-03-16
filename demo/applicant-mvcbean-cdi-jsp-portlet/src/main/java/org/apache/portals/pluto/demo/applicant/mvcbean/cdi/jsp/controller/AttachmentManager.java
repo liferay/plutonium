@@ -20,9 +20,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.servlet.ServletContext;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletContext;
 
 import org.apache.portals.pluto.demo.applicant.mvcbean.cdi.jsp.dto.Attachment;
 

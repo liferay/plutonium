@@ -47,7 +47,7 @@ public class CDIVariableValidator extends VariableValidatorBase {
 			return false;
 		}
 
-		if (name.startsWith("javax.enterprise")) {
+		if (name.startsWith("jakarta.enterprise")) {
 			return false;
 		}
 

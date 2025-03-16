@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.impl;
 
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.RenderURL;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.RenderURL;
 
 import org.apache.pluto.container.PortletResponseContext;
 import org.apache.pluto.container.PortletURLProvider;

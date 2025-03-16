@@ -28,9 +28,9 @@ import java.util.ListResourceBundle;
  */
 class InlinePortletResourceBundle extends ListResourceBundle {
 
-   private final static String TITLE_KEY       = "javax.portlet.title";
-   private final static String SHORT_TITLE_KEY = "javax.portlet.short-title";
-   private final static String KEYWORDS_KEY    = "javax.portlet.keywords";
+   private final static String TITLE_KEY       = "jakarta.portlet.title";
+   private final static String SHORT_TITLE_KEY = "jakarta.portlet.short-title";
+   private final static String KEYWORDS_KEY    = "jakarta.portlet.keywords";
 
    private Object[][]          contents;
 

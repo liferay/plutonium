@@ -19,15 +19,15 @@ package org.apache.portals.pluto.demo.applicant.mvcbean.cdi.thymeleaf.portlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.portlet.HeaderPortlet;
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.PortletException;
-import javax.portlet.annotations.HeaderMethod;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.Preference;
-import javax.portlet.annotations.Supports;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.portlet.HeaderPortlet;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.annotations.HeaderMethod;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.Preference;
+import jakarta.portlet.annotations.Supports;
 
 
 /**

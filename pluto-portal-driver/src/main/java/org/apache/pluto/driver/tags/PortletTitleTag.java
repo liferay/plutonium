@@ -23,12 +23,12 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.portlet.PortletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.portlet.PortletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 import org.apache.pluto.container.PortletWindow;
 import org.apache.pluto.driver.AttributeKeys;
@@ -94,7 +94,7 @@ public class PortletTitleTag extends TagSupport {
                ServletRequest request = pageContext.getRequest();
                Locale defaultLocale = request.getLocale();
                ResourceBundle bundle = config.getResourceBundle(defaultLocale);
-               title = bundle.getString("javax.portlet.title");
+               title = bundle.getString("jakarta.portlet.title");
             } catch (Throwable th) {
                if (LOG.isDebugEnabled()) {
                   StringBuilder txt = new StringBuilder(128);

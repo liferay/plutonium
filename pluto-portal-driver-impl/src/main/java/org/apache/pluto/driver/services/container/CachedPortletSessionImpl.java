@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.driver.services.container;
 
-import javax.portlet.PortletSession;
-import javax.portlet.filter.PortletSessionWrapper;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.filter.PortletSessionWrapper;
 
 public class CachedPortletSessionImpl extends PortletSessionWrapper implements CachedPortletSession {
 

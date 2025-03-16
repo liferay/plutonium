@@ -19,10 +19,10 @@ package org.apache.pluto.container;
 import java.util.List;
 import java.util.Set;
 
-import javax.portlet.Event;
-import javax.portlet.MutableRenderParameters;
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.Event;
+import jakarta.portlet.MutableRenderParameters;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 
 /**
  * @author <a href="mailto:ate@douma.nu">Ate Douma</a>

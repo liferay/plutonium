@@ -29,7 +29,7 @@ import org.apache.pluto.driver.services.portal.SupportedWindowStateService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.portlet.WindowState;
+import jakarta.portlet.WindowState;
 
 import java.util.HashSet;
 import java.util.Iterator;

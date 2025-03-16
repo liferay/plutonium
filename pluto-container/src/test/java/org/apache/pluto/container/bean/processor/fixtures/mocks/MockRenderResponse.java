@@ -21,8 +21,8 @@ package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
 import java.util.Collection;
 
-import javax.portlet.PortletMode;
-import javax.portlet.RenderResponse;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.RenderResponse;
 
 /**
  * @author Scott Nicklous
@@ -31,14 +31,14 @@ import javax.portlet.RenderResponse;
 public class MockRenderResponse extends MockMimeResponse implements RenderResponse {
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderResponse#setNextPossiblePortletModes(java.util.Collection)
+    * @see jakarta.portlet.RenderResponse#setNextPossiblePortletModes(java.util.Collection)
     */
    @Override
    public void setNextPossiblePortletModes(Collection<? extends PortletMode> arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderResponse#setTitle(java.lang.String)
+    * @see jakarta.portlet.RenderResponse#setTitle(java.lang.String)
     */
    @Override
    public void setTitle(String arg0) {

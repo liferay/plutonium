@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
 
 /**
  * @author Scott

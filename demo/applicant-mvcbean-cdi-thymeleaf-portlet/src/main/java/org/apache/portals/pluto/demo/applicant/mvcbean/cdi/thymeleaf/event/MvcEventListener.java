@@ -16,15 +16,15 @@
  */
 package org.apache.portals.pluto.demo.applicant.mvcbean.cdi.thymeleaf.event;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Observes;
-import javax.mvc.event.AfterControllerEvent;
-import javax.mvc.event.AfterProcessViewEvent;
-import javax.mvc.event.BeforeControllerEvent;
-import javax.mvc.event.BeforeProcessViewEvent;
-import javax.mvc.event.ControllerRedirectEvent;
-import javax.mvc.event.MvcEvent;
-import javax.ws.rs.container.ResourceInfo;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.event.Observes;
+import jakarta.mvc.event.AfterControllerEvent;
+import jakarta.mvc.event.AfterProcessViewEvent;
+import jakarta.mvc.event.BeforeControllerEvent;
+import jakarta.mvc.event.BeforeProcessViewEvent;
+import jakarta.mvc.event.ControllerRedirectEvent;
+import jakarta.mvc.event.MvcEvent;
+import jakarta.ws.rs.container.ResourceInfo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -20,8 +20,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import java.util.ListResourceBundle;
 
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

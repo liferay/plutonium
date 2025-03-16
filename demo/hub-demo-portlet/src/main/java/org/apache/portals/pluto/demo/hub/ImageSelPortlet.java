@@ -29,18 +29,18 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Set;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.Dependency;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.Dependency;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletConfiguration;
 import static org.apache.portals.pluto.demo.hub.Constants.IMG_MAP;
 
 
@@ -49,7 +49,7 @@ import static org.apache.portals.pluto.demo.hub.Constants.IMG_MAP;
  */
 @PortletConfiguration(portletName = "ImageSelPortlet", publicParams = "imgName", 
                       title = @LocaleString("PH Image Selection Portlet"),
-                      dependencies = @Dependency(name="PortletHub", scope="javax.portlet", version="3.0.0"))
+                      dependencies = @Dependency(name="PortletHub", scope="jakarta.portlet", version="3.0.0"))
 public class ImageSelPortlet extends GenericPortlet {
 
    // Set up logging
@@ -71,7 +71,7 @@ public class ImageSelPortlet extends GenericPortlet {
    }
    
    /* (non-Javadoc)
-    * @see javax.portlet.GenericPortlet#serveResource(javax.portlet.ResourceRequest, javax.portlet.ResourceResponse)
+    * @see jakarta.portlet.GenericPortlet#serveResource(jakarta.portlet.ResourceRequest, jakarta.portlet.ResourceResponse)
     */
    @Override
    public void serveResource(ResourceRequest req, ResourceResponse resp)

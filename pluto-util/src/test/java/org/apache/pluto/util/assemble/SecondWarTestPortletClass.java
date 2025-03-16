@@ -21,13 +21,13 @@ package org.apache.pluto.util.assemble;
 
 import java.io.IOException;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.Portlet;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.Portlet;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
 
 /**
  * Dummy portlet for test
@@ -38,7 +38,7 @@ import javax.portlet.RenderResponse;
 public class SecondWarTestPortletClass implements Portlet {
 
    /* (non-Javadoc)
-    * @see javax.portlet.Portlet#destroy()
+    * @see jakarta.portlet.Portlet#destroy()
     */
    @Override
    public void destroy() {
@@ -47,7 +47,7 @@ public class SecondWarTestPortletClass implements Portlet {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.Portlet#init(javax.portlet.PortletConfig)
+    * @see jakarta.portlet.Portlet#init(jakarta.portlet.PortletConfig)
     */
    @Override
    public void init(PortletConfig arg0) throws PortletException {
@@ -56,7 +56,7 @@ public class SecondWarTestPortletClass implements Portlet {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.Portlet#processAction(javax.portlet.ActionRequest, javax.portlet.ActionResponse)
+    * @see jakarta.portlet.Portlet#processAction(jakarta.portlet.ActionRequest, jakarta.portlet.ActionResponse)
     */
    @Override
    public void processAction(ActionRequest arg0, ActionResponse arg1)
@@ -66,7 +66,7 @@ public class SecondWarTestPortletClass implements Portlet {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.Portlet#render(javax.portlet.RenderRequest, javax.portlet.RenderResponse)
+    * @see jakarta.portlet.Portlet#render(jakarta.portlet.RenderRequest, jakarta.portlet.RenderResponse)
     */
    @Override
    public void render(RenderRequest arg0, RenderResponse arg1)

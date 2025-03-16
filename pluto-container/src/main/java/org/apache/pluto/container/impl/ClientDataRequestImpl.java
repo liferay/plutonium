@@ -23,16 +23,16 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 
-import javax.portlet.ClientDataRequest;
-import javax.portlet.PortletException;
-import javax.servlet.ServletException;
-import javax.servlet.http.Part;
+import jakarta.portlet.ClientDataRequest;
+import jakarta.portlet.PortletException;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Part;
 
 import org.apache.pluto.container.PortletRequestContext;
 import org.apache.pluto.container.PortletResponseContext;
 
 /**
- * Implementation of the <code>javax.portlet.ClientDataRequest</code> interface.
+ * Implementation of the <code>jakarta.portlet.ClientDataRequest</code> interface.
  */
 public abstract class ClientDataRequestImpl extends PortletRequestImpl implements ClientDataRequest
 {

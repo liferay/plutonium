@@ -16,18 +16,18 @@
  */
 package org.apache.pluto.tags;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletResponse;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.servlet.ServletRequest;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.TagData;
-import javax.servlet.jsp.tagext.TagExtraInfo;
-import javax.servlet.jsp.tagext.TagSupport;
-import javax.servlet.jsp.tagext.VariableInfo;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.TagData;
+import jakarta.servlet.jsp.tagext.TagExtraInfo;
+import jakarta.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.tagext.VariableInfo;
 
 /**
  * A tag handler for the <CODE>defineObjects</CODE> tag as defined in the JSR 168.
@@ -104,15 +104,15 @@ public class DefineObjectsTag168 extends TagSupport {
         public VariableInfo[] getVariableInfo(TagData tagData) {
             VariableInfo[] info = new VariableInfo[]{
             	new VariableInfo("renderRequest",
-            					 "javax.portlet.RenderRequest",
+            					 "jakarta.portlet.RenderRequest",
             					 true,
             					 VariableInfo.AT_BEGIN),
                 new VariableInfo("renderResponse",
-                   				 "javax.portlet.RenderResponse",
+                   				 "jakarta.portlet.RenderResponse",
                    				 true,
                   				 VariableInfo.AT_BEGIN),                            
                 new VariableInfo("portletConfig",
-                                 "javax.portlet.PortletConfig",
+                                 "jakarta.portlet.PortletConfig",
                                  true,
                                  VariableInfo.AT_BEGIN)                                              
             };

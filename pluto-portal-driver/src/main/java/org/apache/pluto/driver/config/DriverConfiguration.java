@@ -19,9 +19,9 @@ package org.apache.pluto.driver.config;
 import java.util.Collection;
 import java.util.Set;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.PortletContainerException;
 import org.apache.pluto.container.PortletPreferencesService;
@@ -51,7 +51,7 @@ public interface DriverConfiguration {
     /**
      * Retrieve the name of the portal
      * as should be returned in
-     * {@link javax.portlet.PortalContext#getPortalInfo()}
+     * {@link jakarta.portlet.PortalContext#getPortalInfo()}
      * @return the name of the portal.
      */
     String getPortalName();
@@ -59,7 +59,7 @@ public interface DriverConfiguration {
     /**
      * Retrieve the version of the portal
      * as should be returned in
-     * {@link javax.portlet.PortalContext#getPortalInfo()}
+     * {@link jakarta.portlet.PortalContext#getPortalInfo()}
      * @return the portal version.
      */
     String getPortalVersion();

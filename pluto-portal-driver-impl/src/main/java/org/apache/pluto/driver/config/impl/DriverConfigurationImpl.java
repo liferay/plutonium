@@ -19,9 +19,9 @@ package org.apache.pluto.driver.config.impl;
 import java.util.Collection;
 import java.util.Set;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.PortletContainerException;
 import org.apache.pluto.container.PortletPreferencesService;

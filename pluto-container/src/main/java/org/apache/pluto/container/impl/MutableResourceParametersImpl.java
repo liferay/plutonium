@@ -21,7 +21,7 @@ package org.apache.pluto.container.impl;
 
 import java.util.Map;
 
-import javax.portlet.MutableResourceParameters;
+import jakarta.portlet.MutableResourceParameters;
 
 import org.apache.pluto.container.PortletURLProvider;
 import org.apache.pluto.container.PortletURLProvider.ParamType;
@@ -63,7 +63,7 @@ public class MutableResourceParametersImpl extends MutablePortletParametersImpl
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#mutableClone()
+    * @see jakarta.portlet.PortletParameters#mutableClone()
     */
    @Override
    public MutableResourceParameters clone() {

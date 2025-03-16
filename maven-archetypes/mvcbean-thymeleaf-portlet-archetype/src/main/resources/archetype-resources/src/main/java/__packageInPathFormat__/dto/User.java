@@ -1,7 +1,7 @@
 package ${package}.dto;
 
-import javax.inject.Inject;
-import javax.ws.rs.FormParam;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.FormParam;
 import java.io.Serializable;
 import org.hibernate.validator.constraints.NotBlank;
 

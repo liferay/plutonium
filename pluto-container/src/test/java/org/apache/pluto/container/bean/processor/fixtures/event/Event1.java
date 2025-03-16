@@ -19,13 +19,13 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.event;
 
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.annotations.EventDefinition;
-import javax.portlet.annotations.EventMethod;
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletQName;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.annotations.EventDefinition;
+import jakarta.portlet.annotations.EventMethod;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletQName;
+import jakarta.portlet.annotations.RenderMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

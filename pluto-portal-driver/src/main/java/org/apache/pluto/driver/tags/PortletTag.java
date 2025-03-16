@@ -23,13 +23,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.WindowState;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.BodyTagSupport;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.tagext.BodyTagSupport;
 
 import org.apache.pluto.container.PortletContainer;
 import org.apache.pluto.container.PortletWindow;
@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
 /**
  * The portlet tag is used to render a portlet specified by the portlet ID.
  * 
- * @see javax.portlet.Portlet#render(javax.portlet.RenderRequest,javax.portlet.RenderResponse)
+ * @see jakarta.portlet.Portlet#render(jakarta.portlet.RenderRequest,jakarta.portlet.RenderResponse)
  * @see org.apache.pluto.container.PortletContainer#doRender(PortletWindow, HttpServletRequest, HttpServletResponse)
  * 
  */
@@ -195,7 +195,7 @@ public class PortletTag extends BodyTagSupport {
                String renderHeaders = null;
                if (portalURL.getVersion(evaluatedPortletId).equalsIgnoreCase("2.0")) {
 
-                  ContainerRuntimeOption crt = pd.getContainerRuntimeOption("javax.portlet.renderHeaders");
+                  ContainerRuntimeOption crt = pd.getContainerRuntimeOption("jakarta.portlet.renderHeaders");
                   if (crt != null) {
                      List<String> headers = crt.getValues();
                      if (headers.size() == 1 && headers.get(0).equalsIgnoreCase("true")) {

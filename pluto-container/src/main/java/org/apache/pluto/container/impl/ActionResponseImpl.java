@@ -18,9 +18,9 @@ package org.apache.pluto.container.impl;
 
 import java.io.IOException;
 
-import javax.portlet.ActionResponse;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.RenderURL;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.RenderURL;
 
 import org.apache.pluto.container.PortletActionResponseContext;
 import org.apache.pluto.container.ResourceURLProvider;

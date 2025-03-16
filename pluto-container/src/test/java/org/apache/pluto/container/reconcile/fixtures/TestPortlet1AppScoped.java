@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.reconcile.fixtures;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.portlet.GenericPortlet;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.portlet.GenericPortlet;
 
 /**
  * @author Scott Nicklous

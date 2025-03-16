@@ -18,9 +18,9 @@ package org.apache.pluto.container;
 
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.ValidatorException;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.ValidatorException;
 
 import org.apache.pluto.container.om.portlet.PortletDefinition;
 

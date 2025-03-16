@@ -17,7 +17,7 @@
  */
 package org.apache.pluto.testsuite.test.jsr286.filter;
 
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.testsuite.TestResult;
 import org.apache.pluto.testsuite.annotations.DefaultTestPhase;

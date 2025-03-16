@@ -22,7 +22,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.portlet.PortletConfig;
+import jakarta.portlet.PortletConfig;
 
 import org.thymeleaf.messageresolver.StandardMessageResolver;
 

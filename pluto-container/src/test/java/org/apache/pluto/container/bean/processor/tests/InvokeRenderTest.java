@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletMode;
 
 import org.apache.pluto.container.bean.processor.AnnotatedMethodStore;
 import org.apache.pluto.container.bean.processor.ConfigSummary;

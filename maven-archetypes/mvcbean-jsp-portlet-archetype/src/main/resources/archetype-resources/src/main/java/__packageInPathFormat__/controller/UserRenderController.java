@@ -2,27 +2,27 @@ package ${package}.controller;
 
 import ${package}.dto.User;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
-import javax.mvc.Controller;
-import javax.mvc.Models;
-import javax.mvc.engine.ViewEngineContext;
+import jakarta.mvc.Controller;
+import jakarta.mvc.Models;
+import jakarta.mvc.engine.ViewEngineContext;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionURL;
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.MutableActionParameters;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.annotations.HeaderMethod;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.MutableActionParameters;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.annotations.HeaderMethod;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.RenderMethod;
 
-import javax.validation.executable.ExecutableType;
-import javax.validation.executable.ValidateOnExecution;
+import jakarta.validation.executable.ExecutableType;
+import jakarta.validation.executable.ValidateOnExecution;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

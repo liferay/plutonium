@@ -24,14 +24,14 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Arrays;
 
-import javax.inject.Named;
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.PortletException;
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.PortletSerializable;
-import javax.portlet.annotations.RenderMethod;
-import javax.portlet.annotations.RenderStateScoped;
+import jakarta.inject.Named;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.PortletSerializable;
+import jakarta.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.RenderStateScoped;
 
 /**
  * Render state scoped bean. The bean is stored as a render parameter, so it

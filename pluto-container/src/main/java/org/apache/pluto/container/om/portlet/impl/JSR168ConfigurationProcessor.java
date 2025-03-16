@@ -22,9 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import javax.portlet.Portlet;
-import javax.portlet.PreferencesValidator;
-import javax.xml.bind.JAXBElement;
+import jakarta.portlet.Portlet;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.xml.bind.JAXBElement;
 
 import org.apache.pluto.container.om.portlet.CustomPortletMode;
 import org.apache.pluto.container.om.portlet.CustomWindowState;
@@ -84,7 +84,7 @@ public class JSR168ConfigurationProcessor extends ConfigurationProcessor {
    }
 
    /* (non-Javadoc)
-    * @see org.apache.pluto.container.om.portlet.impl.jsr168.ConfigurationProcessor#process(javax.xml.bind.JAXBElement)
+    * @see org.apache.pluto.container.om.portlet.impl.jsr168.ConfigurationProcessor#process(jakarta.xml.bind.JAXBElement)
     */
    @Override
    public void process(JAXBElement<?> rootElement)

@@ -20,8 +20,8 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.Vector;
 
-import javax.portlet.PortletContext;
-import javax.portlet.filter.FilterConfig;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.filter.FilterConfig;
 
 import org.apache.pluto.container.om.portlet.InitParam;
 
@@ -43,14 +43,14 @@ public class FilterConfigImpl implements FilterConfig {
 	}
 
 	/**
-	 * @see javax.portlet.filter.FilterConfig#getFilterName()
+	 * @see jakarta.portlet.filter.FilterConfig#getFilterName()
 	 */
 	public String getFilterName() {
 		return filterName;
 	}
 
 	/**
-	 * @see javax.portlet.filter.FilterConfig#getInitParameter(java.lang.String)
+	 * @see jakarta.portlet.filter.FilterConfig#getInitParameter(java.lang.String)
 	 */
 	public String getInitParameter(String name) {
 		if (initParameters != null) {
@@ -64,7 +64,7 @@ public class FilterConfigImpl implements FilterConfig {
 	}
 
 	/**
-	 * @see javax.portlet.filter.FilterConfig#getInitParameterNames()
+	 * @see jakarta.portlet.filter.FilterConfig#getInitParameterNames()
 	 */
 	public Enumeration<String> getInitParameterNames() {
         Vector<String> enum1 = new Vector<String>();
@@ -77,7 +77,7 @@ public class FilterConfigImpl implements FilterConfig {
 	}
 
 	/**
-	 * @see javax.portlet.filter.FilterConfig#getPortletContext()
+	 * @see jakarta.portlet.filter.FilterConfig#getPortletContext()
 	 */
 	public PortletContext getPortletContext() {
 		return portletContext;

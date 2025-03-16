@@ -17,7 +17,7 @@
 package org.apache.pluto.container;
 
 import javax.ccpp.Profile;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * The CC/PP profile service defining how to get the CCPP profile

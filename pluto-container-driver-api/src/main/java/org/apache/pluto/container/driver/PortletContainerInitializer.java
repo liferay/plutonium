@@ -21,18 +21,18 @@ package org.apache.pluto.container.driver;
 import java.io.InputStream;
 import java.util.Set;
 
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletConfigurations;
-import javax.portlet.annotations.PortletLifecycleFilter;
-import javax.portlet.annotations.PortletListener;
-import javax.portlet.annotations.PortletPreferencesValidator;
-import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRegistration;
-import javax.servlet.annotation.HandlesTypes;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletConfigurations;
+import jakarta.portlet.annotations.PortletLifecycleFilter;
+import jakarta.portlet.annotations.PortletListener;
+import jakarta.portlet.annotations.PortletPreferencesValidator;
+import jakarta.servlet.MultipartConfigElement;
+import jakarta.servlet.ServletContainerInitializer;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRegistration;
+import jakarta.servlet.annotation.HandlesTypes;
 
 import org.apache.pluto.container.PortletInvokerService;
 import org.apache.pluto.container.om.portlet.PortletDefinition;
@@ -63,8 +63,8 @@ public class PortletContainerInitializer implements ServletContainerInitializer 
    /*
     * (non-Javadoc)
     * 
-    * @see javax.servlet.ServletContainerInitializer#onStartup(java.util.Set,
-    * javax.servlet.ServletContext)
+    * @see jakarta.servlet.ServletContainerInitializer#onStartup(java.util.Set,
+    * jakarta.servlet.ServletContext)
     */
    @Override
    public void onStartup(Set<Class<?>> classes, ServletContext ctx)

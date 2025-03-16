@@ -19,12 +19,12 @@ package org.apache.pluto.container.impl;
 import java.util.Collection;
 import java.util.Enumeration;
 
-import javax.portlet.PortalContext;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletResponse;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.PortalContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletResponse;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.PortletContainer;
 import org.apache.pluto.container.PortletResponseContext;
@@ -38,7 +38,7 @@ import org.w3c.dom.DOMException;
 import org.w3c.dom.Element;
 
 /**
- * Abstract <code>javax.portlet.PortletResponse</code> implementation.
+ * Abstract <code>jakarta.portlet.PortletResponse</code> implementation.
  */
 public abstract class PortletResponseImpl implements PortletResponse
 {

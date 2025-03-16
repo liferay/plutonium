@@ -19,9 +19,9 @@ package org.apache.pluto.testsuite.test;
 import java.util.Enumeration;
 import java.util.Map;
 
-import javax.portlet.PortletPreferences;
-import javax.portlet.PortletRequest;
-import javax.portlet.ReadOnlyException;
+import jakarta.portlet.PortletPreferences;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.ReadOnlyException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

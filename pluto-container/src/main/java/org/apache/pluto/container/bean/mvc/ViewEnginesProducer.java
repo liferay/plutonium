@@ -19,12 +19,12 @@ package org.apache.pluto.container.bean.mvc;
 import java.util.Collections;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.mvc.engine.ViewEngine;
-import javax.portlet.PortletContext;
-import javax.ws.rs.core.Configuration;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.mvc.engine.ViewEngine;
+import jakarta.portlet.PortletContext;
+import jakarta.ws.rs.core.Configuration;
 
 
 /**

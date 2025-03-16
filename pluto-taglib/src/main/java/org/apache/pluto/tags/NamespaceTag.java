@@ -18,10 +18,10 @@ package org.apache.pluto.tags;
 
 import java.io.IOException;
 
-import javax.portlet.PortletResponse;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.tagext.TagSupport;
+import jakarta.portlet.PortletResponse;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.tagext.TagSupport;
 
 /**
  * This tag produces a unique value for the current portlet.
@@ -37,7 +37,7 @@ public class NamespaceTag extends TagSupport {
 	private static final long serialVersionUID = 286L;
 
     /* (non-Javadoc)
-     * @see javax.servlet.jsp.tagext.Tag#doStartTag()
+     * @see jakarta.servlet.jsp.tagext.Tag#doStartTag()
      */
     public int doStartTag() throws JspException {
     	

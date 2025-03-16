@@ -22,7 +22,7 @@ package org.apache.pluto.container.bean.processor.fixtures;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * @author Scott

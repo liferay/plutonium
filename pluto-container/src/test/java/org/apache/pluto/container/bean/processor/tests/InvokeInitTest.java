@@ -30,7 +30,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import javax.portlet.PortletConfig;
+import jakarta.portlet.PortletConfig;
 
 import org.apache.pluto.container.bean.processor.AnnotatedMethodStore;
 import org.apache.pluto.container.bean.processor.ConfigSummary;

@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.container.driver;
 
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.container.PortletInvokerService;
 import org.apache.pluto.container.PortletWindow;

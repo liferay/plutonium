@@ -19,7 +19,7 @@
 
 package org.apache.pluto.container.bean.processor.fixtures;
 
-import javax.portlet.annotations.RenderStateScoped;
+import jakarta.portlet.annotations.RenderStateScoped;
 
 /**
  * Verifies that an {@literal @}RenderStateScoped bean not implementing 

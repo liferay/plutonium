@@ -26,28 +26,28 @@ import static org.apache.portals.pluto.demo.hub.Constants.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
 
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.Dependency;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.Dependency;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletConfiguration;
 
 /**
  * A demo portlet exercising the partial action processing sequence
  */
 @PortletConfiguration(portletName = "PartialActionPortlet", publicParams = "color",
                         title = @LocaleString("PH Partial Action Portlet"),
-                        dependencies = @Dependency(name="PortletHub", scope="javax.portlet", version="3.0.0"))
+                        dependencies = @Dependency(name="PortletHub", scope="jakarta.portlet", version="3.0.0"))
 public class PartialActionPortlet extends GenericPortlet {
 
    // Set up logging
@@ -95,7 +95,7 @@ public class PartialActionPortlet extends GenericPortlet {
    };
    
    /* (non-Javadoc)
-    * @see javax.portlet.GenericPortlet#serveResource(javax.portlet.ResourceRequest, javax.portlet.ResourceResponse)
+    * @see jakarta.portlet.GenericPortlet#serveResource(jakarta.portlet.ResourceRequest, jakarta.portlet.ResourceResponse)
     */
    @SuppressWarnings("deprecation")
    @Override

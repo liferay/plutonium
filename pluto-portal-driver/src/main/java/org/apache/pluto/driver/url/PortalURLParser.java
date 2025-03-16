@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.driver.url;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * Created by IntelliJ IDEA.

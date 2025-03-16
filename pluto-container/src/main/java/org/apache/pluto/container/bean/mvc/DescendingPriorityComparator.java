@@ -18,8 +18,8 @@ package org.apache.pluto.container.bean.mvc;
 
 import java.util.Comparator;
 
-import javax.annotation.Priority;
-import javax.enterprise.inject.Vetoed;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.inject.Vetoed;
 
 
 /**

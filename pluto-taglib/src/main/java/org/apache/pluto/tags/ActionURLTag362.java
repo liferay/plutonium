@@ -23,13 +23,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.portlet.ActionURL;
-import javax.portlet.BaseURL;
-import javax.portlet.MimeResponse;
-import javax.portlet.MutableActionParameters;
-import javax.portlet.MutableRenderParameters;
-import javax.portlet.MimeResponse.Copy;
-import javax.servlet.jsp.JspException;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.BaseURL;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.MutableActionParameters;
+import jakarta.portlet.MutableRenderParameters;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * 

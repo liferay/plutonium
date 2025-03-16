@@ -24,8 +24,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.testsuite.TestResult;
 
@@ -39,13 +39,13 @@ public class ResourceBundleTest extends AbstractReflectivePortletTest  {
 	// Static Constant Definitions ---------------------------------------------
 
 	/** Key for portlet title defined in portlet.xml/init-param. */
-    private static final String TITLE_KEY = "javax.portlet.title";
+    private static final String TITLE_KEY = "jakarta.portlet.title";
 
 	/** Key for portlet short title defined in portlet.xml/init-param. */
-    private static final String SHORT_TITLE_KEY = "javax.portlet.short-title";
+    private static final String SHORT_TITLE_KEY = "jakarta.portlet.short-title";
 
 	/** Key for portlet keywords defined in portlet.xml/init-param. */
-    private static final String KEYWORDS_KEY = "javax.portlet.keywords";
+    private static final String KEYWORDS_KEY = "jakarta.portlet.keywords";
 
     /**
      * Parameter name for if resource bundle is declared in

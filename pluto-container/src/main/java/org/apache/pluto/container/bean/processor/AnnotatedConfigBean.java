@@ -19,7 +19,7 @@
 
 package org.apache.pluto.container.bean.processor;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * A container for the annotated method configuration.

@@ -24,12 +24,12 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.context.spi.CreationalContext;
-import javax.enterprise.inject.spi.Bean;
-import javax.portlet.PortletRequest;
-import javax.portlet.StateAwareResponse;
-import javax.portlet.annotations.PortletSerializable;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.context.spi.CreationalContext;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.StateAwareResponse;
+import jakarta.portlet.annotations.PortletSerializable;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

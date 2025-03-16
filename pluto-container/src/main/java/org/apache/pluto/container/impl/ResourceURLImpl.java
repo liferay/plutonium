@@ -18,8 +18,8 @@
 
 package org.apache.pluto.container.impl;
 
-import javax.portlet.MutableResourceParameters;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.MutableResourceParameters;
+import jakarta.portlet.ResourceURL;
 
 import org.apache.pluto.container.PortletMimeResponseContext;
 import org.apache.pluto.container.PortletURLProvider;
@@ -89,7 +89,7 @@ public class ResourceURLImpl extends BaseURLImpl implements ResourceURL {
    /*
     * (non-Javadoc)
     * 
-    * @see javax.portlet.ResourceURL#getResourceParameters()
+    * @see jakarta.portlet.ResourceURL#getResourceParameters()
     */
    public MutableResourceParameters getResourceParameters() {
       return new MutableResourceParametersImpl(urlProvider, windowId);
@@ -98,7 +98,7 @@ public class ResourceURLImpl extends BaseURLImpl implements ResourceURL {
    /*
     * (non-Javadoc)
     * 
-    * @see javax.portlet.ResourceURL#getResourceID()
+    * @see jakarta.portlet.ResourceURL#getResourceID()
     */
    public String getResourceID() {
       return urlProvider.getResourceID();

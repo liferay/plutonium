@@ -16,10 +16,10 @@
  */
 package org.apache.pluto.driver.services.container;
 
-import static javax.portlet.PortletRequest.ACTION_SCOPE_ID;
-import static javax.portlet.PortletRequest.HEADER_PHASE;
-import static javax.portlet.PortletRequest.RENDER_PHASE;
-import static javax.portlet.PortletRequest.RESOURCE_PHASE;
+import static jakarta.portlet.PortletRequest.ACTION_SCOPE_ID;
+import static jakarta.portlet.PortletRequest.HEADER_PHASE;
+import static jakarta.portlet.PortletRequest.RENDER_PHASE;
+import static jakarta.portlet.PortletRequest.RESOURCE_PHASE;
 import static org.apache.pluto.driver.url.PortalURLParameter.PARAM_TYPE_RENDER;
 
 import java.util.ArrayList;
@@ -30,11 +30,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.MimeResponse;
-import javax.portlet.PortletConfig;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletConfig;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.HeaderData;
 import org.apache.pluto.container.PortletContainer;

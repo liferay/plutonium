@@ -16,11 +16,11 @@
  */
 package org.apache.pluto.tags;
 
-import javax.portlet.PortletResponse;
-import javax.portlet.PortletURL;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceResponse;
-import javax.servlet.jsp.JspException;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.PortletURL;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceResponse;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * 
@@ -64,7 +64,7 @@ public class ActionURLTag286 extends PortletURLTag286 {
 	public int doEndTag() throws JspException {
 		
 		if(name != null){
-			addParameter("javax.portlet.action", name);
+			addParameter("jakarta.portlet.action", name);
 		}
 		
 		return super.doEndTag();

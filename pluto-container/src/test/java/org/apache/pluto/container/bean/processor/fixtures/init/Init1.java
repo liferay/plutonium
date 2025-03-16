@@ -19,9 +19,9 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.init;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.annotations.InitMethod;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.annotations.InitMethod;
+import jakarta.portlet.annotations.RenderMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

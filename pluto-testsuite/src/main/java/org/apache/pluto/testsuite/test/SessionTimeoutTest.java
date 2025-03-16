@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.testsuite.test;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletSession;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -16,8 +16,8 @@
  */
 package org.apache.portals.pluto.demo.applicant.mvcbean.cdi.jsp.portlet;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.filter.PortletRequestWrapper;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.filter.PortletRequestWrapper;
 
 
 /**

@@ -23,14 +23,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import javax.portlet.CacheControl;
-import javax.portlet.MimeResponse;
+import jakarta.portlet.CacheControl;
+import jakarta.portlet.MimeResponse;
 
-import static javax.portlet.MimeResponse.Copy.*;
+import static jakarta.portlet.MimeResponse.Copy.*;
 
-import javax.portlet.RenderURL;
-import javax.portlet.ActionURL;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.ResourceURL;
 
 import org.apache.pluto.container.PortletMimeResponseContext;
 import org.apache.pluto.container.om.portlet.PortletDefinition;

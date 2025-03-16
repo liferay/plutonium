@@ -19,7 +19,7 @@
 
 package org.apache.pluto.container.driver;
 
-import javax.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServlet;
 
 /**
  * Dummy servlet to allow "legacy" portlets with web.xml files specifying PortletServlet to deploy properly.

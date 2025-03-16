@@ -27,19 +27,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.ActionURL;
-import javax.portlet.BaseURL;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.PortalContext;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletContext;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletSecurityException;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.RenderParameters;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceURL;
-import javax.portlet.WindowState;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.BaseURL;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.PortalContext;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletSecurityException;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.RenderParameters;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.PortletResponseContext;
 import org.apache.pluto.container.PortletURLListenerService;
@@ -137,7 +137,7 @@ public abstract class BaseURLImpl implements BaseURL {
    // ------------------------------------------------------------
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#write(java.io.Writer, boolean)
+    * @see jakarta.portlet.BaseURL#write(java.io.Writer, boolean)
     */
    public void write(Writer out, boolean escapeXML) throws IOException {
       filterURL();
@@ -145,14 +145,14 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#write(java.io.Writer)
+    * @see jakarta.portlet.BaseURL#write(java.io.Writer)
     */
    public void write(Writer out) throws IOException {
       write(out, true);
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#toString()
+    * @see jakarta.portlet.BaseURL#toString()
     */
    public String toString() {
       filterURL();
@@ -161,14 +161,14 @@ public abstract class BaseURLImpl implements BaseURL {
 
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#append(java.lang.Appendable)
+    * @see jakarta.portlet.BaseURL#append(java.lang.Appendable)
     */
    public Appendable append(Appendable out) throws IOException {
       return append(out, true);
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#append(java.lang.Appendable, boolean)
+    * @see jakarta.portlet.BaseURL#append(java.lang.Appendable, boolean)
     */
    public Appendable append(Appendable out, boolean escapeXML) throws IOException {
       filterURL();
@@ -177,28 +177,28 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderState#getRenderParameters()
+    * @see jakarta.portlet.RenderState#getRenderParameters()
     */
    public RenderParameters getRenderParameters() {
       return new RenderParametersImpl(urlProvider, windowId);
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderState#getPortletMode()
+    * @see jakarta.portlet.RenderState#getPortletMode()
     */
    public PortletMode getPortletMode() {
       return urlProvider.getPortletMode();
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderState#getWindowState()
+    * @see jakarta.portlet.RenderState#getWindowState()
     */
    public WindowState getWindowState() {
       return urlProvider.getWindowState();
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#getParameterMap()
+    * @see jakarta.portlet.BaseURL#getParameterMap()
     */
    public Map<String, String[]> getParameterMap() {
       Map<String, String[]> parameters = new HashMap<String, String[]>();
@@ -223,7 +223,7 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#setParameter(java.lang.String, java.lang.String)
+    * @see jakarta.portlet.BaseURL#setParameter(java.lang.String, java.lang.String)
     */
    public void setParameter(String name, String value) {
       ArgumentUtility.validateNotEmpty("name", name);
@@ -236,7 +236,7 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#setParameter(java.lang.String, java.lang.String[])
+    * @see jakarta.portlet.BaseURL#setParameter(java.lang.String, java.lang.String[])
     */
    public void setParameter(String name, String... values) {
       ArgumentUtility.validateNotEmpty("name", name);
@@ -253,7 +253,7 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#setParameters(java.util.Map)
+    * @see jakarta.portlet.BaseURL#setParameters(java.util.Map)
     */
    public void setParameters(Map<String, String[]> parameters) {
       ArgumentUtility.validateNotNull("parameters", parameters);
@@ -281,7 +281,7 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#addProperty(java.lang.String, java.lang.String)
+    * @see jakarta.portlet.BaseURL#addProperty(java.lang.String, java.lang.String)
     */
    public void addProperty(String key, String value) {
       ArgumentUtility.validateNotEmpty("key", key);
@@ -297,7 +297,7 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#setProperty(java.lang.String, java.lang.String)
+    * @see jakarta.portlet.BaseURL#setProperty(java.lang.String, java.lang.String)
     */
    public void setProperty(String key, String value) {
       ArgumentUtility.validateNotEmpty("key", key);
@@ -317,7 +317,7 @@ public abstract class BaseURLImpl implements BaseURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.BaseURL#setSecure(boolean)
+    * @see jakarta.portlet.BaseURL#setSecure(boolean)
     */
    public void setSecure(boolean secure) throws PortletSecurityException {
       urlProvider.setSecure(secure);

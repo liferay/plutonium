@@ -35,21 +35,21 @@ import java.util.Enumeration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.PortletParameters;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.Dependency;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletQName;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletParameters;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.Dependency;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletQName;
 import javax.xml.namespace.QName;
 
 
@@ -58,7 +58,7 @@ import javax.xml.namespace.QName;
  */
 @PortletConfiguration(portletName = "PH-ColorSelPortlet", publicParams = "color", 
                       title = @LocaleString("PH Color Selection Portlet"),
-                      dependencies = @Dependency(name="PortletHub", scope="javax.portlet", version="3.0.0"))
+                      dependencies = @Dependency(name="PortletHub", scope="jakarta.portlet", version="3.0.0"))
 public class ColorSelPortlet extends GenericPortlet {
 
    // Set up logging
@@ -78,7 +78,7 @@ public class ColorSelPortlet extends GenericPortlet {
 }
    
    /* (non-Javadoc)
-    * @see javax.portlet.GenericPortlet#serveResource(javax.portlet.ResourceRequest, javax.portlet.ResourceResponse)
+    * @see jakarta.portlet.GenericPortlet#serveResource(jakarta.portlet.ResourceRequest, jakarta.portlet.ResourceResponse)
     */
    @Override
    public void serveResource(ResourceRequest req, ResourceResponse resp)

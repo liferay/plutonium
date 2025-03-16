@@ -19,7 +19,7 @@
 
 package org.apache.portals.pluto.demo.v3annotated;
 
-import javax.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.RequestScoped;
 
 /**
  * Provides a random number generated once per request.

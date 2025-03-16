@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.driver.config.impl;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.pluto.driver.config.AdminConfiguration;
 import org.apache.pluto.driver.services.portal.admin.PortletRegistryAdminService;

@@ -16,9 +16,9 @@
  */
 package org.apache.pluto.thymeleaf.mvc.portlet;
 
-import javax.mvc.engine.ViewEngine;
-import javax.mvc.engine.ViewEngineContext;
-import javax.mvc.engine.ViewEngineException;
+import jakarta.mvc.engine.ViewEngine;
+import jakarta.mvc.engine.ViewEngineContext;
+import jakarta.mvc.engine.ViewEngineException;
 
 import org.thymeleaf.TemplateEngine;
 

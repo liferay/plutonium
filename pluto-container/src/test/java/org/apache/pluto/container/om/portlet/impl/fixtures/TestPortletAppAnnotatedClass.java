@@ -20,15 +20,15 @@
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
 
-import javax.portlet.annotations.CustomPortletMode;
-import javax.portlet.annotations.CustomWindowState;
-import javax.portlet.annotations.EventDefinition;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletQName;
-import javax.portlet.annotations.PublicRenderParameterDefinition;
-import javax.portlet.annotations.RuntimeOption;
-import javax.portlet.annotations.UserAttribute;
+import jakarta.portlet.annotations.CustomPortletMode;
+import jakarta.portlet.annotations.CustomWindowState;
+import jakarta.portlet.annotations.EventDefinition;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletQName;
+import jakarta.portlet.annotations.PublicRenderParameterDefinition;
+import jakarta.portlet.annotations.RuntimeOption;
+import jakarta.portlet.annotations.UserAttribute;
 
 /**
  * Test class annotated with @PortletAnnotation for testing the configuration
@@ -56,7 +56,7 @@ import javax.portlet.annotations.UserAttribute;
          ),
       },
       runtimeOptions = {
-         @RuntimeOption(name = "javax.portlet.renderHeaders", values = "true"),    
+         @RuntimeOption(name = "jakarta.portlet.renderHeaders", values = "true"),    
          @RuntimeOption(name = "runtime.option", values = "value")    
       },
       publicParams = {

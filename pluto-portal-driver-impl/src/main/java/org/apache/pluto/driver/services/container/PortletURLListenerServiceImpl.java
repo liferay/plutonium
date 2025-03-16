@@ -19,7 +19,7 @@ package org.apache.pluto.driver.services.container;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.portlet.PortletURLGenerationListener;
+import jakarta.portlet.PortletURLGenerationListener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

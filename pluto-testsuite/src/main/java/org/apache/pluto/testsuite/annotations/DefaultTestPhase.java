@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
  * A PortletTest implementation can be marked to have all of its test methods
  * run in a certain portlet lifecycle phase by default.  Individual methods
  * annotated with TestPhase will override this setting.  The argument value 
- * should be of the _PHASE constants on javax.portlet.PortletRequest, i.e.,
+ * should be of the _PHASE constants on jakarta.portlet.PortletRequest, i.e.,
  * RENDER_PHASE, ACTION_PHASE, RESOURCE_PHASE, EVENT_PHASE
  * 
  * @author Benjamin C. Gould

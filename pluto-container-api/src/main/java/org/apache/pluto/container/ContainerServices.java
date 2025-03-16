@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.container;
 
-import javax.portlet.PortalContext;
+import jakarta.portlet.PortalContext;
 
 /**
  * This interface defines the services required for integration between the

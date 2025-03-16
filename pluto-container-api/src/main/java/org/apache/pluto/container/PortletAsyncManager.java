@@ -18,8 +18,8 @@
 
 package org.apache.pluto.container;
 
-import javax.servlet.AsyncContext;
-import javax.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.http.HttpServletRequestWrapper;
 
 public interface PortletAsyncManager {
 

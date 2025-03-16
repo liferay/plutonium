@@ -16,10 +16,10 @@
  */
 package org.apache.portals.pluto.demo.applicant.mvcbean.cdi.thymeleaf.controller;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.mvc.Controller;
-import javax.mvc.View;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.mvc.Controller;
+import jakarta.mvc.View;
+import jakarta.portlet.annotations.RenderMethod;
 
 
 /**

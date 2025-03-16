@@ -19,8 +19,8 @@
 
 package org.apache.portals.pluto.demo.v3annotated;
 
-import javax.inject.Named;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.inject.Named;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 /**
  * Provides a random number generated once per request.

@@ -21,7 +21,7 @@ package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
 import java.io.Serializable;
 
-import javax.portlet.Event;
+import jakarta.portlet.Event;
 import javax.xml.namespace.QName;
 
 /**
@@ -37,7 +37,7 @@ public class MockEvent implements Event {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.Event#getName()
+    * @see jakarta.portlet.Event#getName()
     */
    @Override
    public String getName() {
@@ -45,7 +45,7 @@ public class MockEvent implements Event {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.Event#getQName()
+    * @see jakarta.portlet.Event#getQName()
     */
    @Override
    public QName getQName() {
@@ -53,7 +53,7 @@ public class MockEvent implements Event {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.Event#getValue()
+    * @see jakarta.portlet.Event#getValue()
     */
    @Override
    public Serializable getValue() {

@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.enterprise.inject.Vetoed;
-import javax.mvc.security.Csrf;
+import jakarta.enterprise.inject.Vetoed;
+import jakarta.mvc.security.Csrf;
 
 
 /**

@@ -22,11 +22,11 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.portlet.PortletPreferences;
-import javax.portlet.PortletRequest;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.ReadOnlyException;
-import javax.portlet.ValidatorException;
+import jakarta.portlet.PortletPreferences;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.ReadOnlyException;
+import jakarta.portlet.ValidatorException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +39,7 @@ import org.apache.pluto.container.om.portlet.PortletDefinition;
 import org.apache.pluto.container.util.StringManager;
 
 /**
- * Implementation of the <code>javax.portlet.PortletPreferences</code>
+ * Implementation of the <code>jakarta.portlet.PortletPreferences</code>
  * interface.
  * 
  * @see PortletPreferences

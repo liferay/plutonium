@@ -24,13 +24,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletContext;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletResponse;
-import javax.portlet.PortletSession;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -201,11 +201,11 @@ public abstract class AbstractReflectivePortletTest implements PortletTest {
      * Invokes the test method ('<code>check*</code>') by preparing method
      * parameters. A test method may accept the following types of parameters:
      * <ul>
-     *   <li><code>javax.portlet.PortletConfig</code></li>
-     *   <li><code>javax.portlet.PortletContext</code></li>
-     *   <li><code>javax.portlet.PortletRequest</code></li>
-     *   <li><code>javax.portlet.PortletResponse</code></li>
-     *   <li><code>javax.portlet.PortletSession</code></li>
+     *   <li><code>jakarta.portlet.PortletConfig</code></li>
+     *   <li><code>jakarta.portlet.PortletContext</code></li>
+     *   <li><code>jakarta.portlet.PortletRequest</code></li>
+     *   <li><code>jakarta.portlet.PortletResponse</code></li>
+     *   <li><code>jakarta.portlet.PortletSession</code></li>
      * </ul>
      */
     private TestResult invoke(Method method,

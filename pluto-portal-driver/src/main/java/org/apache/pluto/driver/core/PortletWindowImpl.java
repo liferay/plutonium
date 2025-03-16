@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.driver.core;
 
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

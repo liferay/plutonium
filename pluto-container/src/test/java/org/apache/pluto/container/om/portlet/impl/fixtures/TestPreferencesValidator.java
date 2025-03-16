@@ -19,9 +19,9 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.PortletPreferences;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.ValidatorException;
+import jakarta.portlet.PortletPreferences;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.ValidatorException;
 
 /**
  * @author Scott Nicklous

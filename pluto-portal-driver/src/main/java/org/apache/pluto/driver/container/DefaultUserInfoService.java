@@ -19,7 +19,7 @@ package org.apache.pluto.driver.container;
 import java.util.Collections;
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.container.PortletContainerException;
 import org.apache.pluto.container.PortletWindow;

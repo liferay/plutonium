@@ -16,15 +16,15 @@
  */
 package org.apache.pluto.container.impl;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
-import javax.portlet.PortletRequest;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.container.PortletActionResponseContext;
 import org.apache.pluto.container.PortletRequestContext;
 
 /**
- * Implementation of the <code>javax.portlet.ActionRequest</code> interface.
+ * Implementation of the <code>jakarta.portlet.ActionRequest</code> interface.
  */
 public class ActionRequestImpl extends ClientDataRequestImpl implements ActionRequest
 {

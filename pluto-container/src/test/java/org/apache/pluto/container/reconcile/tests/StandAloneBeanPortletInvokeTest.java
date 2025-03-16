@@ -27,7 +27,7 @@ import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletMode;
 
 import org.apache.pluto.container.bean.processor.AnnotatedMethodStore;
 import org.apache.pluto.container.bean.processor.ConfigSummary;

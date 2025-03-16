@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.container.om.portlet.Filter;
 import org.apache.pluto.container.om.portlet.FilterMapping;

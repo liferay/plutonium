@@ -18,7 +18,7 @@ package org.apache.pluto.container;
 
 import java.io.Serializable;
 
-import javax.portlet.Event;
+import jakarta.portlet.Event;
 import javax.xml.namespace.QName;
 
 /**

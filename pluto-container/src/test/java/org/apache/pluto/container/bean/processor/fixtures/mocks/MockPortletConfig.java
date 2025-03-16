@@ -25,10 +25,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletContext;
-import javax.portlet.PortletMode;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.WindowState;
 import javax.xml.namespace.QName;
 
 /**
@@ -40,13 +40,13 @@ public class MockPortletConfig implements PortletConfig {
    private class PortletRes extends ListResourceBundle {
       protected Object[][] getContents() {
           return new Object[][] {
-              {"javax.portlet.title", "Some Title"},
+              {"jakarta.portlet.title", "Some Title"},
           };
       }
   }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getContainerRuntimeOptions()
+    * @see jakarta.portlet.PortletConfig#getContainerRuntimeOptions()
     */
    @Override
    public Map<String, String[]> getContainerRuntimeOptions() {
@@ -54,7 +54,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getDefaultNamespace()
+    * @see jakarta.portlet.PortletConfig#getDefaultNamespace()
     */
    @Override
    public String getDefaultNamespace() {
@@ -62,7 +62,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getInitParameter(java.lang.String)
+    * @see jakarta.portlet.PortletConfig#getInitParameter(java.lang.String)
     */
    @Override
    public String getInitParameter(String arg0) {
@@ -70,7 +70,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getInitParameterNames()
+    * @see jakarta.portlet.PortletConfig#getInitParameterNames()
     */
    @Override
    public Enumeration<String> getInitParameterNames() {
@@ -78,7 +78,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getPortletContext()
+    * @see jakarta.portlet.PortletConfig#getPortletContext()
     */
    @Override
    public PortletContext getPortletContext() {
@@ -86,7 +86,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getPortletModes(java.lang.String)
+    * @see jakarta.portlet.PortletConfig#getPortletModes(java.lang.String)
     */
    @Override
    public Enumeration<PortletMode> getPortletModes(String arg0) {
@@ -94,7 +94,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getPortletName()
+    * @see jakarta.portlet.PortletConfig#getPortletName()
     */
    @Override
    public String getPortletName() {
@@ -102,7 +102,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getProcessingEventQNames()
+    * @see jakarta.portlet.PortletConfig#getProcessingEventQNames()
     */
    @Override
    public Enumeration<QName> getProcessingEventQNames() {
@@ -110,7 +110,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getPublicRenderParameterDefinitions()
+    * @see jakarta.portlet.PortletConfig#getPublicRenderParameterDefinitions()
     */
    @Override
    public Map<String, QName> getPublicRenderParameterDefinitions() {
@@ -118,7 +118,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getPublicRenderParameterNames()
+    * @see jakarta.portlet.PortletConfig#getPublicRenderParameterNames()
     */
    @Override
    public Enumeration<String> getPublicRenderParameterNames() {
@@ -126,7 +126,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getPublishingEventQNames()
+    * @see jakarta.portlet.PortletConfig#getPublishingEventQNames()
     */
    @Override
    public Enumeration<QName> getPublishingEventQNames() {
@@ -134,7 +134,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getResourceBundle(java.util.Locale)
+    * @see jakarta.portlet.PortletConfig#getResourceBundle(java.util.Locale)
     */
    @Override
    public ResourceBundle getResourceBundle(Locale arg0) {
@@ -142,7 +142,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getSupportedLocales()
+    * @see jakarta.portlet.PortletConfig#getSupportedLocales()
     */
    @Override
    public Enumeration<Locale> getSupportedLocales() {
@@ -150,7 +150,7 @@ public class MockPortletConfig implements PortletConfig {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletConfig#getWindowStates(java.lang.String)
+    * @see jakarta.portlet.PortletConfig#getWindowStates(java.lang.String)
     */
    @Override
    public Enumeration<WindowState> getWindowStates(String arg0) {

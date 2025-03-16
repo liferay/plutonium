@@ -22,8 +22,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
 
-import javax.portlet.MutablePortletParameters;
-import javax.portlet.PortletParameters;
+import jakarta.portlet.MutablePortletParameters;
+import jakarta.portlet.PortletParameters;
 
 import org.apache.pluto.container.PortletURLProvider;
 import org.apache.pluto.container.PortletURLProvider.ParamType;
@@ -65,7 +65,7 @@ public class MutablePortletParametersImpl extends
    /*
     * (non-Javadoc)
     * 
-    * @see javax.portlet.MutablePortletParameters#setValue(java.lang.String,
+    * @see jakarta.portlet.MutablePortletParameters#setValue(java.lang.String,
     * java.lang.String)
     */
    public String setValue(String name, String value) {
@@ -96,7 +96,7 @@ public class MutablePortletParametersImpl extends
    /*
     * (non-Javadoc)
     * 
-    * @see javax.portlet.MutablePortletParameters#setValues(java.lang.String,
+    * @see jakarta.portlet.MutablePortletParameters#setValues(java.lang.String,
     * java.lang.String[])
     */
    public String[] setValues(String name, String... values) {
@@ -131,7 +131,7 @@ public class MutablePortletParametersImpl extends
     * (non-Javadoc)
     * 
     * @see
-    * javax.portlet.MutablePortletParameters#removeParameter(java.lang.String)
+    * jakarta.portlet.MutablePortletParameters#removeParameter(java.lang.String)
     */
    public boolean removeParameter(String name) {
       checkNull("name", name);
@@ -162,7 +162,7 @@ public class MutablePortletParametersImpl extends
     * (non-Javadoc)
     * 
     * @see
-    * javax.portlet.MutablePortletParameters#set(javax.portlet.PortletParameters
+    * jakarta.portlet.MutablePortletParameters#set(jakarta.portlet.PortletParameters
     * )
     */
    public MutablePortletParameters set(PortletParameters inParams) {
@@ -206,7 +206,7 @@ public class MutablePortletParametersImpl extends
     * (non-Javadoc)
     * 
     * @see
-    * javax.portlet.MutablePortletParameters#add(javax.portlet.PortletParameters
+    * jakarta.portlet.MutablePortletParameters#add(jakarta.portlet.PortletParameters
     * )
     */
    public MutablePortletParameters add(PortletParameters inParams) {
@@ -237,7 +237,7 @@ public class MutablePortletParametersImpl extends
    /*
     * (non-Javadoc)
     * 
-    * @see javax.portlet.MutablePortletParameters#clear()
+    * @see jakarta.portlet.MutablePortletParameters#clear()
     */
    public void clear() {
       int ctr = params.size();

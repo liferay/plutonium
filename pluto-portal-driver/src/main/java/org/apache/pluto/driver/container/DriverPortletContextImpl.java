@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.driver.container;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.pluto.container.RequestDispatcherService;
 import org.apache.pluto.container.driver.DriverPortletContext;

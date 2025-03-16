@@ -21,21 +21,21 @@ package org.apache.pluto.container.reconcile.fixtures;
 
 import java.io.IOException;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.ProcessAction;
-import javax.portlet.ProcessEvent;
-import javax.portlet.RenderMode;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.annotations.EventDefinition;
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletQName;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.ProcessAction;
+import jakarta.portlet.ProcessEvent;
+import jakarta.portlet.RenderMode;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.annotations.EventDefinition;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletQName;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

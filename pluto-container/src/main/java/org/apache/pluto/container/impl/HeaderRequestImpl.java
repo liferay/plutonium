@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.impl;
 
-import javax.portlet.HeaderRequest;
-import javax.portlet.PortletRequest;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.container.PortletHeaderResponseContext;
 import org.apache.pluto.container.PortletRequestContext;

@@ -19,7 +19,7 @@
 
 package org.apache.portals.pluto.demo.v3annotated;
 
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 /**
  * Requestscoped bean to mark if timout occurs.

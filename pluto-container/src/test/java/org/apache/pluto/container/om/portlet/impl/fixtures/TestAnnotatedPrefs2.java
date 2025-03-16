@@ -19,13 +19,13 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.PortletPreferences;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.ValidatorException;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletConfigurations;
-import javax.portlet.annotations.PortletPreferencesValidator;
-import javax.portlet.annotations.Preference;
+import jakarta.portlet.PortletPreferences;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.ValidatorException;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletConfigurations;
+import jakarta.portlet.annotations.PortletPreferencesValidator;
+import jakarta.portlet.annotations.Preference;
 
 /**
  * Test for Portlet Preferences Validator annotation  

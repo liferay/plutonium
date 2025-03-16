@@ -21,8 +21,8 @@ import org.springframework.security.web.firewall.RequestRejectedException;
 import org.springframework.security.web.firewall.StrictHttpFirewall;
 import org.springframework.security.web.reactive.result.view.CsrfRequestDataValueProcessor;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
 
 /**
  * This class is designed to override the default "strictHttpFirewall" bean that ships with Spring

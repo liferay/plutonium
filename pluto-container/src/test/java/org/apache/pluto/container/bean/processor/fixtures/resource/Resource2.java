@@ -19,10 +19,9 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.resource;
 
-import javax.activity.InvalidActivityException;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.ServeResourceMethod;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.ServeResourceMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 
@@ -59,7 +58,7 @@ public class Resource2 {
    
    // invalid signature, bad exception
    @ServeResourceMethod(portletNames="portlet8")
-   public String resource8(ResourceRequest req, ResourceResponse resp) throws InvalidActivityException {
+   public String resource8(ResourceRequest req, ResourceResponse resp) throws IllegalStateException  {
       meths.addMethod(this.getClass().getSimpleName() + "#resource8");
       return null;
    }

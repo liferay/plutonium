@@ -25,9 +25,9 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 
-import javax.portlet.ClientDataRequest;
-import javax.portlet.PortletException;
-import javax.servlet.http.Part;
+import jakarta.portlet.ClientDataRequest;
+import jakarta.portlet.PortletException;
+import jakarta.servlet.http.Part;
 
 /**
  * @author Scott
@@ -36,7 +36,7 @@ import javax.servlet.http.Part;
 public class MockClientDataRequest extends MockPortletRequest implements ClientDataRequest {
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#getCharacterEncoding()
+    * @see jakarta.portlet.ClientDataRequest#getCharacterEncoding()
     */
    @Override
    public String getCharacterEncoding() {
@@ -44,7 +44,7 @@ public class MockClientDataRequest extends MockPortletRequest implements ClientD
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#getContentLength()
+    * @see jakarta.portlet.ClientDataRequest#getContentLength()
     */
    @Override
    public int getContentLength() {
@@ -57,7 +57,7 @@ public class MockClientDataRequest extends MockPortletRequest implements ClientD
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#getContentType()
+    * @see jakarta.portlet.ClientDataRequest#getContentType()
     */
    @Override
    public String getContentType() {
@@ -65,7 +65,7 @@ public class MockClientDataRequest extends MockPortletRequest implements ClientD
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#getMethod()
+    * @see jakarta.portlet.ClientDataRequest#getMethod()
     */
    @Override
    public String getMethod() {
@@ -73,7 +73,7 @@ public class MockClientDataRequest extends MockPortletRequest implements ClientD
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#getPortletInputStream()
+    * @see jakarta.portlet.ClientDataRequest#getPortletInputStream()
     */
    @Override
    public InputStream getPortletInputStream() throws IOException {
@@ -81,7 +81,7 @@ public class MockClientDataRequest extends MockPortletRequest implements ClientD
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#getReader()
+    * @see jakarta.portlet.ClientDataRequest#getReader()
     */
    @Override
    public BufferedReader getReader() throws UnsupportedEncodingException, IOException {
@@ -89,7 +89,7 @@ public class MockClientDataRequest extends MockPortletRequest implements ClientD
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ClientDataRequest#setCharacterEncoding(java.lang.String)
+    * @see jakarta.portlet.ClientDataRequest#setCharacterEncoding(java.lang.String)
     */
    @Override
    public void setCharacterEncoding(String arg0) throws UnsupportedEncodingException {

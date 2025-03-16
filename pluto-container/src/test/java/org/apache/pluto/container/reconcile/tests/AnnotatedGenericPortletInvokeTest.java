@@ -25,7 +25,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletMode;
 import javax.xml.namespace.QName;
 
 import org.apache.pluto.container.bean.processor.AnnotatedMethodStore;

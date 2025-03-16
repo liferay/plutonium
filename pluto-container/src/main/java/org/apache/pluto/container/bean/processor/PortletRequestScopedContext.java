@@ -21,11 +21,11 @@ package org.apache.pluto.container.bean.processor;
 
 import java.lang.annotation.Annotation;
 
-import javax.enterprise.context.ContextNotActiveException;
-import javax.enterprise.context.spi.Context;
-import javax.enterprise.context.spi.Contextual;
-import javax.enterprise.context.spi.CreationalContext;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.enterprise.context.ContextNotActiveException;
+import jakarta.enterprise.context.spi.Context;
+import jakarta.enterprise.context.spi.Contextual;
+import jakarta.enterprise.context.spi.CreationalContext;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 /**
  * This is the Context implementation for the PortletRequestScoped custom CDI scope.
@@ -39,7 +39,7 @@ public class PortletRequestScopedContext implements Context {
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.context.spi.Context#get(javax.enterprise.context.spi.Contextual)
+    * @see jakarta.enterprise.context.spi.Context#get(jakarta.enterprise.context.spi.Contextual)
     */
    @Override
    public <T> T get(Contextual<T> bean) {
@@ -51,7 +51,7 @@ public class PortletRequestScopedContext implements Context {
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.context.spi.Context#get(javax.enterprise.context.spi.Contextual, javax.enterprise.context.spi.CreationalContext)
+    * @see jakarta.enterprise.context.spi.Context#get(jakarta.enterprise.context.spi.Contextual, jakarta.enterprise.context.spi.CreationalContext)
     */
    @Override
    public <T> T get(Contextual<T> bean, CreationalContext<T> crco) {
@@ -68,7 +68,7 @@ public class PortletRequestScopedContext implements Context {
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.context.spi.Context#getScope()
+    * @see jakarta.enterprise.context.spi.Context#getScope()
     */
    @Override
    public Class<? extends Annotation> getScope() {
@@ -76,7 +76,7 @@ public class PortletRequestScopedContext implements Context {
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.context.spi.Context#isActive()
+    * @see jakarta.enterprise.context.spi.Context#isActive()
     */
    @Override
    public boolean isActive() {

@@ -18,7 +18,7 @@ package org.apache.pluto.container;
 
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
+import jakarta.portlet.PortletRequest;
 
 
 /**

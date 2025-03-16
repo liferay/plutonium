@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.container.driver;
 
-import javax.portlet.PortalContext;
+import jakarta.portlet.PortalContext;
 
 import org.apache.pluto.container.EventCoordinationService;
 import org.apache.pluto.container.FilterManagerService;

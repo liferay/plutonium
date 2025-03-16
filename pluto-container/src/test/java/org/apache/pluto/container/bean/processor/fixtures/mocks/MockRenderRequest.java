@@ -19,7 +19,7 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
-import javax.portlet.RenderRequest;
+import jakarta.portlet.RenderRequest;
 
 /**
  * @author Scott Nicklous
@@ -28,7 +28,7 @@ import javax.portlet.RenderRequest;
 public class MockRenderRequest extends MockPortletRequest implements RenderRequest {
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderRequest#getETag()
+    * @see jakarta.portlet.RenderRequest#getETag()
     */
    @Override
    public String getETag() {

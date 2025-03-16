@@ -19,7 +19,7 @@
 
 package org.apache.portals.pluto.demo.chat;
 
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.RenderMethod;
 
 /**
  * Displays help information

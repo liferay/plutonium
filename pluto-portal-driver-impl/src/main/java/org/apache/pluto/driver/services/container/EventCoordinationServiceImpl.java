@@ -26,15 +26,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import javax.portlet.Event;
-import javax.portlet.PortletException;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import jakarta.portlet.Event;
+import jakarta.portlet.PortletException;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
 import javax.xml.namespace.QName;
 import javax.xml.parsers.FactoryConfigurationError;
 import javax.xml.stream.XMLInputFactory;
@@ -193,7 +193,7 @@ public class EventCoordinationServiceImpl implements EventCoordinationService {
                Unmarshaller unmarshaller = jc.createUnmarshaller();
 
                // unmarshaller.setEventHandler(new
-               // javax.xml.bind.helpers.DefaultValidationEventHandler());
+               // jakarta.xml.bind.helpers.DefaultValidationEventHandler());
 
                JAXBElement result = unmarshaller.unmarshal(xml, clazz);
 

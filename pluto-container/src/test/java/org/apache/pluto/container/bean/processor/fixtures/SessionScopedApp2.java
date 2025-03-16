@@ -21,7 +21,7 @@ package org.apache.pluto.container.bean.processor.fixtures;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
+import jakarta.enterprise.context.SessionScoped;
 
 /**
  * PortletSessionScoped bean with APPLICATION_SCOPE

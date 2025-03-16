@@ -19,12 +19,12 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.ActionURL;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceURL;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletListener;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletListener;
 
 /**
  * Annotated listener for unit testing.
@@ -43,21 +43,21 @@ public class  TestAnnotatedListener implements
       PortletURLGenerationListener<RenderURL, ActionURL> {
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletURLGenerationListener#filterActionURL(javax.portlet.PortletURL)
+    * @see jakarta.portlet.PortletURLGenerationListener#filterActionURL(jakarta.portlet.PortletURL)
     */
    @Override
    public void filterActionURL(ActionURL arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletURLGenerationListener#filterRenderURL(javax.portlet.PortletURL)
+    * @see jakarta.portlet.PortletURLGenerationListener#filterRenderURL(jakarta.portlet.PortletURL)
     */
    @Override
    public void filterRenderURL(RenderURL arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletURLGenerationListener#filterResourceURL(javax.portlet.ResourceURL)
+    * @see jakarta.portlet.PortletURLGenerationListener#filterResourceURL(jakarta.portlet.ResourceURL)
     */
    @Override
    public void filterResourceURL(ResourceURL arg0) {

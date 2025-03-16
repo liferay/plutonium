@@ -22,12 +22,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.portlet.MimeResponse;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.BaseURL;
-import javax.portlet.MutableRenderParameters;
-import javax.portlet.RenderURL;
-import javax.servlet.jsp.JspException;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.BaseURL;
+import jakarta.portlet.MutableRenderParameters;
+import jakarta.portlet.RenderURL;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * A tag handler for the <CODE>renderURL</CODE> tag as defined in the JSR 362. Creates a url that points to the current

@@ -21,7 +21,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Locale;
 
-import javax.portlet.CacheControl;
+import jakarta.portlet.CacheControl;
 
 /**
  * @author <a href="mailto:ate@douma.nu">Ate Douma</a>

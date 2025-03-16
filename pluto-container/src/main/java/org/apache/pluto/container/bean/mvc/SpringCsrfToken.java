@@ -18,7 +18,7 @@ package org.apache.pluto.container.bean.mvc;
 
 import java.lang.reflect.Method;
 
-import javax.enterprise.inject.Vetoed;
+import jakarta.enterprise.inject.Vetoed;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.driver.portlets;
 
-import javax.portlet.RenderRequest;
+import jakarta.portlet.RenderRequest;
 
 public class AdminPortlet extends GenericPlutoPortlet {
 

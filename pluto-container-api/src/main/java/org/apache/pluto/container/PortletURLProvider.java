@@ -22,9 +22,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.PortletMode;
-import javax.portlet.PortletSecurityException;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletSecurityException;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.PortletURLProvider.ParamType;
 

@@ -24,12 +24,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import javax.inject.Inject;
-import javax.portlet.PortletAsyncContext;
-import javax.portlet.PortletAsyncEvent;
-import javax.portlet.PortletAsyncListener;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
+import jakarta.inject.Inject;
+import jakarta.portlet.PortletAsyncContext;
+import jakarta.portlet.PortletAsyncEvent;
+import jakarta.portlet.PortletAsyncListener;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
 
 import org.apache.portals.pluto.demo.v3annotated.AsyncDialogBean.TimeoutType;
 import org.slf4j.Logger;
@@ -51,7 +51,7 @@ public class AsyncListener implements PortletAsyncListener {
    /*
     * (non-Javadoc)
     * 
-    * @see javax.servlet.AsyncListener#onComplete(javax.servlet.AsyncEvent)
+    * @see jakarta.servlet.AsyncListener#onComplete(jakarta.servlet.AsyncEvent)
     */
    @Override
    public void onComplete(PortletAsyncEvent evt) throws IOException {
@@ -67,7 +67,7 @@ public class AsyncListener implements PortletAsyncListener {
    /*
     * (non-Javadoc)
     * 
-    * @see javax.servlet.AsyncListener#onError(javax.servlet.AsyncEvent)
+    * @see jakarta.servlet.AsyncListener#onError(jakarta.servlet.AsyncEvent)
     */
    @Override
    public void onError(PortletAsyncEvent evt) throws IOException {
@@ -94,7 +94,7 @@ public class AsyncListener implements PortletAsyncListener {
    /*
     * (non-Javadoc)
     * 
-    * @see javax.servlet.AsyncListener#onStartAsync(javax.servlet.AsyncEvent)
+    * @see jakarta.servlet.AsyncListener#onStartAsync(jakarta.servlet.AsyncEvent)
     */
    @Override
    public void onStartAsync(PortletAsyncEvent evt) throws IOException {
@@ -139,7 +139,7 @@ public class AsyncListener implements PortletAsyncListener {
    /*
     * (non-Javadoc)
     * 
-    * @see javax.servlet.AsyncListener#onTimeout(javax.servlet.AsyncEvent)
+    * @see jakarta.servlet.AsyncListener#onTimeout(jakarta.servlet.AsyncEvent)
     */
    @Override
    public void onTimeout(PortletAsyncEvent evt) throws IOException {

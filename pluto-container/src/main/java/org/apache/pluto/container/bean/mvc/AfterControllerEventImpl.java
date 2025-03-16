@@ -16,9 +16,9 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.mvc.event.AfterControllerEvent;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.UriInfo;
+import jakarta.mvc.event.AfterControllerEvent;
+import jakarta.ws.rs.container.ResourceInfo;
+import jakarta.ws.rs.core.UriInfo;
 
 
 /**

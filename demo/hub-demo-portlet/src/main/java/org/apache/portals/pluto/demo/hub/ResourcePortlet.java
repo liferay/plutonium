@@ -29,24 +29,24 @@ import static org.apache.portals.pluto.demo.hub.Constants.DEFAULT_IMAGE;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.PortletURL;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.Dependency;
-import javax.portlet.annotations.EventDefinition;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletQName;
-import javax.portlet.annotations.PublicRenderParameterDefinition;
-import javax.portlet.annotations.Supports;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.PortletURL;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.Dependency;
+import jakarta.portlet.annotations.EventDefinition;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletQName;
+import jakarta.portlet.annotations.PublicRenderParameterDefinition;
+import jakarta.portlet.annotations.Supports;
 import static org.apache.portals.pluto.demo.hub.Constants.IMG_MAP;
 
 
@@ -75,7 +75,7 @@ import static org.apache.portals.pluto.demo.hub.Constants.IMG_MAP;
       )
 @PortletConfiguration(portletName = "PH-ResourcePortlet-PRP",
       title={@LocaleString("PH Resource Portlet")},
-      dependencies = @Dependency(name="PortletHub", scope="javax.portlet", version="3.0.0"),
+      dependencies = @Dependency(name="PortletHub", scope="jakarta.portlet", version="3.0.0"),
       supportedLocales = {"en"},
       supports = @Supports(mimeType = "text/html", portletModes = "VIEW"),
       publicParams = {"color", "imgName"}
@@ -103,7 +103,7 @@ public class ResourcePortlet extends GenericPortlet {
    }
    
    /* (non-Javadoc)
-    * @see javax.portlet.GenericPortlet#serveResource(javax.portlet.ResourceRequest, javax.portlet.ResourceResponse)
+    * @see jakarta.portlet.GenericPortlet#serveResource(jakarta.portlet.ResourceRequest, jakarta.portlet.ResourceResponse)
     */
    @Override
    public void serveResource(ResourceRequest req, ResourceResponse resp)

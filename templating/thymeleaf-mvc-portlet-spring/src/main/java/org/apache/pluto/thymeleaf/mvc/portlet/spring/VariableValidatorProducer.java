@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.thymeleaf.mvc.portlet.spring;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletContext;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
 
 import org.apache.pluto.thymeleaf.portlet.VariableValidator;
 

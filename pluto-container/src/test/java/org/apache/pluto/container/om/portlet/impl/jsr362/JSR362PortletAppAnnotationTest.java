@@ -353,7 +353,7 @@ public class JSR362PortletAppAnnotationTest {
     */
    @Test
    public void testGetContainerRuntimeOption() {
-      String newItem = "javax.portlet.renderHeaders";
+      String newItem = "jakarta.portlet.renderHeaders";
       ContainerRuntimeOption item = cut.getContainerRuntimeOption(newItem);
       assertEquals("true", item.getValues().get(0));
    }
@@ -363,7 +363,7 @@ public class JSR362PortletAppAnnotationTest {
     */
    @Test
    public void testGetContainerRuntimeOptions() {
-      String newItem = "javax.portlet.renderHeaders";
+      String newItem = "jakarta.portlet.renderHeaders";
       List<ContainerRuntimeOption> list = cut.getContainerRuntimeOptions();
       assertNotNull(list);
       assertEquals(2, list.size());

@@ -19,17 +19,17 @@
 
 package org.apache.pluto.container.reconcile.fixtures;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.EventMethod;
-import javax.portlet.annotations.InitParameter;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletQName;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.EventMethod;
+import jakarta.portlet.annotations.InitParameter;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletQName;
+import jakarta.portlet.annotations.RenderMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

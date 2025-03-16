@@ -33,8 +33,8 @@ import static org.apache.portals.pluto.demo.v3.Constants.PARAM_REMTYPE_SET;
 import static org.apache.portals.pluto.demo.v3.Constants.PARAM_SETTYPE;
 import static org.apache.portals.pluto.demo.v3.Constants.PARAM_SETTYPE_VARRAY;
 import static org.apache.portals.pluto.demo.v3.Constants.PARAM_VALUES;
-import static javax.portlet.MimeResponse.Copy.ALL;
-import static javax.portlet.MimeResponse.Copy.NONE;
+import static jakarta.portlet.MimeResponse.Copy.ALL;
+import static jakarta.portlet.MimeResponse.Copy.NONE;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -44,19 +44,19 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeMap;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.GenericPortlet;
-import javax.portlet.MutableRenderParameters;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.RenderParameters;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.MutableRenderParameters;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.RenderParameters;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
 
 
 /**
@@ -254,7 +254,7 @@ public class UrlRPTestPortlet extends GenericPortlet {
    }
    
    /* (non-Javadoc)
-    * @see javax.portlet.GenericPortlet#serveResource(javax.portlet.ResourceRequest, javax.portlet.ResourceResponse)
+    * @see jakarta.portlet.GenericPortlet#serveResource(jakarta.portlet.ResourceRequest, jakarta.portlet.ResourceResponse)
     */
    @Override
    public void serveResource(ResourceRequest req, ResourceResponse resp)

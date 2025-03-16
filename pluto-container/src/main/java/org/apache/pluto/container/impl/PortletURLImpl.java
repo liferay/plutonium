@@ -18,16 +18,16 @@ package org.apache.pluto.container.impl;
 
 import java.util.Enumeration;
 
-import javax.enterprise.inject.spi.Bean;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.MutableRenderParameters;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletModeException;
-import javax.portlet.PortletURL;
-import javax.portlet.WindowState;
-import javax.portlet.WindowStateException;
-import javax.portlet.annotations.PortletSerializable;
-import javax.portlet.annotations.RenderStateScoped;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.MutableRenderParameters;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletModeException;
+import jakarta.portlet.PortletURL;
+import jakarta.portlet.WindowState;
+import jakarta.portlet.WindowStateException;
+import jakarta.portlet.annotations.PortletSerializable;
+import jakarta.portlet.annotations.RenderStateScoped;
 
 import org.apache.pluto.container.PortletResponseContext;
 import org.apache.pluto.container.PortletURLProvider;

@@ -23,10 +23,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-import javax.mvc.RedirectScoped;
-import javax.mvc.binding.BindingError;
-import javax.mvc.binding.ParamError;
-import javax.mvc.binding.ValidationError;
+import jakarta.mvc.RedirectScoped;
+import jakarta.mvc.binding.BindingError;
+import jakarta.mvc.binding.ParamError;
+import jakarta.mvc.binding.ValidationError;
 
 
 /**

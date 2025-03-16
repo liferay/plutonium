@@ -27,7 +27,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.portlet.PortletMode;
+import jakarta.portlet.PortletMode;
 import javax.xml.namespace.QName;
 
 import org.apache.pluto.container.bean.processor.AnnotatedMethodStore;

@@ -27,10 +27,10 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.portlet.PortletMode;
-import javax.portlet.PortletSecurityException;
-import javax.portlet.ResourceURL;
-import javax.portlet.WindowState;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletSecurityException;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.WindowState;
 
 import org.apache.pluto.container.PortletRequestContext;
 import org.apache.pluto.container.PortletURLProvider;

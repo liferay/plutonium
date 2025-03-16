@@ -19,7 +19,7 @@
 
 package org.apache.pluto.container.bean.processor.fixtures;
 
-import javax.mvc.RedirectScoped;
+import jakarta.mvc.RedirectScoped;
 import java.io.Serializable;
 
 /**

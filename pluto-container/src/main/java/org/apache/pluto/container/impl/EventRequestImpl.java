@@ -17,15 +17,15 @@
 package org.apache.pluto.container.impl;
 
 
-import javax.portlet.Event;
-import javax.portlet.EventRequest;
-import javax.portlet.PortletRequest;
+import jakarta.portlet.Event;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.container.PortletEventResponseContext;
 import org.apache.pluto.container.PortletRequestContext;
 
 /**
- * <code>javax.portlet.EventRequest</code> implementation.
+ * <code>jakarta.portlet.EventRequest</code> implementation.
  *
  */
 public class EventRequestImpl extends PortletRequestImpl implements EventRequest

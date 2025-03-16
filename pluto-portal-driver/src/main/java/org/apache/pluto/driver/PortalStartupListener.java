@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.driver;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
 
 import org.apache.pluto.container.PortletContainer;
 import org.apache.pluto.container.PortletContainerException;

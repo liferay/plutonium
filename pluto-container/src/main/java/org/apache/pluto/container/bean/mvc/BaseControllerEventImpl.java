@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.UriInfo;
+import jakarta.ws.rs.container.ResourceInfo;
+import jakarta.ws.rs.core.UriInfo;
 
 
 /**

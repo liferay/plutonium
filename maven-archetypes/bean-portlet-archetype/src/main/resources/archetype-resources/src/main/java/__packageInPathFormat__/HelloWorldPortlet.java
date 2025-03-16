@@ -1,16 +1,16 @@
 package ${package};
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.PortletConfig;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.PortletConfig;
 
-import javax.portlet.annotations.HeaderMethod;
-import javax.portlet.annotations.InitParameter;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.HeaderMethod;
+import jakarta.portlet.annotations.InitParameter;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.RenderMethod;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

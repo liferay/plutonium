@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
-import javax.portlet.Event;
-import javax.portlet.EventRequest;
+import jakarta.portlet.Event;
+import jakarta.portlet.EventRequest;
 import javax.xml.namespace.QName;
 
 
@@ -47,7 +47,7 @@ public class MockEventRequest extends MockClientDataRequest implements EventRequ
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.EventRequest#getEvent()
+    * @see jakarta.portlet.EventRequest#getEvent()
     */
    @Override
    public Event getEvent() {

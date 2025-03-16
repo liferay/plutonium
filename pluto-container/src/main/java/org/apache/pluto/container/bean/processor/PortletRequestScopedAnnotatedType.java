@@ -24,12 +24,12 @@ import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.inject.spi.AnnotatedConstructor;
-import javax.enterprise.inject.spi.AnnotatedField;
-import javax.enterprise.inject.spi.AnnotatedMethod;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.inject.spi.AnnotatedConstructor;
+import jakarta.enterprise.inject.spi.AnnotatedField;
+import jakarta.enterprise.inject.spi.AnnotatedMethod;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 /**
  * A wrapper for a RequestScoped annotated type 
@@ -64,7 +64,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getAnnotation(java.lang.Class)
+    * @see jakarta.enterprise.inject.spi.Annotated#getAnnotation(java.lang.Class)
     */
    @SuppressWarnings({"unchecked"})
    @Override
@@ -78,7 +78,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getAnnotations()
+    * @see jakarta.enterprise.inject.spi.Annotated#getAnnotations()
     */
    @Override
    public Set<Annotation> getAnnotations() {
@@ -86,7 +86,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getBaseType()
+    * @see jakarta.enterprise.inject.spi.Annotated#getBaseType()
     */
    @Override
    public Type getBaseType() {
@@ -94,7 +94,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#getTypeClosure()
+    * @see jakarta.enterprise.inject.spi.Annotated#getTypeClosure()
     */
    @Override
    public Set<Type> getTypeClosure() {
@@ -102,7 +102,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.Annotated#isAnnotationPresent(java.lang.Class)
+    * @see jakarta.enterprise.inject.spi.Annotated#isAnnotationPresent(java.lang.Class)
     */
    @Override
    public boolean isAnnotationPresent(Class<? extends Annotation> type) {
@@ -115,7 +115,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getConstructors()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getConstructors()
     */
    @Override
    public Set<AnnotatedConstructor<RequestScoped>> getConstructors() {
@@ -123,7 +123,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getFields()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getFields()
     */
    @Override
    public Set<AnnotatedField<? super RequestScoped>> getFields() {
@@ -131,7 +131,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getJavaClass()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getJavaClass()
     */
    @Override
    public Class<RequestScoped> getJavaClass() {
@@ -139,7 +139,7 @@ public class PortletRequestScopedAnnotatedType implements AnnotatedType<RequestS
    }
 
    /* (non-Javadoc)
-    * @see javax.enterprise.inject.spi.AnnotatedType#getMethods()
+    * @see jakarta.enterprise.inject.spi.AnnotatedType#getMethods()
     */
    @Override
    public Set<AnnotatedMethod<? super RequestScoped>> getMethods() {

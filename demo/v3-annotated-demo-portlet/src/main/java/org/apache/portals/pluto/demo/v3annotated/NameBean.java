@@ -21,19 +21,19 @@ package org.apache.portals.pluto.demo.v3annotated;
 
 import java.io.IOException;
 
-import javax.inject.Inject;
-import javax.portlet.ActionParameters;
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.PortletException;
-import javax.portlet.PortletURL;
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.Namespace;
-import javax.portlet.annotations.PortletSerializable;
-import javax.portlet.annotations.RenderStateScoped;
-import javax.portlet.annotations.RenderMethod;
-import javax.portlet.MimeResponse;
-import javax.portlet.MimeResponse.Copy;
+import jakarta.inject.Inject;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletURL;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.Namespace;
+import jakarta.portlet.annotations.PortletSerializable;
+import jakarta.portlet.annotations.RenderStateScoped;
+import jakarta.portlet.annotations.RenderMethod;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.MimeResponse.Copy;
 
 /**
  * Render state scoped bean. The bean is stored as a render parameter,

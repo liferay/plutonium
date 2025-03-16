@@ -21,7 +21,7 @@ package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
 import java.util.Locale;
 
-import javax.portlet.ResourceResponse;
+import jakarta.portlet.ResourceResponse;
 
 /**
  * @author Scott Nicklous
@@ -30,28 +30,28 @@ import javax.portlet.ResourceResponse;
 public class MockResourceResponse extends MockMimeResponse implements ResourceResponse {
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceResponse#setCharacterEncoding(java.lang.String)
+    * @see jakarta.portlet.ResourceResponse#setCharacterEncoding(java.lang.String)
     */
    @Override
    public void setCharacterEncoding(String arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceResponse#setContentLength(int)
+    * @see jakarta.portlet.ResourceResponse#setContentLength(int)
     */
    @Override
    public void setContentLength(int arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceResponse#setLocale(java.util.Locale)
+    * @see jakarta.portlet.ResourceResponse#setLocale(java.util.Locale)
     */
    @Override
    public void setLocale(Locale arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceResponse#setStatus(int)
+    * @see jakarta.portlet.ResourceResponse#setStatus(int)
     */
    @Override
    public void setStatus(int arg0) {

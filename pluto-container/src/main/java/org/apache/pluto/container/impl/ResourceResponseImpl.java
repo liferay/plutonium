@@ -16,16 +16,16 @@
  */
 package org.apache.pluto.container.impl;
 
-import static javax.portlet.MimeResponse.Copy.PUBLIC;
+import static jakarta.portlet.MimeResponse.Copy.PUBLIC;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Locale;
 
-import javax.portlet.ActionURL;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceResponse;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.ResourceURL;
 
 import org.apache.pluto.container.PortletResourceResponseContext;
 

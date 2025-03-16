@@ -18,23 +18,23 @@ package org.apache.pluto.driver.container;
 
 import java.io.IOException;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletResponse;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.FilterManager;
 import org.apache.pluto.container.PortletContainerException;
@@ -88,7 +88,7 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
      * @param request  action request used for the invocation.
      * @param response action response used for the invocation.
      * @see PortletServlet3
-     * @see javax.portlet.Portlet#processAction(javax.portlet.ActionRequest,javax.portlet.ActionResponse)
+     * @see jakarta.portlet.Portlet#processAction(jakarta.portlet.ActionRequest,jakarta.portlet.ActionResponse)
      */
     public void action(PortletRequestContext context, ActionRequest request, ActionResponse response, FilterManager filterManager)
     throws IOException, PortletException, PortletContainerException {
@@ -104,7 +104,7 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
      * @param request  header request used for the invocation.
      * @param response header response used for the invocation.
      * @see PortletServlet3
-     * @see javax.portlet.Portlet#header(javax.portlet.headerRequest,javax.portlet.headerResponse)
+     * @see jakarta.portlet.Portlet#header(jakarta.portlet.headerRequest,jakarta.portlet.headerResponse)
      */
     public void header(PortletRequestContext context, HeaderRequest request, HeaderResponse response, FilterManager filterManager)
     throws IOException, PortletException, PortletContainerException {
@@ -120,7 +120,7 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
      * @param request  render request used for the invocation.
      * @param response render response used for the invocation.
      * @see PortletServlet3
-     * @see javax.portlet.Portlet#render(javax.portlet.RenderRequest,javax.portlet.RenderResponse)
+     * @see jakarta.portlet.Portlet#render(jakarta.portlet.RenderRequest,jakarta.portlet.RenderResponse)
      */
     public void render(PortletRequestContext context, RenderRequest request, RenderResponse response, FilterManager filterManager)
     throws IOException, PortletException, PortletContainerException {
@@ -136,7 +136,7 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
      * @param request  event request used for the invocation.
      * @param response event response used for the invocation.
      * @see PortletServlet3
-     * @see javax.portlet.Portlet#render(javax.portlet.RenderRequest,javax.portlet.RenderResponse)
+     * @see jakarta.portlet.Portlet#render(jakarta.portlet.RenderRequest,jakarta.portlet.RenderResponse)
      */
     public void event(PortletRequestContext context, EventRequest request, EventResponse response, FilterManager filterManager)
     throws IOException, PortletException, PortletContainerException {
@@ -152,7 +152,7 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
      * @param request  resource request used for the invocation.
      * @param response resource response used for the invocation.
      * @see PortletServlet3
-     * @see javax.portlet.Portlet#resource(javax.portlet.ResourceRequest,javax.portlet.ResourceResponse)
+     * @see jakarta.portlet.Portlet#resource(jakarta.portlet.ResourceRequest,jakarta.portlet.ResourceResponse)
      */
     public void serveResource(PortletRequestContext context, ResourceRequest request, ResourceResponse response, FilterManager filterManager)
     throws IOException, PortletException, PortletContainerException {
@@ -249,7 +249,7 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
                 }
 
 
-            } catch (javax.servlet.UnavailableException ex) {
+            } catch (jakarta.servlet.UnavailableException ex) {
                 int seconds = ex.isPermanent() ? -1 : ex.getUnavailableSeconds();
                 String message = EXCEPTIONS.getString(
                         "error.portlet.invoker.unavailable",
@@ -258,10 +258,10 @@ public class DefaultPortletInvokerService implements PortletInvokerService {
                 if (LOG.isErrorEnabled()) {
                     LOG.error(message, ex);
                 }
-                throw new javax.portlet.UnavailableException(
+                throw new jakarta.portlet.UnavailableException(
                         message, seconds);
 
-            } catch (javax.servlet.ServletException ex) {
+            } catch (jakarta.servlet.ServletException ex) {
                 String message = EXCEPTIONS.getString("error.portlet.invoker");
                 if (LOG.isErrorEnabled()) {
                     LOG.error(message);

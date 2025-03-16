@@ -17,7 +17,7 @@
 package org.apache.pluto.driver.container;
 
 import javax.ccpp.Profile;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.pluto.container.CCPPProfileService;
 

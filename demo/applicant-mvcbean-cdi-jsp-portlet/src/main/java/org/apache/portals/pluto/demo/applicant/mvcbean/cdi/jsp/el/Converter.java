@@ -20,11 +20,11 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.util.Date;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.mvc.Models;
-import javax.portlet.PortletPreferences;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.mvc.Models;
+import jakarta.portlet.PortletPreferences;
 
 import org.apache.portals.pluto.demo.applicant.mvcbean.cdi.jsp.convert.DateParamConverter;
 

@@ -27,16 +27,16 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletSession;
-import javax.portlet.RenderParameters;
-import javax.servlet.DispatcherType;
-import javax.servlet.ServletContext;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.RenderParameters;
+import jakarta.servlet.DispatcherType;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import org.apache.pluto.container.ContainerServices;
 import org.apache.pluto.container.PortletContainer;
@@ -162,7 +162,7 @@ public class PortletRequestContextImpl implements PortletRequestContext {
    }
 
    protected boolean isReservedAttributeName(String name) {
-      return name.startsWith("javax.servlet.");
+      return name.startsWith("jakarta.servlet.");
    }
 
    protected String encodeAttributeName(String name) {
@@ -377,7 +377,7 @@ public class PortletRequestContextImpl implements PortletRequestContext {
          // inactive interval. If so, we should invalidate the underlying
          // HttpSession and recreate a new one (if the create flag is set to
          // true) -- We just cannot depend on the implementation of
-         // javax.servlet.http.HttpSession!
+         // jakarta.servlet.http.HttpSession!
          //
       
          HttpSession httpSession = getServletRequest().getSession(create);

@@ -24,12 +24,12 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Locale;
 
-import javax.portlet.ActionURL;
-import javax.portlet.CacheControl;
-import javax.portlet.MimeResponse;
-import javax.portlet.PortletURL;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.CacheControl;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletURL;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceURL;
 
 /**
  * @author Scott Nicklous
@@ -38,7 +38,7 @@ import javax.portlet.ResourceURL;
 public class MockMimeResponse extends MockPortletResponse implements MimeResponse {
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#createActionURL()
+    * @see jakarta.portlet.MimeResponse#createActionURL()
     */
    @Override
    public <T extends PortletURL & ActionURL> T createActionURL() {
@@ -46,7 +46,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#createActionURL(javax.portlet.MimeResponse.Copy)
+    * @see jakarta.portlet.MimeResponse#createActionURL(jakarta.portlet.MimeResponse.Copy)
     */
    @Override
    public ActionURL createActionURL(Copy arg0) {
@@ -54,7 +54,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#createRenderURL()
+    * @see jakarta.portlet.MimeResponse#createRenderURL()
     */
    @Override
    public <T extends PortletURL & RenderURL> T createRenderURL() {
@@ -62,7 +62,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#createRenderURL(javax.portlet.MimeResponse.Copy)
+    * @see jakarta.portlet.MimeResponse#createRenderURL(jakarta.portlet.MimeResponse.Copy)
     */
    @Override
    public RenderURL createRenderURL(Copy arg0) {
@@ -70,7 +70,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#createResourceURL()
+    * @see jakarta.portlet.MimeResponse#createResourceURL()
     */
    @Override
    public ResourceURL createResourceURL() {
@@ -78,7 +78,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#flushBuffer()
+    * @see jakarta.portlet.MimeResponse#flushBuffer()
     */
    @Override
    public void flushBuffer() throws IOException {
@@ -86,7 +86,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getBufferSize()
+    * @see jakarta.portlet.MimeResponse#getBufferSize()
     */
    @Override
    public int getBufferSize() {
@@ -94,7 +94,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getCacheControl()
+    * @see jakarta.portlet.MimeResponse#getCacheControl()
     */
    @Override
    public CacheControl getCacheControl() {
@@ -102,7 +102,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getCharacterEncoding()
+    * @see jakarta.portlet.MimeResponse#getCharacterEncoding()
     */
    @Override
    public String getCharacterEncoding() {
@@ -110,7 +110,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getContentType()
+    * @see jakarta.portlet.MimeResponse#getContentType()
     */
    @Override
    public String getContentType() {
@@ -118,7 +118,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getLocale()
+    * @see jakarta.portlet.MimeResponse#getLocale()
     */
    @Override
    public Locale getLocale() {
@@ -126,7 +126,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getPortletOutputStream()
+    * @see jakarta.portlet.MimeResponse#getPortletOutputStream()
     */
    @Override
    public OutputStream getPortletOutputStream() throws IOException {
@@ -134,7 +134,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#getWriter()
+    * @see jakarta.portlet.MimeResponse#getWriter()
     */
    @Override
    public PrintWriter getWriter() throws IOException {
@@ -142,7 +142,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#isCommitted()
+    * @see jakarta.portlet.MimeResponse#isCommitted()
     */
    @Override
    public boolean isCommitted() {
@@ -150,7 +150,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#reset()
+    * @see jakarta.portlet.MimeResponse#reset()
     */
    @Override
    public void reset() {
@@ -158,7 +158,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#resetBuffer()
+    * @see jakarta.portlet.MimeResponse#resetBuffer()
     */
    @Override
    public void resetBuffer() {
@@ -166,7 +166,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#setBufferSize(int)
+    * @see jakarta.portlet.MimeResponse#setBufferSize(int)
     */
    @Override
    public void setBufferSize(int arg0) {
@@ -174,7 +174,7 @@ public class MockMimeResponse extends MockPortletResponse implements MimeRespons
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.MimeResponse#setContentType(java.lang.String)
+    * @see jakarta.portlet.MimeResponse#setContentType(java.lang.String)
     */
    @Override
    public void setContentType(String arg0) {

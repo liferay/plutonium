@@ -24,15 +24,15 @@ import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.portlet.PortalContext;
-import javax.portlet.PortletContext;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletPreferences;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletSession;
-import javax.portlet.RenderParameters;
-import javax.portlet.WindowState;
-import javax.servlet.http.Cookie;
+import jakarta.portlet.PortalContext;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletPreferences;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.RenderParameters;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.http.Cookie;
 
 /**
  * @author Scott
@@ -58,7 +58,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderState#getPortletMode()
+    * @see jakarta.portlet.RenderState#getPortletMode()
     */
    @Override
    public PortletMode getPortletMode() {
@@ -66,7 +66,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderState#getRenderParameters()
+    * @see jakarta.portlet.RenderState#getRenderParameters()
     */
    @Override
    public RenderParameters getRenderParameters() {
@@ -74,7 +74,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.RenderState#getWindowState()
+    * @see jakarta.portlet.RenderState#getWindowState()
     */
    @Override
    public WindowState getWindowState() {
@@ -82,7 +82,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getAttribute(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#getAttribute(java.lang.String)
     */
    @Override
    public Object getAttribute(String arg0) {
@@ -90,7 +90,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getAttributeNames()
+    * @see jakarta.portlet.PortletRequest#getAttributeNames()
     */
    @Override
    public Enumeration<String> getAttributeNames() {
@@ -98,7 +98,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getAuthType()
+    * @see jakarta.portlet.PortletRequest#getAuthType()
     */
    @Override
    public String getAuthType() {
@@ -106,7 +106,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getContextPath()
+    * @see jakarta.portlet.PortletRequest#getContextPath()
     */
    @Override
    public String getContextPath() {
@@ -114,7 +114,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getCookies()
+    * @see jakarta.portlet.PortletRequest#getCookies()
     */
    @Override
    public Cookie[] getCookies() {
@@ -122,7 +122,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getLocale()
+    * @see jakarta.portlet.PortletRequest#getLocale()
     */
    @Override
    public Locale getLocale() {
@@ -130,7 +130,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getLocales()
+    * @see jakarta.portlet.PortletRequest#getLocales()
     */
    @Override
    public Enumeration<Locale> getLocales() {
@@ -138,7 +138,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getParameter(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#getParameter(java.lang.String)
     */
    @Override
    public String getParameter(String arg0) {
@@ -146,7 +146,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getParameterMap()
+    * @see jakarta.portlet.PortletRequest#getParameterMap()
     */
    @Override
    public Map<String, String[]> getParameterMap() {
@@ -154,7 +154,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getParameterNames()
+    * @see jakarta.portlet.PortletRequest#getParameterNames()
     */
    @Override
    public Enumeration<String> getParameterNames() {
@@ -162,7 +162,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getParameterValues(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#getParameterValues(java.lang.String)
     */
    @Override
    public String[] getParameterValues(String arg0) {
@@ -170,7 +170,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPortalContext()
+    * @see jakarta.portlet.PortletRequest#getPortalContext()
     */
    @Override
    public PortalContext getPortalContext() {
@@ -183,7 +183,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPortletSession()
+    * @see jakarta.portlet.PortletRequest#getPortletSession()
     */
    @Override
    public PortletSession getPortletSession() {
@@ -191,7 +191,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPortletSession(boolean)
+    * @see jakarta.portlet.PortletRequest#getPortletSession(boolean)
     */
    @Override
    public PortletSession getPortletSession(boolean arg0) {
@@ -199,7 +199,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPreferences()
+    * @see jakarta.portlet.PortletRequest#getPreferences()
     */
    @Override
    public PortletPreferences getPreferences() {
@@ -207,7 +207,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPrivateParameterMap()
+    * @see jakarta.portlet.PortletRequest#getPrivateParameterMap()
     */
    @Override
    public Map<String, String[]> getPrivateParameterMap() {
@@ -215,7 +215,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getProperties(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#getProperties(java.lang.String)
     */
    @Override
    public Enumeration<String> getProperties(String arg0) {
@@ -223,7 +223,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getProperty(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#getProperty(java.lang.String)
     */
    @Override
    public String getProperty(String arg0) {
@@ -231,7 +231,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPropertyNames()
+    * @see jakarta.portlet.PortletRequest#getPropertyNames()
     */
    @Override
    public Enumeration<String> getPropertyNames() {
@@ -239,7 +239,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getPublicParameterMap()
+    * @see jakarta.portlet.PortletRequest#getPublicParameterMap()
     */
    @Override
    public Map<String, String[]> getPublicParameterMap() {
@@ -247,7 +247,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getRemoteUser()
+    * @see jakarta.portlet.PortletRequest#getRemoteUser()
     */
    @Override
    public String getRemoteUser() {
@@ -255,7 +255,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getRequestedSessionId()
+    * @see jakarta.portlet.PortletRequest#getRequestedSessionId()
     */
    @Override
    public String getRequestedSessionId() {
@@ -263,7 +263,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getResponseContentType()
+    * @see jakarta.portlet.PortletRequest#getResponseContentType()
     */
    @Override
    public String getResponseContentType() {
@@ -271,7 +271,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getResponseContentTypes()
+    * @see jakarta.portlet.PortletRequest#getResponseContentTypes()
     */
    @Override
    public Enumeration<String> getResponseContentTypes() {
@@ -279,7 +279,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getScheme()
+    * @see jakarta.portlet.PortletRequest#getScheme()
     */
    @Override
    public String getScheme() {
@@ -287,7 +287,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getServerName()
+    * @see jakarta.portlet.PortletRequest#getServerName()
     */
    @Override
    public String getServerName() {
@@ -295,7 +295,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getServerPort()
+    * @see jakarta.portlet.PortletRequest#getServerPort()
     */
    @Override
    public int getServerPort() {
@@ -303,7 +303,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getUserPrincipal()
+    * @see jakarta.portlet.PortletRequest#getUserPrincipal()
     */
    @Override
    public Principal getUserPrincipal() {
@@ -311,7 +311,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#getWindowID()
+    * @see jakarta.portlet.PortletRequest#getWindowID()
     */
    @Override
    public String getWindowID() {
@@ -319,7 +319,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#isPortletModeAllowed(javax.portlet.PortletMode)
+    * @see jakarta.portlet.PortletRequest#isPortletModeAllowed(jakarta.portlet.PortletMode)
     */
    @Override
    public boolean isPortletModeAllowed(PortletMode arg0) {
@@ -327,7 +327,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#isRequestedSessionIdValid()
+    * @see jakarta.portlet.PortletRequest#isRequestedSessionIdValid()
     */
    @Override
    public boolean isRequestedSessionIdValid() {
@@ -335,7 +335,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#isSecure()
+    * @see jakarta.portlet.PortletRequest#isSecure()
     */
    @Override
    public boolean isSecure() {
@@ -343,7 +343,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#isUserInRole(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#isUserInRole(java.lang.String)
     */
    @Override
    public boolean isUserInRole(String arg0) {
@@ -351,7 +351,7 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#isWindowStateAllowed(javax.portlet.WindowState)
+    * @see jakarta.portlet.PortletRequest#isWindowStateAllowed(jakarta.portlet.WindowState)
     */
    @Override
    public boolean isWindowStateAllowed(WindowState arg0) {
@@ -359,14 +359,14 @@ public class MockPortletRequest implements PortletRequest {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#removeAttribute(java.lang.String)
+    * @see jakarta.portlet.PortletRequest#removeAttribute(java.lang.String)
     */
    @Override
    public void removeAttribute(String arg0) {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletRequest#setAttribute(java.lang.String, java.lang.Object)
+    * @see jakarta.portlet.PortletRequest#setAttribute(java.lang.String, java.lang.Object)
     */
    @Override
    public void setAttribute(String arg0, Object arg1) {

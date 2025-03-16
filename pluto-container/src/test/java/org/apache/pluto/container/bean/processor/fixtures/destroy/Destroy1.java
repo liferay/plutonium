@@ -19,8 +19,8 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.destroy;
 
-import javax.portlet.annotations.DestroyMethod;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.DestroyMethod;
+import jakarta.portlet.annotations.RenderMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

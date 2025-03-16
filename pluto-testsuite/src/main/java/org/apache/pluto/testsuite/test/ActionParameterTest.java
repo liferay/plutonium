@@ -19,8 +19,8 @@ package org.apache.pluto.testsuite.test;
 import java.util.Enumeration;
 import java.util.Map;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.PortletRequest;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.PortletRequest;
 
 import org.apache.pluto.testsuite.TestResult;
 import org.apache.pluto.testsuite.TestUtils;

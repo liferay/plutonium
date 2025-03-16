@@ -21,9 +21,9 @@ package org.apache.portals.pluto.demo.chat;
 
 import java.io.IOException;
 
-import javax.portlet.PortletAsyncEvent;
-import javax.portlet.PortletAsyncListener;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.portlet.PortletAsyncEvent;
+import jakarta.portlet.PortletAsyncListener;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 /**
  * Simple async listener to watch for timeouts. 

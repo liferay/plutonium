@@ -23,16 +23,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.BaseURL;
-import javax.portlet.PortletSecurityException;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.TagData;
-import javax.servlet.jsp.tagext.TagExtraInfo;
-import javax.servlet.jsp.tagext.TagSupport;
-import javax.servlet.jsp.tagext.VariableInfo;
+import jakarta.portlet.BaseURL;
+import jakarta.portlet.PortletSecurityException;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.TagData;
+import jakarta.servlet.jsp.tagext.TagExtraInfo;
+import jakarta.servlet.jsp.tagext.TagSupport;
+import jakarta.servlet.jsp.tagext.VariableInfo;
 
 /**
  * Abstract supporting class for actionURL tag, renderURL tag 
@@ -98,7 +98,7 @@ public abstract class BaseURLTag extends TagSupport {
 	}
 
 	/* (non-Javadoc)
-	 * @see javax.servlet.jsp.tagext.TagSupport#doStartTag()
+	 * @see jakarta.servlet.jsp.tagext.TagSupport#doStartTag()
 	 */
 	@Override
 	public int doStartTag() throws JspException{
@@ -118,7 +118,7 @@ public abstract class BaseURLTag extends TagSupport {
 	
 	
 	/* (non-Javadoc)
-	 * @see javax.servlet.jsp.tagext.TagSupport#doEndTag()
+	 * @see jakarta.servlet.jsp.tagext.TagSupport#doEndTag()
 	 */
 	@Override
 	public int doEndTag() throws JspException{
@@ -170,7 +170,7 @@ public abstract class BaseURLTag extends TagSupport {
 	
 
 	/* (non-Javadoc)
-	 * @see javax.servlet.jsp.tagext.TagSupport#release()
+	 * @see jakarta.servlet.jsp.tagext.TagSupport#release()
 	 */
 	@Override
 	public void release(){

@@ -77,7 +77,7 @@ final class Environment {
      * @return te major specification version.
      */
     public static final int getMajorSpecificationVersion() {
-        return Integer.parseInt(PROPS.getString("javax.portlet.version.major"));
+        return Integer.parseInt(PROPS.getString("jakarta.portlet.version.major"));
     }
 
     /**
@@ -86,7 +86,7 @@ final class Environment {
      * @return the minor specification version.
      */
     public static final int getMinorSpecificationVersion() {
-        return Integer.parseInt(PROPS.getString("javax.portlet.version.minor"));
+        return Integer.parseInt(PROPS.getString("jakarta.portlet.version.minor"));
     }
 
     /**

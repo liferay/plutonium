@@ -18,10 +18,10 @@ package org.apache.pluto.container;
 
 import java.io.IOException;
 
-import javax.portlet.Event;
-import javax.portlet.PortletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.Event;
+import jakarta.portlet.PortletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * The publicized entry point into Pluto. The base functionality of the portlet
@@ -34,12 +34,12 @@ import javax.servlet.http.HttpServletResponse;
  * lifecycle.</TD></TR>
  * <p/>
  * <TR><TD>{@link #doAction(PortletWindow,
- * javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)}</TD>
+ * jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse)}</TD>
  * <TD>Perform the action for the targeted portlet</TD> <TD>Optionally performed
  * for a single portlet per request</TD></TR>
  * <p/>
  * <TR><TD>{@link #doRender(PortletWindow,
- * javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)}</TD>
+ * jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse)}</TD>
  * <TD>Render the portlet</TD> <TD>Performed once for each portlet per
  * request.</TD></TR>
  * <p/>

@@ -18,8 +18,8 @@ package org.apache.pluto.thymeleaf.mvc.portlet;
 
 import java.io.Writer;
 
-import javax.mvc.engine.ViewEngineContext;
-import javax.mvc.engine.ViewEngineException;
+import jakarta.mvc.engine.ViewEngineContext;
+import jakarta.mvc.engine.ViewEngineException;
 
 
 /**

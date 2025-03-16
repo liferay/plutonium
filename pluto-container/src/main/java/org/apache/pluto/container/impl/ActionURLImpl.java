@@ -1,8 +1,8 @@
 package org.apache.pluto.container.impl;
 
-import javax.portlet.ActionURL;
-import javax.portlet.MimeResponse.Copy;
-import javax.portlet.MutableActionParameters;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.MimeResponse.Copy;
+import jakarta.portlet.MutableActionParameters;
 
 import org.apache.pluto.container.PortletMimeResponseContext;
 import org.apache.pluto.container.PortletURLProvider;
@@ -41,7 +41,7 @@ public class ActionURLImpl extends PortletURLImpl implements ActionURL {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ActionURL#getActionParameters()
+    * @see jakarta.portlet.ActionURL#getActionParameters()
     */
    public MutableActionParameters getActionParameters() {
       return new MutableActionParametersImpl(urlProvider, windowId);

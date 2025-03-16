@@ -19,9 +19,9 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.resource;
 
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.ServeResourceMethod;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.ServeResourceMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

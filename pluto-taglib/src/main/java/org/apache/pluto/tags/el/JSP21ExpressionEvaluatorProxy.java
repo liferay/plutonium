@@ -19,9 +19,9 @@ package org.apache.pluto.tags.el;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
 
 class JSP21ExpressionEvaluatorProxy extends ExpressionEvaluatorProxy {
 
@@ -39,22 +39,22 @@ class JSP21ExpressionEvaluatorProxy extends ExpressionEvaluatorProxy {
 
     static {
         try {
-            jspFactory = Class.forName("javax.servlet.jsp.JspFactory")
+            jspFactory = Class.forName("jakarta.servlet.jsp.JspFactory")
                 .getMethod("getDefaultFactory", new Class[0]).invoke(null);
             jspApplicationContextGetter = 
                 jspFactory.getClass().getMethod("getJspApplicationContext",
                     new Class[] { ServletContext.class });
             expressionFactoryGetter = 
-                Class.forName("javax.servlet.jsp.JspApplicationContext")
+                Class.forName("jakarta.servlet.jsp.JspApplicationContext")
                     .getMethod("getExpressionFactory", new Class[0]);
             elContextGetter = 
                 PageContext.class.getMethod("getELContext", new Class[0]);
             valueExpressionGetter = 
-                Class.forName("javax.el.ExpressionFactory").getMethod(
+                Class.forName("jakarta.el.ExpressionFactory").getMethod(
                     "createValueExpression", new Class[] 
-                    { Class.forName("javax.el.ELContext"), String.class, Class.class });
-            evalMethod = Class.forName("javax.el.ValueExpression").getMethod(
-                    "getValue", new Class[] { Class.forName("javax.el.ELContext") });
+                    { Class.forName("jakarta.el.ELContext"), String.class, Class.class });
+            evalMethod = Class.forName("jakarta.el.ValueExpression").getMethod(
+                    "getValue", new Class[] { Class.forName("jakarta.el.ELContext") });
         } catch (Exception e) {
             throw new RuntimeException("Unable to find JSP2.1 methods.", e);
         }

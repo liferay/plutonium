@@ -23,11 +23,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import javax.portlet.PortletMode;
-import javax.portlet.ResourceURL;
-import javax.portlet.WindowState;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

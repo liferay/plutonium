@@ -18,8 +18,8 @@ package org.apache.pluto.testsuite.test.jsr286;
 
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletResponse;
 
 import org.apache.pluto.testsuite.TestResult;
 import org.apache.pluto.testsuite.test.AbstractReflectivePortletTest;

@@ -23,10 +23,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
-import javax.portlet.PortletContext;
-import javax.portlet.PortletSession;
-import javax.portlet.PortletSessionUtil;
-import javax.servlet.http.HttpSession;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.PortletSessionUtil;
+import jakarta.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +34,7 @@ import org.apache.pluto.container.PortletWindow;
 import org.apache.pluto.container.util.ArgumentUtility;
 
 /**
- * Implementation of the <code>javax.portlet.PortletSession</code> interface.
+ * Implementation of the <code>jakarta.portlet.PortletSession</code> interface.
  * 
  */
 public class PortletSessionImpl implements PortletSession {
@@ -46,7 +46,7 @@ public class PortletSessionImpl implements PortletSession {
     protected static final int DEFAULT_SCOPE = PortletSession.PORTLET_SCOPE;
     
     /** The portlet scope namespace as defined in PLT. 15.3. */
-    protected static final String PORTLET_SCOPE_NAMESPACE = "javax.portlet.p.";
+    protected static final String PORTLET_SCOPE_NAMESPACE = "jakarta.portlet.p.";
     
     /** The portlet window ID / attribute name separator as defined in PLT. 15.3. */
     protected static final char ID_NAME_SEPARATOR = '?';
@@ -207,7 +207,7 @@ public class PortletSessionImpl implements PortletSession {
     /**
      * Creates portlet-scoped ID for the specified attribute name.
      * Portlet-scoped ID for a given attribute name has the following form:
-     * <code>javax.portlet.p.&lt;ID&gt;?&lt;name&gt;</code>
+     * <code>jakarta.portlet.p.&lt;ID&gt;?&lt;name&gt;</code>
      * where <code>ID</code> is a unique identification for the portlet window
      * (assigned by the portal/portlet-container) that must not contain a '?'
      * character. <code>name</code> is the attribute name.
@@ -234,7 +234,7 @@ public class PortletSessionImpl implements PortletSession {
      * @see #createPortletScopedId(String)
      */
     protected boolean isInCurrentPortletScope(String name) {
-    	// Portlet-scoped attribute names MUST start with "javax.portlet.p.",
+    	// Portlet-scoped attribute names MUST start with "jakarta.portlet.p.",
     	//   and contain the ID-name separator '?'.
     	if (name.startsWith(PORTLET_SCOPE_NAMESPACE)
     			&& name.indexOf(ID_NAME_SEPARATOR) > -1) {

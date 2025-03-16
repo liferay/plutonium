@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.container.impl;
 
-import javax.portlet.EventRequest;
-import javax.portlet.EventResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
 
 import org.apache.pluto.container.PortletEventResponseContext;
 import org.apache.pluto.container.util.ArgumentUtility;

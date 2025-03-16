@@ -20,9 +20,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.ValidatorException;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.ValidatorException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,9 +39,9 @@ import org.apache.pluto.container.om.portlet.Preferences;
  * Default implementation of the portlet preferences service. The portlet
  * preferences service is a singleton held by the pluto portlet container.
  *
- * @see javax.portlet.PortletPreferences
+ * @see jakarta.portlet.PortletPreferences
  * @see org.apache.pluto.container.impl.PortletPreferencesImpl
- * @see javax.portlet.PortletPreferences
+ * @see jakarta.portlet.PortletPreferences
  *
  */
 public class DefaultPortletPreferencesService
@@ -159,7 +159,7 @@ implements PortletPreferencesService {
 	 * and saves it.
 	 * </p>
 	 *
-	 * @see javax.portlet.PortletPreferences#store()
+	 * @see jakarta.portlet.PortletPreferences#store()
 	 *
 	 * @param portletWindow  the portlet window
 	 * @param request  the portlet request from which the remote user is retrieved.

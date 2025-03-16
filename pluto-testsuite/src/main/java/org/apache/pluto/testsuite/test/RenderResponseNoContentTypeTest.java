@@ -18,8 +18,8 @@ package org.apache.pluto.testsuite.test;
 
 import java.io.IOException;
 
-import javax.portlet.PortletResponse;
-import javax.portlet.RenderResponse;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.RenderResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -16,10 +16,10 @@
  */
 package org.apache.pluto.thymeleaf.mvc.portlet.cdi;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletContext;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
 
 import org.apache.pluto.thymeleaf.portlet.VariableValidator;
 

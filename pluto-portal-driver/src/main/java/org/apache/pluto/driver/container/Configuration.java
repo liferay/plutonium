@@ -124,7 +124,7 @@ public class Configuration {
      * @return te major specification version.
      */
     public static final int getMajorSpecificationVersion() {
-        return Integer.parseInt(BUNDLE.getString("javax.portlet.version.major"));
+        return Integer.parseInt(BUNDLE.getString("jakarta.portlet.version.major"));
     }
 
     /**
@@ -133,7 +133,7 @@ public class Configuration {
      * @return the minor specification version.
      */
     public static final int getMinorSpecificationVersion() {
-        return Integer.parseInt(BUNDLE.getString("javax.portlet.version.minor"));
+        return Integer.parseInt(BUNDLE.getString("jakarta.portlet.version.minor"));
     }
 
     /**

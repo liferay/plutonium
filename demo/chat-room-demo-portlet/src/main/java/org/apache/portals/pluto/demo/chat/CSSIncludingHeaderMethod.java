@@ -21,10 +21,10 @@ package org.apache.portals.pluto.demo.chat;
 
 import java.io.IOException;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.annotations.HeaderMethod;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.annotations.HeaderMethod;
 
 /**
  * Header method to include a css file.

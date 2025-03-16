@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import org.apache.portals.pluto.demo.applicant.mvcbean.cdi.thymeleaf.dto.Province;
 import org.apache.portals.pluto.demo.applicant.mvcbean.cdi.thymeleaf.service.ProvinceService;

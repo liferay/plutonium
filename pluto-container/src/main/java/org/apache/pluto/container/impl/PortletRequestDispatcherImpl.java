@@ -19,21 +19,21 @@ package org.apache.pluto.container.impl;
 import java.io.IOException;
 import java.util.Map;
 
-import javax.portlet.MimeResponse;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletRequestDispatcher;
-import javax.portlet.PortletResponse;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequestWrapper;
-import javax.servlet.http.HttpServletResponseWrapper;
-import javax.servlet.http.HttpSession;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.HttpServletResponseWrapper;
+import jakarta.servlet.http.HttpSession;
 
 import org.apache.pluto.container.PortletInvokerService;
 import org.apache.pluto.container.PortletRequestContext;
@@ -68,8 +68,8 @@ public class PortletRequestDispatcherImpl implements PortletRequestDispatcher, R
     *           the path associated with the dispatcher
     * @param namedDispatch
     *           true if requestDispatcher is a named dispatcher
-    * @see javax.portlet.PortletContext#getNamedDispatcher(String)
-    * @see javax.portlet.PortletContext#getRequestDispatcher(String)
+    * @see jakarta.portlet.PortletContext#getNamedDispatcher(String)
+    * @see jakarta.portlet.PortletContext#getRequestDispatcher(String)
     */
    public PortletRequestDispatcherImpl(RequestDispatcher requestDispatcher, String path, boolean namedDispatch) {
       this.requestDispatcher = requestDispatcher;
@@ -126,7 +126,7 @@ public class PortletRequestDispatcherImpl implements PortletRequestDispatcher, R
             .getAttribute(PortletInvokerService.REQUEST_CONTEXT);
       HttpSession session = null;
 
-      // PLT.10.4.3. Proxied session is created and passed if javax.portlet.servletDefaultSessionScope == PORTLET_SCOPE
+      // PLT.10.4.3. Proxied session is created and passed if jakarta.portlet.servletDefaultSessionScope == PORTLET_SCOPE
       if (isPortletScopeSessionConfigured(requestContext)) {
          String portletWindowId = requestContext.getPortletWindow().getId().getStringId();
          session = ServletPortletSessionProxy.createProxy(requestContext.getServletRequest(), portletWindowId);
@@ -196,7 +196,7 @@ public class PortletRequestDispatcherImpl implements PortletRequestDispatcher, R
 
       PortletConfig portletConfig = requestContext.getPortletConfig();
       Map<String, String[]> containerRuntimeOptions = portletConfig.getContainerRuntimeOptions();
-      String[] values = containerRuntimeOptions.get("javax.portlet.servletDefaultSessionScope");
+      String[] values = containerRuntimeOptions.get("jakarta.portlet.servletDefaultSessionScope");
 
       if (values != null && values.length > 0) {
          portletScopeSessionConfigured = "PORTLET_SCOPE".equals(values[0]);

@@ -19,16 +19,16 @@ package org.apache.pluto.container.impl;
 import java.util.Enumeration;
 import java.util.Map;
 
-import javax.portlet.CacheControl;
-import javax.portlet.PortletAsyncContext;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletRequest;
-import javax.portlet.ResourceParameters;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.ResourceURL;
-import javax.portlet.WindowState;
-import javax.servlet.DispatcherType;
+import jakarta.portlet.CacheControl;
+import jakarta.portlet.PortletAsyncContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.ResourceParameters;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.DispatcherType;
 
 import org.apache.pluto.container.PortletResourceRequestContext;
 import org.apache.pluto.container.PortletResourceResponseContext;

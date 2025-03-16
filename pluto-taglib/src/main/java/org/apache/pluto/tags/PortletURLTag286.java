@@ -19,9 +19,9 @@ package org.apache.pluto.tags;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletRequest;
-import javax.servlet.jsp.JspException;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletRequest;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Abstract supporting class for the JSR 286 actionURL 

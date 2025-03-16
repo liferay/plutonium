@@ -21,11 +21,11 @@ package org.apache.pluto.container.bean.processor.fixtures.mocks;
 
 import java.util.Map;
 
-import javax.portlet.PortletAsyncContext;
-import javax.portlet.ResourceParameters;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.servlet.DispatcherType;
+import jakarta.portlet.PortletAsyncContext;
+import jakarta.portlet.ResourceParameters;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.servlet.DispatcherType;
 
 /**
  * @author Scott Nicklous
@@ -50,7 +50,7 @@ public class MockResourceRequest extends MockClientDataRequest implements Resour
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceRequest#getCacheability()
+    * @see jakarta.portlet.ResourceRequest#getCacheability()
     */
    @Override
    public String getCacheability() {
@@ -58,7 +58,7 @@ public class MockResourceRequest extends MockClientDataRequest implements Resour
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceRequest#getETag()
+    * @see jakarta.portlet.ResourceRequest#getETag()
     */
    @Override
    public String getETag() {
@@ -66,7 +66,7 @@ public class MockResourceRequest extends MockClientDataRequest implements Resour
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceRequest#getPrivateRenderParameterMap()
+    * @see jakarta.portlet.ResourceRequest#getPrivateRenderParameterMap()
     */
    @Override
    public Map<String, String[]> getPrivateRenderParameterMap() {
@@ -74,7 +74,7 @@ public class MockResourceRequest extends MockClientDataRequest implements Resour
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceRequest#getResourceID()
+    * @see jakarta.portlet.ResourceRequest#getResourceID()
     */
    @Override
    public String getResourceID() {
@@ -82,7 +82,7 @@ public class MockResourceRequest extends MockClientDataRequest implements Resour
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.ResourceRequest#getResourceParameters()
+    * @see jakarta.portlet.ResourceRequest#getResourceParameters()
     */
    @Override
    public ResourceParameters getResourceParameters() {

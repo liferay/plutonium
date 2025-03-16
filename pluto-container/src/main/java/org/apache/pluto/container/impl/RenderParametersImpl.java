@@ -23,8 +23,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.RenderParameters;
-import javax.portlet.MutableRenderParameters;
+import jakarta.portlet.RenderParameters;
+import jakarta.portlet.MutableRenderParameters;
 
 import org.apache.pluto.container.PortletURLProvider;
 import org.apache.pluto.container.PortletURLProvider.ParamType;
@@ -72,7 +72,7 @@ public class RenderParametersImpl extends PortletParametersImpl implements
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#mutableClone()
+    * @see jakarta.portlet.PortletParameters#mutableClone()
     */
    @Override
    public MutableRenderParameters clone() {

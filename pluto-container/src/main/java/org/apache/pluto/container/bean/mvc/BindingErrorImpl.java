@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.mvc.binding.BindingError;
+import jakarta.mvc.binding.BindingError;
 
 
 /**

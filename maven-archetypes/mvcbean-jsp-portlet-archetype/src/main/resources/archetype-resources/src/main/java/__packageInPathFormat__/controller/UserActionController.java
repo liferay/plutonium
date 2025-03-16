@@ -7,25 +7,25 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Set;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
-import javax.mvc.Controller;
-import javax.mvc.Models;
-import javax.mvc.binding.BindingResult;
-import javax.mvc.binding.ParamError;
-import javax.mvc.security.CsrfProtected;
+import jakarta.mvc.Controller;
+import jakarta.mvc.Models;
+import jakarta.mvc.binding.BindingResult;
+import jakarta.mvc.binding.ParamError;
+import jakarta.mvc.security.CsrfProtected;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
 
-import javax.portlet.annotations.ActionMethod;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.portlet.annotations.ActionMethod;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
-import javax.ws.rs.BeanParam;
+import jakarta.ws.rs.BeanParam;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

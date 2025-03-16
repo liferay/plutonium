@@ -18,10 +18,10 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.ActionURL;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceURL;
 
 public class  TestListener implements PortletURLGenerationListener<RenderURL, ActionURL> {
 

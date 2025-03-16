@@ -19,9 +19,9 @@
 
 package org.apache.pluto.container.bean.processor.fixtures.header;
 
-import javax.portlet.HeaderRequest;
-import javax.portlet.HeaderResponse;
-import javax.portlet.annotations.HeaderMethod;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.annotations.HeaderMethod;
 
 import org.apache.pluto.container.bean.processor.fixtures.InvocationResults;
 

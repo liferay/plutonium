@@ -23,10 +23,10 @@ package org.apache.portals.pluto.demo.v3;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.portlet.ActionURL;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceURL;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceURL;
 
 /**
  * @author nick
@@ -36,7 +36,7 @@ public class URLFilter implements PortletURLGenerationListener<RenderURL, Action
    private static final Logger logger = LoggerFactory.getLogger(URLFilter.class);
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletURLGenerationListener#filterActionURL(javax.portlet.PortletURL)
+    * @see jakarta.portlet.PortletURLGenerationListener#filterActionURL(jakarta.portlet.PortletURL)
     */
    @Override
    public void filterActionURL(ActionURL actionURL) {
@@ -47,7 +47,7 @@ public class URLFilter implements PortletURLGenerationListener<RenderURL, Action
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletURLGenerationListener#filterRenderURL(javax.portlet.PortletURL)
+    * @see jakarta.portlet.PortletURLGenerationListener#filterRenderURL(jakarta.portlet.PortletURL)
     */
    @Override
    public void filterRenderURL(RenderURL renderURL) {
@@ -55,7 +55,7 @@ public class URLFilter implements PortletURLGenerationListener<RenderURL, Action
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletURLGenerationListener#filterResourceURL(javax.portlet.ResourceURL)
+    * @see jakarta.portlet.PortletURLGenerationListener#filterResourceURL(jakarta.portlet.ResourceURL)
     */
    @Override
    public void filterResourceURL(ResourceURL resourceURL) {

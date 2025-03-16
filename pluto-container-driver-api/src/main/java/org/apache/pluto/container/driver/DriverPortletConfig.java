@@ -16,7 +16,7 @@
  */
 package org.apache.pluto.container.driver;
 
-import javax.portlet.PortletConfig;
+import jakarta.portlet.PortletConfig;
 
 import org.apache.pluto.container.om.portlet.PortletDefinition;
 

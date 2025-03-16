@@ -16,8 +16,8 @@
  */
 package org.apache.pluto.container;
 
-import javax.portlet.PortletRequestDispatcher;
-import javax.servlet.ServletContext;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.servlet.ServletContext;
 
 import org.apache.pluto.container.om.portlet.PortletApplicationDefinition;
 

@@ -23,15 +23,15 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-import javax.inject.Inject;
-import javax.portlet.PortletException;
-import javax.portlet.ResourceRequest;
-import javax.portlet.ResourceResponse;
-import javax.portlet.annotations.PortletLifecycleFilter;
-import javax.portlet.filter.FilterChain;
-import javax.portlet.filter.FilterConfig;
-import javax.portlet.filter.ResourceFilter;
-import javax.servlet.DispatcherType;
+import jakarta.inject.Inject;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.annotations.PortletLifecycleFilter;
+import jakarta.portlet.filter.FilterChain;
+import jakarta.portlet.filter.FilterConfig;
+import jakarta.portlet.filter.ResourceFilter;
+import jakarta.servlet.DispatcherType;
 
 /**
  * Filter for the async portlet. logs the dispatcher type and sometimes

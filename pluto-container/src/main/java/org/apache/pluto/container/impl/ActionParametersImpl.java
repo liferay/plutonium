@@ -21,8 +21,8 @@ package org.apache.pluto.container.impl;
 
 import java.util.Map;
 
-import javax.portlet.ActionParameters;
-import javax.portlet.MutableActionParameters;
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.MutableActionParameters;
 
 import org.apache.pluto.container.PortletURLProvider;
 import org.apache.pluto.container.PortletURLProvider.ParamType;
@@ -66,7 +66,7 @@ public class ActionParametersImpl extends PortletParametersImpl implements
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#mutableClone()
+    * @see jakarta.portlet.PortletParameters#mutableClone()
     */
    @Override
    public MutableActionParameters clone() {

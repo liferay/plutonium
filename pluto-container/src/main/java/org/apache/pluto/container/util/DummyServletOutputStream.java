@@ -18,8 +18,8 @@ package org.apache.pluto.container.util;
 
 import java.io.IOException;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.WriteListener;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.WriteListener;
 
 public final class DummyServletOutputStream extends ServletOutputStream{
 

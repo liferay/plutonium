@@ -18,11 +18,11 @@ package org.apache.pluto.thymeleaf.mvc.portlet.cdi;
 
 import java.io.IOException;
 
-import javax.enterprise.inject.Produces;
-import javax.mvc.engine.ViewEngine;
-import javax.mvc.engine.ViewEngineException;
-import javax.portlet.MimeResponse;
-import javax.portlet.annotations.PortletRequestScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.mvc.engine.ViewEngine;
+import jakarta.mvc.engine.ViewEngineException;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.annotations.PortletRequestScoped;
 
 import org.apache.pluto.thymeleaf.mvc.portlet.ThymeleafViewEngine;
 import org.apache.pluto.thymeleaf.portlet.TemplateEngineSupplier;

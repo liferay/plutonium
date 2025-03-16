@@ -27,19 +27,19 @@ import java.util.Locale;
 import java.util.Map;
 
 import javax.ccpp.Profile;
-import javax.portlet.CacheControl;
-import javax.portlet.MimeResponse;
-import javax.portlet.PortalContext;
-import javax.portlet.PortletContext;
-import javax.portlet.PortletMode;
-import javax.portlet.PortletPreferences;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletSession;
-import javax.portlet.RenderParameters;
-import javax.portlet.WindowState;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.CacheControl;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortalContext;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletPreferences;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.RenderParameters;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.PortletContainer;
 import org.apache.pluto.container.PortletInvokerService;
@@ -55,7 +55,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Abstract <code>javax.portlet.PortletRequest</code> implementation. This class also implements InternalPortletRequest.
+ * Abstract <code>jakarta.portlet.PortletRequest</code> implementation. This class also implements InternalPortletRequest.
  * 
  */
 public abstract class PortletRequestImpl implements PortletRequest {
@@ -177,11 +177,11 @@ public abstract class PortletRequestImpl implements PortletRequest {
             ccppProfile = getPortletContainer().getContainerServices().getCCPPProfileService().getCCPPProfile(getServletRequest());
          }
          return ccppProfile;
-      } else if (name.equals("javax.portlet.debug.ServletRequest")) {
+      } else if (name.equals("jakarta.portlet.debug.ServletRequest")) {
          return requestContext.getServletRequest();
-      } else if (name.equals("javax.portlet.debug.ServletResponse")) {
+      } else if (name.equals("jakarta.portlet.debug.ServletResponse")) {
          return requestContext.getServletResponse();
-      } else if (name.equals("javax.portlet.debug.ServletContext")) {
+      } else if (name.equals("jakarta.portlet.debug.ServletContext")) {
          return requestContext.getServletContext();
       }
       return requestContext.getAttribute(name);

@@ -19,10 +19,10 @@ package org.apache.pluto.testsuite.test.jsr286.event;
 
 import java.lang.reflect.Method;
 
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
-import javax.portlet.PortletRequest;
-import javax.portlet.StateAwareResponse;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.StateAwareResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

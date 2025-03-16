@@ -18,10 +18,9 @@ package org.apache.pluto.thymeleaf.portlet;
 
 import java.util.Locale;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.thymeleaf.context.IWebContext;
 
@@ -54,23 +53,4 @@ public abstract class WebContextBase implements IWebContext {
 		return locale;
 	}
 
-	@Override
-	public HttpServletRequest getRequest() {
-		return httpServletRequest;
-	}
-
-	@Override
-	public HttpServletResponse getResponse() {
-		return httpServletResponse;
-	}
-
-	@Override
-	public ServletContext getServletContext() {
-		return servletContext;
-	}
-
-	@Override
-	public HttpSession getSession() {
-		return httpServletRequest.getSession();
-	}
 }

@@ -25,8 +25,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import javax.portlet.MutablePortletParameters;
-import javax.portlet.PortletParameters;
+import jakarta.portlet.MutablePortletParameters;
+import jakarta.portlet.PortletParameters;
 
 import org.apache.pluto.container.PortletURLProvider;
 import org.apache.pluto.container.PortletURLProvider.ParamType;
@@ -95,7 +95,7 @@ public abstract class PortletParametersImpl implements PortletParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#getValue(java.lang.String)
+    * @see jakarta.portlet.PortletParameters#getValue(java.lang.String)
     */
    public String getValue(String name) {
       checkNull("name", name);
@@ -108,7 +108,7 @@ public abstract class PortletParametersImpl implements PortletParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#getNames()
+    * @see jakarta.portlet.PortletParameters#getNames()
     */
    public Set<String> getNames() {
       HashSet<String> names = new HashSet<String>();
@@ -122,7 +122,7 @@ public abstract class PortletParametersImpl implements PortletParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#getValues(java.lang.String)
+    * @see jakarta.portlet.PortletParameters#getValues(java.lang.String)
     */
    public String[] getValues(String name) {
       checkNull("name", name);
@@ -134,7 +134,7 @@ public abstract class PortletParametersImpl implements PortletParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#isEmpty()
+    * @see jakarta.portlet.PortletParameters#isEmpty()
     */
    public boolean isEmpty() {
       boolean e = params.isEmpty();
@@ -145,14 +145,14 @@ public abstract class PortletParametersImpl implements PortletParameters {
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#size()
+    * @see jakarta.portlet.PortletParameters#size()
     */
    public int size() {
       return params.size();
    }
 
    /* (non-Javadoc)
-    * @see javax.portlet.PortletParameters#mutableClone()
+    * @see jakarta.portlet.PortletParameters#mutableClone()
     */
    public MutablePortletParameters clone() {
       if (isTrace) {

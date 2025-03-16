@@ -23,15 +23,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequest;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequest;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.container.HeaderData;
 import org.apache.pluto.container.PageResourceId;
@@ -303,7 +303,7 @@ public class PortalDriverServlet extends HttpServlet {
                }
 
             } else if (purl.getVersion(pid).equalsIgnoreCase("2.0")) {
-               ContainerRuntimeOption crt = pd.getContainerRuntimeOption("javax.portlet.renderHeaders");
+               ContainerRuntimeOption crt = pd.getContainerRuntimeOption("jakarta.portlet.renderHeaders");
                if (crt != null) {
                   List<String> headers = crt.getValues();
                   if (headers.size() == 1 && headers.get(0).equalsIgnoreCase("true")) {

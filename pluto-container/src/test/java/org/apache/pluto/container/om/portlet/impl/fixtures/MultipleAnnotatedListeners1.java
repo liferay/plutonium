@@ -19,13 +19,13 @@
 
 package org.apache.pluto.container.om.portlet.impl.fixtures;
 
-import javax.portlet.ActionURL;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.RenderURL;
-import javax.portlet.ResourceURL;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletConfigurations;
-import javax.portlet.annotations.PortletListener;
+import jakarta.portlet.ActionURL;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.RenderURL;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletConfigurations;
+import jakarta.portlet.annotations.PortletListener;
 
 /**
  * Test Listener annotation  
