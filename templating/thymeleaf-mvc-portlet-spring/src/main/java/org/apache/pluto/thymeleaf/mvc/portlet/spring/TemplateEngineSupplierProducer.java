@@ -16,10 +16,10 @@
  */
 package org.apache.pluto.thymeleaf.mvc.portlet.spring;
 
-import javax.mvc.MvcContext;
-import javax.mvc.engine.ViewEngine;
-import javax.portlet.PortletConfig;
-import javax.servlet.ServletContext;
+import jakarta.mvc.MvcContext;
+import jakarta.mvc.engine.ViewEngine;
+import jakarta.portlet.PortletConfig;
+import jakarta.servlet.ServletContext;
 
 import org.apache.pluto.thymeleaf.portlet.DefaultTemplateEngineSupplier;
 import org.apache.pluto.thymeleaf.portlet.PortletMessageResolver;
@@ -69,7 +69,7 @@ public class TemplateEngineSupplierProducer {
 		public String get() {
 			MvcContext mvcContext = beanFactory.getBean(MvcContext.class);
 
-			javax.ws.rs.core.Configuration configuration = mvcContext.getConfig();
+			jakarta.ws.rs.core.Configuration configuration = mvcContext.getConfig();
 
 			String templateLocation = (String) configuration.getProperty(ViewEngine.VIEW_FOLDER);
 

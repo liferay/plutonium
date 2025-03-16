@@ -21,8 +21,8 @@ package org.apache.portals.pluto.demo.chat;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
-import javax.inject.Inject;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.inject.Inject;
+import jakarta.portlet.annotations.RenderMethod;
 
 /**
  * Simple hello world bean portlet

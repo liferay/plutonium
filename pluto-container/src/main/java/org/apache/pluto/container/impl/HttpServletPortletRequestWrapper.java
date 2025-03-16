@@ -29,28 +29,28 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.portlet.ClientDataRequest;
-import javax.portlet.HeaderRequest;
-import javax.portlet.PortalContext;
-import javax.portlet.PortletConfig;
-import javax.portlet.PortletException;
-import javax.portlet.PortletRequest;
-import javax.portlet.RenderRequest;
-import javax.portlet.ResourceRequest;
-import javax.servlet.AsyncContext;
-import javax.servlet.DispatcherType;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpUpgradeHandler;
-import javax.servlet.http.Part;
+import jakarta.portlet.ClientDataRequest;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.PortalContext;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.ResourceRequest;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.DispatcherType;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletInputStream;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpUpgradeHandler;
+import jakarta.servlet.http.Part;
 
 import org.apache.pluto.container.ContainerServices;
 import org.apache.pluto.container.NamespaceMapper;
@@ -66,8 +66,8 @@ import org.slf4j.LoggerFactory;
  * Provides special handling for servlet request methods to make them behave as defined by the portlet specification
  * during forwards, includes, and async dispatches. Summary:
  * 
- * javax.servlet.forward.* values: represent first forward target javax.servlet.include.* values: handled by underlying
- * servlet container javax.servlet.async.* values: handled by underlying servlet container query and path methods:
+ * jakarta.servlet.forward.* values: represent first forward target jakarta.servlet.include.* values: handled by underlying
+ * servlet container jakarta.servlet.async.* values: handled by underlying servlet container query and path methods:
  * represent first forward or include target query string: merged with portlet parameters according to spec
  * 
  * The wrapper is designed to be applied once and reinitialized for each nested RequestDispatcher forward or include.
@@ -84,21 +84,21 @@ public class HttpServletPortletRequestWrapper extends HttpServletRequestWrapper 
 
    private static final String       ENABLE_NESTED_RESOURCE_FORWARDS = "org.apache.pluto.enable.nested.resource.forwards";
 
-   private static final String       FORWARD_CONTEXT_PATH = "javax.servlet.forward.context_path";
-   private static final String       FORWARD_PATH_INFO    = "javax.servlet.forward.path_info";
-   private static final String       FORWARD_QUERY_STRING = "javax.servlet.forward.query_string";
-   private static final String       FORWARD_REQUEST_URI  = "javax.servlet.forward.request_uri";
-   private static final String       FORWARD_SERVLET_PATH = "javax.servlet.forward.servlet_path";
+   private static final String       FORWARD_CONTEXT_PATH = "jakarta.servlet.forward.context_path";
+   private static final String       FORWARD_PATH_INFO    = "jakarta.servlet.forward.path_info";
+   private static final String       FORWARD_QUERY_STRING = "jakarta.servlet.forward.query_string";
+   private static final String       FORWARD_REQUEST_URI  = "jakarta.servlet.forward.request_uri";
+   private static final String       FORWARD_SERVLET_PATH = "jakarta.servlet.forward.servlet_path";
 
    @SuppressWarnings("unused")
-   private static final String       INCLUDE_CONTEXT_PATH = "javax.servlet.include.context_path";
+   private static final String       INCLUDE_CONTEXT_PATH = "jakarta.servlet.include.context_path";
    @SuppressWarnings("unused")
-   private static final String       INCLUDE_PATH_INFO    = "javax.servlet.include.path_info";
+   private static final String       INCLUDE_PATH_INFO    = "jakarta.servlet.include.path_info";
    @SuppressWarnings("unused")
-   private static final String       INCLUDE_QUERY_STRING = "javax.servlet.include.query_string";
+   private static final String       INCLUDE_QUERY_STRING = "jakarta.servlet.include.query_string";
    @SuppressWarnings("unused")
-   private static final String       INCLUDE_REQUEST_URI  = "javax.servlet.include.request_uri";
-   private static final String       INCLUDE_SERVLET_PATH = "javax.servlet.include.servlet_path";
+   private static final String       INCLUDE_REQUEST_URI  = "jakarta.servlet.include.request_uri";
+   private static final String       INCLUDE_SERVLET_PATH = "jakarta.servlet.include.servlet_path";
 
    private final Map<String, String> origin               = new HashMap<String, String>();
    {
@@ -286,11 +286,11 @@ public class HttpServletPortletRequestWrapper extends HttpServletRequestWrapper 
 
             List<String> attrNames = Collections.list(getAttributeNames());
             txt.append("\nAttribute names: ").append(attrNames);
-            txt.append("\norigin_request_uri:    ").append(origin.get("javax.servlet.forward.request_uri"));
-            txt.append("\norigin_context_path:   ").append(origin.get("javax.servlet.forward.context_path"));
-            txt.append("\norigin_servlet_path:   ").append(origin.get("javax.servlet.forward.servlet_path"));
-            txt.append("\norigin_path_info:      ").append(origin.get("javax.servlet.forward.path_info"));
-            txt.append("\norigin_query_string:   ").append(origin.get("javax.servlet.forward.query_string"));
+            txt.append("\norigin_request_uri:    ").append(origin.get("jakarta.servlet.forward.request_uri"));
+            txt.append("\norigin_context_path:   ").append(origin.get("jakarta.servlet.forward.context_path"));
+            txt.append("\norigin_servlet_path:   ").append(origin.get("jakarta.servlet.forward.servlet_path"));
+            txt.append("\norigin_path_info:      ").append(origin.get("jakarta.servlet.forward.path_info"));
+            txt.append("\norigin_query_string:   ").append(origin.get("jakarta.servlet.forward.query_string"));
          }
          LOG.debug(txt.toString());
       }
@@ -302,21 +302,21 @@ public class HttpServletPortletRequestWrapper extends HttpServletRequestWrapper 
          isLogged = true;
          StringBuilder txt = new StringBuilder(128);
          txt.append("Path values:");
-         txt.append("\nasync_request_uri:    ").append((String) getAttribute("javax.servlet.async.request_uri"));
-         txt.append("\nasync_context_path:   ").append((String) getAttribute("javax.servlet.async.context_path"));
-         txt.append("\nasync_servlet_path:   ").append((String) getAttribute("javax.servlet.async.servlet_path"));
-         txt.append("\nasync_path_info:      ").append((String) getAttribute("javax.servlet.async.path_info"));
-         txt.append("\nasync_query_string:   ").append((String) getAttribute("javax.servlet.async.query_string"));
-         txt.append("\nforward_request_uri:  ").append((String) getAttribute("javax.servlet.forward.request_uri"));
-         txt.append("\nforward_context_path: ").append((String) getAttribute("javax.servlet.forward.context_path"));
-         txt.append("\nforward_servlet_path: ").append((String) getAttribute("javax.servlet.forward.servlet_path"));
-         txt.append("\nforward_path_info:    ").append((String) getAttribute("javax.servlet.forward.path_info"));
-         txt.append("\nforward_query_string: ").append((String) getAttribute("javax.servlet.forward.query_string"));
-         txt.append("\ninclude_request_uri:  ").append((String) getAttribute("javax.servlet.include.request_uri"));
-         txt.append("\ninclude_context_path: ").append((String) getAttribute("javax.servlet.include.context_path"));
-         txt.append("\ninclude_servlet_path: ").append((String) getAttribute("javax.servlet.include.servlet_path"));
-         txt.append("\ninclude_path_info:    ").append((String) getAttribute("javax.servlet.include.path_info"));
-         txt.append("\ninclude_query_string: ").append((String) getAttribute("javax.servlet.include.query_string"));
+         txt.append("\nasync_request_uri:    ").append((String) getAttribute("jakarta.servlet.async.request_uri"));
+         txt.append("\nasync_context_path:   ").append((String) getAttribute("jakarta.servlet.async.context_path"));
+         txt.append("\nasync_servlet_path:   ").append((String) getAttribute("jakarta.servlet.async.servlet_path"));
+         txt.append("\nasync_path_info:      ").append((String) getAttribute("jakarta.servlet.async.path_info"));
+         txt.append("\nasync_query_string:   ").append((String) getAttribute("jakarta.servlet.async.query_string"));
+         txt.append("\nforward_request_uri:  ").append((String) getAttribute("jakarta.servlet.forward.request_uri"));
+         txt.append("\nforward_context_path: ").append((String) getAttribute("jakarta.servlet.forward.context_path"));
+         txt.append("\nforward_servlet_path: ").append((String) getAttribute("jakarta.servlet.forward.servlet_path"));
+         txt.append("\nforward_path_info:    ").append((String) getAttribute("jakarta.servlet.forward.path_info"));
+         txt.append("\nforward_query_string: ").append((String) getAttribute("jakarta.servlet.forward.query_string"));
+         txt.append("\ninclude_request_uri:  ").append((String) getAttribute("jakarta.servlet.include.request_uri"));
+         txt.append("\ninclude_context_path: ").append((String) getAttribute("jakarta.servlet.include.context_path"));
+         txt.append("\ninclude_servlet_path: ").append((String) getAttribute("jakarta.servlet.include.servlet_path"));
+         txt.append("\ninclude_path_info:    ").append((String) getAttribute("jakarta.servlet.include.path_info"));
+         txt.append("\ninclude_query_string: ").append((String) getAttribute("jakarta.servlet.include.query_string"));
          txt.append("\nmethod_request_uri:   ").append(getRequestURI());
          txt.append("\nmethod_context_path:  ").append(getContextPath());
          txt.append("\nmethod_servlet_path:  ").append(getServletPath());
@@ -324,21 +324,21 @@ public class HttpServletPortletRequestWrapper extends HttpServletRequestWrapper 
          txt.append("\nmethod_query_string:  ").append(getQueryString());
 
          txt.append("\n\nPath values (from wrapped servlet request):");
-         txt.append("\nasync_request_uri:    ").append((String) getHreq().getAttribute("javax.servlet.async.request_uri"));
-         txt.append("\nasync_context_path:   ").append((String) getHreq().getAttribute("javax.servlet.async.context_path"));
-         txt.append("\nasync_servlet_path:   ").append((String) getHreq().getAttribute("javax.servlet.async.servlet_path"));
-         txt.append("\nasync_path_info:      ").append((String) getHreq().getAttribute("javax.servlet.async.path_info"));
-         txt.append("\nasync_query_string:   ").append((String) getHreq().getAttribute("javax.servlet.async.query_string"));
-         txt.append("\nforward_request_uri:  ").append((String) getHreq().getAttribute("javax.servlet.forward.request_uri"));
-         txt.append("\nforward_context_path: ").append((String) getHreq().getAttribute("javax.servlet.forward.context_path"));
-         txt.append("\nforward_servlet_path: ").append((String) getHreq().getAttribute("javax.servlet.forward.servlet_path"));
-         txt.append("\nforward_path_info:    ").append((String) getHreq().getAttribute("javax.servlet.forward.path_info"));
-         txt.append("\nforward_query_string: ").append((String) getHreq().getAttribute("javax.servlet.forward.query_string"));
-         txt.append("\ninclude_request_uri:  ").append((String) getHreq().getAttribute("javax.servlet.include.request_uri"));
-         txt.append("\ninclude_context_path: ").append((String) getHreq().getAttribute("javax.servlet.include.context_path"));
-         txt.append("\ninclude_servlet_path: ").append((String) getHreq().getAttribute("javax.servlet.include.servlet_path"));
-         txt.append("\ninclude_path_info:    ").append((String) getHreq().getAttribute("javax.servlet.include.path_info"));
-         txt.append("\ninclude_query_string: ").append((String) getHreq().getAttribute("javax.servlet.include.query_string"));
+         txt.append("\nasync_request_uri:    ").append((String) getHreq().getAttribute("jakarta.servlet.async.request_uri"));
+         txt.append("\nasync_context_path:   ").append((String) getHreq().getAttribute("jakarta.servlet.async.context_path"));
+         txt.append("\nasync_servlet_path:   ").append((String) getHreq().getAttribute("jakarta.servlet.async.servlet_path"));
+         txt.append("\nasync_path_info:      ").append((String) getHreq().getAttribute("jakarta.servlet.async.path_info"));
+         txt.append("\nasync_query_string:   ").append((String) getHreq().getAttribute("jakarta.servlet.async.query_string"));
+         txt.append("\nforward_request_uri:  ").append((String) getHreq().getAttribute("jakarta.servlet.forward.request_uri"));
+         txt.append("\nforward_context_path: ").append((String) getHreq().getAttribute("jakarta.servlet.forward.context_path"));
+         txt.append("\nforward_servlet_path: ").append((String) getHreq().getAttribute("jakarta.servlet.forward.servlet_path"));
+         txt.append("\nforward_path_info:    ").append((String) getHreq().getAttribute("jakarta.servlet.forward.path_info"));
+         txt.append("\nforward_query_string: ").append((String) getHreq().getAttribute("jakarta.servlet.forward.query_string"));
+         txt.append("\ninclude_request_uri:  ").append((String) getHreq().getAttribute("jakarta.servlet.include.request_uri"));
+         txt.append("\ninclude_context_path: ").append((String) getHreq().getAttribute("jakarta.servlet.include.context_path"));
+         txt.append("\ninclude_servlet_path: ").append((String) getHreq().getAttribute("jakarta.servlet.include.servlet_path"));
+         txt.append("\ninclude_path_info:    ").append((String) getHreq().getAttribute("jakarta.servlet.include.path_info"));
+         txt.append("\ninclude_query_string: ").append((String) getHreq().getAttribute("jakarta.servlet.include.query_string"));
          txt.append("\nmethod_request_uri:   ").append(getHreq().getRequestURI());
          txt.append("\nmethod_context_path:  ").append(getHreq().getContextPath());
          txt.append("\nmethod_servlet_path:  ").append(getHreq().getServletPath());

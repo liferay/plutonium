@@ -21,13 +21,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import javax.mvc.Models;
-import javax.mvc.MvcContext;
-import javax.portlet.MimeResponse;
-import javax.portlet.PortletRequest;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.mvc.Models;
+import jakarta.mvc.MvcContext;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.portlet.servlet.adapter.HttpServletRequestAdapter;
 import org.apache.pluto.portlet.servlet.adapter.HttpServletResponseAdapter;
@@ -80,7 +81,7 @@ public class WebContextProducer implements ApplicationContextAware {
 
 		public SpringPortletWebContext(ApplicationContext applicationContext, Models models, String lifecyclePhase,
 			HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-			ServletContext servletContext, Locale locale, javax.ws.rs.core.Configuration configuration) {
+			ServletContext servletContext, Locale locale, jakarta.ws.rs.core.Configuration configuration) {
 
 			super(httpServletRequest, httpServletResponse, servletContext, locale);
 			this.applicationContext = applicationContext;

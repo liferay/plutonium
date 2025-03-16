@@ -19,10 +19,11 @@ package org.apache.pluto.container.bean.mvc;
 import java.util.Date;
 import java.util.List;
 
-import javax.ws.rs.core.EntityTag;
-import javax.ws.rs.core.Request;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Variant;
+import jakarta.enterprise.context.Dependent;
+import jakarta.ws.rs.core.EntityTag;
+import jakarta.ws.rs.core.Request;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.Variant;
 
 
 /**

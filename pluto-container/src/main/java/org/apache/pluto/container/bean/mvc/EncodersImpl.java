@@ -16,7 +16,8 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.mvc.security.Encoders;
+import jakarta.enterprise.context.Dependent;
+import jakarta.mvc.security.Encoders;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 

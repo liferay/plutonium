@@ -18,11 +18,12 @@
 
 package org.apache.portals.pluto.demo.chat;
 
-import javax.inject.Inject;
-import javax.portlet.MimeResponse;
-import javax.portlet.PortletRequest;
-import javax.portlet.annotations.RenderMethod;
-import javax.portlet.annotations.ServeResourceMethod;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.ServeResourceMethod;
 
 /**
  * Contains a resource method to insert an image. Illustrates injection of several portlet

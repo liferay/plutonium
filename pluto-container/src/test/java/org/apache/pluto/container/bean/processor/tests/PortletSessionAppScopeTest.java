@@ -31,9 +31,9 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Set;
 
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Inject;
-import javax.portlet.annotations.PortletSessionScoped;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Inject;
+import jakarta.portlet.annotations.PortletSessionScoped;
 
 import org.apache.pluto.container.bean.processor.AnnotatedConfigBean;
 import org.apache.pluto.container.bean.processor.AnnotatedMethodStore;

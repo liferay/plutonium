@@ -19,10 +19,11 @@
 
 package org.apache.portals.pluto.demo.v3annotated;
 
-import javax.inject.Inject;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import javax.portlet.annotations.RenderMethod;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.annotations.RenderMethod;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 

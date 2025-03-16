@@ -16,12 +16,12 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.enterprise.context.Dependent;
-import javax.enterprise.inject.Produces;
-import javax.mvc.engine.ViewEngineContext;
-import javax.portlet.MimeResponse;
-import javax.portlet.PortletRequest;
-import javax.ws.rs.core.Configuration;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.inject.Produces;
+import jakarta.mvc.engine.ViewEngineContext;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.ws.rs.core.Configuration;
 
 
 /**

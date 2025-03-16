@@ -19,13 +19,14 @@
 
 package org.apache.portals.pluto.demo.v3annotated;
 
-import javax.inject.Inject;
-import javax.portlet.PortletRequest;
-import javax.portlet.ResourceParameters;
-import javax.portlet.ResourceURL;
-import javax.portlet.annotations.RenderMethod;
-import javax.portlet.annotations.ServeResourceMethod;
-import javax.portlet.MimeResponse;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.ResourceParameters;
+import jakarta.portlet.ResourceURL;
+import jakarta.portlet.annotations.RenderMethod;
+import jakarta.portlet.annotations.ServeResourceMethod;
+import jakarta.portlet.MimeResponse;
 
 /**
  * Contains a resource method and associated markup generator to insert 

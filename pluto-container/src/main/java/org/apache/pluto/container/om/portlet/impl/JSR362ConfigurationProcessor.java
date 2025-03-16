@@ -25,27 +25,27 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import javax.portlet.Portlet;
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.annotations.InitParameter;
-import javax.portlet.annotations.LocaleString;
-import javax.portlet.annotations.Multipart;
-import javax.portlet.annotations.PortletApplication;
-import javax.portlet.annotations.PortletConfiguration;
-import javax.portlet.annotations.PortletListener;
-import javax.portlet.annotations.PortletPreferencesValidator;
-import javax.portlet.annotations.PortletLifecycleFilter;
-import javax.portlet.annotations.PublicRenderParameterDefinition;
-import javax.portlet.annotations.RuntimeOption;
-import javax.portlet.annotations.UserAttribute;
-import javax.portlet.filter.ActionFilter;
-import javax.portlet.filter.EventFilter;
-import javax.portlet.filter.HeaderFilter;
-import javax.portlet.filter.RenderFilter;
-import javax.portlet.filter.ResourceFilter;
-import javax.xml.bind.JAXBElement;
+import jakarta.portlet.Portlet;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.annotations.InitParameter;
+import jakarta.portlet.annotations.LocaleString;
+import jakarta.portlet.annotations.Multipart;
+import jakarta.portlet.annotations.PortletApplication;
+import jakarta.portlet.annotations.PortletConfiguration;
+import jakarta.portlet.annotations.PortletListener;
+import jakarta.portlet.annotations.PortletPreferencesValidator;
+import jakarta.portlet.annotations.PortletLifecycleFilter;
+import jakarta.portlet.annotations.PublicRenderParameterDefinition;
+import jakarta.portlet.annotations.RuntimeOption;
+import jakarta.portlet.annotations.UserAttribute;
+import jakarta.portlet.filter.ActionFilter;
+import jakarta.portlet.filter.EventFilter;
+import jakarta.portlet.filter.HeaderFilter;
+import jakarta.portlet.filter.RenderFilter;
+import jakarta.portlet.filter.ResourceFilter;
+import jakarta.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
 import org.apache.pluto.container.om.portlet.ContainerRuntimeOption;
@@ -127,7 +127,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
    /*
     * (non-Javadoc)
     * 
-    * @see org.apache.pluto.container.om.portlet.impl.jsr362.ConfigurationProcessor #process(javax.xml.bind.JAXBElement)
+    * @see org.apache.pluto.container.om.portlet.impl.jsr362.ConfigurationProcessor #process(jakarta.xml.bind.JAXBElement)
     */
    @Override
    public void process(JAXBElement<?> rootElement) throws IllegalArgumentException {
@@ -1039,7 +1039,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
       }
 
       // Event defs
-      for (javax.portlet.annotations.EventDefinition ed : app.events()) {
+      for (jakarta.portlet.annotations.EventDefinition ed : app.events()) {
          String nsuri = ed.qname().namespaceURI();
          if (nsuri.length() == 0) {
             nsuri = pad.getDefaultNamespace();
@@ -1061,7 +1061,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
       }
 
       // Custom portlet mode
-      for (javax.portlet.annotations.CustomPortletMode cpm : app.customPortletModes()) {
+      for (jakarta.portlet.annotations.CustomPortletMode cpm : app.customPortletModes()) {
          org.apache.pluto.container.om.portlet.CustomPortletMode mode = new CustomPortletModeImpl(cpm.name());
          for (LocaleString ls : cpm.description()) {
             Description d = new DescriptionImpl(Locale.forLanguageTag(ls.locale()), ls.value());
@@ -1072,7 +1072,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
       }
 
       // Custom window state
-      for (javax.portlet.annotations.CustomWindowState cpm : app.customWindowStates()) {
+      for (jakarta.portlet.annotations.CustomWindowState cpm : app.customWindowStates()) {
          org.apache.pluto.container.om.portlet.CustomWindowState ws = new CustomWindowStateImpl(cpm.name());
          for (LocaleString ls : cpm.description()) {
             Description d = new DescriptionImpl(Locale.forLanguageTag(ls.locale()), ls.value());
@@ -1376,7 +1376,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
          // Portlet preferences
 
          Preferences prefs = new PreferencesImpl();
-         for (javax.portlet.annotations.Preference pa : pc.prefs()) {
+         for (jakarta.portlet.annotations.Preference pa : pc.prefs()) {
             Preference pref = new PreferenceImpl(pa.name(), pa.isReadOnly(), Arrays.asList(pa.values()));
             prefs.addPreference(pref);
          }
@@ -1386,7 +1386,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
 
          // Supports
 
-         for (javax.portlet.annotations.Supports sa : pc.supports()) {
+         for (jakarta.portlet.annotations.Supports sa : pc.supports()) {
             Supports supps = new SupportsImpl(sa.mimeType());
             for (String pm : sa.portletModes()) {
                supps.addPortletMode(pm);
@@ -1399,7 +1399,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
 
          // Security role refs
 
-         for (javax.portlet.annotations.SecurityRoleRef srra : pc.roleRefs()) {
+         for (jakarta.portlet.annotations.SecurityRoleRef srra : pc.roleRefs()) {
             SecurityRoleRef ref = new SecurityRoleRefImpl(srra.roleName());
             ref.setRoleLink(srra.roleLink());
             for (LocaleString ls : srra.description()) {
@@ -1411,7 +1411,7 @@ public class JSR362ConfigurationProcessor extends JSR286ConfigurationProcessor {
 
          // dependencies
 
-         for (javax.portlet.annotations.Dependency da : pc.dependencies()) {
+         for (jakarta.portlet.annotations.Dependency da : pc.dependencies()) {
             Dependency dep = new DependencyImpl(da.name(), da.scope(), da.version());
             pd.addDependency(dep);
          }

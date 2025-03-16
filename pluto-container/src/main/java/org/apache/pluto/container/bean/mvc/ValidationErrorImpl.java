@@ -16,8 +16,9 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.mvc.binding.ValidationError;
-import javax.validation.ConstraintViolation;
+import jakarta.enterprise.context.Dependent;
+import jakarta.mvc.binding.ValidationError;
+import jakarta.validation.ConstraintViolation;
 
 
 /**

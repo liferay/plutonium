@@ -16,7 +16,8 @@
  */
 package org.apache.pluto.container.bean.mvc;
 
-import javax.mvc.binding.ParamError;
+import jakarta.enterprise.context.Dependent;
+import jakarta.mvc.binding.ParamError;
 
 
 /**

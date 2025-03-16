@@ -22,12 +22,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import javax.portlet.Portlet;
-import javax.portlet.PortletURLGenerationListener;
-import javax.portlet.PreferencesValidator;
-import javax.portlet.filter.PortletFilter;
+import jakarta.portlet.Portlet;
+import jakarta.portlet.PortletURLGenerationListener;
+import jakarta.portlet.PreferencesValidator;
+import jakarta.portlet.filter.PortletFilter;
 import javax.xml.XMLConstants;
-import javax.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
 import org.apache.pluto.container.om.portlet.ContainerRuntimeOption;
@@ -107,7 +107,7 @@ public class JSR286ConfigurationProcessor extends JSR168ConfigurationProcessor {
     * 
     * @see
     * org.apache.pluto.container.om.portlet.impl.jsr286.ConfigurationProcessor
-    * #process(javax.xml.bind.JAXBElement)
+    * #process(jakarta.xml.bind.JAXBElement)
     */
    @Override
    public void process(JAXBElement<?> rootElement) throws IllegalArgumentException {

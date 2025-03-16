@@ -16,13 +16,13 @@
  */
 package org.apache.pluto.thymeleaf.mvc.portlet.cdi;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.mvc.MvcContext;
-import javax.mvc.engine.ViewEngine;
-import javax.portlet.PortletConfig;
-import javax.servlet.ServletContext;
-import javax.ws.rs.core.Configuration;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.mvc.MvcContext;
+import jakarta.mvc.engine.ViewEngine;
+import jakarta.portlet.PortletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.ws.rs.core.Configuration;
 
 import org.apache.pluto.thymeleaf.portlet.DefaultTemplateEngineSupplier;
 import org.apache.pluto.thymeleaf.portlet.PortletMessageResolver;

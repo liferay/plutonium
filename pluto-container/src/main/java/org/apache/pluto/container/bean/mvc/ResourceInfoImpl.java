@@ -18,7 +18,8 @@ package org.apache.pluto.container.bean.mvc;
 
 import java.lang.reflect.Method;
 
-import javax.ws.rs.container.ResourceInfo;
+import jakarta.enterprise.context.Dependent;
+import jakarta.ws.rs.container.ResourceInfo;
 
 
 /**
