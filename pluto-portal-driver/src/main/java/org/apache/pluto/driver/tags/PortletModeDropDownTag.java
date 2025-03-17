@@ -230,7 +230,7 @@ public class PortletModeDropDownTag extends BodyTagSupport {
     /**
      * Obtains decoration name for a portlet managed mode from the portlet's resource bundle
      * as defined in PLT.8.4 of the JSR-286 spec using the key 
-     * javax.portlet.app.custom-portlet-mode.<custom mode>.decoration-name where
+     * jakarta.portlet.app.custom-portlet-mode.<custom mode>.decoration-name where
      * custom mode is the name of the custom mode as defined in portlet.xml
      * (//portlet-app/custom-portlet-mode/portlet-mode element). If the decoration
      * name is not found in the resource bundle, this method returns the uppercased
@@ -240,7 +240,7 @@ public class PortletModeDropDownTag extends BodyTagSupport {
      * @param mode the portlet managed custom mode that will be searched for decoration name
      * in the resource bundle.
      * @return the decoration name for a portlet managed mode in the resource bundle
-     * using the key javax.portlet.app.custom-portlet-mode.<custom mode>.decoration-name 
+     * using the key jakarta.portlet.app.custom-portlet-mode.<custom mode>.decoration-name 
      * where custom mode is the name of the custom mode as defined in portlet.xml
      * (//portlet-app/custom-portlet-mode/portlet-mode element). If the decoration
      * name is not found in the resource bundle, the uppercased
@@ -258,7 +258,7 @@ public class PortletModeDropDownTag extends BodyTagSupport {
 			Locale defaultLocale = request.getLocale();
 			bundle = config.getResourceBundle(defaultLocale);
 			res = new StringBuffer();
-			res.append("javax.portlet.app.custom-portlet-mode.");
+			res.append("jakarta.portlet.app.custom-portlet-mode.");
 			res.append(mode.toString());
 			res.append(".decoration-name");
 			decorationName = bundle.getString(res.toString());

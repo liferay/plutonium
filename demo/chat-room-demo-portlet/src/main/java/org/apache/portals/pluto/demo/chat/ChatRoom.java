@@ -44,7 +44,7 @@ import jakarta.portlet.annotations.ServeResourceMethod;
 @PortletConfiguration(
     portletName = "BeanPortletDemo",
     dependencies = {
-        @Dependency(name="PortletHub", scope = "javax.portlet", version="3.0.0")
+        @Dependency(name="PortletHub", scope = "jakarta.portlet", version="3.0.0")
     }
 )
 public class ChatRoom {
@@ -100,7 +100,7 @@ public class ChatRoom {
    /**
     * Action method for processing the message entry form.
     * If the action request contains an action parameter with the reserved
-    * name 'javax.portlet.action' and value matching the actionName attribute,
+    * name 'jakarta.portlet.action' and value matching the actionName attribute,
     * the portlet the portlet container routes the request to this method.
     */
    @ActionMethod(portletName="BeanPortletDemo", actionName="addMessage")
@@ -114,7 +114,7 @@ public class ChatRoom {
    /**
     * Action method for processing the history clear button.
     * If the action request contains an action parameter with the reserved
-    * name 'javax.portlet.action' and value matching the actionName attribute,
+    * name 'jakarta.portlet.action' and value matching the actionName attribute,
     * the portlet the portlet container routes the request to this method.
     */
    @ActionMethod(portletName="BeanPortletDemo", actionName="clearHistory")

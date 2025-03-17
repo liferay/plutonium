@@ -26,7 +26,7 @@ limitations under the License.
 
 <portlet:defineObjects/>
 
-<% if (request instanceof javax.portlet.RenderRequest) {%>
+<% if (request instanceof jakarta.portlet.RenderRequest) {%>
 <center>
   <table>
     <tr>
