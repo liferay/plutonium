@@ -162,6 +162,9 @@
 						<configuration>
 							<outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
 							<attached>false</attached>
+							<resourceBundles>
+								<resourceBundle>org.apache:apache-jar-resource-bundle:1.0</resourceBundle>
+							</resourceBundles>
 						</configuration>
 					</execution>
 				</executions>
