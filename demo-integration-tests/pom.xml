@@ -118,21 +118,6 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-			<!-- skip legal file checking for now -->
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>ianal-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>verify-legal-files</goal>
-						</goals>
-						<configuration>
-							<skip>true</skip>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
