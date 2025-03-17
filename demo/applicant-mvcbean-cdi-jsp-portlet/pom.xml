@@ -52,6 +52,16 @@
 	</profiles>
 	<dependencies>
 		<dependency>
+			<groupId>jakarta.enterprise</groupId>
+			<artifactId>jakarta.enterprise.cdi-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.inject</groupId>
+			<artifactId>jakarta.inject-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>jakarta.mvc</groupId>
 			<artifactId>jakarta.mvc-api</artifactId>
 			<scope>provided</scope>
