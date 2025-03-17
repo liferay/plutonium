@@ -29,6 +29,7 @@ import jakarta.ws.rs.core.UriInfo;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class UriInfoImpl implements UriInfo {
 
 	@Override

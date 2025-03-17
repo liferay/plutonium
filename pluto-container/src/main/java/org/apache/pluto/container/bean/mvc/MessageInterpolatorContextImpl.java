@@ -25,6 +25,7 @@ import jakarta.validation.metadata.ConstraintDescriptor;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class MessageInterpolatorContextImpl implements MessageInterpolator.Context {
 
 	private ConstraintViolation<?> constraintViolation;

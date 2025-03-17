@@ -18,6 +18,7 @@
 
 package org.apache.portals.pluto.demo.v3annotated;
 
+import jakarta.enterprise.context.Dependent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,6 +59,7 @@ import jakarta.servlet.http.Part;
  * @author Scott Nicklous
  * 
  */
+@Dependent
 @PortletConfiguration(portletName="MultipartPortlet", cacheExpirationTime=0,
       title=@LocaleString("Multipart Form Test"))
 public class MultipartPortlet {

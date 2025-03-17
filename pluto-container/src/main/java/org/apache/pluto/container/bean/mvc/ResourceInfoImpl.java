@@ -25,6 +25,7 @@ import jakarta.ws.rs.container.ResourceInfo;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ResourceInfoImpl implements ResourceInfo {
 
 	private Method resourceMethod;

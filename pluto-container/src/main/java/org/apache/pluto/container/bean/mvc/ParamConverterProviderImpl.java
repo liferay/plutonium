@@ -36,6 +36,7 @@ import jakarta.ws.rs.ext.ParamConverterProvider;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ParamConverterProviderImpl implements ParamConverterProvider {
 
 	@Inject

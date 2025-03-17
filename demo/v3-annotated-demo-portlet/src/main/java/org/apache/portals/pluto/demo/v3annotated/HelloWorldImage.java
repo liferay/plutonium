@@ -32,6 +32,7 @@ import jakarta.portlet.MimeResponse;
  * Contains a resource method and associated markup generator to insert 
  * an image.
  */
+@Dependent
 public class HelloWorldImage {
 
    public static final String RESPARAM_DISPLAY = "display";

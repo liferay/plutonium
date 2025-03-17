@@ -70,6 +70,7 @@ import org.slf4j.LoggerFactory;
  * @author Scott Nicklous
  *
  */
+@Dependent
 public class PortletArtifactProducer {
    private static final Logger LOG = LoggerFactory.getLogger(PortletArtifactProducer.class);
    private static final boolean isTrace = LOG.isTraceEnabled();

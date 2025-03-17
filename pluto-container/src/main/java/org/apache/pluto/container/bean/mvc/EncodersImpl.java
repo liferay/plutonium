@@ -25,6 +25,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class EncodersImpl implements Encoders {
 
 	@Override

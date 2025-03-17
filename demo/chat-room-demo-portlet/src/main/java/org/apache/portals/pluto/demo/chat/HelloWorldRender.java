@@ -19,6 +19,7 @@
 
 package org.apache.portals.pluto.demo.chat;
 
+import jakarta.enterprise.context.Dependent;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import jakarta.inject.Inject;
@@ -27,6 +28,7 @@ import jakarta.portlet.annotations.RenderMethod;
 /**
  * Simple hello world bean portlet
  */
+@Dependent
 public class HelloWorldRender {
    
    // This is an @RenderStateScoped bean containing the name entered through the form.

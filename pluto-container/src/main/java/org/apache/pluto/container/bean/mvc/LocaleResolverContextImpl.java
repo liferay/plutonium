@@ -31,6 +31,7 @@ import jakarta.ws.rs.core.UriInfo;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class LocaleResolverContextImpl implements LocaleResolverContext {
 
 	private List<Locale> acceptableLanguages;

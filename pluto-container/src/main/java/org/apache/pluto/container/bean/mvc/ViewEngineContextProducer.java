@@ -27,6 +27,7 @@ import jakarta.ws.rs.core.Configuration;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ViewEngineContextProducer {
 
 	@Dependent

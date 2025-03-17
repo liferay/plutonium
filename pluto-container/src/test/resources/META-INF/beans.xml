@@ -16,10 +16,10 @@ implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
-http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+http://jakarta.ee/xml/ns/jakartaee
+http://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd">
 
    <alternatives>
       <class>com.ibm.portal.samples.GermanPrefixFactory</class>

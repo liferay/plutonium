@@ -29,6 +29,7 @@ import jakarta.ws.rs.core.Variant;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class RequestImpl implements Request {
 
 	@Override

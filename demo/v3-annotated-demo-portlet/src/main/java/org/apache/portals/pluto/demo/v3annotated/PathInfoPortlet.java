@@ -43,6 +43,7 @@ import jakarta.portlet.MimeResponse;
 /**
  * Resource portlet for viewing path information.
  */
+@Dependent
 @PortletConfiguration(portletName="PathInfoPortlet") // not necessary; test for title handling
 public class PathInfoPortlet {
 

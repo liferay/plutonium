@@ -34,6 +34,7 @@ import jakarta.ws.rs.core.Feature;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ConfigurationImpl implements Configuration {
 
 	public static final String DEFAULT_VIEW_EXTENSION = "org.apache.pluto.defaultViewExtension";

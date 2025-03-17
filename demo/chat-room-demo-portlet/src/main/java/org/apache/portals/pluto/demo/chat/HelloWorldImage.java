@@ -29,6 +29,7 @@ import jakarta.portlet.annotations.ServeResourceMethod;
  * Contains a resource method to insert an image. Illustrates injection of several portlet
  * artifacts - the namespace, MimeResponse, context path, and portlet request.
  */
+@Dependent
 public class HelloWorldImage {
 
    @Inject

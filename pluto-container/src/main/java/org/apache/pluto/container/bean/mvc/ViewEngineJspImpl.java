@@ -30,6 +30,7 @@ import jakarta.ws.rs.core.Configuration;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ViewEngineJspImpl implements ViewEngine {
 
 	private final Configuration configuration;

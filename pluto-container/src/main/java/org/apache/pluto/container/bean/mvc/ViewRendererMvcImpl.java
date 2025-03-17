@@ -98,12 +98,16 @@ public class ViewRendererMvcImpl implements ViewRenderer {
 			}
 
 			try {
-				beanManager.fireEvent(new BeforeProcessViewEventImpl(viewName, supportingViewEngine.getClass()));
+				beanManager.getEvent()
+					.select(BeforeProcessViewEventImpl.class)
+					.fire(new BeforeProcessViewEventImpl(viewName, supportingViewEngine.getClass()));
 
 				supportingViewEngine.processView(new ViewEngineContextImpl(configuration, portletRequest, mimeResponse,
 						models, portletRequest.getLocale()));
 
-				beanManager.fireEvent(new AfterProcessViewEventImpl(viewName, supportingViewEngine.getClass()));
+				beanManager.getEvent()
+					.select(AfterProcessViewEventImpl.class)
+					.fire(new AfterProcessViewEventImpl(viewName, supportingViewEngine.getClass()));
 			}
 			catch (ViewEngineException vee) {
 				throw new PortletException(vee);

@@ -30,6 +30,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 /**
  * Simple hello world bean portlet
  */
+@Dependent
 public class HelloWorldRender {
    
    // This is an @RenderStateScoped bean containing the name 

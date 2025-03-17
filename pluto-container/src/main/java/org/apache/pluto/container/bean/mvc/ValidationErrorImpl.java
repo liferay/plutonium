@@ -24,6 +24,7 @@ import jakarta.validation.ConstraintViolation;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ValidationErrorImpl extends ParamErrorImpl implements ValidationError {
 
 	private ConstraintViolation constraintViolation;

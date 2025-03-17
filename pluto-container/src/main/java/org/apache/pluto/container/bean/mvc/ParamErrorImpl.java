@@ -23,6 +23,7 @@ import jakarta.mvc.binding.ParamError;
 /**
  * @author  Neil Griffin
  */
+@Dependent
 public class ParamErrorImpl implements ParamError {
 
 	private final String message;

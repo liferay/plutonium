@@ -78,9 +78,13 @@ class InstallationDependency {
         new InstallationDependency("javax.validation", "validation-api",
             VERSION_PROPERTIES.getProperty("validation-api.version"));
 
+    public static final InstallationDependency CDI_IMPL_API =
+        new InstallationDependency("org.jboss.weld", "weld-api",
+            VERSION_PROPERTIES.getProperty("cdi.impl.api.version"));
+
     public static final InstallationDependency CDI_IMPL =
-        new InstallationDependency("org.jboss.weld.servlet", "weld-servlet",
-                VERSION_PROPERTIES.getProperty("cdi.version"));
+        new InstallationDependency("org.jboss.weld.servlet", "weld-servlet-core",
+                VERSION_PROPERTIES.getProperty("cdi.impl.version"));
 
     public static final InstallationDependency ANNOTATION_DETECTOR =
         new InstallationDependency("eu.infomas", "annotation-detector",
@@ -141,6 +145,7 @@ class InstallationDependency {
         SHARED.add(CONTAINER_DRIVER_API);
         SHARED.add(TAGLIB);
         SHARED.add(CCPP_API);
+        SHARED.add(CDI_IMPL_API);
         SHARED.add(CDI_IMPL);
         SHARED.add(ANNOTATION_DETECTOR);
         SHARED.add(SLF4J_API);
