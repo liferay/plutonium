@@ -240,7 +240,6 @@ generate mailto links. -->
 		<jsp-api.version>3.1.1</jsp-api.version>
 		<jstl.version>9.0.83</jstl.version>
 		<el-api.version>10.1.36</el-api.version>
-		<taglibs.standard.version>1.2.3</taglibs.standard.version>
 		<jaxb.version>3.0.1</jaxb.version>
 		<jaxb-impl.version>4.0.5</jaxb-impl.version>
 		<stax.impl.version>1.2.0</stax.impl.version>
@@ -493,21 +492,6 @@ generate mailto links. -->
 				<groupId>org.apache.tomcat</groupId>
 				<artifactId>tomcat-el-api</artifactId>
 				<version>${el-api.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.taglibs</groupId>
-				<artifactId>taglibs-standard-spec</artifactId>
-				<version>${taglibs.standard.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.taglibs</groupId>
-				<artifactId>taglibs-standard-impl</artifactId>
-				<version>${taglibs.standard.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.taglibs</groupId>
-				<artifactId>taglibs-standard-jstlel</artifactId>
-				<version>${taglibs.standard.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.seleniumhq.selenium</groupId>

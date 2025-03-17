@@ -32,6 +32,7 @@ import jakarta.servlet.jsp.JspWriter;
 import jakarta.servlet.jsp.tagext.BodyTagSupport;
 import jakarta.servlet.jsp.tagext.TagSupport;
 
+import org.apache.pluto.driver.tags.standard.lang.jstl.ExpressionEvaluatorManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.pluto.container.PortletContainer;
@@ -43,7 +44,6 @@ import org.apache.pluto.driver.core.PortalRequestContext;
 import org.apache.pluto.driver.core.PortletWindowImpl;
 import org.apache.pluto.driver.services.portal.PortletWindowConfig;
 import org.apache.pluto.driver.url.PortalURL;
-import org.apache.taglibs.standard.lang.support.ExpressionEvaluatorManager;
 
 /**
  * The tag is used to render a portlet mode anchor specified by the portlet ID and mode.
