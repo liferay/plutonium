@@ -34,8 +34,8 @@ import jakarta.portlet.ResourceServingPortlet;
 
 import org.apache.pluto.container.reconcile.fixtures.TestPortlet1;
 import org.apache.pluto.container.reconcile.fixtures.TestPortlet1AppScoped;
-import org.jglue.cdiunit.AdditionalClasses;
-import org.jglue.cdiunit.CdiRunner;
+import io.github.cdiunit.AdditionalClasses;
+import io.github.cdiunit.CdiRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
