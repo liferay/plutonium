@@ -486,7 +486,7 @@ generate mailto links. -->
 			<dependency>
 				<groupId>org.apache.tomcat</groupId>
 				<artifactId>tomcat-jsp-api</artifactId>
-				<version>${jsp-api.version}</version>
+				<version>${tomcat.servlet-api.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.tomcat</groupId>
