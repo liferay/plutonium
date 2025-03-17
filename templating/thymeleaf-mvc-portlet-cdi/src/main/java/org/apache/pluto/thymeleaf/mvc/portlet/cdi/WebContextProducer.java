@@ -39,10 +39,12 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.portlet.servlet.adapter.HttpServletRequestAdapter;
 import org.apache.pluto.portlet.servlet.adapter.HttpServletResponseAdapter;
+import org.apache.pluto.thymeleaf.portlet.PortletIWebExchange;
 import org.apache.pluto.thymeleaf.portlet.VariableValidator;
 import org.apache.pluto.thymeleaf.portlet.WebContextBase;
 
 import org.thymeleaf.context.IWebContext;
+import org.thymeleaf.web.IWebExchange;
 
 
 /**
@@ -61,7 +63,7 @@ public class WebContextProducer {
 		return new CDIPortletWebContext(beanManager, variableValidator, models,
 				(String) portletRequest.getAttribute(PortletRequest.LIFECYCLE_PHASE),
 				new HttpServletRequestAdapter(portletRequest), new HttpServletResponseAdapter(mimeResponse),
-				servletContext, mvcContext.getLocale());
+				servletContext, mvcContext.getLocale(), new PortletIWebExchange(portletRequest));
 	}
 
 	private static class CDIPortletWebContext extends WebContextBase {
@@ -69,10 +71,11 @@ public class WebContextProducer {
 		private BeanManager beanManager;
 		private Set<String> beanNames;
 		private Models models;
+		private PortletIWebExchange portletIWebExchange;
 
 		public CDIPortletWebContext(BeanManager beanManager, VariableValidator variableInspector, Models models,
 			String lifecyclePhase, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-			ServletContext servletContext, Locale locale) {
+			ServletContext servletContext, Locale locale, PortletIWebExchange portletIWebExchange) {
 
 			super(httpServletRequest, httpServletResponse, servletContext, locale);
 			this.beanManager = beanManager;
@@ -94,6 +97,8 @@ public class WebContextProducer {
 					this.beanNames.add(beanName);
 				}
 			}
+
+			this.portletIWebExchange = portletIWebExchange;
 		}
 
 		@Override
@@ -142,5 +147,9 @@ public class WebContextProducer {
 			return variableNames;
 		}
 
+		@Override
+		public IWebExchange getExchange() {
+			return portletIWebExchange;
+		}
 	}
 }

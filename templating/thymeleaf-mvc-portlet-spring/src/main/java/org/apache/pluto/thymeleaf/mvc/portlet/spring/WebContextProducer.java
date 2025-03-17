@@ -32,6 +32,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.pluto.portlet.servlet.adapter.HttpServletRequestAdapter;
 import org.apache.pluto.portlet.servlet.adapter.HttpServletResponseAdapter;
+import org.apache.pluto.thymeleaf.portlet.PortletIWebExchange;
 import org.apache.pluto.thymeleaf.portlet.VariableValidator;
 import org.apache.pluto.thymeleaf.portlet.WebContextBase;
 
@@ -45,6 +46,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 
 import org.thymeleaf.context.IWebContext;
+import org.thymeleaf.web.IWebExchange;
 
 
 /**
@@ -77,6 +79,7 @@ public class WebContextProducer implements ApplicationContextAware {
 
 		private ApplicationContext applicationContext;
 		private Set<String> beanNames;
+		private HttpServletRequest httpServletRequest;
 		private Models models;
 
 		public SpringPortletWebContext(ApplicationContext applicationContext, Models models, String lifecyclePhase,
@@ -87,6 +90,7 @@ public class WebContextProducer implements ApplicationContextAware {
 			this.applicationContext = applicationContext;
 			this.models = models;
 			this.beanNames = new HashSet<>();
+			this.httpServletRequest = httpServletRequest;
 
 			boolean portletSpecBeans = false;
 
@@ -139,5 +143,23 @@ public class WebContextProducer implements ApplicationContextAware {
 			return variableNames;
 		}
 
+		@Override
+		public IWebExchange getExchange() {
+
+			PortletRequest portletRequest = null;
+
+			HttpServletRequest request = this.httpServletRequest;
+
+			while (request instanceof HttpServletRequestWrapper) {
+				request = (HttpServletRequest) ((HttpServletRequestWrapper) request).getRequest();
+			}
+
+			if (request instanceof HttpServletRequestAdapter) {
+				portletRequest = ((HttpServletRequestAdapter) httpServletRequest).getAdapted();
+				return new PortletIWebExchange(portletRequest);
+			}
+
+			throw new IllegalStateException("Unable to obtain PortletRequest from the request.");
+		}
 	}
 }

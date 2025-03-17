@@ -51,7 +51,7 @@ public class TemplateEngineSupplierProducer {
 		BeanFactory beanFactory) {
 		TemplateEngine templateEngine = new TemplateEngine();
 		templateEngine.setMessageResolver(new PortletMessageResolver(portletConfig));
-		templateEngine.setTemplateResolver(new PortletTemplateResolver(servletContext,
+		 templateEngine.setTemplateResolver(new PortletTemplateResolver(
 				new SpringConfigurationSupplier(beanFactory)));
 
 		return new DefaultTemplateEngineSupplier(templateEngine);

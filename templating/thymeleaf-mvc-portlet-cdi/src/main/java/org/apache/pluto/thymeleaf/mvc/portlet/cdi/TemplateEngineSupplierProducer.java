@@ -57,7 +57,7 @@ public class TemplateEngineSupplierProducer {
 			templateLocation = ViewEngine.DEFAULT_VIEW_FOLDER;
 		}
 
-		templateEngine.setTemplateResolver(new PortletTemplateResolver(servletContext,
+		templateEngine.setTemplateResolver(new PortletTemplateResolver(
 				new CDITemplateLocationSupplier(templateLocation)));
 
 		return new DefaultTemplateEngineSupplier(templateEngine);

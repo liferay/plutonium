@@ -18,25 +18,23 @@ package org.apache.pluto.thymeleaf.portlet;
 
 import java.util.Map;
 
-import javax.servlet.ServletContext;
-
 import org.thymeleaf.IEngineConfiguration;
-
-import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
-
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 /**
  * This is a convenient utility class that provides Thymeleaf with a way to resolve templates in a portlet application.
  *
  * @author  Neil Griffin
  */
-public class PortletTemplateResolver extends ServletContextTemplateResolver {
+public class PortletTemplateResolver extends ClassLoaderTemplateResolver {
 
 	private TemplateLocationSupplier templateLocationSupplier;
 
-	public PortletTemplateResolver(ServletContext servletContext, TemplateLocationSupplier templateLocationSupplier) {
-		super(servletContext);
+	public PortletTemplateResolver(TemplateLocationSupplier templateLocationSupplier) {
 		this.templateLocationSupplier = templateLocationSupplier;
+		setPrefix("templates/");
+		setSuffix(".html");
+		setTemplateMode("HTML");
 	}
 
 	@Override
