@@ -98,6 +98,18 @@
             <groupId>org.apache.portals.pluto</groupId>
             <artifactId>pluto-maven-plugin</artifactId>
             <version>${project.version}</version>
+            <dependencies>
+               <dependency>
+                  <groupId>jakarta.xml.bind</groupId>
+                  <artifactId>jakarta.xml.bind-api</artifactId>
+                  <version>${jaxb.version}</version>
+               </dependency>
+               <dependency>
+                  <groupId>com.sun.xml.bind</groupId>
+                  <artifactId>jaxb-impl</artifactId>
+                  <version>${jaxb-impl.version}</version>
+               </dependency>
+            </dependencies>
             <executions>
                <execution>
                   <phase>generate-resources</phase>

@@ -50,6 +50,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 			<groupId>com.liferay.jakarta.portlet</groupId>
 			<artifactId>com.liferay.jakarta.portlet-api</artifactId>
 			<scope>provided</scope>
@@ -87,6 +91,11 @@
 			<version>4.0.1</version>
 		</dependency>
 		<!-- Testing Libraries ================================================= -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
@@ -183,7 +192,7 @@
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
 				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.14.0</version>
+				<version>0.15.3</version>
 				<executions>
 					<execution>
 						<id>portlet1-generate</id>

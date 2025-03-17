@@ -240,7 +240,7 @@ generate mailto links. -->
 		<jsp-api.version>3.1.1</jsp-api.version>
 		<jstl.version>9.0.83</jstl.version>
 		<el-api.version>10.1.36</el-api.version>
-		<jaxb.version>3.0.1</jaxb.version>
+		<jaxb.version>4.0.2</jaxb.version>
 		<jaxb-impl.version>4.0.5</jaxb-impl.version>
 		<stax.impl.version>1.2.0</stax.impl.version>
 		<commons-digester.version>1.8</commons-digester.version>
