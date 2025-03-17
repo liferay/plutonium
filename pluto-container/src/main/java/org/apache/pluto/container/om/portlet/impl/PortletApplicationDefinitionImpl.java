@@ -594,7 +594,7 @@ public class PortletApplicationDefinitionImpl implements
       // Remove the listener if already present. This is based on the listener class
       // for JSR 286 portlets and on the listener name for JSR 362 portlets
 
-      if (version.equals("3.0")) {
+      if (version.equals("3.0") || version.equals("4.0")) {
          for (int ii = 0; ii < listeners.size(); ii++) {
             if (listeners.get(ii).getListenerName().equals(listener.getListenerName())) {
                listeners.remove(ii);

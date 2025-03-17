@@ -230,9 +230,9 @@ generate mailto links. -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<pluto.container.name>Pluto</pluto.container.name>
-		<javax.portlet.version.major>3</javax.portlet.version.major>
-		<javax.portlet.version.minor>0</javax.portlet.version.minor>
-		<portals.portlet-api.version>4.0.0-SNAPSHOT</portals.portlet-api.version>
+		<jakarta.portlet.version.major>4</jakarta.portlet.version.major>
+		<jakarta.portlet.version.minor>0</jakarta.portlet.version.minor>
+		<portals.portlet-api.version>4.0.0</portals.portlet-api.version>
 		<servlet-api.version>6.0.0</servlet-api.version>
 		<tomcat.servlet-api.version>10.1.36</tomcat.servlet-api.version>
 		<jsp-api.version>3.1.1</jsp-api.version>
