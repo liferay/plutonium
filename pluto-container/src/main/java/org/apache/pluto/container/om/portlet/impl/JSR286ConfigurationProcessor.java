@@ -85,7 +85,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Processes configuration for JSR 168 portlet app.
+ * Processes configuration for JSR 286 portlet app.
  * 
  * @author Scott Nicklous
  * 
