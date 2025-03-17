@@ -31,8 +31,8 @@
 	<description>Apache Pluto's Java Portlet Specification Tag Library implementation</description>
 	<dependencies>
 		<dependency>
-			<groupId>jakarta.portlet</groupId>
-			<artifactId>jakarta.portlet-api</artifactId>
+			<groupId>com.liferay.jakarta.portlet</groupId>
+			<artifactId>com.liferay.jakarta.portlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>

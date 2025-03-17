@@ -43,7 +43,7 @@ class InstallationDependency {
     }
 
     public static final InstallationDependency PORTLET_API =
-        new InstallationDependency("javax.portlet", "portlet-api",
+        new InstallationDependency("com.liferay.jakarta.portlet", "com.liferay.jakarta.portlet-api",
             VERSION_PROPERTIES.getProperty("portals.portlet-api.version"));
 
     public static final InstallationDependency COMMONS_LANG3 =

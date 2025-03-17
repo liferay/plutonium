@@ -315,8 +315,8 @@ generate mailto links. -->
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>jakarta.portlet</groupId>
-				<artifactId>jakarta.portlet-api</artifactId>
+				<groupId>com.liferay.jakarta.portlet</groupId>
+				<artifactId>com.liferay.jakarta.portlet-api</artifactId>
 				<version>${portals.portlet-api.version}</version>
 				<scope>provided</scope>
 			</dependency>

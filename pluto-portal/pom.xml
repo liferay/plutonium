@@ -48,8 +48,8 @@
 					<artifactId>tomcat-servlet-api</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>jakarta.portlet</groupId>
-					<artifactId>jakarta.portlet-api</artifactId>
+					<groupId>com.liferay.jakarta.portlet</groupId>
+					<artifactId>com.liferay.jakarta.portlet-api</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>xml-apis</groupId>
@@ -108,8 +108,8 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>jakarta.portlet</groupId>
-			<artifactId>jakarta.portlet-api</artifactId>
+			<groupId>com.liferay.jakarta.portlet</groupId>
+			<artifactId>com.liferay.jakarta.portlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
