@@ -240,6 +240,7 @@ generate mailto links. -->
 		<jsp-api.version>3.1.1</jsp-api.version>
 		<jstl.version>9.0.83</jstl.version>
 		<el-api.version>10.1.36</el-api.version>
+		<interceptor.version>2.1.0</interceptor.version>
 		<jaxb.version>4.0.2</jaxb.version>
 		<jaxb-impl.version>4.0.5</jaxb-impl.version>
 		<stax.impl.version>1.2.0</stax.impl.version>
@@ -337,6 +338,11 @@ generate mailto links. -->
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
 				<version>${jaxb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.interceptor</groupId>
+				<artifactId>jakarta.interceptor-api</artifactId>
+				<version>${interceptor.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.xml.bind</groupId>
