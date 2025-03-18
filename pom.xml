@@ -228,53 +228,52 @@ generate mailto links. -->
   1)  pluto-maven-plugin/src/main/resources/versions.properties as well!
   -->
 	<properties>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<pluto.container.name>Pluto</pluto.container.name>
-		<jakarta.portlet.version.major>4</jakarta.portlet.version.major>
-		<jakarta.portlet.version.minor>0</jakarta.portlet.version.minor>
-		<portals.portlet-api.version>4.0.0</portals.portlet-api.version>
-		<servlet-api.version>6.0.0</servlet-api.version>
-		<tomcat.servlet-api.version>10.1.36</tomcat.servlet-api.version>
-		<jsp-api.version>3.1.1</jsp-api.version>
-		<jstl.version>9.0.83</jstl.version>
-		<el-api.version>10.1.36</el-api.version>
-		<interceptor.version>2.1.0</interceptor.version>
-		<jaxb.version>4.0.2</jaxb.version>
-		<jaxb-impl.version>4.0.5</jaxb-impl.version>
-		<stax.impl.version>1.2.0</stax.impl.version>
-		<commons-digester.version>1.8</commons-digester.version>
-		<commons-cli.version>1.0</commons-cli.version>
-		<slf4j.version>1.7.5</slf4j.version>
-		<springframework.version>6.2.2</springframework.version>
-		<springsecurity.version>6.4.2</springsecurity.version>
-		<maven.version>3.8.1</maven.version>
+		<annotation-detector.version>3.0.5</annotation-detector.version>
 		<ant.version>1.6.5</ant.version>
+		<ccpp-api.version>1.0</ccpp-api.version>
+		<classmate.version>1.3.4</classmate.version>
+		<commons-cli.version>1.0</commons-cli.version>
+		<commons-digester.version>1.8</commons-digester.version>
 		<commons-lang.scope>provided</commons-lang.scope>
 		<commons-lang.version>3.4</commons-lang.version>
 		<commons-io.version>2.7</commons-io.version>
-		<ccpp-api.version>1.0</ccpp-api.version>
-		<junit.version>4.13.1</junit.version>
-		<jmock.version>2.12.0</jmock.version>
-		<xmlunit.version>1.1</xmlunit.version>
-		<weld.api.version>5.0.SP3</weld.api.version>
-		<weld.impl.version>5.1.5.Final</weld.impl.version>
-		<annotation-detector.version>3.0.5</annotation-detector.version>
-		<!-- MVC ================================================== -->
-		<classmate.version>1.3.4</classmate.version>
-		<hibernate-validator.version>8.0.2.Final</hibernate-validator.version>
-		<jaxrs-api.version>3.1.0</jaxrs-api.version>
-		<mvc-api.version>2.1.0</mvc-api.version>
-		<jboss-logging.version>3.3.2.Final</jboss-logging.version>
-		<validation-api.version>3.0.2</validation-api.version>
 		<!-- scope of certain dependencies is "compile" for deployment on tomcat,
          but "provided" for deployment on tomee. See tomee profile. -->
 		<dependency.scope>compile</dependency.scope>
-		<!-- following properties control whether or not demos are included in page 
+		<el-api.version>10.1.36</el-api.version>
+		<hibernate-validator.version>8.0.2.Final</hibernate-validator.version>
+		<!-- following properties control whether or not demos are included in page
          config file (see profile 'excludeDemos' below) -->
 		<includeDemosBegin />
 		<includeDemosEnd />
+		<interceptor.version>2.1.0</interceptor.version>
+		<jakarta.portlet.version.major>4</jakarta.portlet.version.major>
+		<jakarta.portlet.version.minor>0</jakarta.portlet.version.minor>
+		<jaxb.version>4.0.2</jaxb.version>
+		<jaxb-impl.version>4.0.5</jaxb-impl.version>
+		<jaxrs-api.version>3.1.0</jaxrs-api.version>
+		<jboss-logging.version>3.3.2.Final</jboss-logging.version>
+		<jsp-api.version>3.1.1</jsp-api.version>
+		<jstl.version>9.0.83</jstl.version>
+		<jmock.version>2.12.0</jmock.version>
+		<junit.version>4.13.1</junit.version>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.version>3.8.1</maven.version>
+		<mvc-api.version>2.1.0</mvc-api.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<pluto.container.name>Pluto</pluto.container.name>
+		<portals.portlet-api.version>4.0.0</portals.portlet-api.version>
+		<servlet-api.version>6.0.0</servlet-api.version>
+		<slf4j.version>1.7.5</slf4j.version>
+		<springframework.version>6.2.2</springframework.version>
+		<springsecurity.version>6.4.2</springsecurity.version>
+		<stax.impl.version>1.2.0</stax.impl.version>
+		<tomcat.servlet-api.version>10.1.36</tomcat.servlet-api.version>
+		<validation-api.version>3.0.2</validation-api.version>
+		<weld.api.version>5.0.SP3</weld.api.version>
+		<weld.impl.version>5.1.5.Final</weld.impl.version>
+		<xmlunit.version>1.1</xmlunit.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
