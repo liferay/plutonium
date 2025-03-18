@@ -75,7 +75,7 @@ class InstallationDependency {
             VERSION_PROPERTIES.getProperty("mvc-api.version"));
 
     public static final InstallationDependency VALIDATION_API =
-        new InstallationDependency("javax.validation", "validation-api",
+        new InstallationDependency("jakarta.validation", "jakarta.validation-api",
             VERSION_PROPERTIES.getProperty("validation-api.version"));
 
     public static final InstallationDependency CDI_IMPL_API =
