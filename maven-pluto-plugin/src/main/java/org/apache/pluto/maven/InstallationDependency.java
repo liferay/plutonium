@@ -91,7 +91,7 @@ class InstallationDependency {
             VERSION_PROPERTIES.getProperty("weld.impl.version"));
 
     public static final InstallationDependency WELD_ENVIRONMENT_COMMON =
-        new InstallationDependency("org.jboss.weld", "weld-environment-common",
+        new InstallationDependency("org.jboss.weld.environment", "weld-environment-common",
             VERSION_PROPERTIES.getProperty("weld.impl.version"));
 
     public static final InstallationDependency WELD_LITE_EXTENSION_TRANSLATOR =
@@ -99,7 +99,7 @@ class InstallationDependency {
             VERSION_PROPERTIES.getProperty("weld.impl.version"));
 
     public static final InstallationDependency WELD_WEB =
-        new InstallationDependency("org.jboss.weld", "weld-web",
+        new InstallationDependency("org.jboss.weld.module", "weld-web",
             VERSION_PROPERTIES.getProperty("weld.impl.version"));
 
     public static final InstallationDependency WELD_SERVLET_CORE =
