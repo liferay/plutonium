@@ -21,8 +21,8 @@ limitations under the License.
 <%@ page import="java.util.Map"%>
 <%@ page import="org.apache.pluto.testsuite.TestConfig"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
 
 <portlet:defineObjects/>
 
