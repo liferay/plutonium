@@ -16,12 +16,15 @@
  */
 package org.apache.pluto.driver.security;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
+import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import jakarta.enterprise.inject.Vetoed;
@@ -42,28 +45,36 @@ import java.util.regex.Pattern;
 @Configuration
 @EnableWebSecurity
 @Vetoed
-public class PortalSecurityConfigurer extends WebSecurityConfigurerAdapter {
+public class PortalSecurityConfigurer {
 
-	private static RequestMatcher ACTION_REQUEST_MATCHER = new ActionRequestMatcher();
+	private static final RequestMatcher ACTION_REQUEST_MATCHER = new ActionRequestMatcher();
 
-	public PortalSecurityConfigurer() {
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+		CsrfTokenRequestAttributeHandler requestAttributeHandler = new CsrfTokenRequestAttributeHandler();
 
-		// Disable defaults so that the configure(HttpSecurity) method can selectively enable features that are
-		// relevant to portlets.
-		super(true);
+		httpSecurity
+			.csrf(csrf -> csrf
+				.requireCsrfProtectionMatcher(ACTION_REQUEST_MATCHER)
+				.csrfTokenRepository(new HttpSessionCsrfTokenRepository())
+				.csrfTokenRequestHandler(requestAttributeHandler)
+			)
+			.exceptionHandling(exceptionHandling ->
+				exceptionHandling.accessDeniedHandler(portletAccessDeniedHandler())
+			);
+
+		return httpSecurity.build();
 	}
 
-	@Override
-	protected void configure(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.csrf().requireCsrfProtectionMatcher(ACTION_REQUEST_MATCHER).and().exceptionHandling().accessDeniedHandler(new PortletAccessDeniedHandler());
+	@Bean
+	public AccessDeniedHandler portletAccessDeniedHandler() {
+		return new PortletAccessDeniedHandler();
 	}
 
 	private static class PortletAccessDeniedHandler implements AccessDeniedHandler {
-
 		@Override
-		public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-						   AccessDeniedException accessDeniedException) throws
-			IOException, ServletException {
+		public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException accessDeniedException)
+			throws IOException, ServletException {
 			throw accessDeniedException;
 		}
 	}
@@ -92,12 +103,7 @@ public class PortalSecurityConfigurer extends WebSecurityConfigurerAdapter {
 			}
 
 			Matcher partialActionURLMatcher = PARTIAL_ACTION_URL_PATTERN.matcher(requestURI);
-
-			if (partialActionURLMatcher.matches()) {
-				return true;
-			}
-
-			return false;
+			return partialActionURLMatcher.matches();
 		}
 	}
 }
