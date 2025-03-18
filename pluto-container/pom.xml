@@ -118,13 +118,13 @@
 		<dependency>
 			<groupId>org.jboss.weld.se</groupId>
 			<artifactId>weld-se-core</artifactId>
-			<version>${cdi.impl.version}</version>
+			<version>${weld.impl.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet-core</artifactId>
-			<version>${cdi.impl.version}</version>
+			<version>${weld.impl.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

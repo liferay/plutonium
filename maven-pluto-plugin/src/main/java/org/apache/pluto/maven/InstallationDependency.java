@@ -78,13 +78,33 @@ class InstallationDependency {
         new InstallationDependency("jakarta.validation", "jakarta.validation-api",
             VERSION_PROPERTIES.getProperty("validation-api.version"));
 
-    public static final InstallationDependency CDI_IMPL_API =
+    public static final InstallationDependency WELD_API =
         new InstallationDependency("org.jboss.weld", "weld-api",
-            VERSION_PROPERTIES.getProperty("cdi.impl.api.version"));
+            VERSION_PROPERTIES.getProperty("weld.api.version"));
 
-    public static final InstallationDependency CDI_IMPL =
+    public static final InstallationDependency WELD_SPI =
+        new InstallationDependency("org.jboss.weld", "weld-spi",
+            VERSION_PROPERTIES.getProperty("weld.api.version"));
+
+    public static final InstallationDependency WELD_CORE_IMPL =
+        new InstallationDependency("org.jboss.weld", "weld-core-impl",
+            VERSION_PROPERTIES.getProperty("weld.impl.version"));
+
+    public static final InstallationDependency WELD_ENVIRONMENT_COMMON =
+        new InstallationDependency("org.jboss.weld", "weld-environment-common",
+            VERSION_PROPERTIES.getProperty("weld.impl.version"));
+
+    public static final InstallationDependency WELD_LITE_EXTENSION_TRANSLATOR =
+        new InstallationDependency("org.jboss.weld", "weld-lite-extension-translator",
+            VERSION_PROPERTIES.getProperty("weld.impl.version"));
+
+    public static final InstallationDependency WELD_WEB =
+        new InstallationDependency("org.jboss.weld", "weld-web",
+            VERSION_PROPERTIES.getProperty("weld.impl.version"));
+
+    public static final InstallationDependency WELD_SERVLET_CORE =
         new InstallationDependency("org.jboss.weld.servlet", "weld-servlet-core",
-                VERSION_PROPERTIES.getProperty("cdi.impl.version"));
+                VERSION_PROPERTIES.getProperty("weld.impl.version"));
 
     public static final InstallationDependency ANNOTATION_DETECTOR =
         new InstallationDependency("eu.infomas", "annotation-detector",
@@ -145,8 +165,13 @@ class InstallationDependency {
         SHARED.add(CONTAINER_DRIVER_API);
         SHARED.add(TAGLIB);
         SHARED.add(CCPP_API);
-        SHARED.add(CDI_IMPL_API);
-        SHARED.add(CDI_IMPL);
+        SHARED.add(WELD_API);
+        SHARED.add(WELD_SPI);
+        SHARED.add(WELD_CORE_IMPL);
+        SHARED.add(WELD_ENVIRONMENT_COMMON);
+        SHARED.add(WELD_LITE_EXTENSION_TRANSLATOR);
+        SHARED.add(WELD_WEB);
+        SHARED.add(WELD_SERVLET_CORE);
         SHARED.add(ANNOTATION_DETECTOR);
         SHARED.add(SLF4J_API);
         SHARED.add(SLF4J_IMPL);
