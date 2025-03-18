@@ -21,20 +21,6 @@ limitations under the License.
 --%>
 
 <!-- Pluto about portlet fragment (displayed in VIEW mode). -->
-
-<%@ page import="java.util.Map" %>
-<%
-  java.util.Map<String, Object> uriMap = (Map<String,Object>)application.getAttribute("org.apache.jasper.compiler.TldLocationsCache");
-  out.println("<h3>Registered TLDs:</h3>");
-  if (uriMap != null) {
-    for (Map.Entry<String, Object> entry : uriMap.entrySet()) {
-      out.println("<p>URI: " + entry.getKey() + "</p>");
-    }
-  } else {
-    out.println("<p>No registered TLDs found.</p>");
-  }
-%>
-
 <table>
   
   <tr>
