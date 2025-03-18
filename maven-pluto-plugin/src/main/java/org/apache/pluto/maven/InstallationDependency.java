@@ -63,7 +63,7 @@ class InstallationDependency {
             VERSION_PROPERTIES.getProperty("hibernate-validator.version"));
 
     public static final InstallationDependency JAXRS_API =
-        new InstallationDependency("javax.ws.rs", "javax.ws.rs-api",
+        new InstallationDependency("jakarta.ws.rs", "jakarta.ws.rs-api",
             VERSION_PROPERTIES.getProperty("jaxrs-api.version"));
 
     public static final InstallationDependency JBOSS_LOGGING =
