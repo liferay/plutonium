@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE taglib PUBLIC
-  "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
-  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
-<!-- 
+<!--
 Licensed to the Apache Software Foundation (ASF) under one or more
 contributor license agreements.  See the NOTICE file distributed with
 this work for additional information regarding copyright ownership.
@@ -22,18 +19,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<taglib>
-  
-  <tlibversion>1.0</tlibversion>
-  <jspversion>1.1</jspversion>
-  <shortname>pluto</shortname>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                            https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
+        version="3.0">
+
+  <tlib-version>1.0</tlib-version>
+  <short-name>pluto</short-name>
   <uri>http://portals.apache.org/pluto</uri>
 
   <!-- Insert the rendering of a portlet -->
   <tag>
     <name>portlet</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletTag</tagclass>
-    <bodycontent>JSP</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletTag</tag-class>
+    <body-content>JSP</body-content>
     <attribute>
       <name>portletId</name>
       <required>true</required>
@@ -43,8 +43,8 @@ limitations under the License.
 
   <tag>
     <name>modeAnchor</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletModeAnchorTag</tagclass>
-    <bodycontent>empty</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletModeAnchorTag</tag-class>
+    <body-content>empty</body-content>
     <attribute>
       <name>portletMode</name>
       <required>true</required>
@@ -54,14 +54,14 @@ limitations under the License.
 
   <tag>
     <name>modeDropDown</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletModeDropDownTag</tagclass>
-    <bodycontent>empty</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletModeDropDownTag</tag-class>
+    <body-content>empty</body-content>
   </tag>
   
   <tag>
     <name>windowStateAnchor</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletWindowStateAnchorTag</tagclass>
-    <bodycontent>empty</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletWindowStateAnchorTag</tag-class>
+    <body-content>empty</body-content>
     <attribute>
       <name>windowState</name>
       <required>true</required>
@@ -76,14 +76,14 @@ limitations under the License.
      
   <tag>
     <name>title</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletTitleTag</tagclass>
-    <bodycontent>empty</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletTitleTag</tag-class>
+    <body-content>empty</body-content>
   </tag>
 
   <tag>
     <name>url</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletPortalURLTag</tagclass>
-    <bodycontent>empty</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletPortalURLTag</tag-class>
+    <body-content>empty</body-content>
     <attribute>
       <name>portletMode</name>
       <required>false</required>
@@ -98,14 +98,14 @@ limitations under the License.
 
   <tag>
     <name>render</name>
-    <tagclass>org.apache.pluto.driver.tags.PortletRenderTag</tagclass>
-    <bodycontent>empty</bodycontent>
+    <tag-class>org.apache.pluto.driver.tags.PortletRenderTag</tag-class>
+    <body-content>empty</body-content>
   </tag>
 
     <tag>
         <name>isMaximized</name>
-        <tagclass>org.apache.pluto.driver.tags.IsMaximizedTag</tagclass>
-        <bodycontent>empty</bodycontent>
+        <tag-class>org.apache.pluto.driver.tags.IsMaximizedTag</tag-class>
+        <body-content>empty</body-content>
         <attribute>
             <name>var</name>
             <required>true</required>
