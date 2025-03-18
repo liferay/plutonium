@@ -71,7 +71,7 @@ class InstallationDependency {
             VERSION_PROPERTIES.getProperty("jboss-logging.version"));
 
     public static final InstallationDependency MVC_API =
-        new InstallationDependency("javax.mvc", "javax.mvc-api",
+        new InstallationDependency("jakarta.mvc", "jakarta.mvc-api",
             VERSION_PROPERTIES.getProperty("mvc-api.version"));
 
     public static final InstallationDependency VALIDATION_API =
