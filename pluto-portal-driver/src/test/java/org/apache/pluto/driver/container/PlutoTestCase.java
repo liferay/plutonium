@@ -16,10 +16,11 @@
  */
 package org.apache.pluto.driver.container;
 
+import org.jmock.Mockery;
+import org.junit.Before;
+import static org.junit.Assert.fail;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import org.jmock.MockObjectTestCase;
 
 /**
  * Test Class
@@ -27,45 +28,34 @@ import org.jmock.MockObjectTestCase;
  * @version 1.0
  * @since June 1, 2005
  */
-public abstract class PlutoTestCase extends MockObjectTestCase {
+public abstract class PlutoTestCase {
 
+    protected Mockery context;
+
+    @Before
     public void setUp() throws Exception {
+        context = new Mockery();
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog");
         System.setProperty("org.apache.commons.logging.simplelog.defaultlog", "ERROR");
     }
 
-    protected void assertException(Object target, String methodName,
-                                 Object[] parameters, Class exceptionType) {
-            Class[] parameterClasses = new Class[parameters.length];
-            for(int i=0;i<parameters.length;i++) {
-                parameterClasses[i] = parameters[i]==null?Object.class:parameters[i].getClass();
-            }
-        assertException(target, methodName, parameterClasses, parameters, exceptionType);
-    }
-
-    protected void assertException(Object target, String methodName,
-                                 Class[] parameterClasses,
-                                 Object[] parameters, Class exceptionType) {
+    @SuppressWarnings("unchecked")
+    protected void assertException(Object target, String methodName, Object[] parameters, Class<? extends Throwable> exceptionType) {
+        Class<?>[] parameterClasses = new Class<?>[parameters.length];
+        for (int i = 0; i < parameters.length; i++) {
+            parameterClasses[i] = (parameters[i] == null) ? Object.class : parameters[i].getClass();
+        }
         try {
-            Class targetClass = target.getClass();
-            Method method = targetClass.getMethod(methodName, parameterClasses);
+            Method method = target.getClass().getMethod(methodName, parameterClasses);
             method.invoke(target, parameters);
-        }
-        catch(InvocationTargetException ite) {
+            fail("Expected exception of type " + exceptionType.getName() + " was not thrown.");
+        } catch (InvocationTargetException ite) {
             Throwable t = ite.getTargetException();
-            if(!t.getClass().equals(exceptionType)) {
-                fail("Incorrect Exception thrown.  Expected: "+exceptionType.getName()+", recieved "+t.getClass().getName());
+            if (!exceptionType.isInstance(t)) {
+                fail("Incorrect exception thrown. Expected: " + exceptionType.getName() + ", received: " + t.getClass().getName());
             }
-        }
-        catch(Throwable t) {
-            fail("Invalid Test.  Reflection invocation and setup failed.");
-        }
-    }
-
-    protected void assertContains(String message, String expectedSubstring,
-                                  String testString) {
-        if (testString.indexOf(expectedSubstring) < 0) {
-            fail(message);
+        } catch (Exception e) {
+            fail("Invalid test setup. Reflection invocation failed: " + e.getMessage());
         }
     }
 }

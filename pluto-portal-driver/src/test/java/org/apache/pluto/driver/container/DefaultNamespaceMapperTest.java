@@ -18,61 +18,63 @@ package org.apache.pluto.driver.container;
 
 import org.apache.pluto.container.NamespaceMapper;
 import org.apache.pluto.container.PortletWindowID;
-import org.apache.pluto.driver.container.DefaultNamespaceMapper;
+import org.junit.Before;
+import org.junit.Test;
 
-/**
- * Test Class
- *
- * @version 1.0
- * @since June 1, 2005
- */
-public class DefaultNamespaceMapperTest extends PlutoTestCase {
+import static org.junit.Assert.*;
 
-    private NamespaceMapper mapper = new DefaultNamespaceMapper();
+public class DefaultNamespaceMapperTest {
+
+    private NamespaceMapper mapper;
     private PortletWindowID id1;
     private PortletWindowID id2;
 
-    public void setUp() throws Exception {
-        super.setUp();
+    @Before
+    public void setUp() {
+        mapper = new DefaultNamespaceMapper();
         id1 = new InternalPortletWindowID();
         id2 = new InternalPortletWindowID();
     }
 
+    @Test
     public void testEncodeUniquenessWithSameName() {
         String mappedA = mapper.encode(id1, "testNumber1");
         String mappedB = mapper.encode(id2, "testNumber1");
-        assertFalse(mappedA.equals(mappedB));
+        assertNotEquals("Encoded namespaces should be unique for different PortletWindowIDs with the same name.", mappedA, mappedB);
     }
 
+    @Test
     public void testEncodeUniquenessWithSameObjectID() {
         String mappedA = mapper.encode(id1, "testNumber1");
         String mappedB = mapper.encode(id1, "testNumber2");
-        assertFalse(mappedA.equals(mappedB));
+        assertNotEquals("Encoded namespaces should be unique for the same PortletWindowID with different names.", mappedA, mappedB);
     }
 
+    @Test
     public void testDecode() {
         String original = "original";
         String mappedA = mapper.encode(id1, original);
-        assertEquals(original, mapper.decode(id1, mappedA));
+        assertEquals("Decoded namespace should match the original name.", original, mapper.decode(id1, mappedA));
     }
 
+    @Test
     public void testDecodeInvalidId() {
-        assertNull(mapper.decode(id1, mapper.encode(id2, "test")));
+        String encoded = mapper.encode(id2, "test");
+        assertNull("Decoding with a different PortletWindowID should return null.", mapper.decode(id1, encoded));
     }
 
     private static int objectIDCounter = 1;
 
-
     private class InternalPortletWindowID implements PortletWindowID {
-
-        private int id;
+        private final int id;
 
         public InternalPortletWindowID() {
             id = objectIDCounter++;
         }
 
+        @Override
         public String getStringId() {
-            return "uniqueId"+id;
+            return "uniqueId" + id;
         }
     }
 }

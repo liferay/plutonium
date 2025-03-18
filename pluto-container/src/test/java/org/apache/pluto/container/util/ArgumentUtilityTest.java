@@ -16,47 +16,38 @@
  */
 package org.apache.pluto.container.util;
 
-import org.apache.pluto.container.util.ArgumentUtility;
+import org.junit.Before;
+import org.junit.Test;
 
-
-
-/**
- * Test Class
- *
- * @version 1.0
- * @since June 1, 2005
- */
 public class ArgumentUtilityTest extends PlutoTestCase {
 
-    public void testValidateNotNullWhenNull()
-    throws Exception {
-        Object[] parameters = new Object[] {"arg", null};
-        assertException(new ArgumentUtility(), "validateNotNull",
-                        parameters, IllegalArgumentException.class);
+    @Before
+    public void setUp() throws Exception {
+        super.setUp();
     }
 
+    @Test
+    public void testValidateNotNullWhenNull() {
+        assertException(new ArgumentUtility(), "validateNotNull", IllegalArgumentException.class, "arg", null);
+    }
+
+    @Test
     public void testValidateNotNullWhenNotNull() {
         ArgumentUtility.validateNotNull("arg", "notnull");
     }
 
+    @Test
     public void testValidateNotNullOrEmptyWhenNull() {
-
-        Object[] parameters = new Object[] {"arg", null};
-        Class<?>[] parameterTypes = new Class<?>[] { String.class, String.class };
-        assertException(new ArgumentUtility(), "validateNotEmpty",
-                        parameterTypes,
-                        parameters, IllegalArgumentException.class);
+        assertException(new ArgumentUtility(), "validateNotEmpty", IllegalArgumentException.class, "arg", null);
     }
 
+    @Test
     public void testValidateNotNullOrEmptyWhenEmpty() {
-
-        Object[] parameters = new Object[] {"arg", ""};
-        assertException(new ArgumentUtility(), "validateNotEmpty",
-                        parameters, IllegalArgumentException.class);
+        assertException(new ArgumentUtility(), "validateNotEmpty", IllegalArgumentException.class, "arg", "");
     }
 
+    @Test
     public void testValidateNotNullOrEmptyWhenValid() {
         ArgumentUtility.validateNotEmpty("arg", "notempty");
     }
-
 }
