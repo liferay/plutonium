@@ -18,13 +18,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <portlet-app
-    xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
-    version="2.0" 
+    xmlns="http://jakarta.ee/xml/ns/portlet"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
-                        http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
-  
-  <portlet>
+    xsi:schemaLocation="http://jakarta.ee/xml/ns/portlet http://jakarta.ee/xml/ns/portlet/portlet-app_4_0.xsd"
+    version="4.0">
+
+    <portlet>
     <description>AboutPortletDescription</description>
     <portlet-name>AboutPortlet</portlet-name>
     <display-name>About Portlet</display-name>

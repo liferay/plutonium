@@ -66,7 +66,8 @@ public class ConfigurationHolder {
 
    private static final String          JAXB_CONTEXT = "org.apache.pluto.container.om.portlet10.impl:"
                                                            + "org.apache.pluto.container.om.portlet20.impl:"
-                                                           + "org.apache.pluto.container.om.portlet30.impl";
+                                                           + "org.apache.pluto.container.om.portlet30.impl:"
+                                                           + "org.apache.pluto.container.om.portlet40.impl"; // LOH
 
    private ConfigSummary configSummary = new ConfigSummary();
    private AnnotatedMethodStore methodStore = new AnnotatedMethodStore(configSummary);
@@ -185,7 +186,16 @@ public class ConfigurationHolder {
       } else if (jel.getValue() instanceof org.apache.pluto.container.om.portlet30.impl.PortletAppType) {
 
          // if config processor already present, there were annotations. don't overwrite
-         jcp = (jcp == null) ? new JSR362ConfigurationProcessor(pad) : jcp;
+         if ((jcp == null) || !(jcp instanceof JSR362ConfigurationProcessor)) {
+            jcp = new JSR362ConfigurationProcessor(pad);
+         }
+
+      } else if (jel.getValue() instanceof org.apache.pluto.container.om.portlet40.impl.PortletAppType) {
+
+         // if config processor already present, there were annotations. don't overwrite
+         if ((jcp == null) || !(jcp instanceof JakartaConfigurationProcessor)) {
+            jcp = new JakartaConfigurationProcessor(pad);
+         }
 
       } else {
          String warning = "Unknown application type: " + jel.getValue().getClass().getCanonicalName();
