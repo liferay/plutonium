@@ -58,7 +58,7 @@ public class Header2 {
    
    // invalid signature, bad exception
    @HeaderMethod(portletNames="portlet8")
-   public String header8(HeaderRequest req, HeaderResponse resp) throws InvalidActivityException {
+   public String header8(HeaderRequest req, HeaderResponse resp) throws IllegalStateException  {
       meths.addMethod(this.getClass().getSimpleName() + "#header8");
       return null;
    }

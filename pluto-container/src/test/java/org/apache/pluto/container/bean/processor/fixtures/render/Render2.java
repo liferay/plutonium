@@ -58,7 +58,7 @@ public class Render2 {
    
    // invalid signature, bad exception
    @RenderMethod(portletNames="portlet8")
-   public String render8(RenderRequest req, RenderResponse resp) throws InvalidActivityException {return null;}
+   public String render8(RenderRequest req, RenderResponse resp) throws IllegalStateException  {return null;}
    
    @RenderMethod(portletNames= {"portlet6", "portlet7"})
    public void render6and7(RenderRequest req, RenderResponse resp) {
