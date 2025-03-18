@@ -261,6 +261,29 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>replace-jaxb-imports</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<target>
+								<replace dir="${project.build.directory}/generated-sources">
+									<include name="**/*.java"/>
+									<replacefilter token="javax.interceptor" value="jakarta.interceptor"/>
+									<replacefilter token="javax.xml.bind" value="jakarta.xml.bind"/>
+								</replace>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
