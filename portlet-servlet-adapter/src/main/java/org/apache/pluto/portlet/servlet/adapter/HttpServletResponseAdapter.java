@@ -65,18 +65,8 @@ public class HttpServletResponseAdapter implements HttpServletResponse {
 	}
 
 	@Override
-	public String encodeUrl(String url) {
-		return portletResponse.encodeURL(url);
-	}
-
-	@Override
-	public String encodeRedirectUrl(String url) {
-		return url;
-	}
-
-	@Override
 	public void sendError(int statusCode, String message) throws IOException {
-		setStatus(statusCode, message);
+		setStatus(statusCode);
 	}
 
 	@Override
@@ -127,16 +117,6 @@ public class HttpServletResponseAdapter implements HttpServletResponse {
 	@Override
 	public void setStatus(int statusCode) {
 
-		if (portletResponse instanceof ResourceResponse) {
-			((ResourceResponse)portletResponse).setStatus(statusCode);
-		}
-		else {
-			// no-op
-		}
-	}
-
-	@Override
-	public void setStatus(int statusCode, String statusMessage) {
 		if (portletResponse instanceof ResourceResponse) {
 			((ResourceResponse)portletResponse).setStatus(statusCode);
 		}

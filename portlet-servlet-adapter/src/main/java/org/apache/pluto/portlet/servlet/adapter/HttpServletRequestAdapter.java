@@ -36,6 +36,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.HttpUpgradeHandler;
 import jakarta.servlet.http.Part;
+import jakarta.servlet.http.PushBuilder;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -101,6 +103,11 @@ public class HttpServletRequestAdapter implements HttpServletRequest {
 	}
 
 	@Override
+	public HttpServletMapping getHttpServletMapping() {
+		return HttpServletRequest.super.getHttpServletMapping();
+	}
+
+	@Override
 	public String getMethod() {
 
 		if (portletRequest instanceof ClientDataRequest) {
@@ -118,6 +125,11 @@ public class HttpServletRequestAdapter implements HttpServletRequest {
 	@Override
 	public String getPathTranslated() {
 		return "";
+	}
+
+	@Override
+	public PushBuilder newPushBuilder() {
+		return HttpServletRequest.super.newPushBuilder();
 	}
 
 	@Override
@@ -202,11 +214,6 @@ public class HttpServletRequestAdapter implements HttpServletRequest {
 	}
 
 	@Override
-	public boolean isRequestedSessionIdFromUrl() {
-		return false;
-	}
-
-	@Override
 	public boolean authenticate(HttpServletResponse httpServletResponse) throws IOException, ServletException {
 		return false;
 	}
@@ -254,6 +261,16 @@ public class HttpServletRequestAdapter implements HttpServletRequest {
 	@Override
 	public <T extends HttpUpgradeHandler> T upgrade(Class<T> aClass) throws IOException, ServletException {
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Map<String, String> getTrailerFields() {
+		return HttpServletRequest.super.getTrailerFields();
+	}
+
+	@Override
+	public boolean isTrailerFieldsReady() {
+		return HttpServletRequest.super.isTrailerFieldsReady();
 	}
 
 	@Override
@@ -408,11 +425,6 @@ public class HttpServletRequestAdapter implements HttpServletRequest {
 	}
 
 	@Override
-	public String getRealPath(String path) {
-		return "";
-	}
-
-	@Override
 	public int getRemotePort() {
 		throw new UnsupportedOperationException();
 	}
@@ -466,5 +478,24 @@ public class HttpServletRequestAdapter implements HttpServletRequest {
 	@Override
 	public DispatcherType getDispatcherType() {
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getRequestId() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String getProtocolRequestId() {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public ServletConnection getServletConnection() {
+		throw new UnsupportedOperationException();
+	}
+
+	public PortletRequest getAdapted() {
+		return portletRequest;
 	}
 }

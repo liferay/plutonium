@@ -106,21 +106,6 @@ public class HttpSessionAdapter implements PortletSession, HttpSession {
 	}
 
 	@Override
-	public HttpSessionContext getSessionContext() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public Object getValue(String name) {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public String[] getValueNames() {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
 	public void invalidate() {
 		wrappedPortletSession.invalidate();
 	}
@@ -131,11 +116,6 @@ public class HttpSessionAdapter implements PortletSession, HttpSession {
 	}
 
 	@Override
-	public void putValue(String name, Object value) {
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
 	public void removeAttribute(String name) {
 		wrappedPortletSession.removeAttribute(name);
 	}
@@ -143,11 +123,6 @@ public class HttpSessionAdapter implements PortletSession, HttpSession {
 	@Override
 	public void removeAttribute(String name, int scope) {
 		wrappedPortletSession.removeAttribute(name, scope);
-	}
-
-	@Override
-	public void removeValue(String name) {
-		throw new UnsupportedOperationException();
 	}
 
 	@Override

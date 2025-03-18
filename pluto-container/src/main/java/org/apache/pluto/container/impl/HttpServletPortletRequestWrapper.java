@@ -971,11 +971,6 @@ public class HttpServletPortletRequestWrapper extends HttpServletRequestWrapper 
    }
 
    @Override
-   public String getRealPath(String path) {
-      return null;
-   }
-
-   @Override
    public String getRemoteAddr() {
       return null;
    }

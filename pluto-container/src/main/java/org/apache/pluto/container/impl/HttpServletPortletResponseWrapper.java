@@ -87,18 +87,8 @@ public class HttpServletPortletResponseWrapper extends HttpServletResponseWrappe
    }
 
    @Override
-   public String encodeRedirectUrl(String url) {
-      return null;
-   }
-
-   @Override
    public String encodeRedirectURL(String url) {
       return null;
-   }
-
-   @Override
-   public String encodeUrl(String url) {
-      return encodeURL(url);
    }
 
    @Override
@@ -140,11 +130,6 @@ public class HttpServletPortletResponseWrapper extends HttpServletResponseWrappe
       if (!included && (portletResponse instanceof MimeResponse)) {
          ((MimeResponse) portletResponse).setProperty(name, Integer.toString(value));
       }
-   }
-
-   @Override
-   public void setStatus(int sc, String sm) {
-      setStatus(sc);
    }
 
    @Override
