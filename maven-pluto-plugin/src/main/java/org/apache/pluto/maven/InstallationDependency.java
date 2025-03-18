@@ -42,6 +42,54 @@ class InstallationDependency {
         }
     }
 
+    public static final InstallationDependency ANGUS_ACTIVATION =
+        new InstallationDependency("org.eclipse.angus", "angus-activation",
+            VERSION_PROPERTIES.getProperty("angus-activation.version"));
+
+    public static final InstallationDependency ISTACK_COMMONS_RUNTIME =
+        new InstallationDependency("com.sun.istack", "istack-commons-runtime",
+            VERSION_PROPERTIES.getProperty("istack-commons-runtime.version"));
+
+    public static final InstallationDependency JAKARTA_ACTIVATION_API =
+        new InstallationDependency("jakarta.activation", "jakarta.activation-api",
+            VERSION_PROPERTIES.getProperty("jakarta.activation-api.version"));
+
+    public static final InstallationDependency JAKARTA_ENTERPRISE_CDI_API =
+        new InstallationDependency("jakarta.enterprise", "jakarta.enterprise.cdi-api",
+            VERSION_PROPERTIES.getProperty("jakarta.enterprise.cdi-api.version"));
+
+    public static final InstallationDependency JAKARTA_INJECT_API =
+        new InstallationDependency("jakarta.inject", "jakarta.inject-api",
+            VERSION_PROPERTIES.getProperty("jakarta.inject-api.version"));
+
+    public static final InstallationDependency JAKARTA_INTERCEPTOR_API =
+        new InstallationDependency("jakarta.interceptor", "jakarta.interceptor-api",
+            VERSION_PROPERTIES.getProperty("jakarta.interceptor-api.version"));
+
+    public static final InstallationDependency JAKARTA_SERVLET_JSP_JSTL =
+        new InstallationDependency("org.glassfish.web", "jakarta.servlet.jsp.jstl",
+            VERSION_PROPERTIES.getProperty("jakarta.servlet.jsp.jstl.version"));
+
+    public static final InstallationDependency JAKARTA_SERVLET_JSP_JSTL_API =
+        new InstallationDependency("jakarta.servlet.jsp.jstl", "jakarta.servlet.jsp.jstl-api",
+            VERSION_PROPERTIES.getProperty("jakarta.servlet.jsp.jstl-api.version"));
+
+    public static final InstallationDependency JAKARTA_XML_BIND_API =
+        new InstallationDependency("jakarta.xml.bind", "jakarta.xml.bind-api",
+            VERSION_PROPERTIES.getProperty("jakarta.xml.bind-api.version"));
+
+    public static final InstallationDependency JAXB_CORE =
+        new InstallationDependency("org.glassfish.jaxb", "jaxb-core",
+            VERSION_PROPERTIES.getProperty("jaxb-impl.version"));
+
+    public static final InstallationDependency JAXB_RUNTIME =
+        new InstallationDependency("org.glassfish.jaxb", "jaxb-runtime",
+            VERSION_PROPERTIES.getProperty("jaxb-impl.version"));
+
+    public static final InstallationDependency JBOSS_CLASSFILEWRITER =
+        new InstallationDependency("org.jboss.classfilewriter", "jboss-classfilewriter",
+            VERSION_PROPERTIES.getProperty("jboss-classfilewriter.version"));
+
     public static final InstallationDependency PORTLET_API =
         new InstallationDependency("com.liferay.jakarta.portlet", "com.liferay.jakarta.portlet-api",
             VERSION_PROPERTIES.getProperty("portals.portlet-api.version"));
@@ -151,6 +199,18 @@ class InstallationDependency {
     private static final List<InstallationDependency> SHARED = new ArrayList<InstallationDependency>();
 
     static {
+        SHARED.add(ANGUS_ACTIVATION);
+        SHARED.add(ISTACK_COMMONS_RUNTIME);
+        SHARED.add(JAKARTA_ACTIVATION_API);
+        SHARED.add(JAKARTA_ENTERPRISE_CDI_API);
+        SHARED.add(JAKARTA_INJECT_API);
+        SHARED.add(JAKARTA_INTERCEPTOR_API);
+        SHARED.add(JAKARTA_SERVLET_JSP_JSTL);
+        SHARED.add(JAKARTA_SERVLET_JSP_JSTL_API);
+        SHARED.add(JAKARTA_XML_BIND_API);
+        SHARED.add(JAXB_CORE);
+        SHARED.add(JAXB_RUNTIME);
+        SHARED.add(JBOSS_CLASSFILEWRITER);
         SHARED.add(PORTLET_API);
         SHARED.add(COMMONS_LANG3);
         SHARED.add(CLASSMATE);
