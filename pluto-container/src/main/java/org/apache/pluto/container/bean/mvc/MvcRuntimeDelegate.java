@@ -25,6 +25,8 @@ import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.Variant;
 import jakarta.ws.rs.ext.RuntimeDelegate;
 
+import java.util.concurrent.CompletionStage;
+
 
 /**
  * @author  Neil Griffin
@@ -54,6 +56,30 @@ public class MvcRuntimeDelegate extends RuntimeDelegate {
 
 	@Override
 	public Link.Builder createLinkBuilder() {
+		return null;
+	}
+
+	@Override
+	public SeBootstrap.Configuration.Builder createConfigurationBuilder() {
+		return null;
+	}
+
+	@Override
+	public CompletionStage<SeBootstrap.Instance> bootstrap(
+		Application application, SeBootstrap.Configuration configuration) {
+		return null;
+	}
+
+	@Override
+	public CompletionStage<SeBootstrap.Instance> bootstrap(
+		Class<? extends Application> aClass,
+		SeBootstrap.Configuration configuration) {
+		return null;
+	}
+
+	@Override
+	public EntityPart.Builder createEntityPartBuilder(String s)
+		throws IllegalArgumentException {
 		return null;
 	}
 
