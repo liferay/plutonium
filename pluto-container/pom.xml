@@ -178,7 +178,7 @@
 						<exclude>src/main/resources/org/apache/pluto/container/impl/portlet-app_2_0.xsd</exclude>
 						<exclude>src/main/resources/org/apache/pluto/container/impl/portlet-app_4_0.xsd</exclude>
 						<exclude>src/main/resources/org/apache/pluto/container/impl/web-app_2_3.dtd</exclude>
-						<exclude>src/main/resources/META-INF/services/javax.enterprise.inject.spi.Extension</exclude>
+						<exclude>src/main/resources/META-INF/services/jakarta.enterprise.inject.spi.Extension</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

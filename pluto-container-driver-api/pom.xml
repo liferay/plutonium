@@ -69,7 +69,7 @@
 				<artifactId>apache-rat-plugin</artifactId>
 				<configuration>
 					<excludes>
-						<exclude>src/main/resources/META-INF/services/javax.servlet.ServletContainerInitializer</exclude>
+						<exclude>src/main/resources/META-INF/services/jakarta.servlet.ServletContainerInitializer</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
