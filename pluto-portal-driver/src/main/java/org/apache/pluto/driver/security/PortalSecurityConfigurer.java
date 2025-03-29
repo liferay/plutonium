@@ -16,22 +16,22 @@
  */
 package org.apache.pluto.driver.security;
 
+import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.access.AccessDeniedHandlerImpl;
+import org.springframework.security.web.context.SecurityContextPersistenceFilter;
 import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import jakarta.enterprise.inject.Vetoed;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -49,6 +49,9 @@ public class PortalSecurityConfigurer {
 
 	private static final RequestMatcher ACTION_REQUEST_MATCHER = new ActionRequestMatcher();
 
+	@Autowired
+	private ObjectFactory<HttpServletRequest> requestFactory;
+
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		CsrfTokenRequestAttributeHandler requestAttributeHandler = new CsrfTokenRequestAttributeHandler();
@@ -57,26 +60,17 @@ public class PortalSecurityConfigurer {
 			.csrf(csrf -> csrf
 				.requireCsrfProtectionMatcher(ACTION_REQUEST_MATCHER)
 				.csrfTokenRepository(new HttpSessionCsrfTokenRepository())
-				.csrfTokenRequestHandler(requestAttributeHandler)
-			)
-			.exceptionHandling(exceptionHandling ->
-				exceptionHandling.accessDeniedHandler(portletAccessDeniedHandler())
-			);
+				.csrfTokenRequestHandler(requestAttributeHandler))
+			.exceptionHandling(exceptionHandling -> exceptionHandling.accessDeniedHandler(portletAccessDeniedHandler()))
+			.authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+			.addFilterBefore(new ContainerAuthBridgeFilter(), SecurityContextPersistenceFilter.class);
 
 		return httpSecurity.build();
 	}
 
 	@Bean
 	public AccessDeniedHandler portletAccessDeniedHandler() {
-		return new PortletAccessDeniedHandler();
-	}
-
-	private static class PortletAccessDeniedHandler implements AccessDeniedHandler {
-		@Override
-		public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException accessDeniedException)
-			throws IOException, ServletException {
-			throw accessDeniedException;
-		}
+		return new AccessDeniedHandlerImpl();
 	}
 
 	private static class ActionRequestMatcher implements RequestMatcher {
