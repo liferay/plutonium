@@ -19,7 +19,7 @@ limitations under the License.
 -->
 <jsp:root xmlns:c="jakarta.tags.core"
 		  xmlns:fmt="jakarta.tags.fmt"
-		  xmlns:jsp="https://jakarta.ee/xml/ns/jsp"
+		  xmlns:jsp="http://java.sun.com/JSP/Page"
 		  xmlns:portlet="jakarta.tags.portlet"
 		  version="3.1">
 	<jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
