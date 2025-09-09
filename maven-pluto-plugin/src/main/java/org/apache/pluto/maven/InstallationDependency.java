@@ -167,27 +167,27 @@ class InstallationDependency {
                 VERSION_PROPERTIES.getProperty("slf4j.version"));
 
     public static final InstallationDependency CONTAINER_API =
-        new InstallationDependency("org.apache.portals.pluto", "pluto-container-api",
+        new InstallationDependency("com.liferay.pluto", "pluto-container-api",
                 VERSION_PROPERTIES.getProperty("pluto.version"));
 
     public static final InstallationDependency CONTAINER =
-            new InstallationDependency("org.apache.portals.pluto", "pluto-container", 
+            new InstallationDependency("com.liferay.pluto", "pluto-container", 
                     VERSION_PROPERTIES.getProperty("pluto.version"));
 
     public static final InstallationDependency  TAGLIB =
-            new InstallationDependency("org.apache.portals.pluto", "pluto-taglib", 
+            new InstallationDependency("com.liferay.pluto", "pluto-taglib", 
                     VERSION_PROPERTIES.getProperty("pluto.version"));
 
     public static final InstallationDependency CONTAINER_DRIVER_API =
-        new InstallationDependency("org.apache.portals.pluto", "pluto-container-driver-api",
+        new InstallationDependency("com.liferay.pluto", "pluto-container-driver-api",
                 VERSION_PROPERTIES.getProperty("pluto.version"));
 
     public static final InstallationDependency PORTAL =
-            new InstallationDependency("org.apache.portals.pluto", "pluto-portal",
+            new InstallationDependency("com.liferay.pluto", "pluto-portal",
                     VERSION_PROPERTIES.getProperty("pluto.version"), "war");
 
     public static final InstallationDependency TESTSUITE =
-            new InstallationDependency("org.apache.portals.pluto", "pluto-testsuite", 
+            new InstallationDependency("com.liferay.pluto", "pluto-testsuite", 
                     VERSION_PROPERTIES.getProperty("pluto.version"), "war");
 
     public static final InstallationDependency CCPP_API =
