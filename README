@@ -79,7 +79,7 @@ software that is licensed under the EPL 2.0 or CDDL licenses may be included
 in binary form. To that end, the binary version of the JAX-RS API dependency
 is found in the following path of the Pluto+Tomcat bundle:
 
-    <tomcat-home>/lib/javax.ws.rs-api-2.1.1.jar
+    <tomcat-home>/lib/jakarta.ws.rs-api-2.1.1.jar
 
 Apache Tomcat includes its own version of the Commons-Annotations API (which is
 licensed under the Apache License, Version 2.0) in the following-path of the
