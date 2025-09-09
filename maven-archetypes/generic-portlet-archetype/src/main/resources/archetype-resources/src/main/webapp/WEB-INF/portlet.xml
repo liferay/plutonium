@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 
+<!--
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ -->
 <portlet-app xmlns="http://jakarta.ee/xml/ns/portlet"
 			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			 xsi:schemaLocation="http://jakarta.ee/xml/ns/portlet http://jakarta.ee/xml/ns/portlet/portlet-app_4_0.xsd"

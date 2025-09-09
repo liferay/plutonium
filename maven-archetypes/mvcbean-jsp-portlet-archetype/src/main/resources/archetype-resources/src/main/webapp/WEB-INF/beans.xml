@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ -->
 <beans xmlns="http://jakarta.ee/xml/ns/jakartaee" bean-discovery-mode="all"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://jakarta.ee/xml/ns/jakartaee http://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd">
