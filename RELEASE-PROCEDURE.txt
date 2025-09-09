@@ -185,7 +185,7 @@ Since 3.0.0
 
         #
         # NOTE: This will release a file with the following identification:
-        #		 <groupId>org.apache.portals.pluto</groupId>
+        #		 <groupId>com.liferay.pluto</groupId>
         #		 <artifactId>pluto-bundle</artifactId>
         #		 <version>4.0.0</version>
         #

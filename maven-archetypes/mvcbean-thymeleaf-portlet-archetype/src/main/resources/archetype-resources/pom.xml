@@ -78,7 +78,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.portals.pluto.templating</groupId>
+			<groupId>com.liferay.pluto.templating</groupId>
 			<artifactId>thymeleaf-mvc-portlet-cdi</artifactId>
 			<version>3.1.2</version>
 		</dependency>

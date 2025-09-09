@@ -24,7 +24,7 @@
 		<version>33</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.apache.portals.pluto.archetype</groupId>
+	<groupId>com.liferay.pluto.archetype</groupId>
 	<artifactId>mvcbean-thymeleaf-portlet-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>mvcbean-thymeleaf-portlet-archetype</name>

@@ -24,7 +24,7 @@
 		<version>33</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.apache.portals.pluto</groupId>
+	<groupId>com.liferay.pluto</groupId>
 	<artifactId>pluto</artifactId>
 	<packaging>pom</packaging>
 	<name>Apache Pluto</name>
@@ -622,7 +622,7 @@ generate mailto links. -->
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>org.apache.portals.pluto</groupId>
+					<groupId>com.liferay.pluto</groupId>
 					<artifactId>pluto-maven-plugin</artifactId>
 					<version>${project.version}</version>
 				</plugin>

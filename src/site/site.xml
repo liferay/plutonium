@@ -31,7 +31,7 @@ limitations under the License.
   <publishDate position="left"/>
   <version position="none"/>
   <skin>  
-    <groupId>org.apache.portals.pluto</groupId>
+    <groupId>com.liferay.pluto</groupId>
     <artifactId>pluto-site-skin</artifactId>
     <version>3.0-SNAPSHOT</version>
   </skin> 
