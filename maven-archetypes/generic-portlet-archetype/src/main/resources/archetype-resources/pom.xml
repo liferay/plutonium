@@ -29,8 +29,8 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>com.liferay.jakarta.portlet</groupId>
-			<artifactId>com.liferay.jakarta.portlet-api</artifactId>
+			<groupId>jakarta.portlet</groupId>
+			<artifactId>jakarta.portlet-api</artifactId>
 			<version>4.0.0</version>
 			<scope>provided</scope>
 		</dependency>

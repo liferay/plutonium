@@ -21,8 +21,8 @@
 	<name>Thymeleaf Portlet API</name>
 	<dependencies>
 		<dependency>
-			<groupId>com.liferay.jakarta.portlet</groupId>
-			<artifactId>com.liferay.jakarta.portlet-api</artifactId>
+			<groupId>jakarta.portlet</groupId>
+			<artifactId>jakarta.portlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>

@@ -91,7 +91,7 @@ class InstallationDependency {
             VERSION_PROPERTIES.getProperty("jboss-classfilewriter.version"));
 
     public static final InstallationDependency PORTLET_API =
-        new InstallationDependency("com.liferay.jakarta.portlet", "com.liferay.jakarta.portlet-api",
+        new InstallationDependency("jakarta.portlet", "jakarta.portlet-api",
             VERSION_PROPERTIES.getProperty("portals.portlet-api.version"));
 
     public static final InstallationDependency COMMONS_LANG3 =
