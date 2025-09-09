@@ -19,14 +19,14 @@ limitations under the License.
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false" %>
-<%@page import="org.apache.pluto.driver.core.PortalRequestContext"%>
+<%@page import="com.liferay.pluto.driver.core.PortalRequestContext"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
-<%@ taglib uri="http://portals.apache.org/pluto" prefix="pluto" %>
-<%@ page import="java.util.*,jakarta.portlet.*,org.apache.pluto.driver.url.*" %>
-<%@ page import="org.apache.pluto.driver.config.*,org.apache.pluto.driver.*" %>
-<%@ page import="org.apache.pluto.driver.util.*" %>
-<%@ page import="org.apache.pluto.container.*,jakarta.servlet.jsp.*" %>
+<%@ taglib uri="http://liferay.com/pluto" prefix="pluto" %>
+<%@ page import="java.util.*,jakarta.portlet.*,com.liferay.pluto.driver.url.*" %>
+<%@ page import="com.liferay.pluto.driver.config.*,com.liferay.pluto.driver.*" %>
+<%@ page import="com.liferay.pluto.driver.util.*" %>
+<%@ page import="com.liferay.pluto.container.*,jakarta.servlet.jsp.*" %>
 <% pageContext.setAttribute("now", new java.util.Date()); %>
 
 <!--

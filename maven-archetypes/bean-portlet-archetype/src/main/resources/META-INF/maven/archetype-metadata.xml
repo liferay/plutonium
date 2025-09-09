@@ -17,7 +17,7 @@
   specific language governing permissions and limitations
   under the License.
 -->
-<archetype-descriptor name="org.apache.portals.pluto.bean.portlet">
+<archetype-descriptor name="com.liferay.pluto.bean.portlet">
 	<fileSets>
 		<fileSet filtered="true">
 			<directory>src/main/java</directory>

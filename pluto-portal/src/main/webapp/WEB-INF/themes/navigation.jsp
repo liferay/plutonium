@@ -18,7 +18,7 @@ limitations under the License.
 --%>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ taglib uri="http://portals.apache.org/pluto" prefix="pluto" %>
+<%@ taglib uri="http://liferay.com/pluto" prefix="pluto" %>
 
 <div id="nav">
     <ul id="navigation" >

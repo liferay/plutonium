@@ -27,7 +27,7 @@ limitations under the License.
     <description>AboutPortletDescription</description>
     <portlet-name>AboutPortlet</portlet-name>
     <display-name>About Portlet</display-name>
-    <portlet-class>org.apache.pluto.driver.portlets.AboutPortlet</portlet-class>
+    <portlet-class>com.liferay.pluto.driver.portlets.AboutPortlet</portlet-class>
     <supports>
       <mime-type>text/html</mime-type>
       <portlet-mode>VIEW</portlet-mode>
@@ -43,7 +43,7 @@ limitations under the License.
     <description>AdminPortletDescription</description>
     <portlet-name>AdminPortlet</portlet-name>
     <display-name>Admin Portlet</display-name>
-    <portlet-class>org.apache.pluto.driver.portlets.AdminPortlet</portlet-class>
+    <portlet-class>com.liferay.pluto.driver.portlets.AdminPortlet</portlet-class>
     <supports>
       <mime-type>text/html</mime-type>
       <portlet-mode>VIEW</portlet-mode>
@@ -59,7 +59,7 @@ limitations under the License.
         <description>Used to administer pluto pages</description>
         <portlet-name>PlutoPageAdmin</portlet-name>
         <display-name>Pluto Page Administration Portlet</display-name>
-        <portlet-class>org.apache.pluto.driver.portlets.PageAdminPortlet</portlet-class>
+        <portlet-class>com.liferay.pluto.driver.portlets.PageAdminPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>VIEW</portlet-mode>

@@ -25,7 +25,7 @@ import jakarta.portlet.filter.PortletRequestWrapper;
  */
 public enum PortletContainer {
 
-	LIFERAY("com.liferay"), PLUTO("org.apache.pluto"), WEBSPHERE("com.ibm");
+	LIFERAY("com.liferay"), PLUTO("com.liferay.pluto"), WEBSPHERE("com.ibm");
 
 	private final String fqcnPrefix;
 

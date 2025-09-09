@@ -78,7 +78,7 @@ TABLE {
     <p>Note that this test is not expected to pass on Tomcat 4.x or 5.0.x. On Tomcat 5.5.x
     it requires <i>emptySessionPath="true"</i> to be added to the connector configuration
     in server.xml. See
-    <a href="http://portals.apache.org/pluto/faq.html#tomcat5_5" target="_blank">the FAQ</a>
+    <a href="http://liferay.com/pluto/faq.html#tomcat5_5" target="_blank">the FAQ</a>
     for details.</p>
 </TD></TR>
 <TR><TH colspan="2">Session Id Comparison</TH></TR>

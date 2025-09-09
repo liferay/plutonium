@@ -30,7 +30,7 @@ limitations under the License.
 
 	<filter>
 		<filter-name>plutoPortalDriver</filter-name>
-		<filter-class>org.apache.pluto.driver.PortalDriverFilter</filter-class>
+		<filter-class>com.liferay.pluto.driver.PortalDriverFilter</filter-class>
 		<async-supported>true</async-supported>
 	</filter>
 
@@ -56,14 +56,14 @@ limitations under the License.
 	</filter-mapping>
 
 	<listener>
-		<listener-class>org.apache.pluto.driver.PortalStartupListener</listener-class>
+		<listener-class>com.liferay.pluto.driver.PortalStartupListener</listener-class>
 	</listener>
 
 	<servlet>
 		<description>Pluto Portal Driver Controller</description>
 		<display-name>Pluto Portal Driver</display-name>
 		<servlet-name>plutoPortalDriver</servlet-name>
-		<servlet-class>org.apache.pluto.driver.PortalDriverServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.driver.PortalDriverServlet</servlet-class>
 		<async-supported>true</async-supported>
 		<multipart-config>
 			<file-size-threshold>1048576</file-size-threshold>
@@ -74,7 +74,7 @@ limitations under the License.
 		<description>Pluto Portal Driver Logout</description>
 		<display-name>Pluto Portal Driver</display-name>
 		<servlet-name>plutoPortalDriverLogout</servlet-name>
-		<servlet-class>org.apache.pluto.driver.PortalDriverLogoutServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.driver.PortalDriverLogoutServlet</servlet-class>
 		<async-supported>true</async-supported>
 	</servlet>
 
@@ -82,19 +82,19 @@ limitations under the License.
 		<description>Portlet Application Publisher Service</description>
 		<display-name>Portlet Application Publisher</display-name>
 		<servlet-name>portletApplicationPublisher</servlet-name>
-		<servlet-class>org.apache.pluto.driver.PublishServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.driver.PublishServlet</servlet-class>
 	</servlet>
 
 	<servlet>
 		<description>Pluto TCK Driver Controller</description>
 		<display-name>Pluto TCK Driver</display-name>
 		<servlet-name>tckDriver</servlet-name>
-		<servlet-class>org.apache.pluto.driver.TCKDriverServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.driver.TCKDriverServlet</servlet-class>
 	</servlet>
 
 	<servlet>
 		<servlet-name>AboutPortlet</servlet-name>
-		<servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.container.driver.PortletServlet</servlet-class>
 		<init-param>
 			<param-name>portlet-name</param-name>
 			<param-value>AboutPortlet</param-value>
@@ -104,7 +104,7 @@ limitations under the License.
 
 	<servlet>
 		<servlet-name>AdminPortlet</servlet-name>
-		<servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.container.driver.PortletServlet</servlet-class>
 		<init-param>
 			<param-name>portlet-name</param-name>
 			<param-value>AdminPortlet</param-value>
@@ -114,7 +114,7 @@ limitations under the License.
 
 	<servlet>
 		<servlet-name>PlutoPageAdmin</servlet-name>
-		<servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
+		<servlet-class>com.liferay.pluto.container.driver.PortletServlet</servlet-class>
 		<init-param>
 			<param-name>portlet-name</param-name>
 			<param-value>PlutoPageAdmin</param-value>
@@ -159,7 +159,7 @@ limitations under the License.
 
 	<jsp-config>
 		<taglib>
-			<taglib-uri>http://portals.apache.org/pluto</taglib-uri>
+			<taglib-uri>http://liferay.com/pluto</taglib-uri>
 			<taglib-location>/WEB-INF/tld/pluto.tld</taglib-location>
 		</taglib>
 	</jsp-config>

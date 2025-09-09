@@ -19,10 +19,10 @@ limitations under the License.
 -->
 
 <pluto-portal-driver
-    xmlns="http://portals.apache.org/pluto/xsd/pluto-portal-driver-config.xsd"
+    xmlns="http://liferay.com/pluto/xsd/pluto-portal-driver-config.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://portals.apache.org/pluto/xsd/pluto-portal-driver-config.xsd
-                        http://portals.apache.org/pluto/pluto-portal/2.0/pluto-portal-driver-config.xsd"
+    xsi:schemaLocation="http://liferay.com/pluto/xsd/pluto-portal-driver-config.xsd
+                        http://liferay.com/pluto/pluto-portal/2.0/pluto-portal-driver-config.xsd"
     version="1.1">
 
   <portal-name>pluto-portal-driver</portal-name>
@@ -48,7 +48,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>portlet-spec-1.0.css</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>1.0.0</version>
       </identifier>
       <source type="css">/css/portlet-spec-1.0.css</source>
@@ -56,7 +56,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>portlet-spec-2.0.css</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>2.0.0</version>
       </identifier>
       <source type="css">/css/portlet-spec-2.0.css</source>
@@ -64,7 +64,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>pluto.css</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>3.0.0</version>
       </identifier>
       <source type="css">/css/pluto.css</source>
@@ -72,7 +72,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>pluto.css</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>3.0.1</version>
       </identifier>
       <source type="css">/css/plutoGreen.css</source>
@@ -80,7 +80,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>pluto.js</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>3.0.0</version>
       </identifier>
       <source type="script">/javascript/pluto.js</source>
@@ -88,7 +88,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>portlet.js</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>3.0.0</version>
       </identifier>
       <source type="script">/javascript/portlet.js</source>
@@ -96,7 +96,7 @@ limitations under the License.
     <page-resource>
       <identifier>
         <name>portletHubImpl.js</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>3.0.0</version>
       </identifier>
       <source type="script">/javascript/portletHubImpl.js</source>
@@ -123,22 +123,22 @@ limitations under the License.
     <!-- These are the default resources placed on each page -->
     <default-resource>
       <name>pluto.css</name>
-      <scope>org.apache.portals</scope>
+      <scope>com.liferay.pluto</scope>
       <version>3.0.0</version>
     </default-resource>
     <default-resource>
         <name>portlet-spec-1.0.css</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>1.0.0</version>
     </default-resource>
     <default-resource>
         <name>portlet-spec-2.0.css</name>
-        <scope>org.apache.portals</scope>
+        <scope>com.liferay.pluto</scope>
         <version>2.0.0</version>
     </default-resource>
     <default-resource>
       <name>pluto.js</name>
-      <scope>org.apache.portals</scope>
+      <scope>com.liferay.pluto</scope>
       <version>3.0.0</version>
     </default-resource>
   </page-resources>
@@ -166,7 +166,7 @@ limitations under the License.
     <page name="V3.0 Portlet Hub Demo" uri="/WEB-INF/themes/pluto-default-theme.jsp">
       <dependency>
          <name>pluto.css</name>
-         <scope>org.apache.portals</scope>
+         <scope>com.liferay.pluto</scope>
          <version>3.0.1</version>
       </dependency>
       <portlet context="/hub-demo-portlet" name="ImageSelPortlet"/>

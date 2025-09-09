@@ -17,7 +17,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 --%>
 <%@ page isELIgnored="false" %>
-<%@ taglib uri="http://portals.apache.org/pluto" prefix="pluto" %>
+<%@ taglib uri="http://liferay.com/pluto" prefix="pluto" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <!-- Use pluto portlet tag to render the portlet -->

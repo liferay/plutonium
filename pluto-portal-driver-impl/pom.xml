@@ -114,10 +114,10 @@
 				<artifactId>maven-bundle-plugin</artifactId>
 				<configuration>
 					<instructions>
-						<Export-Package>org.apache.pluto.driver.config.impl,
-              org.apache.pluto.driver.services.container,
-              org.apache.pluto.driver.services.impl.resource,
-              org.apache.pluto.driver.url.impl
+						<Export-Package>com.liferay.pluto.driver.config.impl,
+              com.liferay.pluto.driver.services.container,
+              com.liferay.pluto.driver.services.impl.resource,
+              com.liferay.pluto.driver.url.impl
             </Export-Package>
 					</instructions>
 				</configuration>

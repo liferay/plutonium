@@ -20,7 +20,7 @@ limitations under the License.
 <%@ page session="false" %>
 <%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ page import="static org.apache.portals.pluto.demo.v3.TagLibPortlet.*" %>
+<%@ page import="static com.liferay.pluto.demo.v3.TagLibPortlet.*" %>
 <%@ page import="static jakarta.portlet.PortletRequest.*" %>
 
 

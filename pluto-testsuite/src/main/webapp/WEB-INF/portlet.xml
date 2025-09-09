@@ -31,7 +31,7 @@ limitations under the License.
     <description>TestSuiteDescription</description>
     <portlet-name>TestPortlet1</portlet-name>
     <display-name>Test Portlet #1</display-name>
-    <portlet-class>org.apache.pluto.testsuite.TestPortlet</portlet-class>
+    <portlet-class>com.liferay.pluto.testsuite.TestPortlet</portlet-class>
     
     <init-param>
       <name>config</name>
@@ -78,7 +78,7 @@ limitations under the License.
       <preference>
         <name>nameWithNoValue</name>
       </preference>
-      <preferences-validator>org.apache.pluto.testsuite.validator.PreferencesValidatorImpl</preferences-validator>
+      <preferences-validator>com.liferay.pluto.testsuite.validator.PreferencesValidatorImpl</preferences-validator>
     </portlet-preferences>
     
     <security-role-ref>
@@ -97,7 +97,7 @@ limitations under the License.
     <description>TestSuiteDescription</description>
     <portlet-name>TestPortlet2</portlet-name>
     <display-name>Test Portlet #2</display-name>
-    <portlet-class>org.apache.pluto.testsuite.TestPortlet</portlet-class>
+    <portlet-class>com.liferay.pluto.testsuite.TestPortlet</portlet-class>
     
     <init-param>
       <name>config</name>
@@ -139,7 +139,7 @@ limitations under the License.
       <preference>
         <name>nameWithNoValue</name>
       </preference>
-      <preferences-validator>org.apache.pluto.testsuite.validator.PreferencesValidatorImpl2</preferences-validator>
+      <preferences-validator>com.liferay.pluto.testsuite.validator.PreferencesValidatorImpl2</preferences-validator>
     </portlet-preferences>
     
     <security-role-ref>
@@ -156,7 +156,7 @@ limitations under the License.
     <description>JSR 286 Compatibility Tests</description>
     <portlet-name>286TestPortlet</portlet-name>
     <display-name>JSR 286 Test Portlet</display-name>
-    <portlet-class>org.apache.pluto.testsuite.TestPortlet</portlet-class>
+    <portlet-class>com.liferay.pluto.testsuite.TestPortlet</portlet-class>
     
     <init-param>
       <name>config</name>
@@ -203,7 +203,7 @@ limitations under the License.
     </supported-publishing-event>
 
 	<supported-publishing-event>
-  		<qname xmlns:pluto="http://portals.apache.org/pluto/altns">event-with-qname</qname>
+  		<qname xmlns:pluto="http://liferay.com/pluto/altns">event-with-qname</qname>
   	</supported-publishing-event>
     
     <supported-public-render-parameter>public-render-param1</supported-public-render-parameter>
@@ -215,7 +215,7 @@ limitations under the License.
     <description>JSR 286 Test Portlet Companion</description>
     <portlet-name>286TestCompanionPortlet</portlet-name>
     <portlet-class>
-        org.apache.pluto.testsuite.test.jsr286.TestCompanionPortlet
+        com.liferay.pluto.testsuite.test.jsr286.TestCompanionPortlet
     </portlet-class>
     
     <supports>
@@ -238,7 +238,7 @@ limitations under the License.
     </supported-processing-event>
 
 	<supported-processing-event>
-  		<qname xmlns:pluto="http://portals.apache.org/pluto/altns">event-with-qname</qname>
+  		<qname xmlns:pluto="http://liferay.com/pluto/altns">event-with-qname</qname>
   	</supported-processing-event>
     
     <supported-public-render-parameter>public-render-param1</supported-public-render-parameter>
@@ -255,7 +255,7 @@ limitations under the License.
     <display-name>Wildcard Mapped Filter</display-name>
       
     <filter-name>WildcardMappedFilter</filter-name>
-    <filter-class>org.apache.pluto.testsuite.test.jsr286.filter.WildcardMappedFilter</filter-class>
+    <filter-class>com.liferay.pluto.testsuite.test.jsr286.filter.WildcardMappedFilter</filter-class>
     
     <lifecycle>ACTION_PHASE</lifecycle>
     <lifecycle>RENDER_PHASE</lifecycle>
@@ -274,7 +274,7 @@ limitations under the License.
     <display-name>Test Portlet Filter</display-name>
     
     <filter-name>TestFilter</filter-name>
-    <filter-class>org.apache.pluto.testsuite.test.jsr286.filter.TestFilter</filter-class>
+    <filter-class>com.liferay.pluto.testsuite.test.jsr286.filter.TestFilter</filter-class>
   
     <lifecycle>ACTION_PHASE</lifecycle>
     <lifecycle>RENDER_PHASE</lifecycle>
@@ -295,7 +295,7 @@ limitations under the License.
 
   <!-- JSR 286 Portlet Coordination Definitions -->
 
-  <default-namespace>http://portals.apache.org/pluto/testsuite</default-namespace>
+  <default-namespace>http://liferay.com/pluto/testsuite</default-namespace>
   
   <event-definition>
   	<name>trigger-event-phase</name>
@@ -309,17 +309,17 @@ limitations under the License.
 
   <event-definition>
     <name>event-with-complex-value</name>
-    <value-type>org.apache.pluto.testsuite.test.jsr286.event.ComposedObject</value-type>
+    <value-type>com.liferay.pluto.testsuite.test.jsr286.event.ComposedObject</value-type>
   </event-definition>
   
   <event-definition>
-  	<qname xmlns:pluto="http://portals.apache.org/pluto/altns">event-with-qname</qname>
+  	<qname xmlns:pluto="http://liferay.com/pluto/altns">event-with-qname</qname>
   	<value-type>java.lang.Integer</value-type>	
   </event-definition>
 
   <public-render-parameter>
   	<identifier>public-render-param1</identifier>
-  	<qname xmlns:pluto="http://portals.apache.org/pluto/altns">public-render-param1</qname>
+  	<qname xmlns:pluto="http://liferay.com/pluto/altns">public-render-param1</qname>
   </public-render-parameter>
 
 </portlet-app>

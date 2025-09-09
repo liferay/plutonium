@@ -45,7 +45,7 @@ public class CSSIncludingHeaderMethod {
       txt.append("<link href='").append(contextRoot);
       txt.append("/resources/css/infobox.css' rel='stylesheet' type='text/css'>");
       
-      resp.addDependency("infobox", "org.apache.pluto", "0.3.0", txt.toString());
+      resp.addDependency("infobox", "com.liferay.pluto", "0.3.0", txt.toString());
 
    }
 

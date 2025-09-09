@@ -20,4 +20,4 @@
 # Example properties indent the output, require validation
 # on input and turn debugging on.
 #
-org.apache.pluto.container.bean.mvc.MvcRuntimeDelegate
+com.liferay.pluto.container.bean.mvc.MvcRuntimeDelegate

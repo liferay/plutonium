@@ -1,0 +1,102 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.liferay.pluto.container.impl;
+
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.Event;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletSession;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.servlet.http.HttpSession;
+
+import com.liferay.pluto.container.PortletActionResponseContext;
+import com.liferay.pluto.container.PortletEnvironmentService;
+import com.liferay.pluto.container.PortletEventResponseContext;
+import com.liferay.pluto.container.PortletHeaderResponseContext;
+import com.liferay.pluto.container.PortletRenderResponseContext;
+import com.liferay.pluto.container.PortletRequestContext;
+import com.liferay.pluto.container.PortletResourceRequestContext;
+import com.liferay.pluto.container.PortletResourceResponseContext;
+import com.liferay.pluto.container.PortletWindow;
+
+public class PortletEnvironmentServiceImpl implements PortletEnvironmentService
+{
+    public ActionRequest createActionRequest(PortletRequestContext requestContext, PortletActionResponseContext responseContext)
+    {
+        return new ActionRequestImpl(requestContext, responseContext);
+    }
+
+    public ActionResponse createActionResponse(PortletActionResponseContext responseContext)
+    {
+        return new ActionResponseImpl(responseContext);
+    }
+
+    public EventRequest createEventRequest(PortletRequestContext requestContext, PortletEventResponseContext responseContext, Event event)
+    {
+        return new EventRequestImpl(requestContext, responseContext, event);
+    }
+
+    public EventResponse createEventResponse(PortletEventResponseContext responseContext)
+    {
+        return new EventResponseImpl(responseContext);
+    }
+
+    public PortletSession createPortletSession(PortletContext portletContext, PortletWindow portletWindow,
+                                               HttpSession session)
+    {
+        return new PortletSessionImpl(portletContext, portletWindow, session);
+    }
+
+    public HeaderRequest createHeaderRequest(PortletRequestContext requestContext, PortletHeaderResponseContext responseContext)
+    {
+        return new HeaderRequestImpl(requestContext, responseContext);
+    }
+
+    public HeaderResponse createHeaderResponse(PortletHeaderResponseContext responseContext)
+    {
+        return new HeaderResponseImpl(responseContext);
+    }
+
+    public RenderRequest createRenderRequest(PortletRequestContext requestContext, PortletRenderResponseContext responseContext)
+    {
+        return new RenderRequestImpl(requestContext, responseContext);
+    }
+
+    public RenderResponse createRenderResponse(PortletRenderResponseContext responseContext)
+    {
+        return new RenderResponseImpl(responseContext);
+    }
+
+    public ResourceRequest createResourceRequest(PortletResourceRequestContext requestContext, PortletResourceResponseContext responseContext)
+    {
+        return new ResourceRequestImpl(requestContext, responseContext);
+    }
+
+    public ResourceResponse createResourceResponse(PortletResourceResponseContext responseContext,
+                                                   String requestCacheLevel)
+    {
+        return new ResourceResponseImpl(responseContext, requestCacheLevel);
+    }
+}

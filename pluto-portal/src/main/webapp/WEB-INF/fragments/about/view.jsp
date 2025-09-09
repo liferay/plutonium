@@ -50,8 +50,8 @@ limitations under the License.
   <tr>
     <td>Pluto Website:</td>
     <td>
-      <a href="http://portals.apache.org/pluto/" target="_blank">
-        http://portals.apache.org/pluto/
+      <a href="http://liferay.com/pluto/" target="_blank">
+        http://liferay.com/pluto/
       </a>
     </td>
   </tr>

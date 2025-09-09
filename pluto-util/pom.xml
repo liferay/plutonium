@@ -87,8 +87,8 @@
 				<artifactId>apache-rat-plugin</artifactId>
 				<configuration>
 					<excludes>
-						<exclude>src/main/resources/org/apache/pluto/util/descriptors/web/web-app_2_3.dtd</exclude>
-						<exclude>src/test/resources/org/apache/pluto/util/assemble/web-app_2_3.dtd</exclude>
+						<exclude>src/main/resources/com/liferay/pluto/util/descriptors/web/web-app_2_3.dtd</exclude>
+						<exclude>src/test/resources/com/liferay/pluto/util/assemble/web-app_2_3.dtd</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

@@ -107,7 +107,7 @@ public class TagLibPortlet {
       StringBuilder txt = new StringBuilder(128);
       txt.append("<link href='").append(contextRoot);
       txt.append("/resources/css/infobox.css' rel='stylesheet' type='text/css'>");
-      resp.addDependency("infobox", "org.apache.pluto", "0.4.0", txt.toString());
+      resp.addDependency("infobox", "com.liferay.pluto", "0.4.0", txt.toString());
 
    }
 

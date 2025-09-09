@@ -18,7 +18,7 @@ limitations under the License.
 --%>
 
 <%@ page isELIgnored="false" %>
-<%@ page import="org.apache.pluto.testsuite.TestResult" %>
+<%@ page import="com.liferay.pluto.testsuite.TestResult" %>
 
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>

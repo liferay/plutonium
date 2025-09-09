@@ -17,7 +17,7 @@ implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<page:pluto-portal-driver xmlns:page="http://portals.apache.org/pluto/xsd/pluto-portal-driver-config.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://portals.apache.org/pluto/xsd/pluto-portal-driver-config.xsd ../pluto-portal-driver-config.xsd ">
+<page:pluto-portal-driver xmlns:page="http://liferay.com/pluto/xsd/pluto-portal-driver-config.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://liferay.com/pluto/xsd/pluto-portal-driver-config.xsd ../pluto-portal-driver-config.xsd ">
   <page:portal-name>pluto-portal-driver</page:portal-name>
   <page:portal-version>token</page:portal-version>
   <page:container-name>token</page:container-name>

@@ -18,5 +18,5 @@
   under the License.
 -->
 <archetype>
-	<id>org.apache.portals.pluto.mvcbean.jsp.portlet</id>
+	<id>com.liferay.pluto.mvcbean.jsp.portlet</id>
 </archetype>

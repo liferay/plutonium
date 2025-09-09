@@ -29,6 +29,6 @@ limitations under the License.
       <exclude name="org.apache.container.om.portlet10.impl.*"></exclude>
       <exclude name="org.apache.container.om.portlet20.impl.*"></exclude>
       <exclude name="org.apache.container.om.portlet30.impl.*"></exclude>
-      <exclude name="org.apache.pluto.tags.*"></exclude>
+      <exclude name="com.liferay.pluto.tags.*"></exclude>
    </scan>
 </beans>

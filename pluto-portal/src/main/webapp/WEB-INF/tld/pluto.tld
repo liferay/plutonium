@@ -27,12 +27,12 @@ limitations under the License.
 
   <tlib-version>1.0</tlib-version>
   <short-name>pluto</short-name>
-  <uri>http://portals.apache.org/pluto</uri>
+  <uri>http://liferay.com/pluto</uri>
 
   <!-- Insert the rendering of a portlet -->
   <tag>
     <name>portlet</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletTag</tag-class>
     <body-content>JSP</body-content>
     <attribute>
       <name>portletId</name>
@@ -43,7 +43,7 @@ limitations under the License.
 
   <tag>
     <name>modeAnchor</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletModeAnchorTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletModeAnchorTag</tag-class>
     <body-content>empty</body-content>
     <attribute>
       <name>portletMode</name>
@@ -54,13 +54,13 @@ limitations under the License.
 
   <tag>
     <name>modeDropDown</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletModeDropDownTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletModeDropDownTag</tag-class>
     <body-content>empty</body-content>
   </tag>
   
   <tag>
     <name>windowStateAnchor</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletWindowStateAnchorTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletWindowStateAnchorTag</tag-class>
     <body-content>empty</body-content>
     <attribute>
       <name>windowState</name>
@@ -76,13 +76,13 @@ limitations under the License.
      
   <tag>
     <name>title</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletTitleTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletTitleTag</tag-class>
     <body-content>empty</body-content>
   </tag>
 
   <tag>
     <name>url</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletPortalURLTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletPortalURLTag</tag-class>
     <body-content>empty</body-content>
     <attribute>
       <name>portletMode</name>
@@ -98,13 +98,13 @@ limitations under the License.
 
   <tag>
     <name>render</name>
-    <tag-class>org.apache.pluto.driver.tags.PortletRenderTag</tag-class>
+    <tag-class>com.liferay.pluto.driver.tags.PortletRenderTag</tag-class>
     <body-content>empty</body-content>
   </tag>
 
     <tag>
         <name>isMaximized</name>
-        <tag-class>org.apache.pluto.driver.tags.IsMaximizedTag</tag-class>
+        <tag-class>com.liferay.pluto.driver.tags.IsMaximizedTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>var</name>

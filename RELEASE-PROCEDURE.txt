@@ -155,7 +155,7 @@ Since 3.0.0
 
     Verify the staged artifacts in the nexus repo
         https://repository.apache.org/index.html
-    Staging repositories (under Build Promotion) --> Name column --> org.apache.portals-XXX
+    Staging repositories (under Build Promotion) --> Name column --> com.liferay.pluto-XXX
     Navigate through the artifact tree and make sure that all javadoc, sources, tests, jars, ... have
         .asc (GPG signature)
         .md5 files
@@ -194,7 +194,7 @@ Since 3.0.0
         mvn -Papache-release,pluto \
           gpg:sign-and-deploy-file \
           -Dfile=target/dist/pluto-4.0.0-bundle.zip \
-          -DgroupId=org.apache.portals.pluto \
+          -DgroupId=com.liferay.pluto \
           -DartifactId=pluto-bundle \
           -Dversion=4.0.0 \
           -Durl=https://repository.apache.org/service/local/staging/deploy/maven2 \
@@ -203,8 +203,8 @@ Since 3.0.0
     b. Close the nexus staging repo
 
         https://repository.apache.org/index.html
-        Staging repositories (under Build Promotion) --> Name column --> org.apache.portals-XXX
-        Click checkbox for the open staging repo (org.apache.portals-XXX) and press Close in the menu bar.
+        Staging repositories (under Build Promotion) --> Name column --> com.liferay.pluto-XXX
+        Click checkbox for the open staging repo (com.liferay.pluto-XXX) and press Close in the menu bar.
 
     c. Create a temporary directory for working with Apache's Subversion repository (svnpubsub) for release artifacts:
 
@@ -230,10 +230,10 @@ Since 3.0.0
     # NOTE: Set base URL to the Nexus staging repository
     #
     BASE_URL="https://repository.apache.org/service/local/repositories/orgapacheportals-1025/content"
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.asc
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.md5
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.sha1
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.asc
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.md5
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.sha1
     # Generate the SHA-512 checksum for the source release
     /usr/bin/shasum -a 512 pluto-4.0.0-source-release.zip > pluto-4.0.0-source-release.zip.sha512
     # Linux: sha512sum -a 512 pluto-4.0.0-source-release.zip > pluto-4.0.0-source-release.zip.sha512
@@ -262,10 +262,10 @@ Since 3.0.0
     # svn add portlet-api-4.0.0.jar*
 
     # svn commit -m "PLUTO-807 Committing Binary Release for portlet-api-4.0.0" --username $USER_NAME
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.asc
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.md5
-    wget --no-check-certificate $BASE_URL/org/apache/portals/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.sha1
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.asc
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.md5
+    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.sha1
     # Generate the SHA-512 checksum for the binary release
     /usr/bin/shasum -a 512 pluto-bundle-4.0.0.zip > pluto-bundle-4.0.0.zip.sha512
     # Linux: sha512sum -a 512 pluto-bundle-4.0.0.zip > pluto-bundle-4.0.0.zip.sha512
@@ -288,14 +288,14 @@ Since 3.0.0
 
        References:
             Apache Voting Process http://www.apache.org/foundation/voting.html
-            Who We Are (Apache Portals Project) http://portals.apache.org/whoweare.html
+            Who We Are (Apache Portals Project) http://liferay.com/whoweare.html
 
 14. FINALIZE THE RELEASE
 
     a. Promote the staged nexus artifacts
         https://repository.apache.org/index.html
-        Staging repositories (under Build Promotion) --> Name column --> org.apache.portals
-        Click checkbox of the closed staging repo (org.apache.portals-XXX) and select Release.
+        Staging repositories (under Build Promotion) --> Name column --> com.liferay.pluto
+        Click checkbox of the closed staging repo (com.liferay.pluto-XXX) and select Release.
 
     b. Move the source/binary artifacts over to the distribution area
        Command line examples to distribute artifacts (pluto-4.0.0-source-release.zip as an example below.):
@@ -405,8 +405,8 @@ Since 3.0.0
 
     Make an announcement about the release on the
 
-        general@portals.apache.org
-        pluto-user@portals.apache.org
+        general@liferay.com
+        pluto-user@liferay.com
 
         announce@apache.org list
 
@@ -416,7 +416,7 @@ Since 3.0.0
         See Committer e-mail configuration for detail.
         NOTE: When sending announce message to multiple lists together from your @apache.org e-mail address,
         be careful because your message can be rejected if your @apache.org e-mail address didn't susbscribe user mailinglist
-         (portalapps-user@portals.apache.org, in this case.) You can either subscribe it first from your @apache.org
+         (portalapps-user@liferay.com, in this case.) You can either subscribe it first from your @apache.org
          e-mail address or send the announce message twice separately.
 
         NOTE: It is not required but it is better to digitally sign the announce e-mail message by using your PGP key.
@@ -512,8 +512,8 @@ Regards,
 
 ------------------------------------ Release Email -------------------------------------------------
 To      announce@apache.org
-        general@portals.apache.org
-        pluto-user@portals.apache.org
+        general@liferay.com
+        pluto-user@liferay.com
 
 Subject: [ANNOUNCE] Apache Portals Pluto 4.0.0 release
 
@@ -527,23 +527,23 @@ specification for full details:
 http://jcp.org/en/jsr/detail?id=362
 
 The Portlet API Version 3.0 page documents the portlet programming interface:
-http://portals.apache.org/pluto/portlet-3.0-apidocs/index.html
+http://liferay.com/pluto/portlet-3.0-apidocs/index.html
 
 For a full overview of all the Pluto features, see the online documentation.
 To get up and running quickly, download the bundle which comes with a bundled
 latest Tomcat 8 ready to run.
 
 Features:
-http://portals.apache.org/pluto/v312/v3Features.html
+http://liferay.com/pluto/v312/v3Features.html
 
 Release Notes:
-http://portals.apache.org/pluto/v312/release-notes.html
+http://liferay.com/pluto/v312/release-notes.html
 
 Website Documentation:
-http://portals.apache.org/pluto
+http://liferay.com/pluto
 
 Downloads:
-https://portals.apache.org/pluto/download.html
+https://liferay.com/pluto/download.html
 
 --
 (your name)

@@ -15,8 +15,8 @@
    limitations under the License.
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-   xmlns:page="http://portals.apache.org/pluto/xsd/pluto-portal-driver-config.xsd"
-   targetNamespace="http://portals.apache.org/pluto/xsd/pluto-portal-driver-config.xsd"
+   xmlns:page="http://liferay.com/pluto/xsd/pluto-portal-driver-config.xsd"
+   targetNamespace="http://liferay.com/pluto/xsd/pluto-portal-driver-config.xsd"
    elementFormDefault="qualified">
 
    <xs:complexType name="pageResourceRef">

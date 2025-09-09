@@ -20,7 +20,7 @@ limitations under the License.
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <%@ taglib uri="jakarta.tags.fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/portlet" prefix="portlet" %>
-<%@ taglib uri="http://portals.apache.org/pluto/portlet-el" prefix="portlet-el" %>
+<%@ taglib uri="http://liferay.com/pluto/portlet-el" prefix="portlet-el" %>
 
 <portlet:defineObjects/>
 

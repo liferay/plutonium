@@ -22,11 +22,11 @@ limitations under the License.
   
   <bannerLeft>
     <name>Pluto</name>
-    <src>http://portals.apache.org/pluto/images/apache-portals.gif</src>
-    <href>http://portals.apache.org/pluto/</href>
+    <src>http://liferay.com/pluto/images/apache-portals.gif</src>
+    <href>http://liferay.com/pluto/</href>
   </bannerLeft>
   <bannerRight>
-    <src>http://portals.apache.org/pluto/images/banner.png</src>
+    <src>http://liferay.com/pluto/images/banner.png</src>
   </bannerRight>
   <publishDate position="left"/>
   <version position="none"/>
@@ -38,7 +38,7 @@ limitations under the License.
   
   <body>
     <breadcrumbs>
-      <item name="Home" href="http://portals.apache.org/pluto"/>
+      <item name="Home" href="http://liferay.com/pluto"/>
     </breadcrumbs>
     
     <links>

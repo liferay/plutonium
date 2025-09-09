@@ -52,7 +52,7 @@ public class CSSIncludingHeaderMethod {
       // is added multiple times by different portlets. The final argument can be used
       // to provide the dependency, potentially for use by other portlets as well.
       
-      resp.addDependency("infobox", "org.apache.pluto", "0.3.0", txt.toString());
+      resp.addDependency("infobox", "com.liferay.pluto", "0.3.0", txt.toString());
       
    }
 

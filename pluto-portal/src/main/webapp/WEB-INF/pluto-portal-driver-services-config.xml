@@ -50,9 +50,9 @@ limitations under the License.
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
   <context:annotation-config />
-  <context:component-scan base-package="org.apache.pluto.driver.security"/>
+  <context:component-scan base-package="com.liferay.pluto.driver.security"/>
 
-  <bean id="strictHttpFirewall" class="org.apache.pluto.driver.security.PortalStrictHttpFirewall">
+  <bean id="strictHttpFirewall" class="com.liferay.pluto.driver.security.PortalStrictHttpFirewall">
     <property name="allowSemicolon" value="true"/>
     <property name="allowUrlEncodedPercent" value="true"/>
   </bean>
@@ -66,7 +66,7 @@ limitations under the License.
   </bean>
 
   <bean id="PortletContainer"
-        class="org.apache.pluto.container.impl.PortletContainerImpl"
+        class="com.liferay.pluto.container.impl.PortletContainerImpl"
         init-method="init">
     <constructor-arg>
       <bean factory-bean="DriverConfiguration" factory-method="getPortalName"/>
@@ -77,14 +77,14 @@ limitations under the License.
   </bean>
 
   <bean id="PlutoServices"
-        class="org.apache.pluto.container.driver.PlutoServices">
+        class="com.liferay.pluto.container.driver.PlutoServices">
     <constructor-arg>
       <ref bean="PortalDriverServices"/>
     </constructor-arg>
   </bean>
 
   <bean id="PortalDriverServices"
-        class="org.apache.pluto.driver.container.PortalDriverServicesImpl">
+        class="com.liferay.pluto.driver.container.PortalDriverServicesImpl">
     <constructor-arg>
       <ref bean="PortalContext"/>
     </constructor-arg>
@@ -102,7 +102,7 @@ limitations under the License.
     </constructor-arg>
     <constructor-arg>
       <null/>
-      <!--<bean class="org.apache.pluto.driver.container.DefaultOptionalContainerServices"/>-->
+      <!--<bean class="com.liferay.pluto.driver.container.DefaultOptionalContainerServices"/>-->
     </constructor-arg>
     <constructor-arg>
       <ref bean="PortletContextService"/>
@@ -111,12 +111,12 @@ limitations under the License.
       <ref bean="PortletContextService"/>
     </constructor-arg>
     <constructor-arg>
-      <bean class="org.apache.pluto.driver.container.DefaultPortalAdministrationService"/>
+      <bean class="com.liferay.pluto.driver.container.DefaultPortalAdministrationService"/>
     </constructor-arg>
   </bean>
 
   <bean id="PortalContext"
-        class="org.apache.pluto.driver.services.container.PortalContextImpl">
+        class="com.liferay.pluto.driver.services.container.PortalContextImpl">
     <constructor-arg>
       <ref bean="DriverConfiguration"/>
     </constructor-arg>
@@ -127,7 +127,7 @@ limitations under the License.
   <!-- The single top element of the configuration tree -->
   <!-- ================================================ -->
   <bean id="DriverConfiguration"
-        class="org.apache.pluto.driver.config.impl.DriverConfigurationImpl">
+        class="com.liferay.pluto.driver.config.impl.DriverConfigurationImpl">
 
     <!-- ===== Portal Services ===== -->
     <constructor-arg>
@@ -160,7 +160,7 @@ limitations under the License.
   <!-- ================================================ -->
   <!-- The single top element of the administration tree -->
   <!-- ================================================ -->
-  <bean id="AdminConfiguration" class="org.apache.pluto.driver.config.impl.AdminConfigurationImpl">
+  <bean id="AdminConfiguration" class="com.liferay.pluto.driver.config.impl.AdminConfigurationImpl">
     <property name="renderConfigAdminService">
       <ref bean="RenderConfigService"/>
     </property>
@@ -170,16 +170,16 @@ limitations under the License.
   <!-- ================================================ -->
   <!-- Portal Services injected into the Configuration  -->
   <!-- ================================================ -->
-  <bean id="ResourceConfigFactory" class="org.apache.pluto.driver.services.impl.resource.StaticServletContextResourceConfigFactory"
+  <bean id="ResourceConfigFactory" class="com.liferay.pluto.driver.services.impl.resource.StaticServletContextResourceConfigFactory"
         factory-method="getResourceConfig">
   </bean>
   <bean id="PortalURLParser"
-        class="org.apache.pluto.driver.url.impl.PortalURLParserImpl"
+        class="com.liferay.pluto.driver.url.impl.PortalURLParserImpl"
         factory-method="getParser">
   </bean>
 
   <!--<bean id="ResourceConfigFactory"-->
-        <!--class="org.apache.pluto.driver.services.impl.resource.PropertyConfigServiceImpl"-->
+        <!--class="com.liferay.pluto.driver.services.impl.resource.PropertyConfigServiceImpl"-->
         <!--singleton="true">-->
     <!--<constructor-arg>-->
       <!--<ref bean="ResourceConfigFactory"/>-->
@@ -187,14 +187,14 @@ limitations under the License.
   <!--</bean>-->
 
   <bean id="RenderConfigService"
-        class="org.apache.pluto.driver.services.impl.resource.RenderConfigServiceImpl">
+        class="com.liferay.pluto.driver.services.impl.resource.RenderConfigServiceImpl">
     <constructor-arg>
       <ref bean="ResourceConfigFactory"/>
     </constructor-arg>
   </bean>
 
   <bean id="PublicRenderParameterService"
-        class="org.apache.pluto.driver.services.impl.resource.PublicRenderParameterServiceImpl">
+        class="com.liferay.pluto.driver.services.impl.resource.PublicRenderParameterServiceImpl">
     <constructor-arg>
       <ref bean="RenderConfigService"/>
     </constructor-arg>
@@ -204,7 +204,7 @@ limitations under the License.
   </bean>
 
   <bean id="SupportedModesService"
-        class="org.apache.pluto.driver.services.impl.resource.SupportedModesServiceImpl">
+        class="com.liferay.pluto.driver.services.impl.resource.SupportedModesServiceImpl">
     <constructor-arg>
       <ref bean="ResourceConfigFactory"/>
     </constructor-arg>
@@ -217,7 +217,7 @@ limitations under the License.
   </bean>
 
   <bean id="SupportedWindowStatesService"
-        class="org.apache.pluto.driver.services.impl.resource.SupportedWindowStateServiceImpl">
+        class="com.liferay.pluto.driver.services.impl.resource.SupportedWindowStateServiceImpl">
     <constructor-arg>
       <ref bean="ResourceConfigFactory"/>
     </constructor-arg>
@@ -230,10 +230,10 @@ limitations under the License.
   <!-- Container Services injected into  Configuration  -->
   <!-- ================================================ -->
   <bean id="PortletRequestContextService"
-        class="org.apache.pluto.driver.services.container.PortletRequestContextServiceImpl">
+        class="com.liferay.pluto.driver.services.container.PortletRequestContextServiceImpl">
   </bean>
   <bean id="EventCoordinationService"
-        class="org.apache.pluto.driver.services.container.EventCoordinationServiceImpl">
+        class="com.liferay.pluto.driver.services.container.EventCoordinationServiceImpl">
     <constructor-arg>
       <ref bean="PortletContextService"/>
     </constructor-arg>
@@ -242,22 +242,22 @@ limitations under the License.
     </constructor-arg>
   </bean>
   <bean id="FilterManagerService"
-        class="org.apache.pluto.driver.services.container.FilterManagerServiceImpl">
+        class="com.liferay.pluto.driver.services.container.FilterManagerServiceImpl">
   </bean>
   <bean id="PortletURLListenerService"
-        class="org.apache.pluto.driver.services.container.PortletURLListenerServiceImpl">
+        class="com.liferay.pluto.driver.services.container.PortletURLListenerServiceImpl">
   </bean>
   <bean id="PortletContextService"
-        class="org.apache.pluto.driver.container.PortletContextManager">
+        class="com.liferay.pluto.driver.container.PortletContextManager">
     <constructor-arg>
       <ref bean="RequestDispatcherService"/>
     </constructor-arg>
     <constructor-arg>
-      <bean class="org.apache.pluto.container.impl.PortletAppDescriptorServiceImpl"/>
+      <bean class="com.liferay.pluto.container.impl.PortletAppDescriptorServiceImpl"/>
     </constructor-arg>
   </bean>
   <bean id="RequestDispatcherService"
-        class="org.apache.pluto.container.impl.RequestDispatcherServiceImpl">
+        class="com.liferay.pluto.container.impl.RequestDispatcherServiceImpl">
   </bean>
 
 </beans>

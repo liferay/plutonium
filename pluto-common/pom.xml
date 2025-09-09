@@ -63,10 +63,10 @@
 							<createDependencyReducedPom>false</createDependencyReducedPom>
 							<artifactSet>
 								<includes>
-									<include>org.apache.portals.pluto:pluto-container</include>
-									<include>org.apache.portals.pluto:pluto-container-api</include>
-									<include>org.apache.portals.pluto:pluto-taglib</include>
-									<include>org.apache.portals.pluto:pluto-container-driver-api</include>
+									<include>com.liferay.pluto:pluto-container</include>
+									<include>com.liferay.pluto:pluto-container-api</include>
+									<include>com.liferay.pluto:pluto-taglib</include>
+									<include>com.liferay.pluto:pluto-container-driver-api</include>
 								</includes>
 							</artifactSet>
 						</configuration>

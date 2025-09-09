@@ -25,16 +25,16 @@
     <description>Pluto EL Tag Library</description>
     <tlib-version>2.0</tlib-version>
     <short-name>portlet_2_0-el</short-name>
-    <uri>http://portals.apache.org/pluto/portlet-el_2_0</uri>
+    <uri>http://liferay.com/pluto/portlet-el_2_0</uri>
     <tag>
         <name>defineObjects</name>
-        <tag-class>org.apache.pluto.tags.DefineObjectsTag286</tag-class>
-        <tei-class>org.apache.pluto.tags.DefineObjectsTag286$TEI</tei-class>
+        <tag-class>com.liferay.pluto.tags.DefineObjectsTag286</tag-class>
+        <tei-class>com.liferay.pluto.tags.DefineObjectsTag286$TEI</tei-class>
         <body-content>empty</body-content>
     </tag>
     <tag>
         <name>param</name>
-        <tag-class>org.apache.pluto.tags.el.ParamTag</tag-class>
+        <tag-class>com.liferay.pluto.tags.el.ParamTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>name</name>
@@ -49,7 +49,7 @@
     </tag>
     <tag>
         <name>property</name>
-        <tag-class>org.apache.pluto.tags.el.PropertyTag</tag-class>
+        <tag-class>com.liferay.pluto.tags.el.PropertyTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>name</name>
@@ -64,8 +64,8 @@
     </tag>     
    <tag>
         <name>actionURL</name>
-        <tag-class>org.apache.pluto.tags.ActionURLTag286</tag-class>
-        <tei-class>org.apache.pluto.tags.PortletURLTag168$TEI</tei-class>
+        <tag-class>com.liferay.pluto.tags.ActionURLTag286</tag-class>
+        <tei-class>com.liferay.pluto.tags.PortletURLTag168$TEI</tei-class>
         <body-content>JSP</body-content>
         <attribute>
             <name>windowState</name>
@@ -105,8 +105,8 @@
     </tag>
     <tag>
         <name>renderURL</name>
-        <tag-class>org.apache.pluto.tags.RenderURLTag286</tag-class>
-        <tei-class>org.apache.pluto.tags.PortletURLTag168$TEI</tei-class>
+        <tag-class>com.liferay.pluto.tags.RenderURLTag286</tag-class>
+        <tei-class>com.liferay.pluto.tags.PortletURLTag168$TEI</tei-class>
         <body-content>JSP</body-content>
         <attribute>
             <name>windowState</name>
@@ -141,8 +141,8 @@
     </tag>
     <tag>
         <name>resourceURL</name>
-        <tag-class>org.apache.pluto.tags.ResourceURLTag286</tag-class>
-        <tei-class>org.apache.pluto.tags.BaseURLTag$TEI</tei-class>
+        <tag-class>com.liferay.pluto.tags.ResourceURLTag286</tag-class>
+        <tei-class>com.liferay.pluto.tags.BaseURLTag$TEI</tei-class>
         <body-content>JSP</body-content>
         <attribute>
             <name>var</name>
@@ -172,7 +172,7 @@
     </tag>    
     <tag>
         <name>namespace</name>
-        <tag-class>org.apache.pluto.tags.NamespaceTag</tag-class>
+        <tag-class>com.liferay.pluto.tags.NamespaceTag</tag-class>
         <body-content>empty</body-content>
     </tag>
 </taglib>
