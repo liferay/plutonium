@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ -->
+<!DOCTYPE web-app PUBLIC
+    "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  
+  <display-name>Pluto Testsuite</display-name>
+  
+  <context-param>
+    <param-name>test-parameter-name</param-name>
+    <param-value>test-parameter-val</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>parameter-name</param-name>
+    <param-value>parameter-value</param-value>
+  </context-param>
+  
+  <!-- Companion Servlet Definitions ======================================= -->
+  
+  <servlet>
+    <servlet-name>ExternalAppScopedAttributeTest_Servlet</servlet-name>
+    <servlet-class>com.liferay.plutonium.testsuite.test.ExternalAppScopedAttributeTest$CompanionServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>DispatcherRenderParameterTest_Servlet</servlet-name>
+    <servlet-class>com.liferay.plutonium.testsuite.test.DispatcherRenderParameterTest$CompanionServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>DispatcherRequestTest_Servlet</servlet-name>
+    <servlet-class>com.liferay.plutonium.testsuite.test.DispatcherRequestTest$CompanionServlet</servlet-class>
+  </servlet>
+  
+  
+  <!-- Companion Servlet Mappings ========================================== -->
+  
+  <servlet-mapping>
+    <servlet-name>ExternalAppScopedAttributeTest_Servlet</servlet-name>
+    <url-pattern>/test/ExternalAppScopedAttributeTest_Servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DispatcherRenderParameterTest_Servlet</servlet-name>
+    <url-pattern>/test/DispatcherRenderParameterTest_Servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DispatcherRequestTest_Servlet</servlet-name>
+    <url-pattern>/test/DispatcherRequestTest_Servlet/*</url-pattern>
+  </servlet-mapping>
+  
+  <security-role>
+    <role-name>tomcat</role-name>
+  </security-role>
+  
+</web-app>
+

@@ -11,16 +11,16 @@
 		<version>33</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.liferay.pluto.archetype</groupId>
+	<groupId>com.liferay.plutonium.archetype</groupId>
 	<artifactId>mvcbean-thymeleaf-portlet-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>mvcbean-thymeleaf-portlet-archetype</name>
 	<version>3.1.2-SNAPSHOT</version>
 	<description>Maven archetype for an MVCBean Thymeleaf portlet</description>
 	<scm>
-		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</connection>
-		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</developerConnection>
-		<url>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</url>
+		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</connection>
+		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</developerConnection>
+		<url>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</url>
 		<tag>HEAD</tag>
 	</scm>
 	<licenses>

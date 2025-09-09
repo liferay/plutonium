@@ -5,5 +5,5 @@
  * SPDX-License-Identifier: Apache-2.0
  -->
 <archetype>
-	<id>com.liferay.pluto.mvcbean.jsp.portlet</id>
+	<id>com.liferay.plutonium.mvcbean.jsp.portlet</id>
 </archetype>

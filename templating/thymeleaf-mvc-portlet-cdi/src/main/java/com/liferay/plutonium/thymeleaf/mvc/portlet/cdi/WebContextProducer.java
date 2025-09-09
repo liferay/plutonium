@@ -1,0 +1,144 @@
+/*
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+package com.liferay.plutonium.thymeleaf.mvc.portlet.cdi;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
+import jakarta.enterprise.inject.Any;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.enterprise.util.AnnotationLiteral;
+import jakarta.mvc.Models;
+import jakarta.mvc.MvcContext;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.annotations.PortletRequestScoped;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import com.liferay.plutonium.portlet.servlet.adapter.HttpServletRequestAdapter;
+import com.liferay.plutonium.portlet.servlet.adapter.HttpServletResponseAdapter;
+import com.liferay.plutonium.thymeleaf.portlet.PortletIWebExchange;
+import com.liferay.plutonium.thymeleaf.portlet.VariableValidator;
+import com.liferay.plutonium.thymeleaf.portlet.WebContextBase;
+
+import org.thymeleaf.context.IWebContext;
+import org.thymeleaf.web.IWebExchange;
+
+
+/**
+ * This class is a CDI producer that provides the ability to generate instances of {@link IWebContext}.
+ *
+ * @author  Neil Griffin
+ */
+public class WebContextProducer {
+
+	@PortletRequestScoped
+	@Produces
+	public IWebContext getWebContext(BeanManager beanManager, VariableValidator variableValidator,
+		MvcContext mvcContext, Models models, PortletRequest portletRequest, MimeResponse mimeResponse,
+		ServletContext servletContext) {
+
+		return new CDIPortletWebContext(beanManager, variableValidator, models,
+				(String) portletRequest.getAttribute(PortletRequest.LIFECYCLE_PHASE),
+				new HttpServletRequestAdapter(portletRequest), new HttpServletResponseAdapter(mimeResponse),
+				servletContext, mvcContext.getLocale(), new PortletIWebExchange(portletRequest));
+	}
+
+	private static class CDIPortletWebContext extends WebContextBase {
+
+		private BeanManager beanManager;
+		private Set<String> beanNames;
+		private Models models;
+		private PortletIWebExchange portletIWebExchange;
+
+		public CDIPortletWebContext(BeanManager beanManager, VariableValidator variableInspector, Models models,
+			String lifecyclePhase, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
+			ServletContext servletContext, Locale locale, PortletIWebExchange portletIWebExchange) {
+
+			super(httpServletRequest, httpServletResponse, servletContext, locale);
+			this.beanManager = beanManager;
+			this.models = models;
+			this.beanNames = new HashSet<>();
+
+			boolean headerPhase = lifecyclePhase.equals(PortletRequest.HEADER_PHASE);
+			boolean renderPhase = lifecyclePhase.equals(PortletRequest.RENDER_PHASE);
+			boolean resourcePhase = lifecyclePhase.equals(PortletRequest.RESOURCE_PHASE);
+
+			Set<Bean<?>> beans = beanManager.getBeans(Object.class, new AnnotationLiteral<Any>() {
+					});
+
+			for (Bean<?> bean : beans) {
+				String beanName = bean.getName();
+
+				if ((beanName != null) &&
+						variableInspector.isValidName(beanName, headerPhase, renderPhase, resourcePhase)) {
+					this.beanNames.add(beanName);
+				}
+			}
+
+			this.portletIWebExchange = portletIWebExchange;
+		}
+
+		@Override
+		public boolean containsVariable(String name) {
+
+			Map<String, Object> modelsMap = models.asMap();
+
+			if (modelsMap.containsKey(name)) {
+				return true;
+			}
+
+			return beanNames.contains(name);
+		}
+
+		@Override
+		public Object getVariable(String name) {
+
+			Object value = models.get(name);
+
+			if (value == null) {
+
+				Bean<?> resolvedBean = beanManager.resolve(beanManager.getBeans(name));
+
+				if (resolvedBean != null) {
+					Set<Type> types = resolvedBean.getTypes();
+
+					if (!types.isEmpty()) {
+						Iterator<Type> typeIterator = types.iterator();
+						Type firstType = typeIterator.next();
+						value = beanManager.getReference(resolvedBean, firstType,
+								beanManager.createCreationalContext(resolvedBean));
+					}
+				}
+			}
+
+			return value;
+		}
+
+		@Override
+		public Set<String> getVariableNames() {
+
+			Map<String, Object> modelsMap = models.asMap();
+			Set<String> variableNames = new HashSet<>(modelsMap.keySet());
+			variableNames.addAll(beanNames);
+
+			return variableNames;
+		}
+
+		@Override
+		public IWebExchange getExchange() {
+			return portletIWebExchange;
+		}
+	}
+}

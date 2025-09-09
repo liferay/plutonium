@@ -7,8 +7,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<relativePath>../pom.xml</relativePath>
-		<groupId>com.liferay.pluto</groupId>
-		<artifactId>pluto</artifactId>
+		<groupId>com.liferay.plutonium</groupId>
+		<artifactId>plutonium</artifactId>
 		<version>4.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
@@ -22,16 +22,16 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</connection>
-		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</developerConnection>
-		<url>https://github.com/apache/portals-pluto</url>
+		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</connection>
+		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</developerConnection>
+		<url>https://github.com/apache/plutonium</url>
 		<tag>HEAD</tag>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<test.portal.name>Pluto</test.portal.name>
 		<!-- test.context.base context string used when addressing test pages. Used by module stylesheet -->
-		<test.context.base>pluto/portal/</test.context.base>
+		<test.context.base>plutonium/portal/</test.context.base>
 		<test.dependency.portlet.default.jquery.version>1.12.3</test.dependency.portlet.default.jquery.version>
 		<!-- This variable is used by the test driver to determine how test
       page links are to be found. Values: generateURLs the driver generates URLs
@@ -47,13 +47,13 @@
 		<test.server.host>localhost</test.server.host>
 		<test.server.port>8080</test.server.port>
 		<!-- Configuration of URL to login page -->
-		<test.server.login.url>http://${test.server.host}:${test.server.port}/pluto/portal/About Apache Pluto</test.server.login.url>
+		<test.server.login.url>http://${test.server.host}:${test.server.port}/plutonium/portal/About Apache Pluto</test.server.login.url>
 		<!-- HTML field IDs and values for username & password to enable automatic  login -->
 		<!-- User specified must be in 'tckuser' role. Please configure 'tckuser' role for the specified user in tomcat-users.xml -->
 		<test.server.username.id>j_username</test.server.username.id>
-		<test.server.username>pluto</test.server.username>
+		<test.server.username>plutonium</test.server.username>
 		<test.server.password.id>j_password</test.server.password.id>
-		<test.server.password>pluto</test.server.password>
+		<test.server.password>plutonium</test.server.password>
 		<!-- Specifies the browser to be used by selenium WebDriver for running the tests. -->
 		<!-- Can be used with firefox or HTMLUnit without setting the test.browser.webDriver property. -->
 		<!-- Use of Chrome or IE requires the webDriver to be downloaded and available. Set the -->
@@ -80,7 +80,7 @@
 			<artifactId>junit</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.liferay.pluto</groupId>
+			<groupId>com.liferay.plutonium</groupId>
 			<artifactId>test-base</artifactId>
 			<version>${project.version}</version>
 			<scope>test</scope>
@@ -184,7 +184,7 @@
 			<id>liferay</id>
 			<properties>
 				<test.portal.name>Liferay</test.portal.name>
-				<test.server.login.url>http://${test.server.host}:${test.server.port}/group/pluto-demos</test.server.login.url>
+				<test.server.login.url>http://${test.server.host}:${test.server.port}/group/plutonium-demos</test.server.login.url>
 				<test.context.base>web/guest/</test.context.base>
 			</properties>
 		</profile>

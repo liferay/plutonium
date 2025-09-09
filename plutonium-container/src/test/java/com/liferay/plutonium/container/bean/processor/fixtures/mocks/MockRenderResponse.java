@@ -1,0 +1,33 @@
+/*
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+package com.liferay.plutonium.container.bean.processor.fixtures.mocks;
+
+import java.util.Collection;
+
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.RenderResponse;
+
+/**
+ * @author Scott Nicklous
+ *
+ */
+public class MockRenderResponse extends MockMimeResponse implements RenderResponse {
+
+   /* (non-Javadoc)
+    * @see jakarta.portlet.RenderResponse#setNextPossiblePortletModes(java.util.Collection)
+    */
+   @Override
+   public void setNextPossiblePortletModes(Collection<? extends PortletMode> arg0) {
+   }
+
+   /* (non-Javadoc)
+    * @see jakarta.portlet.RenderResponse#setTitle(java.lang.String)
+    */
+   @Override
+   public void setTitle(String arg0) {
+   }
+
+}

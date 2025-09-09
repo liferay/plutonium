@@ -13,7 +13,7 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-6.0.xsd">
 	<context:component-scan
-		base-package="com.liferay.pluto.demo.hub"
+		base-package="com.liferay.plutonium.demo.hub"
 		scope-resolver="com.liferay.bean.portlet.spring.extension.PortletScopeResolver">
 		<context:include-filter
 			type="custom"

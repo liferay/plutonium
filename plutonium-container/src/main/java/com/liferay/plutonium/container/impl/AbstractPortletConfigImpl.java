@@ -1,0 +1,248 @@
+/*
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+package com.liferay.plutonium.container.impl;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.ResourceBundle;
+import java.util.Set;
+
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
+import javax.xml.XMLConstants;
+import javax.xml.namespace.QName;
+
+import com.liferay.plutonium.container.om.portlet.ContainerRuntimeOption;
+import com.liferay.plutonium.container.om.portlet.EventDefinitionReference;
+import com.liferay.plutonium.container.om.portlet.InitParam;
+import com.liferay.plutonium.container.om.portlet.PortletDefinition;
+
+/**
+ * Abstract PortletConfig base class Implementation.
+ * <p>
+ * An embedding Portal can extend this base class and is only required to provide
+ * an implementation of the getResourceBundle bundle method.
+ * </p>
+ * 
+ * @version $Id$
+ */
+public abstract class AbstractPortletConfigImpl implements PortletConfig
+{
+    protected PortletContext portletContext;
+    /**
+     * The portlet descriptor.
+     */
+    protected PortletDefinition portlet;
+    
+    protected Map<String, String[]> containerRuntimeOptions;
+    
+    protected Set<String> supportedContainerRuntimeOptions; 
+
+    public AbstractPortletConfigImpl(PortletContext portletContext, PortletDefinition portlet)
+    {
+        this.portletContext = portletContext;
+        this.portlet = portlet;
+        this.supportedContainerRuntimeOptions = new HashSet<String>();
+        for (Enumeration<String> e = portletContext.getContainerRuntimeOptions(); e.hasMoreElements(); )
+        {
+            supportedContainerRuntimeOptions.add(e.nextElement());
+        }
+    }
+
+    public abstract ResourceBundle getResourceBundle(Locale locale);
+    
+    public String getPortletName() {
+        return portlet.getPortletName();
+    }
+
+    public PortletContext getPortletContext() {
+        return portletContext;
+    }
+
+    public String getInitParameter(String name) {
+        if (name == null) {
+            throw new IllegalArgumentException("Parameter name == null");
+        }
+
+        Iterator<? extends InitParam> parms = portlet.getInitParams().iterator();
+        while(parms.hasNext()) {
+            InitParam param = parms.next();
+            if (param.getParamName().equals(name)) {
+                return param.getParamValue();
+            }
+        }
+        return null;
+    }
+
+    public Enumeration<String> getInitParameterNames() {
+        return new java.util.Enumeration<String>() {
+            private Iterator<InitParam> iterator =
+                new ArrayList<InitParam>(portlet.getInitParams()).iterator();
+
+            public boolean hasMoreElements() {
+                return iterator.hasNext();
+            }
+
+            public String nextElement() {
+                if (iterator.hasNext()) {
+                    return iterator.next().getParamName();
+                } 
+                return null;
+            }
+        };
+    }
+
+    public PortletDefinition getPortletDefinition() {
+        return portlet;
+    }
+    // --------------------------------------------------------------------------------------------
+
+	public Enumeration<String> getPublicRenderParameterNames() {
+		if (portlet.getSupportedPublicRenderParameters() != null){
+			return Collections.enumeration(portlet.getSupportedPublicRenderParameters());
+		}
+		return  Collections.enumeration(new ArrayList<String>());
+	}
+
+	public String getDefaultNamespace() {
+		if (portlet.getApplication().getDefaultNamespace() == null)
+			return XMLConstants.NULL_NS_URI;
+		return portlet.getApplication().getDefaultNamespace();
+	}
+
+	public Enumeration<QName> getProcessingEventQNames() {
+	    ArrayList<QName> qnameList = new ArrayList<QName>();
+        for (EventDefinitionReference ref : portlet.getSupportedProcessingEvents())
+        {
+            QName name = ref.getQualifiedName();
+            if (name == null)
+            {
+                continue;
+            }
+            qnameList.add(name);
+        }
+        return Collections.enumeration(qnameList);
+	}
+
+	public Enumeration<QName> getPublishingEventQNames() {
+        ArrayList<QName> qnameList = new ArrayList<QName>();
+        for (EventDefinitionReference ref : portlet.getSupportedPublishingEvents())
+        {
+            QName name = ref.getQualifiedName();
+            if (name == null)
+            {
+                continue;
+            }
+            qnameList.add(name);
+        }
+        return Collections.enumeration(qnameList);
+	}
+
+	public Enumeration<Locale> getSupportedLocales() {
+		// for each String entry in SupportedLocales (portletDD)
+		// add an entry in the resut list (new Locale(string))
+		List<Locale> locals = new ArrayList<Locale>();
+		List<String> languageIds = portlet.getSupportedLocales();
+		if (languageIds!=null){
+			for (String languageId : languageIds) {
+				locals.add(getLocale(languageId));
+			}
+		}
+		return Collections.enumeration(locals);
+	}
+	
+	public Map<String, String[]> getContainerRuntimeOptions()
+	{
+	    synchronized(this)
+	    {
+	        if (containerRuntimeOptions == null)
+	        {
+	            containerRuntimeOptions = new HashMap<String, String[]>();
+                for (ContainerRuntimeOption option : portlet.getApplication().getContainerRuntimeOptions())
+                {
+                    List<String> values = option.getValues();
+                    String [] tempValues = new String[values.size()];
+                    for (int i=0;i<values.size();i++)
+                    {
+                        tempValues[i] = values.get(i);
+                    }
+                    containerRuntimeOptions.put(option.getName(),tempValues);
+                }
+                for (ContainerRuntimeOption option : portlet.getContainerRuntimeOptions())
+                {
+                    List<String> values = option.getValues();
+                    String [] tempValues = new String[values.size()];
+                    for (int i=0;i<values.size();i++)
+                    {
+                        tempValues[i] = values.get(i);
+                    }
+                    containerRuntimeOptions.put(option.getName(),tempValues);
+                }
+	            for (Iterator<String> iter = containerRuntimeOptions.keySet().iterator(); iter.hasNext(); )
+	            {
+	                String key = iter.next();
+	                if (!supportedContainerRuntimeOptions.contains(key))
+	                {
+	                    iter.remove();
+	                }
+	            }
+	        }
+	    }
+	    
+        if (!containerRuntimeOptions.isEmpty())
+        {
+            Map<String, String[]> result = new HashMap<String, String[]>(containerRuntimeOptions.size());
+            for (Map.Entry<String,String[]> entry : containerRuntimeOptions.entrySet())
+            {
+                if (entry.getValue() != null)
+                {
+                    result.put(entry.getKey(), entry.getValue().clone());
+                }
+            }
+            return Collections.unmodifiableMap(result);
+        }
+        return Collections.emptyMap();
+	}
+
+	private Locale getLocale(String languageId) {
+
+    	Locale locale;
+
+		int pos = languageId.indexOf("_");
+
+		if (pos == -1) {
+			locale = Locale.forLanguageTag(languageId);
+		}
+		else {
+			String[] languageIdParts = languageId.split("_");
+
+			String languageCode = languageIdParts[0];
+			String countryCode = languageIdParts[1];
+
+			String variant = null;
+
+			if (languageIdParts.length > 2) {
+				variant = languageIdParts[2];
+			}
+
+			if ((variant != null) && (variant.trim().length() > 0)) {
+				locale = new Locale(languageCode, countryCode, variant);
+			}
+			else {
+				locale = new Locale(languageCode, countryCode);
+			}
+		}
+
+		return locale;
+	}
+}

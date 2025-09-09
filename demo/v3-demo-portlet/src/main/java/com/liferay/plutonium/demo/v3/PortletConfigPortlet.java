@@ -1,0 +1,167 @@
+/*
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+package com.liferay.plutonium.demo.v3;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import static com.liferay.plutonium.demo.v3.Constants.ATTRIB_PMS;
+import static com.liferay.plutonium.demo.v3.Constants.ATTRIB_PRPS;
+import static com.liferay.plutonium.demo.v3.Constants.ATTRIB_WS;
+import static com.liferay.plutonium.demo.v3.Constants.ATTRIB_CTX;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.EventRequest;
+import jakarta.portlet.EventResponse;
+import jakarta.portlet.GenericPortlet;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletRequestDispatcher;
+import jakarta.portlet.RenderMode;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.ResourceResponse;
+import jakarta.portlet.WindowState;
+import javax.xml.namespace.QName;
+
+/**
+ * A portlet for displaying config data
+ */
+public class PortletConfigPortlet extends GenericPortlet {
+
+   // Set up logging
+   private final Logger logger = LoggerFactory.getLogger(PortletConfigPortlet.class);
+   
+   @Override
+   protected void doHelp(RenderRequest request, RenderResponse response) throws PortletException, IOException {
+      doView(request, response);
+   }
+   
+   @Override
+   protected void doEdit(RenderRequest request, RenderResponse response) throws PortletException, IOException {
+      doView(request, response);
+   }
+   
+   @RenderMode(name="MyMode_nonPortalManaged_1")
+   public void doMyMode_nonPortalManaged_1(RenderRequest request, RenderResponse response) throws PortletException, IOException {
+      doView(request, response);
+   }
+   
+   @RenderMode(name="MyMode_nonPortalManaged_2")
+   public void doMyMode_nonPortalManaged_2(RenderRequest request, RenderResponse response) throws PortletException, IOException {
+      doView(request, response);
+   }
+
+   protected void doView(RenderRequest req, RenderResponse resp)
+         throws PortletException, IOException {
+      
+      if (logger.isDebugEnabled()) {
+         logger.debug(this.getClass().getName(), "doView", "Entry");
+      }
+      
+      resp.setContentType("text/html");
+      
+      // Get the information from the new V3.0 PortletConfig APIs through
+      // the GenericPortlet class in order to test the adapted GenericPortlet
+      // interfaces as well. Store resulting strings in request attributes
+      // for display through the JSP.
+      
+      ArrayList<String> prps = new ArrayList<String>();
+      ArrayList<String> wss = new ArrayList<String>();
+      ArrayList<String> pms = new ArrayList<String>();
+      
+      Map<String, QName> prpmap = getPublicRenderParameterDefinitions();
+      for (String prp : prpmap.keySet()) {
+         StringBuilder sb = new StringBuilder();
+         sb.append("Name: ").append(prp);
+         sb.append(", QName: ").append(prpmap.get(prp).toString());
+         prps.add(sb.toString());
+      }
+      req.setAttribute(ATTRIB_PRPS, prps);
+      
+      String mimetype = "text/html";
+      for (WindowState ws : Collections.list(getWindowStates(mimetype))) {
+         StringBuilder sb = new StringBuilder();
+         sb.append("MIME type: ").append(mimetype);
+         sb.append(", WindowState: ").append(ws.toString());
+         sb.append(", Allowed: ").append(req.isWindowStateAllowed(ws));
+         wss.add(sb.toString());
+      }
+      for (PortletMode pm : Collections.list(getPortletModes(mimetype))) {
+         StringBuilder sb = new StringBuilder();
+         sb.append("MIME type: ").append(mimetype);
+         sb.append(", PortletMode: ").append(pm.toString());
+         sb.append(", Allowed: ").append(req.isPortletModeAllowed(pm));
+         pms.add(sb.toString());
+      }
+
+      mimetype = "text/vnd.wap.wml";
+      for (WindowState ws : Collections.list(getWindowStates(mimetype))) {
+         StringBuilder sb = new StringBuilder();
+         sb.append("MIME type: ").append(mimetype);
+         sb.append(", WindowState: ").append(ws.toString());
+         wss.add(sb.toString());
+      }
+      for (PortletMode pm : Collections.list(getPortletModes(mimetype))) {
+         StringBuilder sb = new StringBuilder();
+         sb.append("MIME type: ").append(mimetype);
+         sb.append(", PortletMode: ").append(pm.toString());
+         pms.add(sb.toString());
+      }
+
+      req.setAttribute(ATTRIB_WS, wss);
+      req.setAttribute(ATTRIB_PMS, pms);
+      
+      // get the info from the new PortletContext APIs
+      
+      PortletContext ctx = getPortletContext();
+      List<String> ctxinfo = new ArrayList<String>();
+      String vers = "" + ctx.getEffectiveMajorVersion() + "." + ctx.getEffectiveMinorVersion();
+      ctxinfo.add("Portlet application version: " + vers);
+      ClassLoader cl = ctx.getClassLoader();
+      String cltxt = null;
+      if (cl != null) {
+         cltxt = cl.toString().replaceAll("(\\n|\\r|\\t)", " ");
+      }
+      ctxinfo.add("ClassLoader: " + cltxt);
+      ctxinfo.add("Portlet context path: " + ctx.getContextPath());
+      
+      req.setAttribute(ATTRIB_CTX, ctxinfo);
+
+      PortletRequestDispatcher rd = getPortletContext().getRequestDispatcher(
+            "/WEB-INF/jsp/view-pcp.jsp");
+      rd.include(req, resp);
+
+   }
+
+   @Override
+   public void processAction(ActionRequest req, ActionResponse resp)
+         throws PortletException, IOException {
+   }
+   
+   @Override
+   public void processEvent(EventRequest req, EventResponse resp) 
+         throws PortletException ,IOException {
+   };
+   
+   /* (non-Javadoc)
+    * @see jakarta.portlet.GenericPortlet#serveResource(jakarta.portlet.ResourceRequest, jakarta.portlet.ResourceResponse)
+    */
+   @Override
+   public void serveResource(ResourceRequest req, ResourceResponse resp)
+         throws PortletException, IOException {
+   }
+
+}

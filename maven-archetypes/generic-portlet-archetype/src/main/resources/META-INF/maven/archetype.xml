@@ -5,5 +5,5 @@
  * SPDX-License-Identifier: Apache-2.0
  -->
 <archetype>
-	<id>com.liferay.pluto.generic.portlet</id>
+	<id>com.liferay.plutonium.generic.portlet</id>
 </archetype>

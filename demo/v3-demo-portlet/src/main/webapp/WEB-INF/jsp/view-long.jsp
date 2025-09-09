@@ -12,7 +12,7 @@
 <%@ page import="java.io.*,java.util.*,jakarta.portlet.*" %>
 <%@ page import="jakarta.portlet.MimeResponse.Copy" %>
 <%@ page import="static jakarta.portlet.MimeResponse.Copy.*" %>
-<%@ page import="static com.liferay.pluto.demo.v3.Constants.*" %>
+<%@ page import="static com.liferay.plutonium.demo.v3.Constants.*" %>
 
 <portlet:defineObjects />
 

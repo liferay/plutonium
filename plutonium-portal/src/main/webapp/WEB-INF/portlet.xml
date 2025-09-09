@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ -->
+<portlet-app
+    xmlns="http://jakarta.ee/xml/ns/portlet"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jakarta.ee/xml/ns/portlet http://jakarta.ee/xml/ns/portlet/portlet-app_4_0.xsd"
+    version="4.0">
+
+    <portlet>
+    <description>AboutPortletDescription</description>
+    <portlet-name>AboutPortlet</portlet-name>
+    <display-name>About Portlet</display-name>
+    <portlet-class>com.liferay.plutonium.driver.portlets.AboutPortlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>About Apache Pluto</title>
+    </portlet-info>
+  </portlet>
+  
+  <portlet>
+    <description>AdminPortletDescription</description>
+    <portlet-name>AdminPortlet</portlet-name>
+    <display-name>Admin Portlet</display-name>
+    <portlet-class>com.liferay.plutonium.driver.portlets.AdminPortlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+      <portlet-mode>HELP</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>Apache Pluto Portal Admin</title>
+    </portlet-info>
+  </portlet>
+
+    <portlet>
+        <description>Used to administer plutonium pages</description>
+        <portlet-name>PlutoPageAdmin</portlet-name>
+        <display-name>Pluto Page Administration Portlet</display-name>
+        <portlet-class>com.liferay.plutonium.driver.portlets.PageAdminPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+            <portlet-mode>HELP</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Pluto Page Administrator</title>
+        </portlet-info>
+    </portlet>  
+</portlet-app>
+
+

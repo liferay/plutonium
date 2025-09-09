@@ -9,23 +9,23 @@
   
   <bannerLeft>
     <name>Pluto</name>
-    <src>http://liferay.com/pluto/images/apache-portals.gif</src>
-    <href>http://liferay.com/pluto/</href>
+    <src>http://liferay.com/plutonium/images/apache-portals.gif</src>
+    <href>http://liferay.com/plutonium/</href>
   </bannerLeft>
   <bannerRight>
-    <src>http://liferay.com/pluto/images/banner.png</src>
+    <src>http://liferay.com/plutonium/images/banner.png</src>
   </bannerRight>
   <publishDate position="left"/>
   <version position="none"/>
   <skin>  
-    <groupId>com.liferay.pluto</groupId>
-    <artifactId>pluto-site-skin</artifactId>
+    <groupId>com.liferay.plutonium</groupId>
+    <artifactId>plutonium-site-skin</artifactId>
     <version>3.0-SNAPSHOT</version>
   </skin> 
   
   <body>
     <breadcrumbs>
-      <item name="Home" href="http://liferay.com/pluto"/>
+      <item name="Home" href="http://liferay.com/plutonium"/>
     </breadcrumbs>
     
     <links>

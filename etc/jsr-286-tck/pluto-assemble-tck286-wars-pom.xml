@@ -6,8 +6,8 @@
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.liferay.pluto</groupId>
-	<artifactId>pluto-assemble-tck286-wars</artifactId>
+	<groupId>com.liferay.plutonium</groupId>
+	<artifactId>plutonium-assemble-tck286-wars</artifactId>
 	<version>2.0</version>
 	<packaging>pom</packaging>
 	<name>Pluto Assemble JSR-286 TCK 2.0 wars</name>
@@ -18,8 +18,8 @@
 		<defaultGoal>package</defaultGoal>
 		<plugins>
 			<plugin>
-				<groupId>com.liferay.pluto</groupId>
-				<artifactId>maven-pluto-plugin</artifactId>
+				<groupId>com.liferay.plutonium</groupId>
+				<artifactId>maven-plutonium-plugin</artifactId>
 				<version>2.0.1</version>
 				<executions>
 					<execution>
@@ -28,7 +28,7 @@
 							<goal>assemble</goal>
 						</goals>
 						<configuration>
-							<assemblyOutputDirectory>${basedir}/pluto-assembled-wars</assemblyOutputDirectory>
+							<assemblyOutputDirectory>${basedir}/plutonium-assembled-wars</assemblyOutputDirectory>
 							<archives>
 								<assemblyArchive>${dist}/Signature/portlet_jp_sig_web.war</assemblyArchive>
 								<assemblyArchive>${dist}/ee/ClassLoader/portlet_jp_ClassLoader_web.war</assemblyArchive>

@@ -1,0 +1,169 @@
+/*
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+package com.liferay.plutonium.driver.container;
+
+import com.liferay.plutonium.container.CCPPProfileService;
+import com.liferay.plutonium.container.NamespaceMapper;
+import com.liferay.plutonium.container.PortletAppDescriptorService;
+import com.liferay.plutonium.container.PortletEnvironmentService;
+import com.liferay.plutonium.container.PortletInvokerService;
+import com.liferay.plutonium.container.PortletPreferencesService;
+import com.liferay.plutonium.container.RequestDispatcherService;
+import com.liferay.plutonium.container.UserInfoService;
+import com.liferay.plutonium.container.driver.OptionalContainerServices;
+import com.liferay.plutonium.container.driver.PortalAdministrationService;
+import com.liferay.plutonium.container.driver.PortalDriverContainerServices;
+import com.liferay.plutonium.container.driver.PortletContextService;
+import com.liferay.plutonium.container.driver.PortletRegistryService;
+import com.liferay.plutonium.container.impl.PortletEnvironmentServiceImpl;
+import com.liferay.plutonium.container.impl.PortletAppDescriptorServiceImpl;
+import com.liferay.plutonium.container.impl.RequestDispatcherServiceImpl;
+
+/**
+ * Default Optional Container Services and Portal Driver Services implementation.
+ *
+ * @version 1.0
+ * @since Sep 18, 2004
+ */
+public class DefaultOptionalContainerServices implements OptionalContainerServices, PortalDriverContainerServices {
+
+    private PortletPreferencesService portletPreferencesService;
+    private PortletRegistryService portletRegistryService;
+    private PortletContextService portletContextService;
+    private PortletInvokerService portletInvokerService;
+    private PortletEnvironmentService portletEnvironmentService;
+    private PortalAdministrationService portalAdministrationService;
+    private UserInfoService userInfoService;
+    private NamespaceMapper namespaceMapper;
+    private PortletAppDescriptorService descriptorService;
+    private CCPPProfileService ccppProfileService;
+    private RequestDispatcherService rdService;
+
+    /**
+     * Constructs an instance using the default portlet preferences service
+     * implementation.
+     */
+    public DefaultOptionalContainerServices() {
+        rdService = new RequestDispatcherServiceImpl();
+        portletPreferencesService = new DefaultPortletPreferencesService();
+        portletRegistryService = new PortletContextManager(rdService, new PortletAppDescriptorServiceImpl());
+        portletContextService = (PortletContextManager)portletRegistryService;
+        portletInvokerService = new DefaultPortletInvokerService(portletContextService);
+        portletEnvironmentService = new PortletEnvironmentServiceImpl();
+        portalAdministrationService = new DefaultPortalAdministrationService();
+        userInfoService = new DefaultUserInfoService();
+        namespaceMapper = new DefaultNamespaceMapper();
+        descriptorService = new PortletAppDescriptorServiceImpl();                        
+        ccppProfileService = new DummyCCPPProfileServiceImpl();
+    }
+
+    /**
+     * Constructs an instance using specified optional container services
+     * implementation. If the portlet preferences service is provided, it will
+     * be used. Otherwise, the default portlet preferences service will be used.
+     * @param root  the root optional container services implementation.
+     */
+    public DefaultOptionalContainerServices(OptionalContainerServices root, PortalDriverContainerServices driverServices) {
+        this();
+        if (root.getPortletPreferencesService() != null) {
+            portletPreferencesService = root.getPortletPreferencesService();
+        }
+
+        if (driverServices.getPortletRegistryService() != null) {
+            portletRegistryService = driverServices.getPortletRegistryService();
+        }
+
+        if (driverServices.getPortletContextService() != null) {
+            portletContextService = driverServices.getPortletContextService();
+        }
+
+        if(root.getPortletEnvironmentService() != null) {
+            portletEnvironmentService = root.getPortletEnvironmentService();
+        }
+
+        if(root.getPortletInvokerService() != null) {
+            portletInvokerService = root.getPortletInvokerService();
+        }
+
+        if(root.getPortletEnvironmentService() != null) {
+            portletEnvironmentService = root.getPortletEnvironmentService();
+        }
+
+        if(driverServices.getPortalAdministrationService() != null) {
+            portalAdministrationService = driverServices.getPortalAdministrationService();
+        }
+
+		if(root.getUserInfoService() != null) {
+            userInfoService = root.getUserInfoService();
+		}
+		
+        if(root.getNamespaceMapper() != null) {
+            namespaceMapper = root.getNamespaceMapper();
+        }
+        
+        if (descriptorService == null) 
+        {
+            descriptorService = new PortletAppDescriptorServiceImpl();
+        }
+        
+        if (root.getCCPPProfileService() != null)
+        {
+            ccppProfileService = root.getCCPPProfileService();
+        }
+    }
+
+
+    // OptionalContainerServices Impl ------------------------------------------
+
+    public PortletPreferencesService getPortletPreferencesService() {
+        return portletPreferencesService;
+    }
+
+
+    public PortletRegistryService getPortletRegistryService() {
+        return portletRegistryService;
+    }
+
+    public PortletContextService getPortletContextService() {
+        return portletContextService;
+    }
+
+    public PortletEnvironmentService getPortletEnvironmentService() {
+        return portletEnvironmentService;
+    }
+
+    public PortletInvokerService getPortletInvokerService() {
+        return portletInvokerService;
+    }
+
+    public PortalAdministrationService getPortalAdministrationService() {
+        return portalAdministrationService;
+    }
+
+    public UserInfoService getUserInfoService() {
+        return userInfoService;
+    }
+    
+    public NamespaceMapper getNamespaceMapper() {
+        return namespaceMapper;
+    }
+
+    public PortletAppDescriptorService getDescriptorService()
+    {
+        return this.descriptorService;
+    }
+
+    public CCPPProfileService getCCPPProfileService()
+    {
+        return ccppProfileService;
+    }
+
+    public RequestDispatcherService getRequestDispatcherService()
+    {
+        return rdService;
+    }
+}
+

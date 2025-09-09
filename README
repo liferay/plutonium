@@ -7,7 +7,7 @@ Apache Pluto 3.0 is the third version of the JSR-362 Reference Implementation
 (Java Portlet API 3.0) and Technology Compliance Kit (TCK). The project can 
 be built using the maven command:
 
-mvn clean install -Ppluto
+mvn clean install -Pplutonium
 
 The command line switch '-Ppluto' activates a maven profile that causes the 
 TCK war files to be built for running in the Pluto environment.
@@ -29,9 +29,9 @@ See the documentation in dist-build.xml for details on how to run the build.
 Once the bundle has been built, you can unpack it and run the RI. There are three 
 bundles available in different formats that have the same contents.
 
-pluto-<version>-bundle.zip
-pluto-<version>-bundle.gz
-pluto-<version>-bundle.bz2
+plutonium-<version>-bundle.zip
+plutonium-<version>-bundle.gz
+plutonium-<version>-bundle.bz2
 
 where <version> is equal to '3.0-SNAPSHOT' for a snapshot build or '3.0' for the
 release build.
@@ -39,7 +39,7 @@ release build.
 Select the bundle file appropriate for your environment and unpack it to the 
 directory of choice. After unpacking, navigate to the directory:
 
-./pluto-<version>/bin 
+./plutonium-<version>/bin
 
 and run either startup.bat or startup.sh depending on your environment. This
 will start Tomcat with the Pluto application installed.
@@ -47,9 +47,9 @@ will start Tomcat with the Pluto application installed.
 The application is configured to use port 8080. You can access the application 
 with the following URL:
 
-http://localhost:8080/pluto/portal
+http://localhost:8080/plutonium/portal
 
-Use the credentials pluto/pluto to log on to the application.
+Use the credentials plutonium/plutonium to log on to the application.
 
 Third-Party Licensing
 =====================

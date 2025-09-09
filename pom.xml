@@ -11,14 +11,14 @@
 		<version>33</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.liferay.pluto</groupId>
-	<artifactId>pluto</artifactId>
+	<groupId>com.liferay.plutonium</groupId>
+	<artifactId>plutonium</artifactId>
 	<packaging>pom</packaging>
 	<name>Apache Pluto</name>
 	<version>4.0.0-SNAPSHOT</version>
 	<!-- Due to a bug in maven 2.0, the description must not contain any line breaks or tabs. -->
 	<description>Apache Pluto is the Reference Implementation of the Java Portlet Specification.</description>
-	<url>http://liferay.com/pluto</url>
+	<url>http://liferay.com/plutonium</url>
 	<issueManagement>
 		<system>jira</system>
 		<url>http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10560</url>
@@ -28,24 +28,24 @@
 	<mailingLists>
 		<mailingList>
 			<name>Pluto User List</name>
-			<subscribe>pluto-user-subscribe@liferay.com</subscribe>
-			<unsubscribe>pluto-user-unsubscribe@liferay.com</unsubscribe>
-			<post>pluto-user@liferay.com</post>
-			<archive>http://mail-archives.apache.org/mod_mbox/portals-pluto-user</archive>
+			<subscribe>plutonium-user-subscribe@liferay.com</subscribe>
+			<unsubscribe>plutonium-user-unsubscribe@liferay.com</unsubscribe>
+			<post>plutonium-user@liferay.com</post>
+			<archive>http://mail-archives.apache.org/mod_mbox/plutonium-user</archive>
 		</mailingList>
 		<mailingList>
 			<name>Pluto Developer List</name>
-			<subscribe>pluto-dev-subscribe@liferay.com</subscribe>
-			<unsubscribe>pluto-dev-unsubscribe@liferay.com</unsubscribe>
-			<post>pluto-dev@liferay.com</post>
-			<archive>http://mail-archives.apache.org/mod_mbox/portals-pluto-dev</archive>
+			<subscribe>plutonium-dev-subscribe@liferay.com</subscribe>
+			<unsubscribe>plutonium-dev-unsubscribe@liferay.com</unsubscribe>
+			<post>plutonium-dev@liferay.com</post>
+			<archive>http://mail-archives.apache.org/mod_mbox/plutonium-dev</archive>
 		</mailingList>
 		<mailingList>
 			<name>Pluto SCM List</name>
-			<subscribe>pluto-scm-subscribe@liferay.com</subscribe>
-			<unsubscribe>pluto-scm-unsubscribe@liferay.com</unsubscribe>
-			<post>pluto-scm@liferay.com</post>
-			<archive>http://mail-archives.apache.org/mod_mbox/portals-pluto-scm</archive>
+			<subscribe>plutonium-scm-subscribe@liferay.com</subscribe>
+			<unsubscribe>plutonium-scm-unsubscribe@liferay.com</unsubscribe>
+			<post>plutonium-scm@liferay.com</post>
+			<archive>http://mail-archives.apache.org/mod_mbox/plutonium-scm</archive>
 		</mailingList>
 	</mailingLists>
 	<!-- Pluto Committers ==================================================== -->
@@ -202,9 +202,9 @@ generate mailto links. -->
     </contributor>
 	</contributors>
 	<scm>
-		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</connection>
-		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/portals-pluto.git</developerConnection>
-		<url>https://github.com/apache/portals-pluto</url>
+		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</connection>
+		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/plutonium.git</developerConnection>
+		<url>https://github.com/apache/plutonium</url>
 		<tag>HEAD</tag>
 	</scm>
 	<!-- Dependency Version Properties ======================================= -->
@@ -212,7 +212,7 @@ generate mailto links. -->
   NOTE:
 
   Modification of these properties affects:
-  1)  pluto-maven-plugin/src/main/resources/versions.properties as well!
+  1)  plutonium-maven-plugin/src/main/resources/versions.properties as well!
   -->
 	<properties>
 		<angus-activation.version>2.0.2</angus-activation.version>
@@ -264,7 +264,7 @@ generate mailto links. -->
 		<ognl.version>3.1.2</ognl.version>
 		<phantomjsdriver.version>1.3.0</phantomjsdriver.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<pluto.container.name>Pluto</pluto.container.name>
+		<plutonium.container.name>Pluto</plutonium.container.name>
 		<portlet-api.version>4.0.0-SNAPSHOT</portlet-api.version>
 		<selenium.version>3.11.0</selenium.version>
 		<servlet-api.version>6.0.0</servlet-api.version>
@@ -609,8 +609,8 @@ generate mailto links. -->
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>com.liferay.pluto</groupId>
-					<artifactId>pluto-maven-plugin</artifactId>
+					<groupId>com.liferay.plutonium</groupId>
+					<artifactId>plutonium-maven-plugin</artifactId>
 					<version>${project.version}</version>
 				</plugin>
 				<plugin>
@@ -698,7 +698,7 @@ generate mailto links. -->
 					<artifactId>maven-release-plugin</artifactId>
 					<configuration>
 						<!-- During release (prepare) the org.apache.felix maven-bundle-plugin needs classpath access to just build dependent artifacts
-                 like the pluto-container-api to determine the needed OSGi imports.
+                 like the plutonium-container-api to determine the needed OSGi imports.
                  However, the default maven-release-plugin goals (clean verify) somehow don't provide those.
                  To fix that, the default release plugin set of preparationGoals is changed to do an "install" instead of just "verify".
             -->
@@ -755,21 +755,21 @@ generate mailto links. -->
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<modules>
-				<module>pluto-container-api</module>
-				<module>pluto-container</module>
-				<module>pluto-taglib</module>
-				<module>pluto-container-driver-api</module>
-				<module>pluto-portal-driver</module>
-				<module>pluto-portal-driver-impl</module>
-				<module>pluto-portal</module>
-				<module>pluto-testsuite</module>
-				<module>pluto-common</module>
+				<module>plutonium-container-api</module>
+				<module>plutonium-container</module>
+				<module>plutonium-taglib</module>
+				<module>plutonium-container-driver-api</module>
+				<module>plutonium-portal-driver</module>
+				<module>plutonium-portal-driver-impl</module>
+				<module>plutonium-portal</module>
+				<module>plutonium-testsuite</module>
+				<module>plutonium-common</module>
 				<module>demo</module>
 				<module>demo-integration-tests</module>
-				<module>pluto-util</module>
-				<module>maven-pluto-plugin</module>
-				<module>pluto-ant-tasks</module>
-				<module>pluto-site-skin</module>
+				<module>plutonium-util</module>
+				<module>maven-plutonium-plugin</module>
+				<module>plutonium-ant-tasks</module>
+				<module>plutonium-site-skin</module>
 				<module>portlet-servlet-adapter</module>
 				<module>templating</module>
 				<module>test-base</module>
@@ -783,21 +783,21 @@ generate mailto links. -->
 		<profile>
 			<id>apache-release</id>
 			<modules>
-				<module>pluto-container-api</module>
-				<module>pluto-container</module>
-				<module>pluto-taglib</module>
-				<module>pluto-container-driver-api</module>
-				<module>pluto-portal-driver</module>
-				<module>pluto-portal-driver-impl</module>
-				<module>pluto-portal</module>
-				<module>pluto-testsuite</module>
-				<module>pluto-common</module>
+				<module>plutonium-container-api</module>
+				<module>plutonium-container</module>
+				<module>plutonium-taglib</module>
+				<module>plutonium-container-driver-api</module>
+				<module>plutonium-portal-driver</module>
+				<module>plutonium-portal-driver-impl</module>
+				<module>plutonium-portal</module>
+				<module>plutonium-testsuite</module>
+				<module>plutonium-common</module>
 				<module>demo</module>
 				<module>demo-integration-tests</module>
-				<module>pluto-util</module>
-				<module>maven-pluto-plugin</module>
-				<module>pluto-ant-tasks</module>
-				<module>pluto-site-skin</module>
+				<module>plutonium-util</module>
+				<module>maven-plutonium-plugin</module>
+				<module>plutonium-ant-tasks</module>
+				<module>plutonium-site-skin</module>
 				<module>portlet-servlet-adapter</module>
 				<module>templating</module>
 				<module>test-base</module>

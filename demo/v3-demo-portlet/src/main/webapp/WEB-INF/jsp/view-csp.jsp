@@ -9,7 +9,7 @@
 <%@ page session="false" %>
 <%@ taglib uri="jakarta.tags.portlet" prefix="portlet" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ page import="static com.liferay.pluto.demo.v3.Constants.*" %>
+<%@ page import="static com.liferay.plutonium.demo.v3.Constants.*" %>
 
 <portlet:defineObjects />
 

@@ -47,17 +47,17 @@ Running the JSR-286 TCK against Pluto 2.0+ Portal Driver
        j2ee.home.ri=${TS_HOME}
        j2ee.classes.ri=${j2ee.home.ri}/lib/j2ee_1_3.jar
        
-  f) Copy the pluto-assemble-tck286-wars-pom.xml to $TS_HOME
+  f) Copy the plutonium-assemble-tck286-wars-pom.xml to $TS_HOME
   
-  g) from $TS_HOME, run mvn -f pluto-assemble-tck286-wars-pom.xml
+  g) from $TS_HOME, run mvn -f plutonium-assemble-tck286-wars-pom.xml
   
-     This will run the maven-pluto-plugin against the tck test wars and write them out to $TS_HOME/pluto-assembled-wars
+     This will run the maven-plutonium-plugin against the tck test wars and write them out to $TS_HOME/plutonium-assembled-wars
 
 2) Build and setup a clean Pluto/Tomcat installation for testing
 
 3) Running the TCK
 
-  a) copy all wars from $TS_HOME/pluto-assembled-wars to your Pluto/Tomcat webapps folder
+  a) copy all wars from $TS_HOME/plutonium-assembled-wars to your Pluto/Tomcat webapps folder
 
   b) Startup and stop Tomcat once to ensure the TCK portlet applications are predeployed
 

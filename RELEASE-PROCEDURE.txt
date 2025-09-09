@@ -35,7 +35,7 @@ Since 3.0.0
 		https://issues.apache.org/jira/browse/PLUTO-807
 	* Clone a clean copy of master (on the specific branch if needed) to release using command line git.
 	    cd ~/apache/releases
-	    git clone https://github.com/apache/portals-pluto
+	    git clone https://github.com/apache/plutonium
 
 	* Do not use Eclipse to do the checkout. The extra dot (.) files created by Eclipse throws off the rat:check processing.
 
@@ -46,7 +46,7 @@ Since 3.0.0
 4. DRY RUN
 	Do a dry run of the release:prepare step:
 
-		$ mvn -P apache-release,pluto -DrunOnlyAtExecutionRoot=true release:prepare -DdryRun=true
+		$ mvn -P apache-release,plutonium -DrunOnlyAtExecutionRoot=true release:prepare -DdryRun=true
 
 	The dry run will not commit any changes back to Git and gives you the opportunity to verify that the release process will complete as expected.
 	You will be prompted for the following information :
@@ -68,18 +68,18 @@ Since 3.0.0
 	Check release.properties and make sure that the scm properties have the right version. Sometimes the scm location can be the previous version not the next version.
 
 	Verify signatures (Verifying release signatures)
-        gpg --verify target/pluto-4.0.0-SNAPSHOT-source-release.zip.asc target/pluto-4.0.0-SNAPSHOT-source-release.zip
+        gpg --verify target/plutonium-4.0.0-SNAPSHOT-source-release.zip.asc target/plutonium-4.0.0-SNAPSHOT-source-release.zip
 
 6. CLEANUP AND START OVER
 	Cleanup the release prepare files again:
 
-	$ mvn -P apache-release,pluto release:clean
+	$ mvn -P apache-release,plutonium release:clean
 
 7. PERFORM THE RELEASE
 
 	a. OPTIONAL: Release the Portlet API (It has its own version scheme and release schedule)
 
-	$ cd portals-pluto/portlet-api
+	$ cd plutonium/portlet-api
 	$ mvn -P apache-release release:prepare -DrunOnlyAtExecutionRoot=true
 	$ mvn -P apache-release release:perform -Duser.name=[your_apache_uid]
 	$ cd ..
@@ -88,10 +88,10 @@ Since 3.0.0
 
 	b. REQUIRED: Release the main Apache Pluto software modules
 
-	$ cd portals-pluto
-	$ mvn -P apache-release,pluto release:prepare -DrunOnlyAtExecutionRoot=true
-	$ mvn -P apache-release,pluto release:perform -Duser.name=[your_apache_uid]
-	$ vi portlet-tck_3.0/pom.xml # Update the parent <version/> and also the version in the <pluto.test.version/> property
+	$ cd plutonium
+	$ mvn -P apache-release,plutonium release:prepare -DrunOnlyAtExecutionRoot=true
+	$ mvn -P apache-release,plutonium release:perform -Duser.name=[your_apache_uid]
+	$ vi portlet-tck_3.0/pom.xml # Update the parent <version/> and also the version in the <plutonium.test.version/> property
 	$ git commit -a -m "PLUTO-807 Upgraded the TCK to Pluto test version 4.0.0"
 
 	If your local OS userid doesn't match your Apache userid, then you'll have to also override the value provided
@@ -104,25 +104,25 @@ Since 3.0.0
 	      the maven-release-plugin for the TCK is to have it apply a Git tag to auto-increment the <version/> element in
 	      the portlet-tck_3.0/pom.xml and TCK sub-module POM descriptors.
 
-	$ cd portals-pluto/portlet-tck_3.0
-	$ mvn -P apache-release,pluto release:prepare -DrunOnlyAtExecutionRoot=true
-	$ mvn -P apache-release,pluto release:perform -Duser.name=[your_apache_uid]
+	$ cd plutonium/portlet-tck_3.0
+	$ mvn -P apache-release,plutonium release:prepare -DrunOnlyAtExecutionRoot=true
+	$ mvn -P apache-release,plutonium release:perform -Duser.name=[your_apache_uid]
 
 	d. OPTIONAL: Release the Archetypes (Each has its own version scheme and release schedule)
 
-	$ cd portals-pluto/maven-archetypes/bean-portlet-archetype
+	$ cd plutonium/maven-archetypes/bean-portlet-archetype
 	$ mvn -P apache-release release:prepare -Duser.name=[your_apache_uid]
 	$ mvn -P apache-release release:perform -Duser.name=[your_apache_uid]
 
-	$ cd portals-pluto/maven-archetypes/generic-portlet-archetype
+	$ cd plutonium/maven-archetypes/generic-portlet-archetype
 	$ mvn -P apache-release release:prepare -Duser.name=[your_apache_uid]
 	$ mvn -P apache-release release:perform -Duser.name=[your_apache_uid]
 
-	$ cd portals-pluto/maven-archetypes/mvcbean-jsp-portlet-archetype
+	$ cd plutonium/maven-archetypes/mvcbean-jsp-portlet-archetype
 	$ mvn -P apache-release release:prepare -Duser.name=[your_apache_uid]
 	$ mvn -P apache-release release:perform -Duser.name=[your_apache_uid]
 
-	$ cd portals-pluto/maven-archetypes/mvcbean-thymeleaf-portlet-archetype
+	$ cd plutonium/maven-archetypes/mvcbean-thymeleaf-portlet-archetype
 	
 	#	
 	# NOTE: You might need to get rid of a "-SNAPSHOT" from the following POM and Gradle descriptors first!
@@ -138,13 +138,13 @@ Since 3.0.0
 8. VERIFY THE RELEASE
 	a. Verify signatures (Verifying release signatures)
 
-	$ gpg --verify target/pluto-4.0.0-source-release.zip.asc target/pluto-4.0.0-source-release.zip
+	$ gpg --verify target/plutonium-4.0.0-source-release.zip.asc target/plutonium-4.0.0-source-release.zip
 
     b. Verify the Nexus release artifacts
 
     Verify the staged artifacts in the nexus repo
         https://repository.apache.org/index.html
-    Staging repositories (under Build Promotion) --> Name column --> com.liferay.pluto-XXX
+    Staging repositories (under Build Promotion) --> Name column --> com.liferay.plutonium-XXX
     Navigate through the artifact tree and make sure that all javadoc, sources, tests, jars, ... have
         .asc (GPG signature)
         .md5 files
@@ -156,7 +156,7 @@ Since 3.0.0
 
 10. Checkout the new tag, since the repository will be set to a later commit
 
-    $ git checkout pluto-4.0.0
+    $ git checkout plutonium-4.0.0
 
 11. Create a Distribution Bundle
 
@@ -170,21 +170,21 @@ Since 3.0.0
 
 12. Release the bundle Zip file
 
-	a. Use Maven command-line to release pluto-4.0.0-bundle.zip
+	a. Use Maven command-line to release plutonium-4.0.0-bundle.zip
 
         #
         # NOTE: This will release a file with the following identification:
-        #		 <groupId>com.liferay.pluto</groupId>
-        #		 <artifactId>pluto-bundle</artifactId>
+        #		 <groupId>com.liferay.plutonium</groupId>
+        #		 <artifactId>plutonium-bundle</artifactId>
         #		 <version>4.0.0</version>
         #
-        #  And the download filename will be pluto-bundle-4.0.0.zip
+        #  And the download filename will be plutonium-bundle-4.0.0.zip
         #
-        mvn -Papache-release,pluto \
+        mvn -Papache-release,plutonium \
           gpg:sign-and-deploy-file \
-          -Dfile=target/dist/pluto-4.0.0-bundle.zip \
-          -DgroupId=com.liferay.pluto \
-          -DartifactId=pluto-bundle \
+          -Dfile=target/dist/plutonium-4.0.0-bundle.zip \
+          -DgroupId=com.liferay.plutonium \
+          -DartifactId=plutonium-bundle \
           -Dversion=4.0.0 \
           -Durl=https://repository.apache.org/service/local/staging/deploy/maven2 \
           -DrepositoryId=apache.releases.https
@@ -192,8 +192,8 @@ Since 3.0.0
     b. Close the nexus staging repo
 
         https://repository.apache.org/index.html
-        Staging repositories (under Build Promotion) --> Name column --> com.liferay.pluto-XXX
-        Click checkbox for the open staging repo (com.liferay.pluto-XXX) and press Close in the menu bar.
+        Staging repositories (under Build Promotion) --> Name column --> com.liferay.plutonium-XXX
+        Click checkbox for the open staging repo (com.liferay.plutonium-XXX) and press Close in the menu bar.
 
     c. Create a temporary directory for working with Apache's Subversion repository (svnpubsub) for release artifacts:
 
@@ -204,8 +204,8 @@ Since 3.0.0
 
         $ mkdir dev
         $ cd dev
-        $ svn co https://dist.apache.org/repos/dist/dev/portals/pluto
-        $ cd pluto
+        $ svn co https://dist.apache.org/repos/dist/dev/portals/plutonium
+        $ cd plutonium
 
     e. Edit and then execute the following script in order to download the release artifacts from Nexus and
        commit them to Subversion:
@@ -219,15 +219,15 @@ Since 3.0.0
     # NOTE: Set base URL to the Nexus staging repository
     #
     BASE_URL="https://repository.apache.org/service/local/repositories/orgapacheportals-1025/content"
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.asc
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.md5
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto/4.0.0/pluto-4.0.0-source-release.zip.sha1
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium/4.0.0/plutonium-4.0.0-source-release.zip
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium/4.0.0/plutonium-4.0.0-source-release.zip.asc
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium/4.0.0/plutonium-4.0.0-source-release.zip.md5
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium/4.0.0/plutonium-4.0.0-source-release.zip.sha1
     # Generate the SHA-512 checksum for the source release
-    /usr/bin/shasum -a 512 pluto-4.0.0-source-release.zip > pluto-4.0.0-source-release.zip.sha512
-    # Linux: sha512sum -a 512 pluto-4.0.0-source-release.zip > pluto-4.0.0-source-release.zip.sha512
+    /usr/bin/shasum -a 512 plutonium-4.0.0-source-release.zip > plutonium-4.0.0-source-release.zip.sha512
+    # Linux: sha512sum -a 512 plutonium-4.0.0-source-release.zip > plutonium-4.0.0-source-release.zip.sha512
 
-    svn add pluto-4.0.0-source-release*
+    svn add plutonium-4.0.0-source-release*
     #
     # NOTE: If the Portlet API was released, then un-comment the following:
     #
@@ -251,14 +251,14 @@ Since 3.0.0
     # svn add portlet-api-4.0.0.jar*
 
     # svn commit -m "PLUTO-807 Committing Binary Release for portlet-api-4.0.0" --username $USER_NAME
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.asc
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.md5
-    wget --no-check-certificate $BASE_URL/com/liferay/pluto/pluto-bundle/4.0.0/pluto-bundle-4.0.0.zip.sha1
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium-bundle/4.0.0/plutonium-bundle-4.0.0.zip
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium-bundle/4.0.0/plutonium-bundle-4.0.0.zip.asc
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium-bundle/4.0.0/plutonium-bundle-4.0.0.zip.md5
+    wget --no-check-certificate $BASE_URL/com/liferay/plutonium/plutonium-bundle/4.0.0/plutonium-bundle-4.0.0.zip.sha1
     # Generate the SHA-512 checksum for the binary release
-    /usr/bin/shasum -a 512 pluto-bundle-4.0.0.zip > pluto-bundle-4.0.0.zip.sha512
-    # Linux: sha512sum -a 512 pluto-bundle-4.0.0.zip > pluto-bundle-4.0.0.zip.sha512
-    svn add pluto-bundle-4.0.0.zip*
+    /usr/bin/shasum -a 512 plutonium-bundle-4.0.0.zip > plutonium-bundle-4.0.0.zip.sha512
+    # Linux: sha512sum -a 512 plutonium-bundle-4.0.0.zip > plutonium-bundle-4.0.0.zip.sha512
+    svn add plutonium-bundle-4.0.0.zip*
     svn commit -m "PLUTO-807 Committing Binary Release for Pluto 4.0.0" --username $USER_NAME
 
 13. PUT THE RELEASE CANDIDATE UP FOR A VOTE
@@ -283,37 +283,37 @@ Since 3.0.0
 
     a. Promote the staged nexus artifacts
         https://repository.apache.org/index.html
-        Staging repositories (under Build Promotion) --> Name column --> com.liferay.pluto
-        Click checkbox of the closed staging repo (com.liferay.pluto-XXX) and select Release.
+        Staging repositories (under Build Promotion) --> Name column --> com.liferay.plutonium
+        Click checkbox of the closed staging repo (com.liferay.plutonium-XXX) and select Release.
 
     b. Move the source/binary artifacts over to the distribution area
-       Command line examples to distribute artifacts (pluto-4.0.0-source-release.zip as an example below.):
+       Command line examples to distribute artifacts (plutonium-4.0.0-source-release.zip as an example below.):
 
         $ cd ~/asf/svn
         $ mkdir release
         $ cd release
-        $ svn co https://dist.apache.org/repos/dist/release/portals/pluto
-        $ cd pluto
-        $ mv ../../dev/pluto/pluto-4.0.0-source-release* .
-        $ svn add pluto-4.0.0-source-release*
-        $ svn commit -m "PLUTO-807 Committing Source Release for pluto-4.0.0" --username $USER_NAME
+        $ svn co https://dist.apache.org/repos/dist/release/portals/plutonium
+        $ cd plutonium
+        $ mv ../../dev/plutonium/plutonium-4.0.0-source-release* .
+        $ svn add plutonium-4.0.0-source-release*
+        $ svn commit -m "PLUTO-807 Committing Source Release for plutonium-4.0.0" --username $USER_NAME
 
     c. If the Portlet API was released, then move the source/binary artifacts over to the distribution area
-        $ mv ../../dev/portals/pluto/portlet-api-4.0.0* .
+        $ mv ../../dev/portals/plutonium/portlet-api-4.0.0* .
         $ svn add portlet-api-4.0.0*
         $ svn commit -m "PLUTO-807 Committing Binary Release for portlet-api-4.0.0" --username $USER_NAME
 
     d. Move the bundle artifacts over to the distribution area
-        $ mv ../../dev/pluto/pluto-bundle-4.0.0.zip* .
-        $ svn add pluto-bundle-4.0.0.zip*
+        $ mv ../../dev/plutonium/plutonium-bundle-4.0.0.zip* .
+        $ svn add plutonium-bundle-4.0.0.zip*
         $ svn commit -m "PLUTO-807 Committing Binary Release for Pluto 4.0.0" --username $USER_NAME
-        $ cd ../../dev/pluto
-        $ FILES=`svn status | grep pluto | awk '{print $2}'`
+        $ cd ../../dev/plutonium
+        $ FILES=`svn status | grep plutonium | awk '{print $2}'`
         $ svn rm "$FILES"
         $ svn commit -m "PLUTO-807 Promoted artifacts from dev to release for Pluto 4.0.0" --username $USER_NAME
 
     e. Push the tags upstream
-        $ git push upstream pluto-4.0.0
+        $ git push upstream plutonium-4.0.0
         $ git push upstream portlet-tck-3.0.3
         $ git push upstream bean-portlet-archetype-4.0.0
         $ git push upstream generic-portlet-archetype-4.0.0
@@ -334,34 +334,34 @@ Since 3.0.0
         $ cd ~/asf/svn
         $ svn checkout https://svn.apache.org/repos/asf/portals/site/
         $ cd site
-        $ cp -r pluto/src/site/xdoc/v311 pluto/src/site/xdoc/v312
+        $ cp -r plutonium/src/site/xdoc/v311 plutonium/src/site/xdoc/v312
 
     b. Edit the following files, replacing "4.0.0" with "4.0.0":
-        pluto/src/site/xdoc/v312/*
+        plutonium/src/site/xdoc/v312/*
 
-        NOTE: For pluto/src/site/xdoc/v312/maven-archetypes.xml you should only replace the version numbers if
+        NOTE: For plutonium/src/site/xdoc/v312/maven-archetypes.xml you should only replace the version numbers if
               the archetypes were released! Also, are there new archetypes to add?
 
-        NOTE: For pluto/src/site/xdoc/v312/tck.html you should take care with substitution of version numbers
+        NOTE: For plutonium/src/site/xdoc/v312/tck.html you should take care with substitution of version numbers
               since the TCK has its own version scheme and release schedule.
 
     c. Edit the following files, replacing "v312" with "v400" and "4.0.0" with "4.0.0":
-        pluto/src/site/fml/faq.fml
-        pluto/src/site/site.xml <-- If applicable, instead of replacing version numbers, add a new <menu name="Pluto 3.1"> section
-        pluto/src/site/xdoc/download.xml
-        pluto/src/site/xdoc/index.xml
-        pluto/src/site/xdoc/news.xml <-- Also add a news item detailing the release.
-        pluto/src/site/xdoc/security.xml <-- Also add descriptions of any CVE issues that were fixed.
-        pluto/src/site/xdoc/status.xml <-- If applicable, add a description of the new major or minor version.
+        plutonium/src/site/fml/faq.fml
+        plutonium/src/site/site.xml <-- If applicable, instead of replacing version numbers, add a new <menu name="Pluto 3.1"> section
+        plutonium/src/site/xdoc/download.xml
+        plutonium/src/site/xdoc/index.xml
+        plutonium/src/site/xdoc/news.xml <-- Also add a news item detailing the release.
+        plutonium/src/site/xdoc/security.xml <-- Also add descriptions of any CVE issues that were fixed.
+        plutonium/src/site/xdoc/status.xml <-- If applicable, add a description of the new major or minor version.
                                            Also, replace "Pluto 3.0" with "Pluto 3.1" where appropriate.
 
-    d. Edit site/pluto/src/site/xdoc/v312/release-notes.xml
+    d. Edit site/plutonium/src/site/xdoc/v312/release-notes.xml
         include generated release notes from step 15
 
     e. Generate the site:
         $ cd ~/asf/svn/site
         $ mvn site # Only needed to update the Apache Portals news page
-        $ cd pluto
+        $ cd plutonium
         $ mvn clean site
 
     f. Publish the docs to LIVE SITE
@@ -378,13 +378,13 @@ Since 3.0.0
 
     	$ cd ~/asf/svn
     	$ svn checkout https://svn.apache.org/repos/asf/portals/site-live
-    	$ cd site/pluto/target/site
+    	$ cd site/plutonium/target/site
 
     	# Copy the generated html and resources to site-live
 
-    	$ tar cf - * | (cd ../../../../site-live/pluto; tar xvf -)
+    	$ tar cf - * | (cd ../../../../site-live/plutonium; tar xvf -)
 
-    	$ cd ../../../../site-live/pluto
+    	$ cd ../../../../site-live/plutonium
 
     	$ svn add v312
 
@@ -395,7 +395,7 @@ Since 3.0.0
     Make an announcement about the release on the
 
         general@liferay.com
-        pluto-user@liferay.com
+        plutonium-user@liferay.com
 
         announce@apache.org list
 
@@ -424,8 +424,8 @@ Since 3.0.0
                 - When sending e-mail, check the sender address is @apache.org.
 
 ------------------------------------ Release Candidate Email Template ------------------------------------------------------------
-To: pluto-dev list
-cc: pluto-user list, portals-pmc list
+To: plutonium-dev list
+cc: plutonium-user list, portals-pmc list
 Subject: [VOTE] Release Apache Portals Pluto 4.0.0
 
 Dear Apache Portals Pluto Team and community,
@@ -442,7 +442,7 @@ Please review the release candidate for this project which is found in the follo
 https://repository.apache.org/content/repositories/orgapacheportals-****/
 
 The source and other artifacts have been made available at the /dist/dev directory:
-https://dist.apache.org/repos/dist/dev/portals/pluto/
+https://dist.apache.org/repos/dist/dev/portals/plutonium/
 
 (These files will be promoted to /dist/release if the vote passes)
 
@@ -450,7 +450,7 @@ The Release Notes are available here:
 https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=****&version=******
 
 The KEYS file to verify the release artifacts signature can be found here:
-https://dist.apache.org/repos/dist/release/portals/pluto/KEYS
+https://dist.apache.org/repos/dist/release/portals/plutonium/KEYS
 
 Please review the release candidates and vote on releasing Apache Portals Pluto 4.0.0
 
@@ -502,7 +502,7 @@ Regards,
 ------------------------------------ Release Email -------------------------------------------------
 To      announce@apache.org
         general@liferay.com
-        pluto-user@liferay.com
+        plutonium-user@liferay.com
 
 Subject: [ANNOUNCE] Apache Portals Pluto 4.0.0 release
 
@@ -516,23 +516,23 @@ specification for full details:
 http://jcp.org/en/jsr/detail?id=362
 
 The Portlet API Version 3.0 page documents the portlet programming interface:
-http://liferay.com/pluto/portlet-3.0-apidocs/index.html
+http://liferay.com/plutonium/portlet-3.0-apidocs/index.html
 
 For a full overview of all the Pluto features, see the online documentation.
 To get up and running quickly, download the bundle which comes with a bundled
 latest Tomcat 8 ready to run.
 
 Features:
-http://liferay.com/pluto/v312/v3Features.html
+http://liferay.com/plutonium/v312/v3Features.html
 
 Release Notes:
-http://liferay.com/pluto/v312/release-notes.html
+http://liferay.com/plutonium/v312/release-notes.html
 
 Website Documentation:
-http://liferay.com/pluto
+http://liferay.com/plutonium
 
 Downloads:
-https://liferay.com/pluto/download.html
+https://liferay.com/plutonium/download.html
 
 --
 (your name)

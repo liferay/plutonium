@@ -1,0 +1,185 @@
+/*
+ * SPDX-FileCopyrightText: (c) 2003-2025 The Apache Software Foundation (ASF) and contributors.
+ * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+package com.liferay.plutonium.tags;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+
+import jakarta.portlet.ActionParameters;
+import jakarta.portlet.ActionRequest;
+import jakarta.portlet.ClientDataRequest;
+import jakarta.portlet.HeaderRequest;
+import jakarta.portlet.HeaderResponse;
+import jakarta.portlet.MimeResponse;
+import jakarta.portlet.MutableRenderParameters;
+import jakarta.portlet.PortletConfig;
+import jakarta.portlet.PortletContext;
+import jakarta.portlet.PortletMode;
+import jakarta.portlet.PortletRequest;
+import jakarta.portlet.PortletResponse;
+import jakarta.portlet.RenderParameters;
+import jakarta.portlet.ResourceParameters;
+import jakarta.portlet.ResourceRequest;
+import jakarta.portlet.StateAwareResponse;
+import jakarta.portlet.WindowState;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.jsp.tagext.TagData;
+import jakarta.servlet.jsp.tagext.VariableInfo;
+
+
+/**
+ * A tag handler for the <CODE>defineObjects</CODE> tag as defined in the JSR 362.
+ * Uses the superclass to set the JSR 286 stuff, so this class just sets the delta
+ * between v2 & v3.
+ *  
+ * @author Scott Nicklous
+ *
+ * @version 3.0
+ */
+public class DefineObjectsTag362 extends DefineObjectsTag286 {
+   private static final long serialVersionUID = -6107224582740650955L;
+   
+   public static class TEI extends DefineObjectsTag286.TEI {
+
+      protected static List<VariableInfo> info362 = 
+            new ArrayList<VariableInfo>(Arrays.asList(info286));
+      
+      static {
+         info362.add(new VariableInfo("headerRequest",
+               HeaderRequest.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("headerResponse",
+               HeaderResponse.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("clientDataRequest",
+               ClientDataRequest.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("mimeResponse",
+               MimeResponse.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("stateAwareResponse",
+               StateAwareResponse.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("renderParams",
+               RenderParameters.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("mutableRenderParams",
+               MutableRenderParameters.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("actionParams",
+               ActionParameters.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("resourceParams",
+               ResourceParameters.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("portletContext",
+               PortletContext.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+
+         info362.add(new VariableInfo("portletMode",
+               PortletMode.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("windowState",
+               WindowState.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("cookies",
+               Cookie[].class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("locale",
+               Locale.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("locales",
+               Locale[].class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("namespace",
+               String.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("contextPath",
+               String.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("windowId",
+               String.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+         info362.add(new VariableInfo("portletName",
+               String.class.getCanonicalName(),
+               true,
+               VariableInfo.AT_BEGIN));
+      }
+      
+      @Override
+      public VariableInfo[] getVariableInfo(TagData tagData) {
+         return info362.toArray(new VariableInfo[0]);
+      }
+      
+   }
+   
+   @Override
+   protected void setPortletRequestResponseAttribute(PortletRequest request, PortletResponse response) {
+      
+      PortletContext poco = request.getPortletContext();
+      setAttribute(poco, "portletContext");
+      
+      PortletConfig config = (PortletConfig) pageContext.getRequest().getAttribute(Constants.PORTLET_CONFIG);
+      setAttribute(config.getPortletName(), "portletName");
+      
+      setAttribute(request.getRenderParameters(), "renderParams");
+      setAttribute(request.getPortletMode(), "portletMode");
+      setAttribute(request.getWindowState(), "windowState");
+      setAttribute(request.getCookies(), "cookies");
+      setAttribute(Collections.list(request.getLocales()).toArray(new Locale[0]), "locales");
+      setAttribute(request.getLocale(), "locale");
+      setAttribute(request.getWindowID(), "windowId");
+      setAttribute(request.getContextPath(), "contextPath");
+      setAttribute(response.getNamespace(), "namespace");
+      
+      if (request instanceof ClientDataRequest) {
+         setAttribute(request, "clientDataRequest");
+         if (request instanceof ActionRequest) {
+            setAttribute(((ActionRequest) request).getActionParameters(), "actionParameters");
+         } else {
+            setAttribute(((ResourceRequest) request).getResourceParameters(), "resourceParameters");
+         }
+      }
+      
+      if (response instanceof StateAwareResponse) {
+         setAttribute(response, "stateAwareResponse");
+         setAttribute(((StateAwareResponse) response).getRenderParameters(), "mutableRenderParams");
+      }
+      
+      if (response instanceof MimeResponse) {
+         setAttribute(response, "mimeResponse");
+      }
+
+      if(request instanceof HeaderRequest){
+         setAttribute(request, "headerRequest");
+         setAttribute(response, "headerResponse");
+      }     
+
+      super.setPortletRequestResponseAttribute(request, response);
+   }
+
+}

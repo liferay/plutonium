@@ -4,7 +4,7 @@
  * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
  * SPDX-License-Identifier: Apache-2.0
  -->
-<archetype-descriptor name="com.liferay.pluto.bean.portlet">
+<archetype-descriptor name="com.liferay.plutonium.bean.portlet">
 	<fileSets>
 		<fileSet filtered="true">
 			<directory>src/main/java</directory>
