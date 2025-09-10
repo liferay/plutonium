@@ -73,7 +73,7 @@
 
     <!-- Footer block: copyright -->
     <div id="footer">
-        &copy; 2003-2005 Apache Software Foundation
+        &copy; 2003-2005 Apache Software Foundation | &copy; 2025 Liferay, Inc.
     </div>
 
 </div>

@@ -57,7 +57,7 @@
       </div>
       
       <div id="footer">
-        &copy; 2003-<fmt:formatDate value="${now}" pattern="yyyy"/> Apache Software Foundation
+        &copy; 2003-<fmt:formatDate value="${now}" pattern="yyyy"/> Apache Software Foundation | &copy; 2025 Liferay, Inc.
       </div>
       
     </div>
