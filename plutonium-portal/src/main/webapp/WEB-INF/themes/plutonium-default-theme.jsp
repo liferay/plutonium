@@ -133,7 +133,7 @@ group (the left column) displays portlets with odd IDs, while the second group
 
     <!-- Footer block: copyright -->
     <div id="footer">
-       &copy; 2003-<fmt:formatDate value="${now}" pattern="yyyy"/> Apache Software Foundation
+       &copy; 2003-<fmt:formatDate value="${now}" pattern="yyyy"/> Apache Software Foundation | © 2025 Liferay, Inc.
     </div>
 
 </div>

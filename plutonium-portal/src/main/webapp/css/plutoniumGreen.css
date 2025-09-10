@@ -52,7 +52,7 @@ a.tooltip:hover span.tooltip {
 /** 'header' block **/
 
 #header {
-  background: #8DDFA5 url('../images/bannerGreen.png') no-repeat top left;
+  background: #8DDFA5 url('../images/banner.png') no-repeat top left;
   border-bottom: 1px solid #2E6794;
   width: auto;
   height: 50px;

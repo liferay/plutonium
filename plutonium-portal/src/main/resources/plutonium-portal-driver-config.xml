@@ -62,7 +62,7 @@
         <scope>com.liferay.plutonium</scope>
         <version>3.0.1</version>
       </identifier>
-      <source type="css">/css/plutoGreen.css</source>
+      <source type="css">/css/plutoniumGreen.css</source>
     </page-resource>
     <page-resource>
       <identifier>
