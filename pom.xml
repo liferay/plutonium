@@ -705,9 +705,9 @@ generate mailto links. -->
 						<!-- by default, the release build includes the V3 demos. To perform the release build without the demos, 
                  activate the 'excludeDemos profile 'arguments' line as shown below. -->
 						<!--
-            <arguments>-Ppluto,excludeDemos</arguments>
+            <arguments>-Pplutonium,excludeDemos</arguments>
             -->
-						<arguments>-Ppluto</arguments>
+						<arguments>-Pplutonium</arguments>
 					</configuration>
 				</plugin>
 				<!-- Javascript compressor plugin -->
