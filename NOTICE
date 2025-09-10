@@ -1,2 +1,8 @@
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
+
+The following files are Copyright 2014 IBM Corporation:
+plutonium-portal/src/main/webapp/javascript/portlet.js
+plutonium-portal/src/main/webapp/javascript/portletHubImpl.js
+
+Modifications Copyright 2025 Liferay, Inc.
