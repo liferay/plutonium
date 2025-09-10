@@ -14,7 +14,7 @@
 	</parent>
 	<artifactId>plutonium-util</artifactId>
 	<packaging>bundle</packaging>
-	<name>Apache Pluto Utilities</name>
+	<name>Liferay Plutonium Utilities</name>
 	<!-- The dependencies for the ApplicationServerHook project
        are those which need to be installed!
   -->

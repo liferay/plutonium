@@ -22,7 +22,7 @@
       <portlet-mode>HELP</portlet-mode>
     </supports>
     <portlet-info>
-      <title>About Apache Pluto</title>
+      <title>About Liferay Plutonium</title>
     </portlet-info>
   </portlet>
   
@@ -38,14 +38,14 @@
       <portlet-mode>HELP</portlet-mode>
     </supports>
     <portlet-info>
-      <title>Apache Pluto Portal Admin</title>
+      <title>Liferay Plutonium Portal Admin</title>
     </portlet-info>
   </portlet>
 
     <portlet>
         <description>Used to administer plutonium pages</description>
-        <portlet-name>PlutoPageAdmin</portlet-name>
-        <display-name>Pluto Page Administration Portlet</display-name>
+        <portlet-name>PlutoniumPageAdmin</portlet-name>
+        <display-name>Plutonium Page Administration Portlet</display-name>
         <portlet-class>com.liferay.plutonium.driver.portlets.PageAdminPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
@@ -53,7 +53,7 @@
             <portlet-mode>HELP</portlet-mode>
         </supports>
         <portlet-info>
-            <title>Pluto Page Administrator</title>
+            <title>Plutonium Page Administrator</title>
         </portlet-info>
     </portlet>  
 </portlet-app>

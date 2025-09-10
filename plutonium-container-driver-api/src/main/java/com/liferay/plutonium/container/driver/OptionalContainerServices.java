@@ -14,7 +14,7 @@ import com.liferay.plutonium.container.RequestDispatcherService;
 import com.liferay.plutonium.container.UserInfoService;
 
 /**
- * Defines the services necessary for integration between the Pluto Container
+ * Defines the services necessary for integration between the Plutonium Container
  * and a Portal.
  *
  * <p>NOTE: Backwards compatibility is not garaunteed against

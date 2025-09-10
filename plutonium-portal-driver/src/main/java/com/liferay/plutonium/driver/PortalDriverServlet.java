@@ -70,7 +70,7 @@ public class PortalDriverServlet extends HttpServlet {
    // HttpServlet Impl --------------------------------------------------------
 
    public String getServletInfo() {
-      return "Pluto Portal Driver Servlet";
+      return "Plutonium Portal Driver Servlet";
    }
 
    /**

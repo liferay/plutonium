@@ -19,7 +19,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.ContextLoaderListener;
 
 /**
- * Listener used to start up / shut down the Pluto Portal Driver upon startup /
+ * Listener used to start up / shut down the Plutonium Portal Driver upon startup /
  * showdown of the servlet context in which it resides.
  * <p/>
  * Startup Includes:
@@ -86,7 +86,7 @@ public class PortalStartupListener extends ContextLoaderListener
      */
     public void contextInitialized(ServletContextEvent event)
     {
-        LOG.info("Starting up Pluto Portal Driver. . .");
+        LOG.info("Starting up Plutonium Portal Driver. . .");
 
         final ServletContext servletContext = event.getServletContext();
 
@@ -136,9 +136,9 @@ public class PortalStartupListener extends ContextLoaderListener
 
         // Save portlet container to the servlet context scope.
         servletContext.setAttribute(CONTAINER_KEY, container);
-        LOG.info("Pluto portlet container started.");
+        LOG.info("Plutonium portlet container started.");
 
-        LOG.info("********** Pluto Portal Driver Started **********\n\n");
+        LOG.info("********** Plutonium Portal Driver Started **********\n\n");
     }
 
     /**
@@ -152,14 +152,14 @@ public class PortalStartupListener extends ContextLoaderListener
         ServletContext servletContext = event.getServletContext();
         if (LOG.isInfoEnabled())
         {
-            LOG.info("Shutting down Pluto Portal Driver...");
+            LOG.info("Shutting down Plutonium Portal Driver...");
         }
         destroyContainer(servletContext);
         destroyAdminConfiguration(servletContext);
         destroyDriverConfiguration(servletContext);
         if (LOG.isInfoEnabled())
         {
-            LOG.info("********** Pluto Portal Driver Shut Down **********\n\n");
+            LOG.info("********** Plutonium Portal Driver Shut Down **********\n\n");
         }
         super.contextDestroyed(event);
     }
@@ -176,7 +176,7 @@ public class PortalStartupListener extends ContextLoaderListener
     {
         if (LOG.isInfoEnabled())
         {
-            LOG.info("Shutting down Pluto Portal Driver...");
+            LOG.info("Shutting down Plutonium Portal Driver...");
         }
         PortletContainer container = (PortletContainer)
                 servletContext.getAttribute(CONTAINER_KEY);
@@ -187,7 +187,7 @@ public class PortalStartupListener extends ContextLoaderListener
                 container.destroy();
                 if (LOG.isInfoEnabled())
                 {
-                    LOG.info("Pluto Portal Driver shut down.");
+                    LOG.info("Plutonium Portal Driver shut down.");
                 }
             } catch (PortletContainerException ex)
             {
@@ -231,7 +231,7 @@ public class PortalStartupListener extends ContextLoaderListener
                 adminConfig.destroy();
                 if (LOG.isInfoEnabled())
                 {
-                    LOG.info("Pluto Portal Admin Config destroyed.");
+                    LOG.info("Plutonium Portal Admin Config destroyed.");
                 }
             } catch (DriverConfigurationException ex)
             {

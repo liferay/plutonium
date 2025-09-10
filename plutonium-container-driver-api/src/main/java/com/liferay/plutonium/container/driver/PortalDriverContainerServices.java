@@ -6,7 +6,7 @@
 package com.liferay.plutonium.container.driver;
 
 /**
- * Defines the additional services needed for the Pluto Portal Driver to integrate with the Pluto Container
+ * Defines the additional services needed for the Plutonium Portal Driver to integrate with the Plutonium Container
  * and accessed from the <code>com.liferay.plutonium.container.driver.PortletServlet3</code>
  * and the <code>com.liferay.plutonium.container.driver.impl.DefaultPortletInvokerService</code>.
  * These extra services are not required nor used by the container itself directly.

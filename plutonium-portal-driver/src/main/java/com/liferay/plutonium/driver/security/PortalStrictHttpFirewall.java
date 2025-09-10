@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletRequestWrapper;
  * This class is designed to override the default "strictHttpFirewall" bean that ships with Spring
  * Security. Its purpose is to override the {@link #getFirewalledRequest(HttpServletRequest)} method
  * so that the {@link FirewalledRequest#getParameter(String)} method can return the value of the
- * Spring "_csrf" URL parameter. This is necessary because Apache Pluto's portlet URLs do not follow
+ * Spring "_csrf" URL parameter. This is necessary because Liferay Plutonium's portlet URLs do not follow
  * a conventional name=value URL parameter syntax. Instead, are delimited by forward slashes and
  * have a "lifecycle;name:value" type of syntax.
  *

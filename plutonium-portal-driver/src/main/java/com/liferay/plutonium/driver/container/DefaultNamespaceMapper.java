@@ -21,7 +21,7 @@ public class DefaultNamespaceMapper implements NamespaceMapper {
 
     public String encode(PortletWindowID portletWindowId, String name) {
         StringBuffer buffer = new StringBuffer(50);
-        buffer.append("Pluto_");
+        buffer.append("Plutonium_");
         buffer.append(portletWindowId.getStringId());
         buffer.append('_');
         buffer.append(name);
@@ -29,11 +29,11 @@ public class DefaultNamespaceMapper implements NamespaceMapper {
     }
 
     public String decode(PortletWindowID portletWindowId, String name) {
-        if (!name.startsWith("Pluto_")) {
+        if (!name.startsWith("Plutonium_")) {
             return null;
         }
         StringBuffer buffer = new StringBuffer(50);
-        buffer.append("Pluto_");
+        buffer.append("Plutonium_");
         buffer.append(portletWindowId.getStringId());
         buffer.append('_');
         if (!name.startsWith(buffer.toString())) {

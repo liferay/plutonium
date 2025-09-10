@@ -13,8 +13,8 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>plutonium-ant-tasks</artifactId>
-	<name>Apache Pluto Ant Tasks</name>
-	<description>The Pluto Ant Tasks are used to assemble, deploy, and publish portlets to the Pluto Portal Driver.</description>
+	<name>Liferay Plutonium Ant Tasks</name>
+	<description>The Plutonium Ant Tasks are used to assemble, deploy, and publish portlets to the Plutonium Portal Driver.</description>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.plutonium</groupId>

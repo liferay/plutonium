@@ -127,7 +127,7 @@ public class PortletServlet3 extends HttpServlet {
    // HttpServlet Impl --------------------------------------------------------
 
    public String getServletInfo() {
-      return "Pluto PortletServlet3 [" + portletName + "]";
+      return "Plutonium PortletServlet3 [" + portletName + "]";
    }
 
    /**
@@ -237,8 +237,8 @@ public class PortletServlet3 extends HttpServlet {
    }
 
    protected boolean attemptRegistration(ServletContext context, ClassLoader paClassLoader) {
-      if (PlutoServices.getServices() != null) {
-         contextService = PlutoServices.getServices().getPortletContextService();
+      if (PlutoniumServices.getServices() != null) {
+         contextService = PlutoniumServices.getServices().getPortletContextService();
          try {
             ServletConfig sConfig = getServletConfig();
             if (sConfig == null) {
@@ -516,7 +516,7 @@ public class PortletServlet3 extends HttpServlet {
          }
          // The requested method is ADMIN: call handlers.
          else if (methodId == PortletInvokerService.METHOD_ADMIN) {
-            PortalAdministrationService pas = PlutoServices.getServices().getPortalAdministrationService();
+            PortalAdministrationService pas = PlutoniumServices.getServices().getPortalAdministrationService();
 
             for (AdministrativeRequestListener l : pas.getAdministrativeRequestListeners()) {
                l.administer(portletRequest, portletResponse);
@@ -594,7 +594,7 @@ public class PortletServlet3 extends HttpServlet {
    }
 
    protected void notify(PortletInvocationEvent event, boolean pre, Throwable e) {
-      PortalAdministrationService pas = PlutoServices.getServices().getPortalAdministrationService();
+      PortalAdministrationService pas = PlutoniumServices.getServices().getPortalAdministrationService();
 
       for (PortletInvocationListener listener : pas.getPortletInvocationListeners()) {
          if (pre) {

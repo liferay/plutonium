@@ -28,7 +28,7 @@ import com.liferay.plutonium.driver.services.portal.PortletWindowConfig;
 import com.liferay.plutonium.driver.services.portal.RenderConfigService;
 
 
-public class PageAdminPortlet extends GenericPlutoPortlet {
+public class PageAdminPortlet extends GenericPlutoniumPortlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(PageAdminPortlet.class);
     private static final String JSP_DIR = "/WEB-INF/fragments/admin/page/";
@@ -111,7 +111,7 @@ public class PageAdminPortlet extends GenericPlutoPortlet {
 
     /**
      * Removes a page from the portal ignoring any requests to remove the default page
-     * or the Pluto Admin page. 
+     * or the Plutonium Admin page. 
      * 
      * The page's portlets are still available, but no longer associated with the deleted page.
      * 
@@ -129,9 +129,9 @@ public class PageAdminPortlet extends GenericPlutoPortlet {
 			//TODO: send message back to UI
 	    	return;
 	    }
-        //make sure we are not deleting the Pluto Admin page
-		if (page.equalsIgnoreCase("Pluto Admin")) {
-			LOG.warn("Trying to delete the Pluto Admin page. Page deletion will be ignored.");
+        //make sure we are not deleting the Plutonium Admin page
+		if (page.equalsIgnoreCase("Plutonium Admin")) {
+			LOG.warn("Trying to delete the Plutonium Admin page. Page deletion will be ignored.");
 			return;
 		}
 

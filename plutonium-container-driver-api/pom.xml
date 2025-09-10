@@ -14,7 +14,7 @@
 	</parent>
 	<artifactId>plutonium-container-driver-api</artifactId>
 	<packaging>bundle</packaging>
-	<name>Apache Pluto Container Driver API</name>
+	<name>Liferay Plutonium Container Driver API</name>
 	<dependencies>
 		<!-- Specification Libraries =========================================== -->
 		<dependency>

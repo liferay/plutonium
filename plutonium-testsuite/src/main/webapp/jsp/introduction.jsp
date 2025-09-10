@@ -20,7 +20,7 @@
   This portlet is a portlet specification compatibility test portlet.
   It provides several tests of verying complexities which will assist in
   evaluating compliance with the portlet specification. It was originally
-  developed for testing Apache Pluto, however, it does not utilize any
+  developed for testing Liferay Plutonium, however, it does not utilize any
   proprietary APIs and should work with all compliant portlet containers.
 </p>
 

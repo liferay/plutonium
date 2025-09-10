@@ -19,7 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Encapsulation of the Pluto Driver ResourceConfig Info.
+ * Encapsulation of the Plutonium Driver ResourceConfig Info.
  *
  * @version 1.0
  * @since Sep 23, 2004

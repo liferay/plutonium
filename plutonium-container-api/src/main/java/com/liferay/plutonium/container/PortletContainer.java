@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * The publicized entry point into Pluto. The base functionality of the portlet
+ * The publicized entry point into Plutonium. The base functionality of the portlet
  * container can be enhanced or even modified by PortletContainerServices.
  * <p/>
  * <P> The methods of this class have to be called in the following order:

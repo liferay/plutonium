@@ -14,7 +14,7 @@
 	</parent>
 	<artifactId>plutonium-maven-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
-	<name>Maven Pluto Installer Plugin</name>
+	<name>Maven Plutonium Installer Plugin</name>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.plutonium</groupId>

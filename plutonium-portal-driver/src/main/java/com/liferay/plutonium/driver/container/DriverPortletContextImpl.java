@@ -13,7 +13,7 @@ import com.liferay.plutonium.container.impl.PortletContextImpl;
 import com.liferay.plutonium.container.om.portlet.PortletApplicationDefinition;
 
 /**
- * Pluto's Portlet Context Implementation. This class implements the
+ * Plutonium's Portlet Context Implementation. This class implements the
  * <code>InternalPortletContext</code> which provides container specific
  * information needed for processing.
  * 
@@ -36,7 +36,7 @@ public class DriverPortletContextImpl extends PortletContextImpl implements Driv
                               PortletApplicationDefinition portletApp,
                               RequestDispatcherService rdService)
     {
-        super(servletContext, portletApp, PlutoContainerInfo.getInfo(), Configuration.getSupportedContainerRuntimeOptions(), rdService);
+        super(servletContext, portletApp, PlutoniumContainerInfo.getInfo(), Configuration.getSupportedContainerRuntimeOptions(), rdService);
         init();
     }
     

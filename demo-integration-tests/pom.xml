@@ -13,7 +13,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>portlet-demo-integration-tests</artifactId>
-	<description>Integration Tests for the Pluto Demos</description>
+	<description>Integration Tests for the Plutonium Demos</description>
 	<packaging>jar</packaging>
 	<licenses>
 		<license>
@@ -29,7 +29,7 @@
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<test.portal.name>Pluto</test.portal.name>
+		<test.portal.name>Plutonium</test.portal.name>
 		<!-- test.context.base context string used when addressing test pages. Used by module stylesheet -->
 		<test.context.base>plutonium/portal/</test.context.base>
 		<test.dependency.portlet.default.jquery.version>1.12.3</test.dependency.portlet.default.jquery.version>
@@ -47,7 +47,7 @@
 		<test.server.host>localhost</test.server.host>
 		<test.server.port>8080</test.server.port>
 		<!-- Configuration of URL to login page -->
-		<test.server.login.url>http://${test.server.host}:${test.server.port}/plutonium/portal/About Apache Pluto</test.server.login.url>
+		<test.server.login.url>http://${test.server.host}:${test.server.port}/plutonium/portal/About Liferay Plutonium</test.server.login.url>
 		<!-- HTML field IDs and values for username & password to enable automatic  login -->
 		<!-- User specified must be in 'tckuser' role. Please configure 'tckuser' role for the specified user in tomcat-users.xml -->
 		<test.server.username.id>j_username</test.server.username.id>

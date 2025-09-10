@@ -14,7 +14,7 @@ import com.liferay.plutonium.container.PortletContainer;
 import com.liferay.plutonium.container.PortletContainerException;
 import com.liferay.plutonium.container.PortletWindow;
 import com.liferay.plutonium.container.PortletWindowID;
-import com.liferay.plutonium.container.driver.PlutoServices;
+import com.liferay.plutonium.container.driver.PlutoniumServices;
 import com.liferay.plutonium.container.om.portlet.PortletDefinition;
 import com.liferay.plutonium.driver.services.portal.PortletWindowConfig;
 import com.liferay.plutonium.driver.url.PortalURL;
@@ -48,7 +48,7 @@ public class PortletWindowImpl implements PortletWindow {
         try
         {
             String applicationName = config.getContextPath();
-            this.portlet = PlutoServices.getServices().getPortletRegistryService().getPortlet(applicationName, config.getPortletName());
+            this.portlet = PlutoniumServices.getServices().getPortletRegistryService().getPortlet(applicationName, config.getPortletName());
         }
         catch (PortletContainerException ex)
         {

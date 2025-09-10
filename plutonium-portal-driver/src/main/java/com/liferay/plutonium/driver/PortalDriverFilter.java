@@ -31,7 +31,7 @@ import java.io.IOException;
 /**
  * The controller filter used to drive static portlet pages (see
  * <a href="http://liferay.com/plutonium/faq.html#simple-embed">
- * http://liferay.com/plutonium/faq.html#simple-embed</a> in Pluto FAQ).
+ * http://liferay.com/plutonium/faq.html#simple-embed</a> in Plutonium FAQ).
  *
  * @version 1.0
  * @since March 28, 2006

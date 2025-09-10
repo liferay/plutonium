@@ -11,11 +11,11 @@ import com.liferay.plutonium.container.ContainerInfo;
  * @version $Id$
  *
  */
-public final class PlutoContainerInfo implements ContainerInfo
+public final class PlutoniumContainerInfo implements ContainerInfo
 {
-    private static final ContainerInfo instance = new PlutoContainerInfo();
+    private static final ContainerInfo instance = new PlutoniumContainerInfo();
     
-    private PlutoContainerInfo()
+    private PlutoniumContainerInfo()
     {
     }
     

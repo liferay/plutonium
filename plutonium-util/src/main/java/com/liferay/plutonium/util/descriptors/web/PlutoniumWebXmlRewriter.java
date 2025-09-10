@@ -39,7 +39,7 @@ import org.xml.sax.SAXException;
 /**
  * @version $Id$
  */
-public class PlutoWebXmlRewriter
+public class PlutoniumWebXmlRewriter
 {
     private static final String NAMESPACE_PREFIX = "xp";
     
@@ -113,7 +113,7 @@ public class PlutoWebXmlRewriter
     private XPath xpath;
     private boolean descriptor23;
     
-    public PlutoWebXmlRewriter(Document descriptor)
+    public PlutoniumWebXmlRewriter(Document descriptor)
     {
         this.descriptor = descriptor;
         this.root = descriptor.getDocumentElement();
@@ -150,7 +150,7 @@ public class PlutoWebXmlRewriter
         }
     }
     
-    public PlutoWebXmlRewriter(InputStream source) throws Exception
+    public PlutoniumWebXmlRewriter(InputStream source) throws Exception
     {
         this(parseXml(source));
     }
@@ -303,7 +303,7 @@ public class PlutoWebXmlRewriter
         Element servletMapName = descriptor.createElementNS(namespace, "servlet-name");
         servletMapName.setTextContent(name);
         Element servletUrlPattern = descriptor.createElementNS(namespace, "url-pattern");
-        servletUrlPattern.setTextContent("/PlutoInvoker/"+name);
+        servletUrlPattern.setTextContent("/PlutoniumInvoker/"+name);
 
         servletMappingElement.appendChild(servletMapName);
         servletMappingElement.appendChild(servletUrlPattern);

@@ -132,7 +132,7 @@ public abstract class PortletMimeResponseContextImpl extends PortletResponseCont
          type = getServletResponse().getContentType();
          if (type == null) {
             if (!getLifecycle().equals(PortletRequest.RESOURCE_PHASE)) {
-               // default MIME type for Pluto
+               // default MIME type for Plutonium
                type = "text/html";
             }
          } else {
@@ -234,14 +234,14 @@ public abstract class PortletMimeResponseContextImpl extends PortletResponseCont
 
    @Override
    public void setContentType(String contentType) {
-      // The content type is set by Pluto for the render & header phases
+      // The content type is set by Plutonium for the render & header phases
       if (!isClosed()) { 
          if (getLifecycle().equals(PortletRequest.RESOURCE_PHASE)) {
             getServletResponse().setContentType(contentType);
          } else {
             String type = getServletResponse().getContentType();
             if (type == null) {
-               // default MIME type for Pluto
+               // default MIME type for Plutonium
                type = "text/html";
             } else {
                // ignore charset parameter

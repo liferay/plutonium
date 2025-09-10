@@ -8,7 +8,7 @@ package com.liferay.plutonium.util.assemble;
 import java.io.File;
 
 /**
- * The Pluto Assembler configuration encapsulates the configuration
+ * The Plutonium Assembler configuration encapsulates the configuration
  * used by assembler implementations.
  */
 public class AssemblerConfig {

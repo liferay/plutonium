@@ -14,7 +14,7 @@
    </parent>
    <artifactId>plutonium-testsuite</artifactId>
    <packaging>war</packaging>
-   <name>Apache Pluto Testsuite Portlet</name>
+   <name>Liferay Plutonium Testsuite Portlet</name>
    <dependencies>
       <dependency>
          <groupId>jakarta.portlet</groupId>

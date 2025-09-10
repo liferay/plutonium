@@ -30,17 +30,17 @@ import com.liferay.plutonium.util.install.ServerConfig;
  *
  * @since 07/29/2005
  */
-public abstract class AbstractManagementMojo extends AbstractPlutoMojo {
+public abstract class AbstractManagementMojo extends AbstractPlutoniumMojo {
 
     /**
      * @parameter expression="${domain}"
      */
-    protected String domain = "PlutoDomain";
+    protected String domain = "PlutoniumDomain";
 
     /**
      * @parameter expression="${server}"
      */
-    protected String server = "PlutoServer";
+    protected String server = "PlutoniumServer";
 
     /**
      * @parameter expression="${host}"

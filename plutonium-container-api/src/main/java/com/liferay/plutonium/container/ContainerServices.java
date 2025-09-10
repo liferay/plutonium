@@ -9,7 +9,7 @@ import jakarta.portlet.PortalContext;
 
 /**
  * This interface defines the services required for integration between the
- * Pluto Portlet Container and a Portal.
+ * Plutonium Portlet Container and a Portal.
  */
 public interface ContainerServices {
 

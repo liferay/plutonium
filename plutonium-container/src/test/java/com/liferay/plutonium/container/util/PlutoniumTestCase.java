@@ -19,7 +19,7 @@ import static org.junit.Assert.fail;
  * @version 1.0
  * @since June 1, 2005
  */
-public abstract class PlutoTestCase {
+public abstract class PlutoniumTestCase {
 
     protected Mockery context;
 

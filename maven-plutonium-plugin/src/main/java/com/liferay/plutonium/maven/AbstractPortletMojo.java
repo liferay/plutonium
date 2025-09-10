@@ -9,7 +9,7 @@ package com.liferay.plutonium.maven;
  * @todo Document
  * @since Jul 30, 2005
  */
-public abstract class AbstractPortletMojo extends AbstractPlutoMojo {
+public abstract class AbstractPortletMojo extends AbstractPlutoniumMojo {
 
 
 }

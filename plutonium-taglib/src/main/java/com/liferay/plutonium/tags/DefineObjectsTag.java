@@ -7,7 +7,7 @@ package com.liferay.plutonium.tags;
 
 /**
  * Backwards compatibility JSR-168 DefineObjectsTag provided for old
- * Pluto 1.0.1 portlet.tld usages.
+ * Plutonium 1.0.1 portlet.tld usages.
  * <p>
  * Although a portlet.tld should not be provided by Portlet Applications
  * themselves but "injected" by the target portlet container, fact is many

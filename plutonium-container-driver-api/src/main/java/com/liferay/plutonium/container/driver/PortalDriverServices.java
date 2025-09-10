@@ -8,7 +8,7 @@ package com.liferay.plutonium.container.driver;
 import com.liferay.plutonium.container.ContainerServices;
 
 /**
- * Combines the ContainerServices and the additional services needed for the Pluto Portal Driver to integrate with the Pluto Container
+ * Combines the ContainerServices and the additional services needed for the Plutonium Portal Driver to integrate with the Plutonium Container
  *
  * @since 2.0
  * @version $Id$

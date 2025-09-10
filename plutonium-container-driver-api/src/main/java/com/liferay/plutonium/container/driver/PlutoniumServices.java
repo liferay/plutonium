@@ -20,18 +20,18 @@ import com.liferay.plutonium.container.RequestDispatcherService;
 import com.liferay.plutonium.container.UserInfoService;
 
 
-public class PlutoServices implements PortalDriverServices
+public class PlutoniumServices implements PortalDriverServices
 {
     private PortalDriverServices driverServices;
     
-    private static PlutoServices singleton;
+    private static PlutoniumServices singleton;
 
-    public static PlutoServices getServices()
+    public static PlutoniumServices getServices()
     {
         return singleton;
     }
     
-    public PlutoServices(PortalDriverServices driverServices)
+    public PlutoniumServices(PortalDriverServices driverServices)
     {
         singleton = this;
         this.driverServices = driverServices;

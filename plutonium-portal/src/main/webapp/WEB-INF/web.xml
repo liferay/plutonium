@@ -10,7 +10,7 @@
                       https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
 		 version="6.0">
 
-	<display-name>Apache Pluto Portal Driver</display-name>
+	<display-name>Liferay Plutonium Portal Driver</display-name>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -49,8 +49,8 @@
 	</listener>
 
 	<servlet>
-		<description>Pluto Portal Driver Controller</description>
-		<display-name>Pluto Portal Driver</display-name>
+		<description>Plutonium Portal Driver Controller</description>
+		<display-name>Plutonium Portal Driver</display-name>
 		<servlet-name>plutoPortalDriver</servlet-name>
 		<servlet-class>com.liferay.plutonium.driver.PortalDriverServlet</servlet-class>
 		<async-supported>true</async-supported>
@@ -60,8 +60,8 @@
 	</servlet>
 
 	<servlet>
-		<description>Pluto Portal Driver Logout</description>
-		<display-name>Pluto Portal Driver</display-name>
+		<description>Plutonium Portal Driver Logout</description>
+		<display-name>Plutonium Portal Driver</display-name>
 		<servlet-name>plutoPortalDriverLogout</servlet-name>
 		<servlet-class>com.liferay.plutonium.driver.PortalDriverLogoutServlet</servlet-class>
 		<async-supported>true</async-supported>
@@ -75,8 +75,8 @@
 	</servlet>
 
 	<servlet>
-		<description>Pluto TCK Driver Controller</description>
-		<display-name>Pluto TCK Driver</display-name>
+		<description>Plutonium TCK Driver Controller</description>
+		<display-name>Plutonium TCK Driver</display-name>
 		<servlet-name>tckDriver</servlet-name>
 		<servlet-class>com.liferay.plutonium.driver.TCKDriverServlet</servlet-class>
 	</servlet>
@@ -102,11 +102,11 @@
 	</servlet>
 
 	<servlet>
-		<servlet-name>PlutoPageAdmin</servlet-name>
+		<servlet-name>PlutoniumPageAdmin</servlet-name>
 		<servlet-class>com.liferay.plutonium.container.driver.PortletServlet</servlet-class>
 		<init-param>
 			<param-name>portlet-name</param-name>
-			<param-value>PlutoPageAdmin</param-value>
+			<param-value>PlutoniumPageAdmin</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -133,17 +133,17 @@
 
 	<servlet-mapping>
 		<servlet-name>AboutPortlet</servlet-name>
-		<url-pattern>/PlutoInvoker/AboutPortlet</url-pattern>
+		<url-pattern>/PlutoniumInvoker/AboutPortlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>AdminPortlet</servlet-name>
-		<url-pattern>/PlutoInvoker/AdminPortlet</url-pattern>
+		<url-pattern>/PlutoniumInvoker/AdminPortlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>PlutoPageAdmin</servlet-name>
-		<url-pattern>/PlutoInvoker/PlutoPageAdmin</url-pattern>
+		<servlet-name>PlutoniumPageAdmin</servlet-name>
+		<url-pattern>/PlutoniumInvoker/PlutoniumPageAdmin</url-pattern>
 	</servlet-mapping>
 
 	<jsp-config>

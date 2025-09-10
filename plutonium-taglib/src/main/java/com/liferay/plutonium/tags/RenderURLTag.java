@@ -6,8 +6,8 @@
 package com.liferay.plutonium.tags;
 
 /**
- * Backwards compatibility Pluto 1.0.1 RenderURLTag providing support for old
- * Pluto 1.0.1 portlet.tld usages.
+ * Backwards compatibility Plutonium 1.0.1 RenderURLTag providing support for old
+ * Plutonium 1.0.1 portlet.tld usages.
  * <p>
  * Although a portlet.tld should not be provided by Portlet Applications
  * themselves but "injected" by the target portlet container, fact is many

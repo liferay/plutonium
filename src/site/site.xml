@@ -5,10 +5,10 @@
  * SPDX-License-Identifier: Apache-2.0
  -->
 
-<project name="Pluto">
+<project name="Plutonium">
   
   <bannerLeft>
-    <name>Pluto</name>
+    <name>Plutonium</name>
     <src>http://liferay.com/plutonium/images/apache-portals.gif</src>
     <href>http://liferay.com/plutonium/</href>
   </bannerLeft>
@@ -37,8 +37,8 @@
       <item name="JSR 168 JCP Page" href="http://jcp.org/en/jsr/detail?id=168"/>
     </links>
     
-    <menu name="The Pluto Project">
-      <item name="About Pluto" href="/index.html"/>
+    <menu name="The Plutonium Project">
+      <item name="About Plutonium" href="/index.html"/>
       <item name="Mission" href="/mission.html"/>
       <item name="Download" href="/download.html"/>
       <item name="News" href="/news.html"/>
@@ -49,12 +49,12 @@
       <item name="Resources" href="/resources.html"/>
       
       <item name="FAQ" href="/faq.html"/>
-      <item name="Wiki" href="http://wiki.apache.org/portals/Pluto"/>
+      <item name="Wiki" href="http://wiki.apache.org/portals/Plutonium"/>
       <item name="Issue Tracker (JIRA)" href="https://issues.apache.org/jira/browse/PLUTO"/>
       <item name="Get Involved" href="/helping.html"/>
     </menu>
 
-	<menu name="Pluto 3.0">
+	<menu name="Plutonium 3.0">
       <item name="Getting Started" href="/v30/getting-started.html"/>
       <item name="Deploying Portlets" href="/v30/deploying.html"/>
       <item name="Portlet Concepts" href="/v30/portlet-api.html"/>
@@ -63,16 +63,16 @@
       <item name="Release Notes" href="/v30/release-notes.html"/>
 	</menu>    
 	
-	<menu name="Pluto 2.0">
+	<menu name="Plutonium 2.0">
       <item name="Getting Started" href="/v20/getting-started.html"/>
       <item name="Deploying" href="/v20/deploying.html"/>
       <item name="Embedding" href="/v20/embedding.html"/>
       <item name="Release Notes" href="/v20/release-notes.html"/>
       <item name="App Servers" href="/v20/app-servers.html"/>
-      <item name="Powered By Pluto" href="/v20/powered.html"/>
+      <item name="Powered By Plutonium" href="/v20/powered.html"/>
 	</menu>    
 	
-    <menu name="Pluto 1.1">
+    <menu name="Plutonium 1.1">
       <item name="Getting Started" href="/v11/getting-started.html"/>
       <item name="Deploying" href="/v11/deploying.html"/>
       <item name="Release Notes" href="/v11/release-notes.html"/>

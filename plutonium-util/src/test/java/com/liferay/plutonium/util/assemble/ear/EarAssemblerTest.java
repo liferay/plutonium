@@ -20,7 +20,7 @@ import com.liferay.plutonium.container.om.portlet.PortletDefinition;
 import com.liferay.plutonium.util.assemble.ArchiveBasedAssemblyTest;
 import com.liferay.plutonium.util.assemble.Assembler;
 import com.liferay.plutonium.util.assemble.AssemblerConfig;
-import com.liferay.plutonium.util.descriptors.web.PlutoWebXmlRewriter;
+import com.liferay.plutonium.util.descriptors.web.PlutoniumWebXmlRewriter;
 
 /**
  * This test assembles an EAR file which contains a single portlet
@@ -55,7 +55,7 @@ public class EarAssemblerTest extends ArchiveBasedAssemblyTest {
     
     public void testEarAssemblyInPlace() throws Exception {
         // copy the test ear file to a temp directory, so we don't overwrite the
-        // test ear file distributed with Pluto.
+        // test ear file distributed with Plutonium.
         File inplaceEarFile = File.createTempFile( earFile.getName(), ".ear" );
         FileUtils.copyFile( earFile, inplaceEarFile );
         
@@ -76,7 +76,7 @@ public class EarAssemblerTest extends ArchiveBasedAssemblyTest {
         PortletAppDescriptorService portletSvc = new PortletAppDescriptorServiceImpl();
         PortletApplicationDefinition portletApp = null;
 
-        PlutoWebXmlRewriter webXmlRewriter = null;
+        PlutoniumWebXmlRewriter webXmlRewriter = null;
         
         int earEntryCount = 0;
         int warEntryCount = 0;
@@ -97,7 +97,7 @@ public class EarAssemblerTest extends ArchiveBasedAssemblyTest {
                                 new ByteArrayInputStream( IOUtils.toByteArray( warIn ) ) );
                     }
                     if ( Assembler.SERVLET_XML.equals( warEntry.getName() ) ) {
-                        webXmlRewriter = new PlutoWebXmlRewriter( new ByteArrayInputStream( IOUtils.toByteArray( warIn ) ) );
+                        webXmlRewriter = new PlutoniumWebXmlRewriter( new ByteArrayInputStream( IOUtils.toByteArray( warIn ) ) );
                     }
                 }                
             }

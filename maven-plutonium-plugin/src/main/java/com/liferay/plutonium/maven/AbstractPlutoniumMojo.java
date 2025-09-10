@@ -15,7 +15,7 @@ import org.apache.maven.project.MavenProject;
  * @todo Document
  * @since Jul 30, 2005
  */
-public abstract class AbstractPlutoMojo extends AbstractMojo {
+public abstract class AbstractPlutoniumMojo extends AbstractMojo {
 
     /**
      * @parameter expression="${installDir}"
@@ -37,7 +37,7 @@ public abstract class AbstractPlutoMojo extends AbstractMojo {
         } catch (MojoExecutionException ex) {
             throw ex;
         } catch (Exception ex) {
-            throw new MojoExecutionException("Error Installing Pluto", ex);
+            throw new MojoExecutionException("Error Installing Plutonium", ex);
         }
     }
 

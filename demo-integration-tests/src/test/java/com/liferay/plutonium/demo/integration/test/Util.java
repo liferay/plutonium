@@ -32,9 +32,9 @@ public final class Util {
 
    public static String encodeURL(String url) {
 
-      String portalName = System.getProperty("test.portal.name", "Pluto");
+      String portalName = System.getProperty("test.portal.name", "Plutonium");
 
-      if ("Pluto".equalsIgnoreCase(portalName)) {
+      if ("Plutonium".equalsIgnoreCase(portalName)) {
          try {
             return URLEncoder.encode(url, StandardCharsets.UTF_8.toString());
          }

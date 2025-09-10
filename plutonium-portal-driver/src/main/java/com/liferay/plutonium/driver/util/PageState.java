@@ -122,13 +122,13 @@ public class PageState {
    }
 
    /**
-    * Returns a Pluto namespace string for the input portlet ID.
+    * Returns a Plutonium namespace string for the input portlet ID.
     * 
     * @param portletId
     * @return namespace string for the portlet ID
     */
    public String getNameSpace(String portletId) {
-      StringBuffer ns = new StringBuffer("Pluto_");
+      StringBuffer ns = new StringBuffer("Plutonium_");
       for (int ii = 0; ii < portletId.length(); ii++) {
          if (Character.isJavaIdentifierPart(portletId.charAt(ii))) {
             ns.append(portletId.charAt(ii));

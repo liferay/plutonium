@@ -23,7 +23,7 @@ import com.liferay.plutonium.container.PortletRequestContext;
 import com.liferay.plutonium.container.PortletStateAwareResponseContext;
 import com.liferay.plutonium.container.PortletURLProvider;
 import com.liferay.plutonium.container.PortletWindow;
-import com.liferay.plutonium.container.driver.PlutoServices;
+import com.liferay.plutonium.container.driver.PlutoniumServices;
 import com.liferay.plutonium.container.impl.MutableRenderParametersImpl;
 import com.liferay.plutonium.driver.core.PortalRequestContext;
 import com.liferay.plutonium.driver.url.PortalURL;
@@ -48,7 +48,7 @@ public abstract class PortletStateAwareResponseContextImpl extends PortletRespon
       super(container, containerRequest, containerResponse, window, requestContext);
       this.portletURLProvider = new PortletURLProviderImpl(getPortalURL(), PortletURLProvider.TYPE.RENDER, window,
             getRequestContext());
-      this.eventProviderImpl = new EventProviderImpl(getPortletWindow(), PlutoServices.getServices()
+      this.eventProviderImpl = new EventProviderImpl(getPortletWindow(), PlutoniumServices.getServices()
             .getPortletRegistryService());
 
       if (isDebug) {

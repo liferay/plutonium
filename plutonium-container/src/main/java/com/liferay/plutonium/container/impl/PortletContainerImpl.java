@@ -47,7 +47,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * Default Pluto Container implementation.
+ * Default Plutonium Container implementation.
  *
  * @version 1.0
  * @since Sep 18, 2004

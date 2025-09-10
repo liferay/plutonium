@@ -95,7 +95,7 @@ public class MessageBoxPortlet extends GenericPortlet {
 
       try {
          // Both pieces of info are transported in a delimted string rather than 
-         // an array since the Pluto impl doesn't seem to get along with array types as 
+         // an array since the Plutonium impl doesn't seem to get along with array types as 
          // event payload types.
          String val = (String) req.getEvent().getValue();
          msg = val.split(DELIM);

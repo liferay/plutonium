@@ -12,7 +12,7 @@
 
 <html>
 <head>
-    <title>Pluto Portal</title>
+    <title>Plutonium Portal</title>
     <style type="text/css" title="currentStyle" media="screen">
         @import "<c:out value="${pageContext.request.contextPath}"/>/css/plutonium.css";
         @import "<c:out value="${pageContext.request.contextPath}"/>/css/portlet-spec-1.0.css";
@@ -25,9 +25,9 @@
 
 <div id="portal">
 
-    <!-- Header block: the Apache Pluto banner image and description -->
+    <!-- Header block: the Liferay Plutonium banner image and description -->
     <div id="header">
-        <h1>Apache Pluto</h1>
+        <h1>Liferay Plutonium</h1>
 
         <p>An Apache Portals Project</p>
     </div>

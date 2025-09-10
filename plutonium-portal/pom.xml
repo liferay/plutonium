@@ -14,7 +14,7 @@
 	</parent>
 	<artifactId>plutonium-portal</artifactId>
 	<packaging>war</packaging>
-	<name>Apache Pluto Portal</name>
+	<name>Liferay Plutonium Portal</name>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.plutonium</groupId>
@@ -225,7 +225,7 @@
 				</plugins>
 			</build>
 		</profile>
-		<!-- Build Pluto for deployment without the demos -->
+		<!-- Build Plutonium for deployment without the demos -->
 		<profile>
 			<id>excludeDemos</id>
 			<activation>

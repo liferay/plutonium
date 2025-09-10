@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The installation configuration used to install Pluto to servlet container.
+ * The installation configuration used to install Plutonium to servlet container.
  */
 public class InstallationConfig {
 

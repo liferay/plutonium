@@ -30,7 +30,7 @@ http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
       </supports>
       <supported-locale>en</supported-locale>
       <portlet-info>
-         <title>About Apache Pluto</title>
+         <title>About Liferay Plutonium</title>
       </portlet-info>
    </portlet>
    <custom-portlet-mode id="mode1">

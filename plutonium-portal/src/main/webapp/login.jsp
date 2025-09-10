@@ -14,7 +14,7 @@
 <html>
   
   <head>
-    <title>Pluto Portal</title>
+    <title>Plutonium Portal</title>
     <style type="text/css" title="currentStyle" media="screen">
       @import "<c:out value="${pageContext.request.contextPath}"/>/css/plutonium.css";
     </style>
@@ -26,7 +26,7 @@
   <body>
     <div id="portal" style="width: 600px;">
       <div id="header">
-        <h1>Apache Pluto</h1>
+        <h1>Liferay Plutonium</h1>
         <p>A Apache Portals Project</p>
       </div>
       <div id="content">
@@ -38,7 +38,7 @@
           </c:if>
           <form method="POST" action="j_security_check">
             <fieldset>
-              <legend>Login to Pluto</legend>
+              <legend>Login to Plutonium</legend>
               <div>
                 <label for="j_username">User Name</label>
                 <input type="text" name="j_username" id="j_username"/>

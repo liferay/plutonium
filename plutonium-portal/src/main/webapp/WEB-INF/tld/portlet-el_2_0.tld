@@ -9,7 +9,7 @@
         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
                             https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
         version="3.0">
-    <description>Pluto EL Tag Library</description>
+    <description>Plutonium EL Tag Library</description>
     <tlib-version>2.0</tlib-version>
     <short-name>portlet_2_0-el</short-name>
     <uri>http://liferay.com/plutonium/portlet-el_2_0</uri>

@@ -15,7 +15,7 @@ import com.liferay.plutonium.container.PortletURLListenerService;
 
 /**
  * This interface defines the services required for integration between the
- * Pluto Portlet Container and a Portal.
+ * Plutonium Portlet Container and a Portal.
  *
  */
 public interface RequiredContainerServices {

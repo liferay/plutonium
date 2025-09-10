@@ -15,7 +15,7 @@
 	<groupId>com.liferay.plutonium.templating</groupId>
 	<artifactId>templating</artifactId>
 	<packaging>pom</packaging>
-	<name>Pluto Templating</name>
+	<name>Plutonium Templating</name>
 	<modules>
 		<module>thymeleaf-portlet-api</module>
 		<module>thymeleaf-mvc-portlet-api</module>

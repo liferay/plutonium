@@ -80,7 +80,7 @@ public abstract class BaseURLTag extends TagSupport {
             try {                   
                 url.setSecure(isSecure());                    
             } catch (PortletSecurityException e) {
-                // ignore exception as Pluto doesn't support setSecure
+                // ignore exception as Plutonium doesn't support setSecure
                 // throw new JspException(e);                    
             }
         }

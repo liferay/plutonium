@@ -374,7 +374,7 @@ public abstract class PortletRequestImpl implements PortletRequest {
          contentTypes = new ArrayList<String>();
          String type = getServletResponse().getContentType();
          if (type == null) {
-            // default MIME type for Pluto
+            // default MIME type for Plutonium
             type = "text/html";
          } else {
             // ignore charset parameter

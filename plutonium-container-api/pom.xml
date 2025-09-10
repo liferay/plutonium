@@ -14,7 +14,7 @@
 	</parent>
 	<artifactId>plutonium-container-api</artifactId>
 	<packaging>bundle</packaging>
-	<name>Apache Pluto Container API</name>
+	<name>Liferay Plutonium Container API</name>
 	<dependencies>
 		<!-- Specification Libraries =========================================== -->
 		<dependency>

@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 /**
- * Process logout from the Pluto portal.
+ * Process logout from the Plutonium portal.
  *
  *
  */

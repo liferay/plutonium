@@ -9,10 +9,10 @@
 	<groupId>com.liferay.plutonium</groupId>
 	<artifactId>plutonium-parent</artifactId>
 	<packaging>pom</packaging>
-	<name>Apache Pluto</name>
+	<name>Liferay Plutonium</name>
 	<version>4.0.0-SNAPSHOT</version>
 	<!-- Due to a bug in maven 2.0, the description must not contain any line breaks or tabs. -->
-	<description>Apache Pluto is the Reference Implementation of the Java Portlet Specification.</description>
+	<description>Liferay Plutonium is the Reference Implementation of the Java Portlet Specification.</description>
 	<url>http://liferay.com/plutonium</url>
 	<issueManagement>
 		<system>jira</system>
@@ -22,28 +22,28 @@
 	<!-- Mailing Lists ======================================================= -->
 	<mailingLists>
 		<mailingList>
-			<name>Pluto User List</name>
+			<name>Plutonium User List</name>
 			<subscribe>plutonium-user-subscribe@liferay.com</subscribe>
 			<unsubscribe>plutonium-user-unsubscribe@liferay.com</unsubscribe>
 			<post>plutonium-user@liferay.com</post>
 			<archive>http://mail-archives.apache.org/mod_mbox/plutonium-user</archive>
 		</mailingList>
 		<mailingList>
-			<name>Pluto Developer List</name>
+			<name>Plutonium Developer List</name>
 			<subscribe>plutonium-dev-subscribe@liferay.com</subscribe>
 			<unsubscribe>plutonium-dev-unsubscribe@liferay.com</unsubscribe>
 			<post>plutonium-dev@liferay.com</post>
 			<archive>http://mail-archives.apache.org/mod_mbox/plutonium-dev</archive>
 		</mailingList>
 		<mailingList>
-			<name>Pluto SCM List</name>
+			<name>Plutonium SCM List</name>
 			<subscribe>plutonium-scm-subscribe@liferay.com</subscribe>
 			<unsubscribe>plutonium-scm-unsubscribe@liferay.com</unsubscribe>
 			<post>plutonium-scm@liferay.com</post>
 			<archive>http://mail-archives.apache.org/mod_mbox/plutonium-scm</archive>
 		</mailingList>
 	</mailingLists>
-	<!-- Pluto Committers ==================================================== -->
+	<!-- Plutonium Committers ==================================================== -->
 	<!-- Email format: [name]#a@T#[domain].d0t.[extension]
 '@' and '.' characters are added because m2 seems to need them to
 generate mailto links. -->
@@ -175,7 +175,7 @@ generate mailto links. -->
 			<timezone>-7</timezone>
 		</developer>
 	</developers>
-	<!-- Pluto Contributors ================================================== -->
+	<!-- Plutonium Contributors ================================================== -->
 	<contributors>
 		<contributor>
 			<name>Michael Westbay</name>
@@ -259,7 +259,7 @@ generate mailto links. -->
 		<ognl.version>3.1.2</ognl.version>
 		<phantomjsdriver.version>1.3.0</phantomjsdriver.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<plutonium.container.name>Pluto</plutonium.container.name>
+		<plutonium.container.name>Plutonium</plutonium.container.name>
 		<portlet-api.version>4.0.0-SNAPSHOT</portlet-api.version>
 		<selenium.version>3.11.0</selenium.version>
 		<servlet-api.version>6.0.0</servlet-api.version>
@@ -815,7 +815,7 @@ generate mailto links. -->
 			<!-- For building website documentation, there's no need to include modules. -->
 			<modules />
 		</profile>
-		<!-- To build Pluto for deployment on tomee, activate this profile -->
+		<!-- To build Plutonium for deployment on tomee, activate this profile -->
 		<!-- Activate using the tomee property: mvn clean install -Dtomee -->
 		<profile>
 			<id>tomee</id>

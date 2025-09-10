@@ -25,7 +25,7 @@ import com.liferay.plutonium.driver.services.portal.SupportedWindowStateService;
 import com.liferay.plutonium.driver.url.PortalURLParser;
 
 /**
- * Encapsulation of the Pluto Driver ResourceConfig.
+ * Encapsulation of the Plutonium Driver ResourceConfig.
  *
  * @version 1.0
  * @since Sep 23, 2004

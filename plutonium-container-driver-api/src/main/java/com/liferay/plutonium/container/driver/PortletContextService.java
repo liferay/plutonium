@@ -13,8 +13,8 @@ import com.liferay.plutonium.container.PortletContainerException;
 import com.liferay.plutonium.container.PortletWindow;
 
 /**
- * Interface defining the services used by both the Pluto Portal Driver
- * and the Pluto PortletServlet for registration and access to 
+ * Interface defining the services used by both the Plutonium Portal Driver
+ * and the Plutonium PortletServlet for registration and access to 
  * the PortletContexts and ClassLoader of registered Portlet Applications.
  *
  * @since 2.0

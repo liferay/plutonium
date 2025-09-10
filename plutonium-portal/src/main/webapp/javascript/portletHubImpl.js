@@ -12,7 +12,7 @@
 
 /**
  * @fileOverview
- * This module provides the implementation for the Pluto portlet hub.
+ * This module provides the implementation for the Plutonium portlet hub.
  * <p>
  * 
  * @author Scott Nicklous
@@ -272,7 +272,7 @@ var portlet = portlet || {};
    },
    
    
-   // Constants used for URL Encoding/Decoding (copied from Pluto impl code)  ----------
+   // Constants used for URL Encoding/Decoding (copied from Plutonium impl code)  ----------
    
    PREFIX = "__",
    PORTLET_ID = "pd",
@@ -360,7 +360,7 @@ var portlet = portlet || {};
       // if there are no values, return the empty string
       if (vals !== undefined) {
 
-    	  // If encoding a render parameter, insert the pid in Pluto internal form 
+    	  // If encoding a render parameter, insert the pid in Plutonium internal form 
     	  // as opposed to namespace form -
 
     	  if (type === RENDER_PARAM || type === PUBLIC_RENDER_PARAM
@@ -777,7 +777,7 @@ var portlet = portlet || {};
 
       return new Promise(function (resolve, reject) {
 
-         // get the ajax action URL. The Pluto impl creates the URL in JS
+         // get the ajax action URL. The Plutonium impl creates the URL in JS
          // therefore no error handling 
          getUrl("ACTION", pid, parms).then(function (url) {
             var xhr, upids, fd, method = 'POST', enctype, fstr;

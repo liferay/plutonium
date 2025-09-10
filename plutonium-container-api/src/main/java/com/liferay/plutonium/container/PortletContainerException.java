@@ -6,7 +6,7 @@
 package com.liferay.plutonium.container;
 
 /**
- * Thrown when an internal portlet container exception occurs within Pluto.
+ * Thrown when an internal portlet container exception occurs within Plutonium.
  * This type of exception indicates an error from which the container is not
  * able to recover.
  *

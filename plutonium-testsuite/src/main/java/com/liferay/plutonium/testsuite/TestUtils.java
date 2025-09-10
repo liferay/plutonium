@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Static class that provides utility methods for Pluto testsuite.
+ * Static class that provides utility methods for Plutonium testsuite.
  * @since 2006-02-13
  */
 public class TestUtils {

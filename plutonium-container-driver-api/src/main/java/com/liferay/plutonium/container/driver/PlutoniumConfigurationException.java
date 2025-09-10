@@ -6,19 +6,19 @@
 package com.liferay.plutonium.container.driver;
 
 /**
- * Exception thrown when Pluto configuration fails.
+ * Exception thrown when Plutonium configuration fails.
  *
  * @since Jul 2, 2005
  */
-public class PlutoConfigurationException extends RuntimeException {
+public class PlutoniumConfigurationException extends RuntimeException {
 
     private static final long serialVersionUID = 8159327269127050615L;
 
-    public PlutoConfigurationException(String message) {
+    public PlutoniumConfigurationException(String message) {
         super(message);
     }
 
-    public PlutoConfigurationException(String message, Throwable cause) {
+    public PlutoniumConfigurationException(String message, Throwable cause) {
         super(message, cause);
     }
 }

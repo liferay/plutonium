@@ -19,7 +19,7 @@
 <% pageContext.setAttribute("now", new java.util.Date()); %>
 
 <!--
-Portal page template for default theme used by the Pluto Portal Driver.
+Portal page template for default theme used by the Plutonium Portal Driver.
 This template divides all portlets into two groups (div blocks): the first
 group (the left column) displays portlets with odd IDs, while the second group
 (the right column) displays portlets with even IDs.
@@ -29,7 +29,7 @@ group (the left column) displays portlets with odd IDs, while the second group
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Pluto Portal</title>
+    <title>Plutonium Portal</title>
     <script type="text/javascript">
        /**
         * Initialization code for portlet hub
@@ -79,9 +79,9 @@ group (the left column) displays portlets with odd IDs, while the second group
 
 <div id="portal">
 
-    <!-- Header block: the Apache Pluto banner image and description -->
+    <!-- Header block: the Liferay Plutonium banner image and description -->
     <div id="header">
-        <h1>Apache Pluto</h1>
+        <h1>Liferay Plutonium</h1>
 
         <p>An Apache Portals Project</p>
     </div>

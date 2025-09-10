@@ -4,10 +4,10 @@
  * SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
  * SPDX-License-Identifier: Apache-2.0
  -->
-<project name="Pluto Website Skin">
+<project name="Plutonium Website Skin">
 
   <body>
-    <menu name="Pluto Website Skin">
+    <menu name="Plutonium Website Skin">
       <item name="About" href="/index.html"/>
     </menu> 
 

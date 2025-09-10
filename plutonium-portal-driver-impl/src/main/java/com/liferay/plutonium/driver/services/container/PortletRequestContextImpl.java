@@ -92,7 +92,7 @@ public class PortletRequestContextImpl implements PortletRequestContext {
    private Map<String, List<String>> queryParams          = null;
 
    // make sure these classes are loaded first by the container classloader
-   // so that the logs from these classes land in the Pluto log file.
+   // so that the logs from these classes land in the Plutonium log file.
    static {
       PortletURLProviderImpl.load();
       PortletURLImpl.load();

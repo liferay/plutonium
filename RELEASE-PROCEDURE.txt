@@ -86,13 +86,13 @@ Since 3.0.0
 	$ vi pom.xml # Update the version in the <portals.portlet-api.version/> property
 	$ git commit -m "Upgraded to portlet-api-x.y.z"
 
-	b. REQUIRED: Release the main Apache Pluto software modules
+	b. REQUIRED: Release the main Liferay Plutonium software modules
 
 	$ cd plutonium
 	$ mvn -P apache-release,plutonium release:prepare -DrunOnlyAtExecutionRoot=true
 	$ mvn -P apache-release,plutonium release:perform -Duser.name=[your_apache_uid]
 	$ vi portlet-tck_3.0/pom.xml # Update the parent <version/> and also the version in the <plutonium.test.version/> property
-	$ git commit -a -m "PLUTO-807 Upgraded the TCK to Pluto test version 4.0.0"
+	$ git commit -a -m "PLUTO-807 Upgraded the TCK to Plutonium test version 4.0.0"
 
 	If your local OS userid doesn't match your Apache userid, then you'll have to also override the value provided
 	by the OS to Maven for the site-deploy step to work. This is known to work for Linux, but not for Mac and unknown for Windows.
@@ -200,7 +200,7 @@ Since 3.0.0
         $ mkdir ~/asf-svn
         $ cd ~/asf-svn
 
-    d. Checkout the "dev" folder for Apache Pluto:
+    d. Checkout the "dev" folder for Liferay Plutonium:
 
         $ mkdir dev
         $ cd dev
@@ -259,7 +259,7 @@ Since 3.0.0
     /usr/bin/shasum -a 512 plutonium-bundle-4.0.0.zip > plutonium-bundle-4.0.0.zip.sha512
     # Linux: sha512sum -a 512 plutonium-bundle-4.0.0.zip > plutonium-bundle-4.0.0.zip.sha512
     svn add plutonium-bundle-4.0.0.zip*
-    svn commit -m "PLUTO-807 Committing Binary Release for Pluto 4.0.0" --username $USER_NAME
+    svn commit -m "PLUTO-807 Committing Binary Release for Plutonium 4.0.0" --username $USER_NAME
 
 13. PUT THE RELEASE CANDIDATE UP FOR A VOTE
 
@@ -306,11 +306,11 @@ Since 3.0.0
     d. Move the bundle artifacts over to the distribution area
         $ mv ../../dev/plutonium/plutonium-bundle-4.0.0.zip* .
         $ svn add plutonium-bundle-4.0.0.zip*
-        $ svn commit -m "PLUTO-807 Committing Binary Release for Pluto 4.0.0" --username $USER_NAME
+        $ svn commit -m "PLUTO-807 Committing Binary Release for Plutonium 4.0.0" --username $USER_NAME
         $ cd ../../dev/plutonium
         $ FILES=`svn status | grep plutonium | awk '{print $2}'`
         $ svn rm "$FILES"
-        $ svn commit -m "PLUTO-807 Promoted artifacts from dev to release for Pluto 4.0.0" --username $USER_NAME
+        $ svn commit -m "PLUTO-807 Promoted artifacts from dev to release for Plutonium 4.0.0" --username $USER_NAME
 
     e. Push the tags upstream
         $ git push upstream plutonium-4.0.0
@@ -347,13 +347,13 @@ Since 3.0.0
 
     c. Edit the following files, replacing "v312" with "v400" and "4.0.0" with "4.0.0":
         plutonium/src/site/fml/faq.fml
-        plutonium/src/site/site.xml <-- If applicable, instead of replacing version numbers, add a new <menu name="Pluto 3.1"> section
+        plutonium/src/site/site.xml <-- If applicable, instead of replacing version numbers, add a new <menu name="Plutonium 3.1"> section
         plutonium/src/site/xdoc/download.xml
         plutonium/src/site/xdoc/index.xml
         plutonium/src/site/xdoc/news.xml <-- Also add a news item detailing the release.
         plutonium/src/site/xdoc/security.xml <-- Also add descriptions of any CVE issues that were fixed.
         plutonium/src/site/xdoc/status.xml <-- If applicable, add a description of the new major or minor version.
-                                           Also, replace "Pluto 3.0" with "Pluto 3.1" where appropriate.
+                                           Also, replace "Plutonium 3.0" with "Plutonium 3.1" where appropriate.
 
     d. Edit site/plutonium/src/site/xdoc/v312/release-notes.xml
         include generated release notes from step 15
@@ -370,7 +370,7 @@ Since 3.0.0
         https://svn.apache.org/repos/asf/portals/site/
 
         $ svn add src/site/xdoc/v312
-        $ svn commit -m "PLUTO-807 Committing site changes associated with the Pluto 4.0.0 release" --username $USER_NAME
+        $ svn commit -m "PLUTO-807 Committing site changes associated with the Plutonium 4.0.0 release" --username $USER_NAME
 
     Copy the generated html and resources into the workspace folder of the following svnpubsub SVN location:
         https://svn.apache.org/repos/asf/portals/site-live/
@@ -388,7 +388,7 @@ Since 3.0.0
 
     	$ svn add v312
 
-        $ svn commit -m "PLUTO-807 Committing site changes associated with the Pluto 4.0.0 release" --username $USER_NAME
+        $ svn commit -m "PLUTO-807 Committing site changes associated with the Plutonium 4.0.0 release" --username $USER_NAME
 
 17. ANNOUNCE THE RELEASE
 
@@ -426,11 +426,11 @@ Since 3.0.0
 ------------------------------------ Release Candidate Email Template ------------------------------------------------------------
 To: plutonium-dev list
 cc: plutonium-user list, portals-pmc list
-Subject: [VOTE] Release Apache Portals Pluto 4.0.0
+Subject: [VOTE] Release Liferay Plutonium 4.0.0
 
-Dear Apache Portals Pluto Team and community,
+Dear Liferay Plutonium Team and community,
 
-I've staged a release candidate for the new Apache Portals Pluto 4.0.0 release.
+I've staged a release candidate for the new Liferay Plutonium 4.0.0 release.
 
 This release candidate includes:
 
@@ -452,7 +452,7 @@ https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=****&version=**
 The KEYS file to verify the release artifacts signature can be found here:
 https://dist.apache.org/repos/dist/release/portals/plutonium/KEYS
 
-Please review the release candidates and vote on releasing Apache Portals Pluto 4.0.0
+Please review the release candidates and vote on releasing Liferay Plutonium 4.0.0
 
 REMINDER: According to the following policy:
 http://www.apache.org/legal/release-policy.html#release-approval
@@ -462,7 +462,7 @@ http://www.apache.org/legal/release-policy.html#release-approval
     cryptographic signatures, compile as provided, and test the result on their
     own platform."
 
-Please review the release candidates and vote on releasing Apache Portals Pluto 4.0.0
+Please review the release candidates and vote on releasing Liferay Plutonium 4.0.0
 
 This vote is open for the next 72 hours.
 
@@ -479,7 +479,7 @@ Regards,
 ------------------------------------ Result/Vote Email Template ------------------------------------------------------------
 
 Respond to last email
-Subject: [RESULT][VOTE] Release Apache Portals Pluto 4.0.0
+Subject: [RESULT][VOTE] Release Liferay Plutonium 4.0.0
 
 Apache Portals Team and community,
 
@@ -493,7 +493,7 @@ Thank you all for voting!
 
 We will promote the release candidates to the Maven Central Repository and upload the source and binary distributions to the official download area.
 
-An announcement about the new release will be send out as soon as the Pluto website is updated and the source and binary distributions have been mirrored.
+An announcement about the new release will be send out as soon as the Plutonium website is updated and the source and binary distributions have been mirrored.
 
 Regards,
 
@@ -504,10 +504,10 @@ To      announce@apache.org
         general@liferay.com
         plutonium-user@liferay.com
 
-Subject: [ANNOUNCE] Apache Portals Pluto 4.0.0 release
+Subject: [ANNOUNCE] Liferay Plutonium 4.0.0 release
 
 The Apache Portals team is pleased to announce the General Availability of
-Apache Pluto version 4.0.0.
+Liferay Plutonium version 4.0.0.
 
 Additional Resources:
 
@@ -518,7 +518,7 @@ http://jcp.org/en/jsr/detail?id=362
 The Portlet API Version 3.0 page documents the portlet programming interface:
 http://liferay.com/plutonium/portlet-3.0-apidocs/index.html
 
-For a full overview of all the Pluto features, see the online documentation.
+For a full overview of all the Plutonium features, see the online documentation.
 To get up and running quickly, download the bundle which comes with a bundled
 latest Tomcat 8 ready to run.
 

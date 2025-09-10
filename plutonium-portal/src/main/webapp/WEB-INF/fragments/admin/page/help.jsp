@@ -30,7 +30,7 @@ carried forward into the updated file).
 </p>
 
 <p class="portlet-font">
-A custom portlet war deployed into the bundled distribution of Pluto also needs a Tomcat context descriptor 
+A custom portlet war deployed into the bundled distribution of Plutonium also needs a Tomcat context descriptor
 with the same name as the portlet app war name (a.k.a. context name). This context file needs to be 
 in the META-INF directory of the war file. Here's an example of one for a portlet bundled for a 
 HelloWorldPortlet context (file name is HelloWorldPortlet.xml): 
@@ -38,29 +38,29 @@ HelloWorldPortlet context (file name is HelloWorldPortlet.xml):
 &lt;Context path="/HelloWorldPortlet" 
 	docBase="HelloWorldPortlet" crossContext="true"/&gt; 
 </pre>  
-The crossContext attribute allows Pluto, which is deployed in its own Tomcat context, to work with this custom portlet. 
+The crossContext attribute allows Plutonium, which is deployed in its own Tomcat context, to work with this custom portlet.
 </p>
 
 <div class="portlet-section-subheader">Deploying a Portlet Application</div>
 <p class="portlet-font">
-	The way to deploy a portlet application depends on the app server Pluto is running in. In the bundled distribution
-	Pluto is deployed in Tomcat. In this case, you can use the Tomcat manager app to deploy the portlet
+	The way to deploy a portlet application depends on the app server Plutonium is running in. In the bundled distribution
+	Plutonium is deployed in Tomcat. In this case, you can use the Tomcat manager app to deploy the portlet
 	war. There is a 'Upload and deploy portlet war' link at the bottom of the Page Administrator portlet that points to 
 	the manager app	in the bundled distribution (this link can be changed for other app servers -- see the 
-	adjacent Help link). Use of the manager application requires you to be logged into Pluto in a manager role (plutonium or
+	adjacent Help link). Use of the manager application requires you to be logged into Plutonium in a manager role (plutonium or
 	tomcat user). 
 </p>
 	
 <p class="portlet-font">
-	In the bundled distribution of Pluto, you can also deploy a properly configured portlet application by simply dropping
+	In the bundled distribution of Plutonium, you can also deploy a properly configured portlet application by simply dropping
 	the war file into the webapp directory (see <a href="#ConfiguringPortletApp">Configuring a Portlet Application</a> above).
-	You will need to restart Pluto in order for the Page Administrator Portlet to see the newly deployed portlet so it
+	You will need to restart Plutonium in order for the Page Administrator Portlet to see the newly deployed portlet so it
 	can be added to a portal page.
 </p>
 
 <div class="portlet-section-subheader">Adding Portal Pages</div>
 <p class="portlet-font">
-Adding a new portal page using the Pluto Page Administrator portlet involves inputing the page name into the text box adjacent 
+Adding a new portal page using the Plutonium Page Administrator portlet involves inputing the page name into the text box adjacent
 to the Add Page button and clicking on the button. The new page is created with the default 'theme', which lays out the 
 portlets in two columns (see /WEB-INF/themes/plutonium-default-theme.jsp in the plutonium webapp for details). Once a page
 has been added, portlets will need to be added to the page (see <a href="#AddingPortlets">Adding Portlets to a Portal Page</a>).
@@ -73,14 +73,14 @@ new page. This is equivalent to removing the page and adding it again with the s
 
 <div class="portlet-section-subheader">Removing Portal Pages</div>
 <p class="portlet-font">
-Removing a portal page using the Pluto Page Administrator portlet involves selecting a page in the drop down above 
+Removing a portal page using the Plutonium Page Administrator portlet involves selecting a page in the drop down above
 the Remove Page button and clicking on the button. You are not allowed to remove the default page 
-(default attribute of the render-config element in plutonium-portal-driver-config.xml) and the Pluto Admin page.
+(default attribute of the render-config element in plutonium-portal-driver-config.xml) and the Plutonium Admin page.
 </p>
 
 <div class="portlet-section-subheader"><a name="AddingPortlets">Adding Portlets to a Portal Page</a></div>
 <p class="portlet-font">
-Adding portlets to a portal page using the Pluto Page Administrator portlet involves first selecting a portal 
+Adding portlets to a portal page using the Plutonium Page Administrator portlet involves first selecting a portal
 page in the Portal Pages drop-down (above the Remove Page button) and then selecting a portlet application 
 using the Portlet Applications drop-down and finally a portlet in the adjacent drop down. When this is done, 
 click the Add Portlet button.

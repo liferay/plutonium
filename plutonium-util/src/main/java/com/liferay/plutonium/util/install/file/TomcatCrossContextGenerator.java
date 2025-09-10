@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  * @since Dec 11, 2005
  */
 public class TomcatCrossContextGenerator {
-	private static final String PLUTO_TEMP_DIR = "PlutoDomain";
+	private static final String PLUTO_TEMP_DIR = "PlutoniumDomain";
 	private static Logger LOG = LoggerFactory.getLogger(TomcatCrossContextGenerator.class);
 
     public static void main(String[] args) throws IOException {

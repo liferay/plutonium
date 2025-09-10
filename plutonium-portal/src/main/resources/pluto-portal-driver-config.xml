@@ -14,7 +14,7 @@
 
   <portal-name>plutonium-portal-driver</portal-name>
   <portal-version>${pom.version}</portal-version>
-  <container-name>Pluto Portal Driver</container-name>
+  <container-name>Plutonium Portal Driver</container-name>
 
   <supports>
     <portlet-mode>view</portlet-mode>
@@ -31,7 +31,7 @@
 
   <page-resources>
   
-    <!-- These are the page resources made available by Pluto --> 
+    <!-- These are the page resources made available by Plutonium -->
     <page-resource>
       <identifier>
         <name>portlet-spec-1.0.css</name>
@@ -132,8 +132,8 @@
 
 
   <!-- Render configuration which defines the portal pages. -->
-  <render-config default="About Apache Pluto">
-    <page name="About Apache Pluto" uri="/WEB-INF/themes/plutonium-default-theme.jsp">
+  <render-config default="About Liferay Plutonium">
+    <page name="About Liferay Plutonium" uri="/WEB-INF/themes/plutonium-default-theme.jsp">
       <portlet context="/plutonium" name="AboutPortlet"/>
       <portlet context="/testsuite" name="TestPortlet1"/>
     </page>
@@ -145,8 +145,8 @@
       <portlet context="/testsuite" name="286TestPortlet"/>
       <portlet context="/testsuite" name="286TestCompanionPortlet"/>
     </page>
-    <page name="Pluto Admin" uri="/WEB-INF/themes/plutonium-default-theme.jsp">
-      <portlet context="/plutonium" name="PlutoPageAdmin"/>
+    <page name="Plutonium Admin" uri="/WEB-INF/themes/plutonium-default-theme.jsp">
+      <portlet context="/plutonium" name="PlutoniumPageAdmin"/>
       <portlet context="/plutonium" name="AboutPortlet"/>
     </page>
     ${includeDemosBegin}

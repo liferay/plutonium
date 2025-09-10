@@ -14,8 +14,8 @@
 	</parent>
 	<artifactId>plutonium-taglib</artifactId>
 	<packaging>bundle</packaging>
-	<name>Apache Pluto Portlet Tag Library</name>
-	<description>Apache Pluto's Java Portlet Specification Tag Library implementation</description>
+	<name>Liferay Plutonium Portlet Tag Library</name>
+	<description>Liferay Plutonium's Java Portlet Specification Tag Library implementation</description>
 	<dependencies>
 		<dependency>
 			<groupId>jakarta.portlet</groupId>

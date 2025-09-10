@@ -108,11 +108,11 @@ public class EventCoordinationServiceImpl implements EventCoordinationService {
                   if (portlet.equals(config.getId())) {
                      /*
                       * PLUTO-569: multi-threaded (event) request processing
-                      * isn't thread save with the Pluto Portal Driver handling
+                      * isn't thread save with the Plutonium Portal Driver handling
                       * of request attributes as they all are stored/managed
                       * within the single underlying HttpServletRequest.
                       * Providing proper thread save parallel request processing
-                      * would require extensive enhancements to the Pluto Portal
+                      * would require extensive enhancements to the Plutonium Portal
                       * Driver and as such is out-of-scope for the purpose of
                       * the Portal Driver itself.
                       * 

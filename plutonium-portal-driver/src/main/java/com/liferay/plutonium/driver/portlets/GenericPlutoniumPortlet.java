@@ -15,7 +15,7 @@ import jakarta.portlet.RenderRequest;
 import jakarta.portlet.RenderResponse;
 
 
-public abstract class GenericPlutoPortlet extends GenericPortlet {
+public abstract class GenericPlutoniumPortlet extends GenericPortlet {
 
     public abstract String getViewPage();
     public abstract String getEditPage();

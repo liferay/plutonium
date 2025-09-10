@@ -10,7 +10,7 @@
 	<artifactId>plutonium-assemble-tck286-wars</artifactId>
 	<version>2.0</version>
 	<packaging>pom</packaging>
-	<name>Pluto Assemble JSR-286 TCK 2.0 wars</name>
+	<name>Plutonium Assemble JSR-286 TCK 2.0 wars</name>
 	<properties>
 		<dist>${basedir}/dist/com/sun/ts/tests/portlet</dist>
 	</properties>

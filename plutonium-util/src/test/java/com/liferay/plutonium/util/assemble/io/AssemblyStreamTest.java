@@ -24,7 +24,7 @@ import com.liferay.plutonium.container.impl.PortletAppDescriptorServiceImpl;
 import com.liferay.plutonium.container.om.portlet.PortletApplicationDefinition;
 import com.liferay.plutonium.container.om.portlet.PortletDefinition;
 import com.liferay.plutonium.util.assemble.Assembler;
-import com.liferay.plutonium.util.descriptors.web.PlutoWebXmlRewriter;
+import com.liferay.plutonium.util.descriptors.web.PlutoniumWebXmlRewriter;
 
 /**
  * This test class directly tests the Jar streaming assembly,
@@ -73,7 +73,7 @@ public class AssemblyStreamTest extends TestCase {
     
     protected void verifyAssembly( InputStream webXml, InputStream portletXml ) throws Exception {
         PortletAppDescriptorService portletSvc = new PortletAppDescriptorServiceImpl();
-        PlutoWebXmlRewriter webXmlRewriter = new PlutoWebXmlRewriter( webXml );
+        PlutoniumWebXmlRewriter webXmlRewriter = new PlutoniumWebXmlRewriter( webXml );
         PortletApplicationDefinition portletApp = portletSvc.read( "test", "/test", portletXml );
         
         assertNotNull( "Web Application Descripter was null.", webXmlRewriter );
@@ -91,7 +91,7 @@ public class AssemblyStreamTest extends TestCase {
     }
 
     protected void verifyAssembly( File warFile ) throws Exception {
-        PlutoWebXmlRewriter webXmlRewriter = null;
+        PlutoniumWebXmlRewriter webXmlRewriter = null;
         PortletAppDescriptorService portletSvc = new PortletAppDescriptorServiceImpl();
         int entryCount = 0;
         ByteArrayOutputStream portletXmlBytes = new ByteArrayOutputStream();
@@ -110,7 +110,7 @@ public class AssemblyStreamTest extends TestCase {
             }
             if ( Assembler.SERVLET_XML.equals( tempEntry.getName() ) ) {
                 IOUtils.copy( assembledWarIn, webXmlBytes );
-                webXmlRewriter = new PlutoWebXmlRewriter( new ByteArrayInputStream( webXmlBytes.toByteArray() ) );
+                webXmlRewriter = new PlutoniumWebXmlRewriter( new ByteArrayInputStream( webXmlBytes.toByteArray() ) );
             }
         }
         

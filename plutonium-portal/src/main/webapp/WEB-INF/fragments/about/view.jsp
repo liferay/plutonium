@@ -9,11 +9,11 @@
  */
 --%>
 
-<!-- Pluto about portlet fragment (displayed in VIEW mode). -->
+<!-- Plutonium about portlet fragment (displayed in VIEW mode). -->
 <table>
   
   <tr>
-    <td colspan="2"><h2>About Pluto Portal Driver</h2></td>
+    <td colspan="2"><h2>About Plutonium Portal Driver</h2></td>
   </tr>
   
   <tr>
@@ -37,7 +37,7 @@
     <td><%= System.getProperty("os.name") %>  (<%= System.getProperty("os.arch") %> version <%= System.getProperty("os.version") %>)</td>
   </tr>
   <tr>
-    <td>Pluto Website:</td>
+    <td>Plutonium Website:</td>
     <td>
       <a href="http://liferay.com/plutonium/" target="_blank">
         http://liferay.com/plutonium/
@@ -49,7 +49,7 @@
     <td colspan="2">
       <i>Please use the <a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10560" target="_blank">
       Jira issue tracking site</a> to record any problems you are having with
-      the Pluto portal driver. When you report an issue, please include the data (version, os, etc.) collected in 
+      the Plutonium portal driver. When you report an issue, please include the data (version, os, etc.) collected in
       this portlet in addition to any relevant stack traces or log records and detailed steps on what you were doing when 
       the problem arose.</i>
     </td>

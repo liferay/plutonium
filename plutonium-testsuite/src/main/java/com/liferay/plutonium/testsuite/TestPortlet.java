@@ -33,7 +33,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Pluto testsuite's test portlet.
+ * Plutonium testsuite's test portlet.
  *
  * @see TestConfig
  * @see PortletTest

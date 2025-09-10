@@ -14,8 +14,8 @@
 	</parent>
 	<artifactId>plutonium-container</artifactId>
 	<packaging>bundle</packaging>
-	<name>Apache Pluto Portlet Container</name>
-	<description>The Apache Pluto portlet container.</description>
+	<name>Liferay Plutonium Portlet Container</name>
+	<description>The Liferay Plutonium portlet container.</description>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.plutonium</groupId>
@@ -160,7 +160,7 @@
 						<include>**/*TestSuite.java</include>
 					</includes>
 					<excludes>
-						<exclude>**/PlutoTestCase.java</exclude>
+						<exclude>**/PlutoniumTestCase.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

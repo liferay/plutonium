@@ -79,7 +79,7 @@ public class HeaderPortlet extends GenericPortlet {
 
       // Set header
       resp.addProperty("Portlet", this.getPortletName());
-      resp.setProperty("Portal", "Pluto");
+      resp.setProperty("Portal", "Plutonium");
       resp.addProperty("Portal", "Apache");
       
       // get header info

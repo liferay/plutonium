@@ -16,9 +16,9 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>plutonium-site-skin</artifactId>
-	<name>Apache Pluto Website Skin</name>
+	<name>Liferay Plutonium Website Skin</name>
 	<packaging>jar</packaging>
-	<description>Apache Pluto Website Resources (CSS, images)</description>
+	<description>Liferay Plutonium Website Resources (CSS, images)</description>
 	<build>
 		<plugins>
 			<plugin>

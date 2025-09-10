@@ -2,9 +2,9 @@
 # SPDX-FileCopyrightText: (c) 2025 Liferay, Inc.
 # SPDX-License-Identifier: Apache-2.0
 
-Running the JSR-286 TCK against Pluto 2.0+ Portal Driver
+Running the JSR-286 TCK against Plutonium 2.0+ Portal Driver
 
-1) Setup the Portlet TCK and assemble Pluto TCK test wars (only needs to be done once)
+1) Setup the Portlet TCK and assemble Plutonium TCK test wars (only needs to be done once)
 
   a) Download the Portlet TCK
   
@@ -53,11 +53,11 @@ Running the JSR-286 TCK against Pluto 2.0+ Portal Driver
   
      This will run the maven-plutonium-plugin against the tck test wars and write them out to $TS_HOME/plutonium-assembled-wars
 
-2) Build and setup a clean Pluto/Tomcat installation for testing
+2) Build and setup a clean Plutonium/Tomcat installation for testing
 
 3) Running the TCK
 
-  a) copy all wars from $TS_HOME/plutonium-assembled-wars to your Pluto/Tomcat webapps folder
+  a) copy all wars from $TS_HOME/plutonium-assembled-wars to your Plutonium/Tomcat webapps folder
 
   b) Startup and stop Tomcat once to ensure the TCK portlet applications are predeployed
 

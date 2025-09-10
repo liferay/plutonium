@@ -10,7 +10,7 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
   
-  <display-name>Pluto Testsuite</display-name>
+  <display-name>Plutonium Testsuite</display-name>
   
   <context-param>
     <param-name>test-parameter-name</param-name>

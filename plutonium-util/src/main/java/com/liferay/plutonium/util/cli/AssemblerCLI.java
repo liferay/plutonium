@@ -21,7 +21,7 @@ import com.liferay.plutonium.util.assemble.AssemblerConfig;
 import com.liferay.plutonium.util.assemble.AssemblerFactory;
 
 /**
- * Command Line Interface to the Pluto Assembler.
+ * Command Line Interface to the Plutonium Assembler.
  *
  * @author <a href="ddewolf@apache.org">David H. DeWolf</a>
  * @version 1.0

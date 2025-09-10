@@ -122,7 +122,7 @@ public class ConfigurationHolder {
     * processed, a new configuration data structure is created.
     * <p>
     * The class also performs validity checking and throws exceptions for invalid data. To maintain compatibility with
-    * the earlier Pluto implementation, an <code>IllegalArgumentException</code> is thrown in such cases.
+    * the earlier Plutonium implementation, an <code>IllegalArgumentException</code> is thrown in such cases.
     * 
     * 
     * @param stream

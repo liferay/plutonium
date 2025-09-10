@@ -63,8 +63,8 @@
     </constructor-arg>
   </bean>
 
-  <bean id="PlutoServices"
-        class="com.liferay.plutonium.container.driver.PlutoServices">
+  <bean id="PlutoniumServices"
+        class="com.liferay.plutonium.container.driver.PlutoniumServices">
     <constructor-arg>
       <ref bean="PortalDriverServices"/>
     </constructor-arg>

@@ -8,7 +8,7 @@ package com.liferay.plutonium.container.util;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ArgumentUtilityTest extends PlutoTestCase {
+public class ArgumentUtilityTest extends PlutoniumTestCase {
 
     @Before
     public void setUp() throws Exception {

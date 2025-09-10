@@ -16,7 +16,7 @@ import jakarta.portlet.WindowState;
 import com.liferay.plutonium.driver.config.DriverConfiguration;
 
 /**
- * <code>PortalContext</code> implementation for the Pluto Portal Driver.
+ * <code>PortalContext</code> implementation for the Plutonium Portal Driver.
  */
 public class PortalContextImpl implements PortalContext {
    

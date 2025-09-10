@@ -30,7 +30,7 @@ public interface Assembler {
 
     /**
      * The fully qualified name of the class responsible for
-     * dispatching requests from the Pluto container to portlets. 
+     * dispatching requests from the Plutonium container to portlets. 
      */
     String DISPATCH_SERVLET_CLASS =
         	"com.liferay.plutonium.container.driver.PortletServlet";

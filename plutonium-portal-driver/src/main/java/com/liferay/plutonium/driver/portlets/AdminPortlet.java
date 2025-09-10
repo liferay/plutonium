@@ -7,7 +7,7 @@ package com.liferay.plutonium.driver.portlets;
 
 import jakarta.portlet.RenderRequest;
 
-public class AdminPortlet extends GenericPlutoPortlet {
+public class AdminPortlet extends GenericPlutoniumPortlet {
 
 	private static final String VIEW_PAGE = "/WEB-INF/fragments/admin/view.jsp";
 	private static final String EDIT_PAGE = "/WEB-INF/fragments/admin/edit.jsp";

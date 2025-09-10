@@ -22,7 +22,7 @@ import com.liferay.plutonium.container.om.portlet.PortletDefinition;
 import com.liferay.plutonium.util.assemble.ArchiveBasedAssemblyTest;
 import com.liferay.plutonium.util.assemble.Assembler;
 import com.liferay.plutonium.util.assemble.AssemblerConfig;
-import com.liferay.plutonium.util.descriptors.web.PlutoWebXmlRewriter;
+import com.liferay.plutonium.util.descriptors.web.PlutoniumWebXmlRewriter;
 
 /**
  * This test assembles an EAR file which contains two portlet
@@ -85,7 +85,7 @@ public class ComplexEarAssemblerTest extends ArchiveBasedAssemblyTest {
         PortletAppDescriptorService portletSvc = new PortletAppDescriptorServiceImpl();
         PortletApplicationDefinition portletApp = null;
         
-        PlutoWebXmlRewriter webXmlRewriter = null;
+        PlutoniumWebXmlRewriter webXmlRewriter = null;
         
         List<String> portletWarEntries = Arrays.asList( testWarEntryNames );
         List<String> unassembledWarEntries = Arrays.asList( unassembledWarEntryName );
@@ -114,7 +114,7 @@ public class ComplexEarAssemblerTest extends ArchiveBasedAssemblyTest {
                                 new ByteArrayInputStream( IOUtils.toByteArray( warIn ) ) );
                     }
                     if ( Assembler.SERVLET_XML.equals( warEntry.getName() ) ) {
-                        webXmlRewriter = new PlutoWebXmlRewriter( new ByteArrayInputStream( IOUtils.toByteArray( warIn ) ) );
+                        webXmlRewriter = new PlutoniumWebXmlRewriter( new ByteArrayInputStream( IOUtils.toByteArray( warIn ) ) );
                     }
                 }
                 

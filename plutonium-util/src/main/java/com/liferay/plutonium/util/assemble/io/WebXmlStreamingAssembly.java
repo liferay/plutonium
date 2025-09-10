@@ -13,7 +13,7 @@ import com.liferay.plutonium.container.impl.PortletAppDescriptorServiceImpl;
 import com.liferay.plutonium.container.om.portlet.PortletApplicationDefinition;
 import com.liferay.plutonium.container.om.portlet.PortletDefinition;
 import com.liferay.plutonium.util.assemble.Assembler;
-import com.liferay.plutonium.util.descriptors.web.PlutoWebXmlRewriter;
+import com.liferay.plutonium.util.descriptors.web.PlutoniumWebXmlRewriter;
 
 /**
  * Utility class responsible for accepting web.xml and portlet.xml as InputStreams, and assembling the web.xml to an
@@ -42,10 +42,10 @@ public class WebXmlStreamingAssembly
         {
             dispatchServletClass = Assembler.DISPATCH_SERVLET_CLASS;
         }
-        PlutoWebXmlRewriter webXmlRewriter = null;
+        PlutoniumWebXmlRewriter webXmlRewriter = null;
         try
         {
-            webXmlRewriter = new PlutoWebXmlRewriter(webXmlIn);
+            webXmlRewriter = new PlutoniumWebXmlRewriter(webXmlIn);
         }
         catch (Exception e)
         {

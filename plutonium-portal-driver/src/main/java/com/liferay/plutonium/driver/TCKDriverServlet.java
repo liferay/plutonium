@@ -33,7 +33,7 @@ public class TCKDriverServlet extends PortalDriverServlet {
     private int pageCounter = 0;
     
     public String getServletInfo() {
-        return "Pluto TCK Driver Servlet";
+        return "Plutonium TCK Driver Servlet";
     }
 
     public void init() {
@@ -123,12 +123,12 @@ public class TCKDriverServlet extends PortalDriverServlet {
     }
     
     /**
-     * Prints debug message with a <code>[Pluto TCK Driver]</code> prefix.
+     * Prints debug message with a <code>[Plutonium TCK Driver]</code> prefix.
      * @param message  message to debug.
      */
     private void debugWithName(String message) {
     	if (LOG.isDebugEnabled()) {
-    		LOG.debug("[Pluto TCK Driver] " + message);
+    		LOG.debug("[Plutonium TCK Driver] " + message);
     	}
     }
     

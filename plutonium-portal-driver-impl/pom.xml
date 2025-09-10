@@ -14,7 +14,7 @@
 	</parent>
 	<artifactId>plutonium-portal-driver-impl</artifactId>
 	<packaging>bundle</packaging>
-	<name>Apache Pluto Portal Driver Implementation Classes</name>
+	<name>Liferay Plutonium Portal Driver Implementation Classes</name>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.plutonium</groupId>

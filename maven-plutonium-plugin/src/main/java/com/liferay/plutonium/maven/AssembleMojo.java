@@ -19,9 +19,9 @@ import com.liferay.plutonium.util.assemble.AssemblerFactory;
 
 /**
  * The AssembleMojo is responsible for assembling a web application for deployment
- * into the Pluto portlet container.  Assembly, in this context, is the process of
- * updating a web application's WEB-INF/web.xml with Pluto specific parameters for 
- * deployment in Pluto.   
+ * into the Plutonium portlet container.  Assembly, in this context, is the process of
+ * updating a web application's WEB-INF/web.xml with Plutonium specific parameters for 
+ * deployment in Plutonium.   
  * <p>
  * This Mojo is able to operate on individual descriptors by specifying 
  * <code>portletXml</code>, <code>webXml</code>, and <code>webXmlDestination</code>.
@@ -152,7 +152,7 @@ public class AssembleMojo extends AbstractPortletMojo {
      */
     private File warFilesDestination;
 
-    // AbstractPlutoMojo Impl --------------------------------------------------
+    // AbstractPlutoniumMojo Impl --------------------------------------------------
 
     protected void doExecute() throws MojoExecutionException {       
         

@@ -17,6 +17,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>WarTestPortletName</servlet-name>
-        <url-pattern>/PlutoInvoker/WarTestPortletName</url-pattern>
+        <url-pattern>/PlutoniumInvoker/WarTestPortletName</url-pattern>
     </servlet-mapping>
 </web-app>
