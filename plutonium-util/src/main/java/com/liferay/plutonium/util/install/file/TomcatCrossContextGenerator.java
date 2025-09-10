@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  * @since Dec 11, 2005
  */
 public class TomcatCrossContextGenerator {
-	private static final String PLUTO_TEMP_DIR = "PlutoniumDomain";
+	private static final String PLUTONIUM_TEMP_DIR = "PlutoniumDomain";
 	private static Logger LOG = LoggerFactory.getLogger(TomcatCrossContextGenerator.class);
 
     public static void main(String[] args) throws IOException {
@@ -54,7 +54,7 @@ public class TomcatCrossContextGenerator {
 			StringBuffer contents = new StringBuffer();
 			contents.append("<Context ")
 			        .append("path=\"").append(contextName).append("\" ")
-			        .append("docBase=\"../").append(PLUTO_TEMP_DIR).append("/").append(fileName).append("\" ")
+			        .append("docBase=\"../").append(PLUTONIUM_TEMP_DIR).append("/").append(fileName).append("\" ")
 			        .append("crossContext=\"true\">").append("</Context>");
 			File confFile = new File(confDir, contextName+".xml");
 			if (LOG.isInfoEnabled()) {

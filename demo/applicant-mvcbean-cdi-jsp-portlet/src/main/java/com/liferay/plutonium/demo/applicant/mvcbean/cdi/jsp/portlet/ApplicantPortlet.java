@@ -35,7 +35,7 @@ public class ApplicantPortlet implements HeaderPortlet {
 		IOException {
 
 		boolean liferayDetected = PortletContainer.LIFERAY.isDetected(headerRequest);
-		boolean plutoDetected = PortletContainer.PLUTO.isDetected(headerRequest);
+		boolean plutoDetected = PortletContainer.PLUTONIUM.isDetected(headerRequest);
 
 		if (plutoDetected) {
 			headerResponse.addDependency("jQuery", "com.jquery", "1.12.1",
