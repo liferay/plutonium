@@ -6,7 +6,7 @@ This directory contains the source code for the Liferay Plutonium 4.0 project,
 the Compatible Implementation (CI) of Jakarta Portlet 4.0. The project can be
 built using the maven command:
 
-mvn clean install -Pplutoniumnium
+mvn clean install -Pplutonium
 
 Building with dist-build.xml
 ============================
